@@ -20,7 +20,7 @@ class Test_Suite_02_Add_Shortcut:
     
     def test_01_verify_the_behavior_when_user_disables_the_print_destination_toggle_bar_in_add_shortcut_screen(self):
         """
-        Description: C4380
+        Description: C52
         Steps:
             1.Install and Launch the HPX app.
             2.Click on the printer icon on the root view screen.
@@ -49,7 +49,7 @@ class Test_Suite_02_Add_Shortcut:
     
     def test_02_verify_the_behavior_when_user_enables_the_email_destination_toggle_bar_in_add_shortcut_screen(self):
         """
-        Description: C4381
+        Description: C53
         Steps:
             1.Install and Launch the HPX app.
             2.Click on the printer icon on the root view screen.
@@ -78,7 +78,7 @@ class Test_Suite_02_Add_Shortcut:
 
     def test_03_verify_the_behavior_when_user_disables_the_email_destination_toggle_bar_in_add_shortcut_screen(self):
         """
-        Description: C4382
+        Description: C54
         Steps:
             1.Install and Launch the HPX app.
             2.Click on the printer icon on the root view screen.
@@ -108,7 +108,7 @@ class Test_Suite_02_Add_Shortcut:
     
     def test_04_verify_the_behavior_when_user_enables_the_save_destination_toggle_bar_in_add_shortcut_screen(self):
         """
-        Description: C4383
+        Description: C55
         Steps:
             1.Install and Launch the HPX app.
             2.Click on the printer icon on the root view screen.
@@ -136,7 +136,7 @@ class Test_Suite_02_Add_Shortcut:
 
     def test_05_verify_the_behavior_when_user_disables_the_save_destination_toggle_bar_in_add_shortcut_screen(self):
         """
-        Description: C4384
+        Description: C56
         Steps:
             1.Install and Launch the HPX app.
             2.Click on the printer icon on the root view screen.
@@ -166,7 +166,7 @@ class Test_Suite_02_Add_Shortcut:
 
     def test_06_verify_the_screen_when_the_user_enables_only_the_print_destination_in_the_add_shortcut_screen(self):
         """
-        Description: C4385
+        Description: C57
         Steps:
             1.Install and Launch the HPX app.
             2.Click on the printer icon on the root view screen.
@@ -197,7 +197,7 @@ class Test_Suite_02_Add_Shortcut:
 
     def test_07_verify_the_screen_when_user_clicks_on_back_button_in_add_print_screen(self):
         """
-        Description: C4386
+        Description: C58
         Steps:
             1.Install and Launch the HPX app.
             2.Click on the printer icon on the root view screen.
@@ -230,7 +230,7 @@ class Test_Suite_02_Add_Shortcut:
     
     def test_08_verify_the_behavior_when_the_user_selects_any_value_in_the_copies_dropdown_on_the_add_print_screen(self):
         """
-        Description: C4387
+        Description: C59
         Steps:
             1.Install and Launch the HPX app.
             2.Navigate to printer details screen.
@@ -266,7 +266,7 @@ class Test_Suite_02_Add_Shortcut:
     
     def test_09_verify_the_behavior_when_the_user_selects_any_option_in_the_color_dropdown_on_the_add_print_screen(self):
         """
-        Description: C4388
+        Description: C60
         Steps:
             1.Install and Launch the HPX app.
             2.Navigate to printer details screen.
@@ -302,7 +302,7 @@ class Test_Suite_02_Add_Shortcut:
 
     def test_10_verify_the_behavior_when_the_user_selects_any_option_in_the_two_sided_dropdown_on_the_add_print_screen(self):
         """
-        Description: C4389
+        Description: C61
         Steps:
             1.Install and Launch the HPX app.
             2.Navigate to printer details screen.
@@ -338,7 +338,7 @@ class Test_Suite_02_Add_Shortcut:
     
     def test_11_verify_the_behavior_when_user_clicks_on_add_to_shortcut_button_in_add_print_screen(self):
         """
-        Description: C4390
+        Description: C62
         Steps:
             1.Install and Launch the HPX app.
             2.Navigate to printer details screen.
