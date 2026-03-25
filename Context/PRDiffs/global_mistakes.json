@@ -1,80 +1,58 @@
 {
   "metadata": {
     "version": "1.0",
-    "last_updated": "2026-03-25T12:00:00Z",
-    "total_mistakes": 3
+    "generated_from": "add_shortcuts",
+    "generated_at": "2026-03-25T12:30:00Z",
+    "total_mistakes": 2
   },
   "global_mistakes": [
     {
       "id": "GM-001",
-      "title": "Hardcoded wait instead of explicit wait",
-      "description": "Use of time.sleep() instead of WebDriverWait leading to flaky tests",
+      "title": "Hardcoded wait using time.sleep",
+      "description": "Use of time.sleep() instead of dynamic waits can lead to flaky and slow tests.",
       "category": "Synchronization",
       "severity": "Medium",
-      "tags": ["selenium", "wait", "flaky-tests"],
+      "tags": ["wait", "selenium", "flaky-tests"],
       "pattern": {
         "type": "code_snippet",
         "value": "time.sleep("
       },
-      "recommendation": "Replace time.sleep() with WebDriverWait and expected_conditions",
+      "recommendation": "Replace time.sleep() with WebDriverWait and expected_conditions.",
       "example_bad": "time.sleep(5)",
       "example_good": "WebDriverWait(driver, 10).until(EC.visibility_of_element_located(locator))",
       "occurrences": [
         {
-          "repo": "test-automation-repo",
-          "file": "tests/login_test.py",
-          "function": "test_login",
-          "pr_id": "PR-102",
-          "commit_id": "abc123",
-          "detected_at": "2026-03-20T10:15:00Z"
+          "file": "add_shortcuts/*.py",
+          "note": "Detected in one or more functions using static wait"
         }
       ],
       "semantic_hash": "sync_wait_issue_v1",
-      "created_at": "2026-03-20T10:20:00Z",
-      "updated_at": "2026-03-22T08:00:00Z"
+      "created_at": "2026-03-25T12:30:00Z",
+      "updated_at": "2026-03-25T12:30:00Z"
     },
     {
       "id": "GM-002",
-      "title": "Duplicate locator definitions",
-      "description": "Same locator defined multiple times across page objects",
-      "category": "Code Duplication",
-      "severity": "Low",
-      "tags": ["pom", "duplication"],
-      "pattern": {
-        "type": "semantic",
-        "value": "duplicate locator across files"
-      },
-      "recommendation": "Centralize locators in a single page object or constants file",
-      "occurrences": [],
-      "semantic_hash": "duplicate_locator_v1",
-      "created_at": "2026-03-18T09:00:00Z",
-      "updated_at": "2026-03-18T09:00:00Z"
-    },
-    {
-      "id": "GM-003",
-      "title": "Missing assertion in test",
-      "description": "Test function executes steps but does not validate outcomes",
+      "title": "Missing assertion in test functions",
+      "description": "Test functions do not contain assertions, making them ineffective for validation.",
       "category": "Test Quality",
       "severity": "High",
-      "tags": ["assertion", "test-validation"],
+      "tags": ["assert", "testing", "validation"],
       "pattern": {
         "type": "ast_rule",
-        "value": "no assert statement in test function"
+        "value": "test function without assert"
       },
-      "recommendation": "Ensure every test has at least one assertion validating expected behavior",
+      "recommendation": "Ensure each test function contains at least one assert statement.",
+      "example_bad": "def test_example():\n    do_something()",
+      "example_good": "def test_example():\n    result = do_something()\n    assert result == expected",
       "occurrences": [
         {
-          "repo": "automation-suite",
-          "file": "tests/cart_test.py",
-          "function": "test_add_to_cart",
-          "pr_id": "PR-110",
-          "commit_id": "def456",
-          "detected_at": "2026-03-21T14:30:00Z"
+          "file": "add_shortcuts/*.py",
+          "note": "Detected in one or more test functions without assertions"
         }
       ],
       "semantic_hash": "missing_assert_v1",
-      "created_at": "2026-03-21T14:35:00Z",
-      "updated_at": "2026-03-21T14:35:00Z"
+      "created_at": "2026-03-25T12:30:00Z",
+      "updated_at": "2026-03-25T12:30:00Z"
     }
   ]
 }
