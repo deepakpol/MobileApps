@@ -1,6 +1,7 @@
 import pytest
 from MobileApps.libs.flows.android.smart.flow_container import FLOW_NAMES
 import time
+import logging
 
 pytest.app_info = "HPX"
 
@@ -17,6 +18,7 @@ class Test_Suite_05_Add_Shortcut:
         cls.hpx_shortcuts = cls.fc.fd[FLOW_NAMES.HPX_SHORTCUTS]
         # Enable HPX Flag
         cls.fc.hpx = True
+        logging.info("Starting Test Suite 05 for HPX Add Shortcuts")
     
     def test_01_verify_the_position_of_the_buttons_on_the_delete_this_shortcut_pop_up_window(self):
         """

@@ -1,6 +1,7 @@
 import pytest
 from MobileApps.libs.flows.android.smart.flow_container import FLOW_NAMES
 import time
+import logging
 
 pytest.app_info = "HPX"
 
@@ -17,6 +18,7 @@ class Test_Suite_04_Add_Shortcut:
         cls.hpx_shortcuts = cls.fc.fd[FLOW_NAMES.HPX_SHORTCUTS]
         # Enable HPX Flag
         cls.fc.hpx = True
+        logging.info("Starting Test Suite 04 for HPX Add Shortcuts")
     
     def test_01_verify_the_screen_when_the_user_enables_only_the_save_destination_in_the_add_shortcut_screen(self):
         """
