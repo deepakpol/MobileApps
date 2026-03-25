@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "file": "add_shortcuts/add_shortcut_test.py",
+    "generated_at": "2026-03-25T12:45:00Z",
+    "total_mistakes": 2
+  },
+  "local_mistakes": [
+    {
+      "id": "LM-001",
+      "title": "Hardcoded wait in function",
+      "description": "time.sleep() used inside test function instead of dynamic wait",
+      "category": "Synchronization",
+      "severity": "Medium",
+      "function_name": "test_add_shortcut",
+      "code_context": "time.sleep(5)",
+      "line_hint": "approx line where sleep is used",
+      "recommendation": "Replace with WebDriverWait for better synchronization",
+      "related_global_id": "GM-001",
+      "semantic_hash": "sync_wait_issue_v1",
+      "created_at": "2026-03-25T12:45:00Z"
+    },
+    {
+      "id": "LM-002",
+      "title": "Missing assertion in test function",
+      "description": "Test executes steps but does not validate outcome",
+      "category": "Test Quality",
+      "severity": "High",
+      "function_name": "test_add_shortcut",
+      "code_context": "function without assert",
+      "line_hint": "entire function scope",
+      "recommendation": "Add assertion to validate expected behavior",
+      "related_global_id": "GM-002",
+      "semantic_hash": "missing_assert_v1",
+      "created_at": "2026-03-25T12:45:00Z"
+    }
+  ]
+}
