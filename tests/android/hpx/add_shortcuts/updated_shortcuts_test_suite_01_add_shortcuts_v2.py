@@ -6,7 +6,8 @@ import logging
 pytest.app_info = "HPX"
 
 class Test_Suite_01_Add_Shortcut(object):
-    @pytest.fixture(scope="class", autouse=True)
+    # GLOBAL MISTAKE: Missing autouse=True
+    @pytest.fixture(scope="class") 
     def class_setup(cls, request, android_hpx_flow_setup ,load_printers_session):
         cls = cls.__class__
         cls.driver, cls.fc = android_hpx_flow_setup
@@ -42,8 +43,11 @@ class Test_Suite_01_Add_Shortcut(object):
         self.hpx_shortcuts.click_cancel_shortcut_go_back_btn()
         assert self.hpx_shortcuts.verify_cancel_this_shortcut_title()
     
-    # LOCAL MISTAKE: Missing docstring with TestRail URL
     def test_03_verify_the_position_of_the_buttons_on_the_cancel_shortcut_creation_pop_up_window_C48(self):
+        """
+        Verify the buttons of cancel shortcut creation pop up window.
+        TestRails -> https://hp-testrail.external.hp.com/index.php?/cases/view/48
+        """
         assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()
         assert self.hpx_shortcuts.verify_cancel_shortcut_go_back_btn()
     
