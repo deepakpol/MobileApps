@@ -31,7 +31,8 @@ class Test_Suite_01_Add_Shortcut(object):
         self.hpx_printer_details.click_shortcuts_tile(raise_e=False)
         assert self.hpx_shortcuts.verify_shortcuts_screen_title()
         self.hpx_shortcuts.click_add_new_shortcut_btn()
-        assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()
+        # LOCAL MISTAKE 1: Missing 'assert'
+        self.hpx_shortcuts.verify_add_new_shortcut_screen_title()
 
     def test_02_verify_the_screen_when_user_clicks_on_the_back_button_in_add_shortcut_screen_C47(self):
         """
@@ -83,5 +84,7 @@ class Test_Suite_01_Add_Shortcut(object):
         self.hpx_shortcuts.click_add_new_shortcut_btn()
         assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()
         self.hpx_shortcuts.click_create_your_own_shortcut()
+        # LOCAL MISTAKE 2: Hardcoded sleep
+        time.sleep(5)
         self.hpx_shortcuts.click_edit_shortcut_print_toggle_btn()
         assert self.hpx_shortcuts.is_continue_btn_enabled(), "Continue button should be enabled after toggling print option"
