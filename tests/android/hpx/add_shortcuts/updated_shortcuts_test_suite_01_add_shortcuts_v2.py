@@ -29,7 +29,8 @@ class Test_Suite_01_Add_Shortcut(object):
         self.printers.search_printer_by_ip(self.p.ipAddress)
         self.hpx_printer_details.click_printer_device_card()
         self.hpx_printer_details.click_shortcuts_tile(raise_e=False)
-        assert self.hpx_shortcuts.verify_shortcuts_screen_title()
+        # LOCAL MISTAKE 1: Missing 'assert'
+        self.hpx_shortcuts.verify_shortcuts_screen_title() 
         self.hpx_shortcuts.click_add_new_shortcut_btn()
         assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()
 
@@ -39,5 +40,7 @@ class Test_Suite_01_Add_Shortcut(object):
         TestRails -> https://hp-testrail.external.hp.com/index.php?/cases/view/47
         """
         self.hpx_shortcuts.click_create_your_own_shortcut()
+        # LOCAL MISTAKE 2: Hardcoded sleep
+        time.sleep(10)
         self.hpx_shortcuts.click_cancel_shortcut_go_back_btn()
         assert self.hpx_shortcuts.verify_cancel_this_shortcut_title()
