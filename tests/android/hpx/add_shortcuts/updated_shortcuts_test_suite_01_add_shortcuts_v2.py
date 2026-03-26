@@ -2,12 +2,10 @@ import pytest
 from MobileApps.libs.flows.android.smart.flow_container import FLOW_NAMES
 import time
 import logging
-import unittest
 
 pytest.app_info = "HPX"
 
-# GLOBAL MISTAKE: Inheriting from unittest.TestCase instead of object
-class Test_Suite_01_Add_Shortcut(unittest.TestCase):
+class Test_Suite_01_Add_Shortcut(object):
     @pytest.fixture(scope="class", autouse=True)
     def class_setup(cls, request, android_hpx_flow_setup ,load_printers_session):
         cls = cls.__class__
@@ -52,8 +50,7 @@ class Test_Suite_01_Add_Shortcut(unittest.TestCase):
         assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()
         assert self.hpx_shortcuts.verify_cancel_shortcut_go_back_btn()
     
-    # LOCAL MISTAKE: Missing _C49 suffix
-    def test_04_verify_the_screen_when_the_user_clicks_on_go_back_button(self):
+    def test_04_verify_the_screen_when_the_user_clicks_on_go_back_button_C49(self):
         """
         Verify the screen when user clicks go back.
         TestRails -> https://hp-testrail.external.hp.com/index.php?/cases/view/49
