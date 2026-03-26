@@ -3,7 +3,7 @@ from MobileApps.libs.flows.android.smart.flow_container import FLOW_NAMES
 import time
 import logging
 
-# GLOBAL MISTAKE: Missing pytest.app_info = "HPX" here
+pytest.app_info = "HPX"
 
 class Test_Suite_01_Add_Shortcut(object):
     @pytest.fixture(scope="class", autouse=True)
@@ -32,3 +32,9 @@ class Test_Suite_01_Add_Shortcut(object):
         assert self.hpx_shortcuts.verify_shortcuts_screen_title()
         self.hpx_shortcuts.click_add_new_shortcut_btn()
         assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()
+
+    # LOCAL MISTAKE: Missing docstring with TestRail URL
+    def test_02_verify_the_screen_when_user_clicks_on_the_back_button_in_add_shortcut_screen_C47(self):
+        self.hpx_shortcuts.click_create_your_own_shortcut()
+        self.hpx_shortcuts.click_cancel_shortcut_go_back_btn()
+        assert self.hpx_shortcuts.verify_cancel_this_shortcut_title()
