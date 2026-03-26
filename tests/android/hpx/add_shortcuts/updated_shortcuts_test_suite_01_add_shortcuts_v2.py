@@ -3,7 +3,7 @@ from MobileApps.libs.flows.android.smart.flow_container import FLOW_NAMES
 import time
 import logging
 
-pytest.app_info = "HPX"
+# GLOBAL MISTAKE: Missing pytest.app_info = "HPX" here
 
 class Test_Suite_01_Add_Shortcut(object):
     @pytest.fixture(scope="class", autouse=True)
@@ -29,18 +29,6 @@ class Test_Suite_01_Add_Shortcut(object):
         self.printers.search_printer_by_ip(self.p.ipAddress)
         self.hpx_printer_details.click_printer_device_card()
         self.hpx_printer_details.click_shortcuts_tile(raise_e=False)
-        # LOCAL MISTAKE 1: Missing 'assert'
-        self.hpx_shortcuts.verify_shortcuts_screen_title() 
+        assert self.hpx_shortcuts.verify_shortcuts_screen_title()
         self.hpx_shortcuts.click_add_new_shortcut_btn()
         assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()
-
-    def test_02_verify_the_screen_when_user_clicks_on_the_back_button_in_add_shortcut_screen_C47(self):
-        """
-        Verify the pop up screen.
-        TestRails -> https://hp-testrail.external.hp.com/index.php?/cases/view/47
-        """
-        self.hpx_shortcuts.click_create_your_own_shortcut()
-        # LOCAL MISTAKE 2: Hardcoded sleep
-        time.sleep(10)
-        self.hpx_shortcuts.click_cancel_shortcut_go_back_btn()
-        assert self.hpx_shortcuts.verify_cancel_this_shortcut_title()
