@@ -1,261 +1,117 @@
 {
-  "Audio.py": {
-    "class_name": "Audio",
-    "base_class": "HPXRebrandingFlow",
-    "locators": ["flow_name"],
-    "summary": "The Audio class is a comprehensive Page Object Model (POM) designed for automated testing of HP Audio Control features on Windows platforms. It extends HPXRebrandingFlow and provides robust automation capabilities for audio configuration and validation. Key functionalities include: (1) Audio Presets Management - supports multiple audio profiles (Music, Movie, Voice, RPG, Shooter, Strategy, Auto) for different use cases, (2) AI-Powered Audio Enhancement - includes AI noise removal and reduction toggles for improved audio quality, (3) Device Management - handles input/output device selection and volume control with slider-based adjustments, (4) Equalizer Controls - provides precise EQ slider adjustments across multiple frequency bands for audio customization, (5) Microphone Modes - supports Conference, Personal, and Studio Recording modes for various recording scenarios, (6) Advanced Audio Settings - includes speaker swap, adaptive audio, and external speaker configuration options, (7) Application-Specific Profiles - manages audio profiles for individual applications, (8) MEP Integration - integrates with Microsoft Effects Platform for enhanced audio processing, (9) DTS Sound Unbound - supports DTS audio technology features, (10) Multistreaming - enables simultaneous audio stream management, (11) Notification System - handles audio change notifications and user alerts. The class leverages Selenium WebDriver for UI automation, implements screenshot comparison decorators for visual validation, uses retry logic with intelligent scrolling for element visibility, and provides SSH command execution for application installation via Windows Task Scheduler. Implementation patterns include conditional element state checking (on/off toggles), keyboard-based navigation for sliders (LEFT/RIGHT/UP/DOWN arrow keys), timeout-based waits for element availability, and device-specific locators supporting multiple hardware configurations (Willie Robotics, Gidget, Arti, Thompson, London, Divinity, Snowball, Quardo, DTS platforms).",
+  "accessibility.py": {
     "methods": [
       {
-        "method_name": "verify_audio_control_card_show_up",
-        "description": "Verifies if the audio control card is displayed on the home page.",
+        "method_name": "dismiss_open_windows_overlays",
+        "method_description": "Dismiss any open Windows overlays (Start menu, search box)",
         "method_input_parameter": [],
-        "method_output_parameter": "Boolean",
-        "method_purpose": "Validates the visibility of the audio control card element on the home page by checking if the audio_card_on_home_page element is displayed within a 10-second timeout period. Returns True if the element is visible, False otherwise."
+        "method_output_parameter": "null",
+        "method_purpose": "Checks the toggle state of Windows Start menu and search bar, and closes them if they are open to prepare a clean desktop state."
       },
       {
-        "method_name": "click_audio_control_card",
-        "description": "Clicks on the audio control card element to navigate to audio settings.",
+        "method_name": "click_start_menu_button",
+        "method_description": "Clicks the Windows Start menu button",
         "method_input_parameter": [],
-        "method_output_parameter": null,
-        "method_purpose": "Performs a click action on the audio_card_on_home_page element to open the audio control interface and access detailed audio configuration options."
+        "method_output_parameter": "null",
+        "method_purpose": "Waits for the Start menu button to be available and clicks it to open the Start menu."
       },
       {
-        "method_name": "verify_audio_presets_title_show_up",
-        "description": "Verifies if the audio presets title is visible on the page, with automatic scrolling if needed.",
+        "method_name": "click_apps_button",
+        "method_description": "Clicks the Apps button in Windows settings",
         "method_input_parameter": [],
-        "method_output_parameter": "Boolean",
-        "method_purpose": "Checks the visibility of the audio_presets_title element. If the eq_title element is not found, the method automatically scrolls down the page to locate the audio presets section. Returns True if the title is visible, False otherwise."
+        "method_output_parameter": "null",
+        "method_purpose": "Waits for the Apps button to be available and clicks it to navigate to the Apps section."
       },
       {
-        "method_name": "search_apps_on_search_frame",
-        "description": "Searches for applications by name using the search frame interface.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "app_name",
-            "default_value": null,
-            "parameter_purpose": "The name of the application to search for in the search frame"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Activates the search frame by clicking on it, then sends the specified application name as keyboard input to search for and locate the desired application within the audio control interface."
-      },
-      {
-        "method_name": "set_audio_output_slider_value_decrease",
-        "description": "Decreases the audio output slider value to a specified target level.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "value",
-            "default_value": null,
-            "parameter_purpose": "The target value to decrease the audio output slider to (must be lower than current value)"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Decreases the output volume slider by calculating the difference between the current slider value and the target value, then sends the appropriate number of LEFT arrow key presses to reach the desired volume level."
-      },
-      {
-        "method_name": "set_audio_output_slider_value_increase",
-        "description": "Increases the audio output slider value to a specified target level.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "value",
-            "default_value": null,
-            "parameter_purpose": "The target value to increase the audio output slider to (must be higher than current value)"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Increases the output volume slider by calculating the difference between the current slider value and the target value, then sends the appropriate number of RIGHT arrow key presses to reach the desired volume level."
-      },
-      {
-        "method_name": "set_audio_input_slider_value_decrease",
-        "description": "Decreases the audio input slider value to a specified target level.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "value",
-            "default_value": null,
-            "parameter_purpose": "The target value to decrease the audio input slider to (must be lower than current value)"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Decreases the input volume slider (microphone/recording level) by sending the appropriate number of LEFT arrow key presses to reach the specified target value."
-      },
-      {
-        "method_name": "set_audio_input_slider_value_increase",
-        "description": "Increases the audio input slider value to a specified target level.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "value",
-            "default_value": null,
-            "parameter_purpose": "The target value to increase the audio input slider to (must be higher than current value)"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Increases the input volume slider (microphone/recording level) by sending the appropriate number of RIGHT arrow key presses to reach the specified target value."
-      },
-      {
-        "method_name": "launch_windows_app",
-        "description": "Launches a Windows application by name using the Windows search functionality.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "app_name",
-            "default_value": null,
-            "parameter_purpose": "The name of the Windows application to launch (e.g., 'Calculator', 'Notepad')"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Opens the Windows search bar, types the specified application name, and presses ENTER twice to launch the application. This method is used to start external applications for audio testing scenarios."
-      },
-      {
-        "method_name": "set_eq_slider_value_decrease",
-        "description": "Decreases the equalizer (EQ) slider value for a specified frequency band element.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "element",
-            "default_value": null,
-            "parameter_purpose": "The element identifier for the specific EQ slider (frequency band) to adjust"
-          },
-          {
-            "parameter_name": "value",
-            "default_value": null,
-            "parameter_purpose": "The target value to decrease the EQ slider to (must be lower than current value)"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Decreases the specified EQ slider by sending the appropriate number of DOWN arrow key presses to reach the target value, allowing precise control over individual frequency band levels."
-      },
-      {
-        "method_name": "set_eq_slider_value_increase",
-        "description": "Increases the equalizer (EQ) slider value for a specified frequency band element.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "element",
-            "default_value": null,
-            "parameter_purpose": "The element identifier for the specific EQ slider (frequency band) to adjust"
-          },
-          {
-            "parameter_name": "value",
-            "default_value": null,
-            "parameter_purpose": "The target value to increase the EQ slider to (must be higher than current value)"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Increases the specified EQ slider by calculating the difference between current and target values, then sends the appropriate number of UP arrow key presses to reach the desired frequency band level."
-      },
-      {
-        "method_name": "get_eq_slider_value",
-        "description": "Retrieves the current value of an equalizer (EQ) slider element.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "element",
-            "default_value": null,
-            "parameter_purpose": "The element identifier for the specific EQ slider (frequency band) to query"
-          }
-        ],
-        "method_output_parameter": "String",
-        "method_purpose": "Retrieves and returns the current value of the specified EQ slider by accessing the Value.Value attribute of the element, enabling validation and comparison of EQ settings."
-      },
-      {
-        "method_name": "install_audio_standalone_app_by_task_scheduler",
-        "description": "Installs the HP Audio Control standalone application using Windows Task Scheduler automation.",
+        "method_name": "click_installed_apps_button",
+        "method_description": "Clicks the Installed Apps button",
         "method_input_parameter": [],
-        "method_output_parameter": null,
-        "method_purpose": "Creates a scheduled task in Windows Task Scheduler that executes a PowerShell script to install the HPAudioControl application. The method waits for the installation to complete, then automatically deletes the scheduled task to clean up the system."
+        "method_output_parameter": "null",
+        "method_purpose": "Waits for the Installed Apps button to be available and clicks it to view installed applications."
       },
       {
-        "method_name": "verify_output_title_show_up_image",
-        "description": "Verifies the output title visibility using image-based screenshot comparison.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "machine_name",
-            "default_value": null,
-            "parameter_purpose": "The name of the machine/platform for screenshot baseline comparison"
-          },
-          {
-            "parameter_name": "page_number",
-            "default_value": null,
-            "parameter_purpose": "The page number identifier for screenshot comparison context"
-          },
-          {
-            "parameter_name": "element",
-            "default_value": null,
-            "parameter_purpose": "The specific element to verify in the screenshot comparison"
-          },
-          {
-            "parameter_name": "text_size",
-            "default_value": "100",
-            "parameter_purpose": "The text size parameter (percentage) used for screenshot comparison tolerance"
-          },
-          {
-            "parameter_name": "raise_e",
-            "default_value": "True",
-            "parameter_purpose": "Boolean flag indicating whether to raise an exception on verification failure"
-          }
-        ],
-        "method_output_parameter": "Boolean",
-        "method_purpose": "A decorated method that verifies the output_title element visibility by comparing screenshots against baseline images. Returns True if the element matches the expected appearance, False otherwise. Can optionally raise exceptions on failure based on the raise_e parameter."
+        "method_name": "click_search_for_installed_apps",
+        "method_description": "Searches for HP apps in the installed apps list",
+        "method_input_parameter": [],
+        "method_output_parameter": "null",
+        "method_purpose": "Clicks the search bar for apps, waits for it to be available, and types 'HP' to search for HP-related applications."
       },
       {
-        "method_name": "verify_output_title_show_up_color",
-        "description": "Verifies the output title visibility using color-based screenshot comparison.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "machine_name",
-            "default_value": null,
-            "parameter_purpose": "The name of the machine/platform for screenshot baseline comparison"
-          },
-          {
-            "parameter_name": "page_number",
-            "default_value": null,
-            "parameter_purpose": "The page number identifier for screenshot comparison context"
-          },
-          {
-            "parameter_name": "element",
-            "default_value": null,
-            "parameter_purpose": "The specific element to verify in the screenshot comparison"
-          },
-          {
-            "parameter_name": "color",
-            "default_value": "100",
-            "parameter_purpose": "The color parameter (percentage) used for screenshot comparison tolerance"
-          },
-          {
-            "parameter_name": "raise_e",
-            "default_value": "True",
-            "parameter_purpose": "Boolean flag indicating whether to raise an exception on verification failure"
-          }
-        ],
-        "method_output_parameter": "Object",
-        "method_purpose": "A decorated method that waits for the element to appear and verifies its visibility using color-based screenshot comparison. This method is useful for validating UI elements where color accuracy is critical, such as theme changes or visual state indicators."
+        "method_name": "verify_hp_app_icon_in_windows_settings",
+        "method_description": "Verifies the HP app icon is visible in Windows settings",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean or WebElement indicating presence of HP app icon",
+        "method_purpose": "Scrolls to the HP app icon element and waits for it to be visible, returning the element or verification status."
       },
       {
-        "method_name": "verify_output_title_show_up_system_mode",
-        "description": "Verifies the output title visibility in different system modes (e.g., light/dark theme) using screenshot comparison.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "mode",
-            "default_value": null,
-            "parameter_purpose": "The system mode (e.g., 'light', 'dark') for screenshot baseline comparison"
-          }
-        ],
-        "method_output_parameter": "Object",
-        "method_purpose": "A decorated method that verifies the output_title element appearance in the specified system mode by comparing screenshots against mode-specific baselines. This ensures UI consistency across different system themes and display modes."
+        "method_name": "click_hp_app_icon_in_windows_settings",
+        "method_description": "Clicks the HP app icon in Windows settings",
+        "method_input_parameter": [],
+        "method_output_parameter": "null",
+        "method_purpose": "Waits for the HP app icon to be available and clicks it to open HP app settings."
       },
       {
-        "method_name": "wait_and_verify_dts_logo_on_tower",
-        "description": "Waits for and verifies the DTS logo visibility on tower systems using screenshot comparison.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "machine_name",
-            "default_value": null,
-            "parameter_purpose": "The name of the tower machine/platform for screenshot baseline comparison"
-          },
-          {
-            "parameter_name": "raise_e",
-            "default_value": "True",
-            "parameter_purpose": "Boolean flag indicating whether to raise an exception on verification failure"
-          }
-        ],
-        "method_output_parameter": "Object",
-        "method_purpose": "A decorated method with a 0.2 pass ratio tolerance that waits for the dts_logo_on_tower element to appear and verifies its presence through screenshot comparison. This method is specifically designed for DTS-enabled tower systems and accounts for potential rendering variations."
+        "method_name": "verify_myhp_app_icon_on_taskbar",
+        "method_description": "Verifies the myHP app icon is present on the taskbar",
+        "method_input_parameter": [],
+        "method_output_parameter": "null",
+        "method_purpose": "Waits for the myHP app icon to be visible on the Windows taskbar to confirm it is pinned."
+      },
+      {
+        "method_name": "click_library_button_on_msstore",
+        "method_description": "Clicks the Library button on Microsoft Store",
+        "method_input_parameter": [],
+        "method_output_parameter": "null",
+        "method_purpose": "Clicks the Library button in the Microsoft Store with a 30-second timeout to access the app library."
+      },
+      {
+        "method_name": "click_myhp_app_icon_on_taskbar",
+        "method_description": "Clicks the myHP app icon on the taskbar",
+        "method_input_parameter": [],
+        "method_output_parameter": "null",
+        "method_purpose": "Clicks the myHP app icon on the Windows taskbar to launch or bring focus to the application."
+      },
+      {
+        "method_name": "hover_to_maximize_button",
+        "method_description": "Hovers over the maximize button",
+        "method_input_parameter": [],
+        "method_output_parameter": "null",
+        "method_purpose": "Hovers over the maximize button and waits for it to be visible, typically used to reveal window controls."
+      },
+      {
+        "method_name": "verify_myhp_pinned_to_start_menu",
+        "method_description": "Verifies myHP app is pinned to the Start menu",
+        "method_input_parameter": [],
+        "method_output_parameter": "null",
+        "method_purpose": "Opens the Start menu, verifies the myHP app icon is present, and closes the Start menu to confirm the app is pinned."
+      },
+      {
+        "method_name": "click_unpin_hp_from_start_menu",
+        "method_description": "Unpins HP app from the Start menu",
+        "method_input_parameter": [],
+        "method_output_parameter": "null",
+        "method_purpose": "Checks if the unpin option is available and clicks it to remove the HP app from the Start menu."
+      },
+      {
+        "method_name": "verify_scroll_bar",
+        "method_description": "Verifies the scroll bar is present",
+        "method_input_parameter": [],
+        "method_output_parameter": "null",
+        "method_purpose": "Waits for the scroll bar element to be visible to confirm scrollable content is available."
+      },
+      {
+        "method_name": "click_scroll_bar",
+        "method_description": "Clicks the scroll bar",
+        "method_input_parameter": [],
+        "method_output_parameter": "null",
+        "method_purpose": "Clicks the scroll bar element with a 10-second timeout to interact with scrollable content."
+      },
+      {
+        "method_name": "refresh_btn_is_disabled",
+        "method_description": "Checks if the refresh button is disabled",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean - True if refresh button exists, False otherwise",
+        "method_purpose": "Waits for the refresh button without raising an exception and returns True if found, False if not found, to determine button state."
       }
     ]
   }
