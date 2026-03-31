@@ -6,129 +6,31 @@
     "methods": [
       {
         "method_name": "verify_audio_control_card_show_up",
-        "description": "Verifies if the audio control card is displayed on the home page",
-        "method_input_parameter": [],
-        "method_output_parameter": "boolean",
-        "method_purpose": "Waits for the audio card element to appear on the home page within a 10-second timeout and checks its presence."
+        "description": "Verifies if the audio control card is displayed on the home page.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Reference to the instance of the Audio class. Required for method execution."
+          }
+        ],
+        "method_output_parameter": "Returns True if the audio control card is found on the home page within 10 seconds, otherwise returns False.",
+        "method_purpose": "Checks the visibility of the audio control card UI element on the home page using a 10-second timeout to determine if the element is present."
       },
       {
         "method_name": "click_audio_control_card",
-        "description": "Clicks on the audio control card element",
-        "method_input_parameter": [],
-        "method_output_parameter": "None",
-        "method_purpose": "Performs a click action on the audio card element located on the home page."
-      },
-      {
-        "method_name": "verify_audio_control_screen",
-        "description": "Verifies the audio control screen is displayed",
-        "method_input_parameter": [],
-        "method_output_parameter": "boolean",
-        "method_purpose": "Checks if the audio control screen element is present within a 10-second timeout."
-      },
-      {
-        "method_name": "verify_audio_control_screen_title",
-        "description": "Verifies the title text on the audio control screen",
-        "method_input_parameter": [],
-        "method_output_parameter": "boolean",
-        "method_purpose": "Validates that the audio control screen title matches the expected text from the string map for internationalization support."
-      },
-      {
-        "method_name": "verify_audio_control_screen_body",
-        "description": "Verifies the body text on the audio control screen",
-        "method_input_parameter": [],
-        "method_output_parameter": "boolean",
-        "method_purpose": "Validates that the audio control screen body text matches the expected text from the string map for internationalization support."
-      },
-      {
-        "method_name": "verify_audio_control_screen_learn_more_link",
-        "description": "Verifies the learn more link is present on audio control screen",
-        "method_input_parameter": [],
-        "method_output_parameter": "boolean",
-        "method_purpose": "Checks if the 'Learn More' link element exists on the audio control screen."
-      },
-      {
-        "method_name": "click_audio_control_screen_learn_more_link",
-        "description": "Clicks the learn more link on audio control screen",
-        "method_input_parameter": [],
-        "method_output_parameter": "None",
-        "method_purpose": "Performs a click action on the 'Learn More' link element on the audio control screen."
-      },
-      {
-        "method_name": "verify_audio_control_screen_close_btn",
-        "description": "Verifies the close button is present on audio control screen",
-        "method_input_parameter": [],
-        "method_output_parameter": "boolean",
-        "method_purpose": "Checks if the close button element exists on the audio control screen."
-      },
-      {
-        "method_name": "click_audio_control_screen_close_btn",
-        "description": "Clicks the close button on audio control screen",
-        "method_input_parameter": [],
-        "method_output_parameter": "None",
-        "method_purpose": "Performs a click action on the close button element on the audio control screen."
-      },
-      {
-        "method_name": "verify_audio_control_screen_dismiss",
-        "description": "Verifies the audio control screen is dismissed/not visible",
-        "method_input_parameter": [],
-        "method_output_parameter": "boolean",
-        "method_purpose": "Checks that the audio control screen element is no longer present within a 10-second timeout."
-      },
-      {
-        "method_name": "verify_audio_control_screen_toggle_btn",
-        "description": "Verifies the toggle button is present on audio control screen",
-        "method_input_parameter": [],
-        "method_output_parameter": "boolean",
-        "method_purpose": "Checks if the toggle button element exists on the audio control screen."
-      },
-      {
-        "method_name": "get_audio_control_screen_toggle_btn_status",
-        "description": "Gets the current status of the audio control toggle button",
-        "method_input_parameter": [],
-        "method_output_parameter": "string",
-        "method_purpose": "Retrieves the current status attribute value of the toggle button on the audio control screen."
-      },
-      {
-        "method_name": "click_audio_control_screen_toggle_btn",
-        "description": "Clicks the toggle button on audio control screen",
-        "method_input_parameter": [],
-        "method_output_parameter": "None",
-        "method_purpose": "Performs a click action on the toggle button element on the audio control screen."
-      },
-      {
-        "method_name": "verify_audio_control_screen_toggle_btn_status",
-        "description": "Verifies the toggle button status matches expected value",
+        "description": "Clicks on the audio control card element on the home page.",
         "method_input_parameter": [
           {
-            "parameter_name": "status",
-            "default_value": "None",
-            "parameter_purpose": "Expected status value to verify against (e.g., 'On' or 'Off')."
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Reference to the instance of the Audio class. Required for method execution."
           }
         ],
-        "method_output_parameter": "boolean",
-        "method_purpose": "Compares the actual toggle button status with the expected status parameter provided."
-      },
-      {
-        "method_name": "verify_audio_control_card_status",
-        "description": "Verifies the audio control card status matches expected value",
-        "method_input_parameter": [
-          {
-            "parameter_name": "status",
-            "default_value": "None",
-            "parameter_purpose": "Expected status value to verify against (e.g., 'On' or 'Off')."
-          }
-        ],
-        "method_output_parameter": "boolean",
-        "method_purpose": "Compares the actual audio card status with the expected status parameter provided."
-      },
-      {
-        "method_name": "verify_audio_control_card_status_invisible",
-        "description": "Verifies the audio control card status is not visible",
-        "method_input_parameter": [],
-        "method_output_parameter": "boolean",
-        "method_purpose": "Checks that the audio card status element is not present within a 10-second timeout."
+        "method_output_parameter": null,
+        "method_purpose": "Performs a click action on the audio control card UI element on the home page to trigger the associated functionality."
       }
     ],
-    "summary": "The Audio class models the HP Experience (HPX) rebranding audio control features for test automation. It provides a structured set of methods for verifying and interacting with audio control cards and screens, including element presence checks, click actions, status validation for toggle buttons and cards, and text validation against string maps for internationalization. The class follows the page object model, separating UI element interaction from state verification, and includes comprehensive methods for screen dismissal and navigation via the learn more link."
+    "summary": "Audio page class for HP Experience rebranding audio control testing.\n\n- Inherits from HPXRebrandingFlow.\n- Implements Selenium WebDriver interactions for audio control card elements.\n- Uses explicit 10-second timeout for element visibility verification.\n- Separates verification and interaction methods following the Page Object Model pattern.\n- Supports visual regression testing via screenshot_compare decorator.\n- Integrates SSH and Windows utilities for cross-platform or remote testing.\n- Class attribute flow_name='audio' organizes tests by flow."
   }
 }
