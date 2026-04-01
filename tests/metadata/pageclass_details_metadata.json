@@ -1,139 +1,203 @@
 {
-  "AddDevice.py": {
+  "add_device.py": {
     "methods": [
       {
-        "method_name": "__init__",
-        "method_description": "Initializes the AddDevice class instance.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "self",
-            "default_value": null,
-            "parameter_purpose": "Instance reference"
-          },
-          {
-            "parameter_name": "driver",
-            "default_value": null,
-            "parameter_purpose": "WebDriver instance for browser automation"
-          }
-        ],
-        "method_output_parameter": "None",
-        "method_purpose": "Constructs and initializes the AddDevice page object by invoking the parent HPXRebrandingFlow class constructor with the provided WebDriver instance, setting up the necessary foundation for device addition workflows."
+        "method_name": "verify_add_device_page",
+        "method_description": "Verifies the add device page elements are visible.",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean (True if all elements are visible, False otherwise)",
+        "method_purpose": "Waits for and verifies the presence of key add device page elements including sidebar, title, printer section, and missing device section."
       },
       {
-        "method_name": "select_add_device",
-        "method_description": "Select Add Device from Home screen.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "self",
-            "default_value": null,
-            "parameter_purpose": "Instance reference"
-          },
-          {
-            "parameter_name": "tile",
-            "default_value": "TEST_DATA.TILE_1",
-            "parameter_purpose": "Specifies which tile to use for adding device"
-          }
-        ],
-        "method_output_parameter": "None",
-        "method_purpose": "Initiates the device addition workflow by navigating from the Home screen to the Add Device interface through interaction with the specified tile element, defaulting to TILE_1 if no tile parameter is provided."
+        "method_name": "verify_open_hp_smart_link",
+        "method_description": "Verifies the open HP Smart link is visible.",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean or object reference",
+        "method_purpose": "Waits for and returns the open HP Smart link element."
       },
       {
-        "method_name": "verify_add_device_screen",
-        "method_description": "Verify Add Device screen.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "self",
-            "default_value": null,
-            "parameter_purpose": "Instance reference"
-          }
-        ],
-        "method_output_parameter": "None",
-        "method_purpose": "Performs validation checks to ensure the Add Device screen has loaded correctly and displays all expected UI elements, confirming successful navigation to the device addition interface."
+        "method_name": "verify_microsoft_store_opened",
+        "method_description": "Verifies the Microsoft Store window is opened.",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean or object reference",
+        "method_purpose": "Waits for and returns the Microsoft Store element to confirm it has opened."
       },
       {
-        "method_name": "select_printer_setup_option",
-        "method_description": "Select printer setup option.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "self",
-            "default_value": null,
-            "parameter_purpose": "Instance reference"
-          },
-          {
-            "parameter_name": "option",
-            "default_value": null,
-            "parameter_purpose": "The printer setup option to select"
-          }
-        ],
-        "method_output_parameter": "None",
-        "method_purpose": "Facilitates the printer configuration process by selecting a designated setup option from the available printer setup choices presented on the Add Device screen, enabling users to proceed with their preferred setup method."
+        "method_name": "verify_search_by_serial_number_btn",
+        "method_description": "Verifies the search by serial number button is visible.",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean or object reference",
+        "method_purpose": "Waits for and returns the search by serial number button element."
       },
       {
-        "method_name": "verify_printer_setup_screen",
-        "method_description": "Verify Printer Setup screen.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "self",
-            "default_value": null,
-            "parameter_purpose": "Instance reference"
-          }
-        ],
-        "method_output_parameter": "None",
-        "method_purpose": "Validates that the Printer Setup screen has rendered properly with all required UI components visible and accessible, ensuring the user can proceed with printer configuration."
+        "method_name": "verify_serial_number_textbox",
+        "method_description": "Verifies the serial number textbox is visible.",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean or object reference",
+        "method_purpose": "Waits for and returns the serial number textbox element."
       },
       {
-        "method_name": "select_printer",
-        "method_description": "Select printer from list.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "self",
-            "default_value": null,
-            "parameter_purpose": "Instance reference"
-          },
-          {
-            "parameter_name": "printer_name",
-            "default_value": null,
-            "parameter_purpose": "Name of the printer to select from the list"
-          }
-        ],
-        "method_output_parameter": "None",
-        "method_purpose": "Identifies and selects a target printer from the displayed list of available printers by matching the provided printer name, enabling the user to proceed with connecting the specific device."
+        "method_name": "verify_need_help_finding_your_serial_number_link",
+        "method_description": "Verifies the help link for finding serial number is visible.",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean or object reference",
+        "method_purpose": "Waits for and returns the help link element for finding serial numbers."
       },
       {
-        "method_name": "verify_printer_connected",
-        "method_description": "Verify printer is connected.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "self",
-            "default_value": null,
-            "parameter_purpose": "Instance reference"
-          },
-          {
-            "parameter_name": "printer_name",
-            "default_value": null,
-            "parameter_purpose": "Name of the printer to verify connection status"
-          }
-        ],
-        "method_output_parameter": "None",
-        "method_purpose": "Confirms successful printer connection by verifying that the specified printer appears on the Home screen with an active connection status, validating the completion of the device addition workflow."
+        "method_name": "verify_add_a_device_back_btn",
+        "method_description": "Verifies the back button on add device page is visible.",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean or object reference",
+        "method_purpose": "Waits for and returns the back button element on the add device page."
       },
       {
-        "method_name": "verify_add_device_button",
-        "method_description": "Verify Add Device button is visible.",
+        "method_name": "verify_close_button_on_add_device_page",
+        "method_description": "Verifies the close button on add device page is visible.",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean or object reference",
+        "method_purpose": "Waits for and returns the close button element on the add device page."
+      },
+      {
+        "method_name": "verify_add_printer_content",
+        "method_description": "Verifies the add printer content section is visible.",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean or object reference",
+        "method_purpose": "Waits for and returns the add printer content element."
+      },
+      {
+        "method_name": "verify_missing_device_content",
+        "method_description": "Verifies the missing device content section is visible.",
         "method_input_parameter": [
           {
-            "parameter_name": "self",
-            "default_value": null,
-            "parameter_purpose": "Instance reference"
-          },
-          {
-            "parameter_name": "tile",
-            "default_value": "TEST_DATA.TILE_1",
-            "parameter_purpose": "Specifies which tile to check for Add Device button"
+            "parameter_name": "timeout",
+            "default_value": "15",
+            "parameter_purpose": "Specifies the maximum wait time in seconds for the element to appear."
           }
         ],
-        "method_output_parameter": "None",
-        "method_purpose": "Validates the presence and visibility of the Add Device button on the designated tile of the Home screen, ensuring users have access to the device addition functionality from the specified location."
+        "method_output_parameter": "Boolean or object reference",
+        "method_purpose": "Waits for and returns the missing device content element with a configurable timeout."
+      },
+      {
+        "method_name": "verify_hp_smart_text",
+        "method_description": "Verifies the HP Smart text is visible.",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean or object reference",
+        "method_purpose": "Waits for and returns the HP Smart text element."
+      },
+      {
+        "method_name": "verify_hp_smart_open_btn",
+        "method_description": "Verifies the HP Smart open button is visible.",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean or object reference",
+        "method_purpose": "Waits for and returns the HP Smart open button element."
+      },
+      {
+        "method_name": "verify_newly_added_devicename",
+        "method_description": "Verifies the newly added device name card is visible.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "raise_e",
+            "default_value": "False",
+            "parameter_purpose": "Determines whether to raise an exception if the element is not found."
+          }
+        ],
+        "method_output_parameter": "Boolean or object reference",
+        "method_purpose": "Waits for and returns the newly added device card name element with a 10-second timeout."
+      },
+      {
+        "method_name": "input_enter_product_number",
+        "method_description": "Enters a product number into the product number textbox.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "product_number",
+            "default_value": null,
+            "parameter_purpose": "The product number string to be entered into the textbox."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Sends keystrokes to input the specified product number into the product number textbox."
+      },
+      {
+        "method_name": "verify_product_number_textbox",
+        "method_description": "Verifies the product number textbox is visible.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "raise_e",
+            "default_value": "False",
+            "parameter_purpose": "Determines whether to raise an exception if the element is not found."
+          }
+        ],
+        "method_output_parameter": "Boolean or object reference",
+        "method_purpose": "Waits for and returns the product number textbox element with a 10-second timeout."
+      },
+      {
+        "method_name": "click_open_hp_smart_link",
+        "method_description": "Clicks the open HP Smart link.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Performs a click action on the open HP Smart link element with a 10-second timeout."
+      },
+      {
+        "method_name": "click_search_by_serial_number_btn",
+        "method_description": "Clicks the search by serial number button.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Performs a click action on the search by serial number button with a 10-second timeout."
+      },
+      {
+        "method_name": "click_need_help_finding_your_serial_number_link",
+        "method_description": "Clicks the help link for finding serial number.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Performs a click action on the help link for finding serial numbers with a 10-second timeout."
+      },
+      {
+        "method_name": "click_add_a_device_back_btn",
+        "method_description": "Clicks the back button on add device page.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Performs a click action on the back button to navigate away from the add device page with a 10-second timeout."
+      },
+      {
+        "method_name": "click_close_button_on_add_device_page",
+        "method_description": "Clicks the close button on add device page.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Performs a click action on the close button to dismiss the add device page with a 10-second timeout."
+      },
+      {
+        "method_name": "click_close_microsoft_store",
+        "method_description": "Clicks the close button on Microsoft Store window.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Performs a click action to close the Microsoft Store window with a 10-second timeout."
+      },
+      {
+        "method_name": "input_enter_serial_number",
+        "method_description": "Enters a serial number into the serial number textbox.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "serial_number",
+            "default_value": null,
+            "parameter_purpose": "The serial number string to be entered into the textbox."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Sends keystrokes to input the specified serial number into the serial number textbox."
+      },
+      {
+        "method_name": "get_entered_serial_number",
+        "method_description": "Retrieves the entered serial number from the textbox.",
+        "method_input_parameter": [],
+        "method_output_parameter": "String (the value of the serial number textbox)",
+        "method_purpose": "Gets the Value.Value attribute from the serial number textbox to retrieve the entered serial number."
+      },
+      {
+        "method_name": "click_add_device_hyperlink",
+        "method_description": "Clicks the add device hyperlink.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Performs a click action on the add device hyperlink with a 10-second timeout."
       }
     ]
   }
