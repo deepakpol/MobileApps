@@ -1,1 +1,226 @@
-[{"class_name": "Audio", "base_class": "HPXRebrandingFlow", "locators": ["flow_name"], "methods": [{"method_name": "verify_audio_control_card_show_up", "description": "Verifies if the audio control card is displayed on the home page.", "method_input_parameter": null, "method_output_parameter": "Boolean", "method_purpose": "Checks visibility of audio card element with 10 second timeout"}, {"method_name": "click_audio_control_card", "description": "Clicks on the audio control card on the home page.", "method_input_parameter": null, "method_output_parameter": null, "method_purpose": "Performs click action on audio card element"}, {"method_name": "verify_audio_presets_title_show_up", "description": "Verifies if the audio presets title is visible, with scrolling if needed.", "method_input_parameter": null, "method_output_parameter": "Boolean", "method_purpose": "Checks visibility of audio presets title with conditional scrolling logic"}, {"method_name": "get_restore_default_button_text", "description": "Gets the text attribute of the restore defaults button.", "method_input_parameter": null, "method_output_parameter": "String", "method_purpose": "Retrieves the Name attribute from restore defaults button element"}, {"method_name": "search_apps_on_search_frame", "description": "Searches for applications by name in the search frame.", "method_input_parameter": [{"parameter_name": "app_name", "default_value": null, "parameter_purpose": "Name of the application to search for"}], "method_output_parameter": null, "method_purpose": "Clicks search frame and sends keys to search for specified application"}, {"method_name": "set_audio_output_slider_value_decrease", "description": "Decreases the audio output slider value to a specified level.", "method_input_parameter": [{"parameter_name": "value", "default_value": null, "parameter_purpose": "Target value to decrease the slider to"}], "method_output_parameter": null, "method_purpose": "Adjusts output volume slider by sending LEFT key presses to decrease value"}, {"method_name": "set_audio_output_slider_value_increase", "description": "Increases the audio output slider value to a specified level.", "method_input_parameter": [{"parameter_name": "value", "default_value": null, "parameter_purpose": "Target value to increase the slider to"}], "method_output_parameter": null, "method_purpose": "Adjusts output volume slider by sending RIGHT key presses to increase value"}, {"method_name": "set_audio_input_slider_value_decrease", "description": "Decreases the audio input slider value to a specified level.", "method_input_parameter": [{"parameter_name": "value", "default_value": null, "parameter_purpose": "Target value to decrease the slider to"}], "method_output_parameter": null, "method_purpose": "Adjusts input volume slider by sending LEFT key presses to decrease value"}, {"method_name": "set_audio_input_slider_value_increase", "description": "Increases the audio input slider value to a specified level.", "method_input_parameter": [{"parameter_name": "value", "default_value": null, "parameter_purpose": "Target value to increase the slider to"}], "method_output_parameter": null, "method_purpose": "Adjusts input volume slider by sending RIGHT key presses to increase value"}, {"method_name": "launch_windows_app", "description": "Launches a Windows application by name using search bar.", "method_input_parameter": [{"parameter_name": "app_name", "default_value": null, "parameter_purpose": "Name of the Windows application to launch"}], "method_output_parameter": null, "method_purpose": "Opens Windows search, types app name, and presses ENTER to launch application"}, {"method_name": "set_eq_slider_value_decrease", "description": "Decreases an EQ slider value to a specified level.", "method_input_parameter": [{"parameter_name": "element", "default_value": null, "parameter_purpose": "Element identifier for the EQ slider"}, {"parameter_name": "value", "default_value": null, "parameter_purpose": "Target value to decrease the slider to"}], "method_output_parameter": null, "method_purpose": "Adjusts EQ slider by sending DOWN key presses to decrease value"}, {"method_name": "set_eq_slider_value_increase", "description": "Increases an EQ slider value to a specified level.", "method_input_parameter": [{"parameter_name": "element", "default_value": null, "parameter_purpose": "Element identifier for the EQ slider"}, {"parameter_name": "value", "default_value": null, "parameter_purpose": "Target value to increase the slider to"}], "method_output_parameter": null, "method_purpose": "Adjusts EQ slider by sending UP key presses to increase value"}, {"method_name": "get_eq_slider_value", "description": "Gets the current value of an EQ slider.", "method_input_parameter": [{"parameter_name": "element", "default_value": null, "parameter_purpose": "Element identifier for the EQ slider"}], "method_output_parameter": "String", "method_purpose": "Retrieves the Value.Value attribute from specified EQ slider element"}, {"method_name": "install_audio_standalone_app_by_task_scheduler", "description": "Installs HP Audio Control app using Windows Task Scheduler.", "method_input_parameter": null, "method_output_parameter": null, "method_purpose": "Creates and runs a scheduled task to install HPAudioControl application via PowerShell script"}, {"method_name": "verify_output_title_show_up_image", "description": "Verifies output title visibility with screenshot comparison.", "method_input_parameter": [{"parameter_name": "machine_name", "default_value": null, "parameter_purpose": "Name of the machine for screenshot comparison"}, {"parameter_name": "page_number", "default_value": null, "parameter_purpose": "Page number for screenshot identification"}, {"parameter_name": "element", "default_value": null, "parameter_purpose": "Element to verify"}, {"parameter_name": "text_size", "default_value": "100", "parameter_purpose": "Text size parameter for comparison"}, {"parameter_name": "raise_e", "default_value": "True", "parameter_purpose": "Whether to raise exception on failure"}], "method_output_parameter": "Boolean", "method_purpose": "Decorated method that performs screenshot comparison for output title element"}, {"method_name": "verify_output_title_show_up_color", "description": "Verifies output title color with screenshot comparison.", "method_input_parameter": [{"parameter_name": "machine_name", "default_value": null, "parameter_purpose": "Name of the machine for screenshot comparison"}, {"parameter_name": "page_number", "default_value": null, "parameter_purpose": "Page number for screenshot identification"}, {"parameter_name": "element", "default_value": null, "parameter_purpose": "Element to verify"}, {"parameter_name": "color", "default_value": "100", "parameter_purpose": "Color parameter for comparison"}, {"parameter_name": "raise_e", "default_value": "True", "parameter_purpose": "Whether to raise exception on failure"}], "method_output_parameter": "WebElement", "method_purpose": "Decorated method that performs color-based screenshot comparison for element"}, {"method_name": "verify_output_title_show_up_system_mode", "description": "Verifies output title in different system modes with screenshot comparison.", "method_input_parameter": [{"parameter_name": "mode", "default_value": null, "parameter_purpose": "System mode for screenshot comparison"}], "method_output_parameter": "WebElement", "method_purpose": "Decorated method that performs mode-based screenshot comparison for output title"}, {"method_name": "wait_and_verify_dts_logo_on_tower", "description": "Waits for and verifies DTS logo on tower with screenshot comparison.", "method_input_parameter": [{"parameter_name": "machine_name", "default_value": null, "parameter_purpose": "Name of the machine for screenshot comparison"}, {"parameter_name": "raise_e", "default_value": "True", "parameter_purpose": "Whether to raise exception on failure"}], "method_output_parameter": "WebElement", "method_purpose": "Decorated method with custom pass ratio for DTS logo verification"}], "summary": "This Audio class is a comprehensive Page Object Model for HP's audio control interface in Windows applications. It extends HPXRebrandingFlow and provides extensive automation methods for testing audio settings, device management, EQ controls, MEP (Microsoft Effects Platform) integration, speaker configuration, and DTS audio features. The class includes over 400 methods covering UI element verification, interaction methods, slider controls, toggle management, device selection, notification handling, and screenshot comparison decorators. It demonstrates advanced test automation patterns including conditional scrolling, retry logic, exception handling, SSH command execution for app installation, and integration with Windows system settings. The class supports multiple audio device types (USB, 3.5mm, internal), various audio presets (Music, Movie, Voice, RPG, Shooter, Strategy, Auto), noise reduction features, microphone modes, adaptive audio, immersive audio, multistreaming, and external speaker configuration with surround sound support."}]
+{
+  "class_name": "AddDevice",
+  "base_class": "HPXRebrandingFlow",
+  "locators": [
+    "add_device_page_side_bar",
+    "add_device_title",
+    "add_printer_section",
+    "missing_device_section",
+    "open_hp_smart_link",
+    "microsoft_store",
+    "search_by_serial_number_btn",
+    "serial_number_textbox",
+    "need_help_finding_your_serial_number_link",
+    "add_a_device_back_btn",
+    "close_button_on_add_device_page",
+    "add_printer_content",
+    "missing_device_content",
+    "hp_smart_text",
+    "hp_smart_open_btn",
+    "newly_added_device_card_name",
+    "product_number_textbox",
+    "close_microsoft_store",
+    "add_device_hyperlink"
+  ],
+  "methods": [
+    {
+      "method_name": "verify_add_device_page",
+      "description": "Verifies the add device page elements are visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean (True if all elements are visible, False otherwise)",
+      "method_purpose": "Checks visibility of add device page sidebar, title, add printer section, and missing device section. Returns True if all elements are found, False otherwise."
+    },
+    {
+      "method_name": "verify_open_hp_smart_link",
+      "description": "Verifies the open HP Smart link is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or WebElement",
+      "method_purpose": "Waits for and returns the open HP Smart link element."
+    },
+    {
+      "method_name": "verify_microsoft_store_opened",
+      "description": "Verifies the Microsoft Store window is opened.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or WebElement",
+      "method_purpose": "Waits for and returns the Microsoft Store element to confirm it has opened."
+    },
+    {
+      "method_name": "verify_search_by_serial_number_btn",
+      "description": "Verifies the search by serial number button is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or WebElement",
+      "method_purpose": "Waits for and returns the search by serial number button element."
+    },
+    {
+      "method_name": "verify_serial_number_textbox",
+      "description": "Verifies the serial number textbox is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or WebElement",
+      "method_purpose": "Waits for and returns the serial number textbox element."
+    },
+    {
+      "method_name": "verify_need_help_finding_your_serial_number_link",
+      "description": "Verifies the need help finding serial number link is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or WebElement",
+      "method_purpose": "Waits for and returns the help link element for finding serial numbers."
+    },
+    {
+      "method_name": "verify_add_a_device_back_btn",
+      "description": "Verifies the add device back button is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or WebElement",
+      "method_purpose": "Waits for and returns the back button element on the add device page."
+    },
+    {
+      "method_name": "verify_close_button_on_add_device_page",
+      "description": "Verifies the close button on add device page is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or WebElement",
+      "method_purpose": "Waits for and returns the close button element on the add device page."
+    },
+    {
+      "method_name": "verify_add_printer_content",
+      "description": "Verifies the add printer content is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or WebElement",
+      "method_purpose": "Waits for and returns the add printer content element."
+    },
+    {
+      "method_name": "verify_missing_device_content",
+      "description": "Verifies the missing device content is visible.",
+      "method_input_parameter": [
+        {
+          "parameter_name": "timeout",
+          "default_value": "15",
+          "parameter_purpose": "Specifies the maximum wait time in seconds for the missing device content element to appear."
+        }
+      ],
+      "method_output_parameter": "Boolean or WebElement",
+      "method_purpose": "Waits for and returns the missing device content element with a configurable timeout."
+    },
+    {
+      "method_name": "verify_hp_smart_text",
+      "description": "Verifies the HP Smart text is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or WebElement",
+      "method_purpose": "Waits for and returns the HP Smart text element."
+    },
+    {
+      "method_name": "verify_hp_smart_open_btn",
+      "description": "Verifies the HP Smart open button is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or WebElement",
+      "method_purpose": "Waits for and returns the HP Smart open button element."
+    },
+    {
+      "method_name": "verify_newly_added_devicename",
+      "description": "Verifies the newly added device name is visible.",
+      "method_input_parameter": [
+        {
+          "parameter_name": "raise_e",
+          "default_value": "False",
+          "parameter_purpose": "Determines whether to raise an exception if the element is not found."
+        }
+      ],
+      "method_output_parameter": "Boolean or WebElement",
+      "method_purpose": "Waits for and returns the newly added device card name element with a 10-second timeout and optional exception raising."
+    },
+    {
+      "method_name": "input_enter_product_number",
+      "description": "Enters a product number into the product number textbox.",
+      "method_input_parameter": [
+        {
+          "parameter_name": "product_number",
+          "default_value": null,
+          "parameter_purpose": "The product number string to be entered into the textbox."
+        }
+      ],
+      "method_output_parameter": null,
+      "method_purpose": "Sends the provided product number to the product number textbox element."
+    },
+    {
+      "method_name": "verify_product_number_textbox",
+      "description": "Verifies the product number textbox is visible.",
+      "method_input_parameter": [
+        {
+          "parameter_name": "raise_e",
+          "default_value": "False",
+          "parameter_purpose": "Determines whether to raise an exception if the element is not found."
+        }
+      ],
+      "method_output_parameter": "Boolean or WebElement",
+      "method_purpose": "Waits for and returns the product number textbox element with a 10-second timeout and optional exception raising."
+    },
+    {
+      "method_name": "click_open_hp_smart_link",
+      "description": "Clicks the open HP Smart link.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action on the open HP Smart link element with a 10-second timeout."
+    },
+    {
+      "method_name": "click_search_by_serial_number_btn",
+      "description": "Clicks the search by serial number button.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action on the search by serial number button with a 10-second timeout."
+    },
+    {
+      "method_name": "click_need_help_finding_your_serial_number_link",
+      "description": "Clicks the need help finding serial number link.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action on the help link for finding serial numbers with a 10-second timeout."
+    },
+    {
+      "method_name": "click_add_a_device_back_btn",
+      "description": "Clicks the add device back button.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action on the back button on the add device page with a 10-second timeout."
+    },
+    {
+      "method_name": "click_close_button_on_add_device_page",
+      "description": "Clicks the close button on add device page.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action on the close button on the add device page with a 10-second timeout."
+    },
+    {
+      "method_name": "click_close_microsoft_store",
+      "description": "Clicks the close button on Microsoft Store.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action on the close button of the Microsoft Store window with a 10-second timeout."
+    },
+    {
+      "method_name": "input_enter_serial_number",
+      "description": "Enters a serial number into the serial number textbox.",
+      "method_input_parameter": [
+        {
+          "parameter_name": "serial_number",
+          "default_value": null,
+          "parameter_purpose": "The serial number string to be entered into the textbox."
+        }
+      ],
+      "method_output_parameter": null,
+      "method_purpose": "Sends the provided serial number to the serial number textbox element."
+    },
+    {
+      "method_name": "get_entered_serial_number",
+      "description": "Retrieves the entered serial number from the textbox.",
+      "method_input_parameter": [],
+      "method_output_parameter": "String (the value of the serial number textbox)",
+      "method_purpose": "Gets the 'Value.Value' attribute from the serial number textbox to retrieve the currently entered serial number."
+    },
+    {
+      "method_name": "click_add_device_hyperlink",
+      "description": "Clicks the add device hyperlink.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action on the add device hyperlink with a 10-second timeout."
+    }
+  ],
+  "summary": "This class models the Add Device page in the HPX Rebranding flow for Windows automation. It follows the Page Object Model (POM) pattern with clear separation between verification methods (verify_*) and action methods (click_*, input_*, get_*). The class uses driver-based element interactions with configurable timeouts and exception handling. Locators are referenced as string identifiers passed to driver methods rather than being stored as class attributes. The class provides comprehensive coverage for adding devices, including serial number search, product number entry, HP Smart integration, and Microsoft Store interactions."
+}
