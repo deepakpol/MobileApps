@@ -1,264 +1,139 @@
 {
-  "audio.py": {
+  "AddDevice.py": {
     "methods": [
       {
-        "method_name": "verify_audio_control_card_show_up",
-        "method_description": "Verifies if the audio control card is displayed on the home page.",
-        "method_input_parameter": [],
-        "method_output_parameter": "Boolean",
-        "method_purpose": "Checks visibility of audio card element with 10 second timeout"
-      },
-      {
-        "method_name": "click_audio_control_card",
-        "method_description": "Clicks on the audio control card on the home page.",
-        "method_input_parameter": [],
-        "method_output_parameter": null,
-        "method_purpose": "Performs click action on audio card element"
-      },
-      {
-        "method_name": "verify_audio_presets_title_show_up",
-        "method_description": "Verifies if the audio presets title is visible, with scrolling if needed.",
-        "method_input_parameter": [],
-        "method_output_parameter": "Boolean",
-        "method_purpose": "Checks visibility of audio presets title with conditional scrolling logic"
-      },
-      {
-        "method_name": "get_restore_default_button_text",
-        "method_description": "Gets the text attribute of the restore defaults button.",
-        "method_input_parameter": [],
-        "method_output_parameter": "String",
-        "method_purpose": "Retrieves the Name attribute from restore defaults button element"
-      },
-      {
-        "method_name": "search_apps_on_search_frame",
-        "method_description": "Searches for applications by name in the search frame.",
+        "method_name": "__init__",
+        "method_description": "Initializes the AddDevice class instance.",
         "method_input_parameter": [
           {
-            "parameter_name": "app_name",
+            "parameter_name": "self",
             "default_value": null,
-            "parameter_purpose": "Name of the application to search for"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Clicks search frame and sends keys to search for specified application"
-      },
-      {
-        "method_name": "set_audio_output_slider_value_decrease",
-        "method_description": "Decreases the audio output slider value to a specified level.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "value",
-            "default_value": null,
-            "parameter_purpose": "Target value to decrease the slider to"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Adjusts output volume slider by sending LEFT key presses to decrease value"
-      },
-      {
-        "method_name": "set_audio_output_slider_value_increase",
-        "method_description": "Increases the audio output slider value to a specified level.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "value",
-            "default_value": null,
-            "parameter_purpose": "Target value to increase the slider to"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Adjusts output volume slider by sending RIGHT key presses to increase value"
-      },
-      {
-        "method_name": "set_audio_input_slider_value_decrease",
-        "method_description": "Decreases the audio input slider value to a specified level.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "value",
-            "default_value": null,
-            "parameter_purpose": "Target value to decrease the slider to"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Adjusts input volume slider by sending LEFT key presses to decrease value"
-      },
-      {
-        "method_name": "set_audio_input_slider_value_increase",
-        "method_description": "Increases the audio input slider value to a specified level.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "value",
-            "default_value": null,
-            "parameter_purpose": "Target value to increase the slider to"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Adjusts input volume slider by sending RIGHT key presses to increase value"
-      },
-      {
-        "method_name": "launch_windows_app",
-        "method_description": "Launches a Windows application by name using search bar.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "app_name",
-            "default_value": null,
-            "parameter_purpose": "Name of the Windows application to launch"
-          }
-        ],
-        "method_output_parameter": null,
-        "method_purpose": "Opens Windows search, types app name, and presses ENTER to launch application"
-      },
-      {
-        "method_name": "set_eq_slider_value_decrease",
-        "method_description": "Decreases an EQ slider value to a specified level.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "element",
-            "default_value": null,
-            "parameter_purpose": "Element identifier for the EQ slider"
+            "parameter_purpose": "Instance reference"
           },
           {
-            "parameter_name": "value",
+            "parameter_name": "driver",
             "default_value": null,
-            "parameter_purpose": "Target value to decrease the slider to"
+            "parameter_purpose": "WebDriver instance for browser automation"
           }
         ],
-        "method_output_parameter": null,
-        "method_purpose": "Adjusts EQ slider by sending DOWN key presses to decrease value"
+        "method_output_parameter": "None",
+        "method_purpose": "Constructs and initializes the AddDevice page object by invoking the parent HPXRebrandingFlow class constructor with the provided WebDriver instance, setting up the necessary foundation for device addition workflows."
       },
       {
-        "method_name": "set_eq_slider_value_increase",
-        "method_description": "Increases an EQ slider value to a specified level.",
+        "method_name": "select_add_device",
+        "method_description": "Select Add Device from Home screen.",
         "method_input_parameter": [
           {
-            "parameter_name": "element",
+            "parameter_name": "self",
             "default_value": null,
-            "parameter_purpose": "Element identifier for the EQ slider"
+            "parameter_purpose": "Instance reference"
           },
           {
-            "parameter_name": "value",
-            "default_value": null,
-            "parameter_purpose": "Target value to increase the slider to"
+            "parameter_name": "tile",
+            "default_value": "TEST_DATA.TILE_1",
+            "parameter_purpose": "Specifies which tile to use for adding device"
           }
         ],
-        "method_output_parameter": null,
-        "method_purpose": "Adjusts EQ slider by sending UP key presses to increase value"
+        "method_output_parameter": "None",
+        "method_purpose": "Initiates the device addition workflow by navigating from the Home screen to the Add Device interface through interaction with the specified tile element, defaulting to TILE_1 if no tile parameter is provided."
       },
       {
-        "method_name": "get_eq_slider_value",
-        "method_description": "Gets the current value of an EQ slider.",
+        "method_name": "verify_add_device_screen",
+        "method_description": "Verify Add Device screen.",
         "method_input_parameter": [
           {
-            "parameter_name": "element",
+            "parameter_name": "self",
             "default_value": null,
-            "parameter_purpose": "Element identifier for the EQ slider"
+            "parameter_purpose": "Instance reference"
           }
         ],
-        "method_output_parameter": "String",
-        "method_purpose": "Retrieves the Value.Value attribute from specified EQ slider element"
+        "method_output_parameter": "None",
+        "method_purpose": "Performs validation checks to ensure the Add Device screen has loaded correctly and displays all expected UI elements, confirming successful navigation to the device addition interface."
       },
       {
-        "method_name": "install_audio_standalone_app_by_task_scheduler",
-        "method_description": "Installs HP Audio Control app using Windows Task Scheduler.",
-        "method_input_parameter": [],
-        "method_output_parameter": null,
-        "method_purpose": "Creates and runs a scheduled task to install HPAudioControl application via PowerShell script"
-      },
-      {
-        "method_name": "verify_output_title_show_up_image",
-        "method_description": "Verifies output title visibility with screenshot comparison.",
+        "method_name": "select_printer_setup_option",
+        "method_description": "Select printer setup option.",
         "method_input_parameter": [
           {
-            "parameter_name": "machine_name",
+            "parameter_name": "self",
             "default_value": null,
-            "parameter_purpose": "Name of the machine for screenshot comparison"
+            "parameter_purpose": "Instance reference"
           },
           {
-            "parameter_name": "page_number",
+            "parameter_name": "option",
             "default_value": null,
-            "parameter_purpose": "Page number for screenshot identification"
-          },
-          {
-            "parameter_name": "element",
-            "default_value": null,
-            "parameter_purpose": "Element to verify"
-          },
-          {
-            "parameter_name": "text_size",
-            "default_value": "100",
-            "parameter_purpose": "Text size parameter for comparison"
-          },
-          {
-            "parameter_name": "raise_e",
-            "default_value": "True",
-            "parameter_purpose": "Whether to raise exception on failure"
+            "parameter_purpose": "The printer setup option to select"
           }
         ],
-        "method_output_parameter": "Boolean",
-        "method_purpose": "Decorated method that performs screenshot comparison for output title element"
+        "method_output_parameter": "None",
+        "method_purpose": "Facilitates the printer configuration process by selecting a designated setup option from the available printer setup choices presented on the Add Device screen, enabling users to proceed with their preferred setup method."
       },
       {
-        "method_name": "verify_output_title_show_up_color",
-        "method_description": "Verifies output title color with screenshot comparison.",
+        "method_name": "verify_printer_setup_screen",
+        "method_description": "Verify Printer Setup screen.",
         "method_input_parameter": [
           {
-            "parameter_name": "machine_name",
+            "parameter_name": "self",
             "default_value": null,
-            "parameter_purpose": "Name of the machine for screenshot comparison"
-          },
-          {
-            "parameter_name": "page_number",
-            "default_value": null,
-            "parameter_purpose": "Page number for screenshot identification"
-          },
-          {
-            "parameter_name": "element",
-            "default_value": null,
-            "parameter_purpose": "Element to verify"
-          },
-          {
-            "parameter_name": "color",
-            "default_value": "100",
-            "parameter_purpose": "Color parameter for comparison"
-          },
-          {
-            "parameter_name": "raise_e",
-            "default_value": "True",
-            "parameter_purpose": "Whether to raise exception on failure"
+            "parameter_purpose": "Instance reference"
           }
         ],
-        "method_output_parameter": "WebElement",
-        "method_purpose": "Decorated method that performs color-based screenshot comparison for element"
+        "method_output_parameter": "None",
+        "method_purpose": "Validates that the Printer Setup screen has rendered properly with all required UI components visible and accessible, ensuring the user can proceed with printer configuration."
       },
       {
-        "method_name": "verify_output_title_show_up_system_mode",
-        "method_description": "Verifies output title in different system modes with screenshot comparison.",
+        "method_name": "select_printer",
+        "method_description": "Select printer from list.",
         "method_input_parameter": [
           {
-            "parameter_name": "mode",
+            "parameter_name": "self",
             "default_value": null,
-            "parameter_purpose": "System mode for screenshot comparison"
-          }
-        ],
-        "method_output_parameter": "WebElement",
-        "method_purpose": "Decorated method that performs mode-based screenshot comparison for output title"
-      },
-      {
-        "method_name": "wait_and_verify_dts_logo_on_tower",
-        "method_description": "Waits for and verifies DTS logo on tower with screenshot comparison.",
-        "method_input_parameter": [
-          {
-            "parameter_name": "machine_name",
-            "default_value": null,
-            "parameter_purpose": "Name of the machine for screenshot comparison"
+            "parameter_purpose": "Instance reference"
           },
           {
-            "parameter_name": "raise_e",
-            "default_value": "True",
-            "parameter_purpose": "Whether to raise exception on failure"
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to select from the list"
           }
         ],
-        "method_output_parameter": "WebElement",
-        "method_purpose": "Decorated method with custom pass ratio for DTS logo verification"
+        "method_output_parameter": "None",
+        "method_purpose": "Identifies and selects a target printer from the displayed list of available printers by matching the provided printer name, enabling the user to proceed with connecting the specific device."
+      },
+      {
+        "method_name": "verify_printer_connected",
+        "method_description": "Verify printer is connected.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference"
+          },
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify connection status"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Confirms successful printer connection by verifying that the specified printer appears on the Home screen with an active connection status, validating the completion of the device addition workflow."
+      },
+      {
+        "method_name": "verify_add_device_button",
+        "method_description": "Verify Add Device button is visible.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference"
+          },
+          {
+            "parameter_name": "tile",
+            "default_value": "TEST_DATA.TILE_1",
+            "parameter_purpose": "Specifies which tile to check for Add Device button"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validates the presence and visibility of the Add Device button on the designated tile of the Home screen, ensuring users have access to the device addition functionality from the specified location."
       }
     ]
   }
