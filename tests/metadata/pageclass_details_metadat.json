@@ -1,0 +1,137 @@
+{
+  "Accessibility.py": {
+    "class_name": "Accessibility",
+    "base_class": "HPXRebrandingFlow",
+    "locators": [
+      {"name": "start_menu_window_btn", "description": "Start menu window button locator"},
+      {"name": "start_menu_window", "description": "Start menu window locator"},
+      {"name": "search_bar_on_windows", "description": "Windows search bar locator"},
+      {"name": "apps_button", "description": "Apps button locator"},
+      {"name": "installed_apps_button", "description": "Installed apps button locator"},
+      {"name": "search_bar_for_apps", "description": "Search bar for apps locator"},
+      {"name": "HP_apps_icon", "description": "HP apps icon locator in Windows settings"},
+      {"name": "myhp_app_icon_on_taskbar", "description": "MyHP app icon on taskbar locator"},
+      {"name": "library_button_on_msstore", "description": "Library button on Microsoft Store locator"},
+      {"name": "maximize_button", "description": "Maximize button locator"},
+      {"name": "myhp_app_icon_on_start_menu", "description": "MyHP app icon on start menu locator"},
+      {"name": "unpin_hp_from_start_menu", "description": "Unpin HP from start menu option locator"},
+      {"name": "scroll_bar", "description": "Scroll bar locator"},
+      {"name": "refresh_button", "description": "Refresh button locator"}
+    ],
+    "methods": [
+      {
+        "method_name": "dismiss_open_windows_overlays",
+        "description": "Dismiss any open Windows overlays (Start menu, search box)",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Closes any open Windows overlays such as the Start menu or search box by checking their toggle states and clicking to close them if they are open. Logs the desktop state preparation."
+      },
+      {
+        "method_name": "click_start_menu_button",
+        "description": "Clicks the Start menu button",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for the Start menu window button to be available and then clicks it to open or close the Start menu."
+      },
+      {
+        "method_name": "click_apps_button",
+        "description": "Clicks the Apps button",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for the Apps button to be available and then clicks it to navigate to the Apps section."
+      },
+      {
+        "method_name": "click_installed_apps_button",
+        "description": "Clicks the Installed Apps button",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for the Installed Apps button to be available and then clicks it to view installed applications."
+      },
+      {
+        "method_name": "click_search_for_installed_apps",
+        "description": "Clicks the search bar for apps and searches for 'HP'",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for the search bar for apps to be available, clicks it, and then sends the text 'HP' to search for HP-related applications."
+      },
+      {
+        "method_name": "verify_hp_app_icon_in_windows_settings",
+        "description": "Verifies the HP app icon is present in Windows settings",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean or object indicating presence",
+        "method_purpose": "Scrolls to the HP apps icon element and waits for it to be present, returning the result to verify the HP app icon exists in Windows settings."
+      },
+      {
+        "method_name": "click_hp_app_icon_in_windows_settings",
+        "description": "Clicks the HP app icon in Windows settings",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for the HP apps icon to be available in Windows settings and then clicks it to open the HP app details or settings."
+      },
+      {
+        "method_name": "verify_myhp_app_icon_on_taskbar",
+        "description": "Verifies the MyHP app icon is present on the taskbar",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for the MyHP app icon to be present on the taskbar, verifying that the application is pinned to the taskbar."
+      },
+      {
+        "method_name": "click_library_button_on_msstore",
+        "description": "Clicks the Library button on Microsoft Store",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the Library button on the Microsoft Store with a 30-second timeout to navigate to the library section."
+      },
+      {
+        "method_name": "click_myhp_app_icon_on_taskbar",
+        "description": "Clicks the MyHP app icon on the taskbar",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the MyHP app icon on the taskbar to launch or bring focus to the MyHP application."
+      },
+      {
+        "method_name": "hover_to_maximize_button",
+        "description": "Hovers over the maximize button",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Hovers over the maximize button and waits for it to be available, typically used to reveal or interact with window controls."
+      },
+      {
+        "method_name": "verify_myhp_pinned_to_start_menu",
+        "description": "Verifies MyHP is pinned to the Start menu",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Opens the Start menu, waits for the MyHP app icon to be present on the Start menu to verify it is pinned, then closes the Start menu."
+      },
+      {
+        "method_name": "click_unpin_hp_from_start_menu",
+        "description": "Clicks to unpin HP from the Start menu",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Checks if the 'Unpin HP from Start menu' option is available and clicks it to remove the HP app from the Start menu."
+      },
+      {
+        "method_name": "verify_scroll_bar",
+        "description": "Verifies the scroll bar is present",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for the scroll bar element to be present, verifying that scrollable content exists in the current view."
+      },
+      {
+        "method_name": "click_scroll_bar",
+        "description": "Clicks the scroll bar",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the scroll bar element with a 10-second timeout to interact with scrollable content."
+      },
+      {
+        "method_name": "refresh_btn_is_disabled",
+        "description": "Checks if the refresh button is disabled",
+        "method_input_parameter": [],
+        "method_output_parameter": "Boolean (True if disabled/not found, False if enabled/found)",
+        "method_purpose": "Waits for the refresh button element without raising an exception if not found. Returns True if the button is not found (disabled), False if it is found (enabled)."
+      }
+    ],
+    "summary": "The Accessibility class extends HPXRebrandingFlow and provides automation methods for testing Windows UI accessibility features related to HP applications. It includes functionality for managing Windows overlays (Start menu, search box), navigating Windows settings to find and interact with HP apps, verifying app presence on taskbar and Start menu, and interacting with Microsoft Store. The class contains 16 methods focused on verification and interaction with various Windows UI elements, including clicking buttons, verifying icon presence, managing pinned applications, and checking UI element states. The flow_name is set to 'accessibility', indicating this class is part of an accessibility testing suite for HP's rebranded applications on Windows platforms."
+  }
+}

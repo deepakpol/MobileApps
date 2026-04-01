@@ -1,0 +1,226 @@
+{
+  "class_name": "AddDevice",
+  "base_class": "HPXRebrandingFlow",
+  "locators": [
+    "add_device_page_side_bar",
+    "add_device_title",
+    "add_printer_section",
+    "missing_device_section",
+    "open_hp_smart_link",
+    "microsoft_store",
+    "search_by_serial_number_btn",
+    "serial_number_textbox",
+    "need_help_finding_your_serial_number_link",
+    "add_a_device_back_btn",
+    "close_button_on_add_device_page",
+    "add_printer_content",
+    "missing_device_content",
+    "hp_smart_text",
+    "hp_smart_open_btn",
+    "newly_added_device_card_name",
+    "product_number_textbox",
+    "close_microsoft_store",
+    "add_device_hyperlink"
+  ],
+  "methods": [
+    {
+      "method_name": "verify_add_device_page",
+      "description": "Verifies the add device page elements are visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean (True if all elements are visible, False otherwise)",
+      "method_purpose": "Waits for and verifies the presence of key add device page elements including sidebar, title, printer section, and missing device section."
+    },
+    {
+      "method_name": "verify_open_hp_smart_link",
+      "description": "Verifies the open HP Smart link is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or object reference",
+      "method_purpose": "Waits for and returns the open HP Smart link element."
+    },
+    {
+      "method_name": "verify_microsoft_store_opened",
+      "description": "Verifies the Microsoft Store window is opened.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or object reference",
+      "method_purpose": "Waits for and returns the Microsoft Store element to confirm it has opened."
+    },
+    {
+      "method_name": "verify_search_by_serial_number_btn",
+      "description": "Verifies the search by serial number button is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or object reference",
+      "method_purpose": "Waits for and returns the search by serial number button element."
+    },
+    {
+      "method_name": "verify_serial_number_textbox",
+      "description": "Verifies the serial number textbox is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or object reference",
+      "method_purpose": "Waits for and returns the serial number textbox element."
+    },
+    {
+      "method_name": "verify_need_help_finding_your_serial_number_link",
+      "description": "Verifies the help link for finding serial number is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or object reference",
+      "method_purpose": "Waits for and returns the help link element for finding serial numbers."
+    },
+    {
+      "method_name": "verify_add_a_device_back_btn",
+      "description": "Verifies the back button on add device page is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or object reference",
+      "method_purpose": "Waits for and returns the back button element on the add device page."
+    },
+    {
+      "method_name": "verify_close_button_on_add_device_page",
+      "description": "Verifies the close button on add device page is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or object reference",
+      "method_purpose": "Waits for and returns the close button element on the add device page."
+    },
+    {
+      "method_name": "verify_add_printer_content",
+      "description": "Verifies the add printer content section is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or object reference",
+      "method_purpose": "Waits for and returns the add printer content element."
+    },
+    {
+      "method_name": "verify_missing_device_content",
+      "description": "Verifies the missing device content section is visible.",
+      "method_input_parameter": [
+        {
+          "parameter_name": "timeout",
+          "default_value": "15",
+          "parameter_purpose": "Specifies the maximum wait time in seconds for the element to appear."
+        }
+      ],
+      "method_output_parameter": "Boolean or object reference",
+      "method_purpose": "Waits for and returns the missing device content element with a configurable timeout."
+    },
+    {
+      "method_name": "verify_hp_smart_text",
+      "description": "Verifies the HP Smart text is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or object reference",
+      "method_purpose": "Waits for and returns the HP Smart text element."
+    },
+    {
+      "method_name": "verify_hp_smart_open_btn",
+      "description": "Verifies the HP Smart open button is visible.",
+      "method_input_parameter": [],
+      "method_output_parameter": "Boolean or object reference",
+      "method_purpose": "Waits for and returns the HP Smart open button element."
+    },
+    {
+      "method_name": "verify_newly_added_devicename",
+      "description": "Verifies the newly added device name card is visible.",
+      "method_input_parameter": [
+        {
+          "parameter_name": "raise_e",
+          "default_value": "False",
+          "parameter_purpose": "Determines whether to raise an exception if the element is not found."
+        }
+      ],
+      "method_output_parameter": "Boolean or object reference",
+      "method_purpose": "Waits for and returns the newly added device card name element with a 10-second timeout."
+    },
+    {
+      "method_name": "input_enter_product_number",
+      "description": "Enters a product number into the product number textbox.",
+      "method_input_parameter": [
+        {
+          "parameter_name": "product_number",
+          "default_value": null,
+          "parameter_purpose": "The product number string to be entered into the textbox."
+        }
+      ],
+      "method_output_parameter": null,
+      "method_purpose": "Sends keystrokes to input the specified product number into the product number textbox."
+    },
+    {
+      "method_name": "verify_product_number_textbox",
+      "description": "Verifies the product number textbox is visible.",
+      "method_input_parameter": [
+        {
+          "parameter_name": "raise_e",
+          "default_value": "False",
+          "parameter_purpose": "Determines whether to raise an exception if the element is not found."
+        }
+      ],
+      "method_output_parameter": "Boolean or object reference",
+      "method_purpose": "Waits for and returns the product number textbox element with a 10-second timeout."
+    },
+    {
+      "method_name": "click_open_hp_smart_link",
+      "description": "Clicks the open HP Smart link.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action on the open HP Smart link element with a 10-second timeout."
+    },
+    {
+      "method_name": "click_search_by_serial_number_btn",
+      "description": "Clicks the search by serial number button.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action on the search by serial number button with a 10-second timeout."
+    },
+    {
+      "method_name": "click_need_help_finding_your_serial_number_link",
+      "description": "Clicks the help link for finding serial number.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action on the help link for finding serial numbers with a 10-second timeout."
+    },
+    {
+      "method_name": "click_add_a_device_back_btn",
+      "description": "Clicks the back button on add device page.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action on the back button to navigate away from the add device page with a 10-second timeout."
+    },
+    {
+      "method_name": "click_close_button_on_add_device_page",
+      "description": "Clicks the close button on add device page.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action on the close button to dismiss the add device page with a 10-second timeout."
+    },
+    {
+      "method_name": "click_close_microsoft_store",
+      "description": "Clicks the close button on Microsoft Store window.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action to close the Microsoft Store window with a 10-second timeout."
+    },
+    {
+      "method_name": "input_enter_serial_number",
+      "description": "Enters a serial number into the serial number textbox.",
+      "method_input_parameter": [
+        {
+          "parameter_name": "serial_number",
+          "default_value": null,
+          "parameter_purpose": "The serial number string to be entered into the textbox."
+        }
+      ],
+      "method_output_parameter": null,
+      "method_purpose": "Sends keystrokes to input the specified serial number into the serial number textbox."
+    },
+    {
+      "method_name": "get_entered_serial_number",
+      "description": "Retrieves the entered serial number from the textbox.",
+      "method_input_parameter": [],
+      "method_output_parameter": "String (the value of the serial number textbox)",
+      "method_purpose": "Gets the Value.Value attribute from the serial number textbox to retrieve the entered serial number."
+    },
+    {
+      "method_name": "click_add_device_hyperlink",
+      "description": "Clicks the add device hyperlink.",
+      "method_input_parameter": [],
+      "method_output_parameter": null,
+      "method_purpose": "Performs a click action on the add device hyperlink with a 10-second timeout."
+    }
+  ],
+  "summary": "This class models the Add Device page in the HPX Rebranding flow for Windows automation testing. It extends HPXRebrandingFlow and provides comprehensive methods for verifying UI elements, performing user actions (clicks, text input), and validating the add device workflow. The class follows a clear pattern of separating verification methods (verify_*) from action methods (click_*, input_*, get_*). It uses string-based locator identifiers that are resolved by the underlying driver framework. Notable patterns include configurable timeouts, optional exception raising for element verification, and methods for interacting with external applications like Microsoft Store. The class supports device addition workflows including serial number search, product number input, and HP Smart app integration."
+}
