@@ -1,0 +1,1703 @@
+{
+  "summaries": [
+    {
+      "class_name": "Devices",
+      "base_class": "HPXFlow",
+      "locators": [
+        "pc_devices_module",
+        "pen_control_module",
+        "keyboard_module",
+        "mouse_module",
+        "actions_header",
+        "Audio_Control_Display",
+        "Video_Control_Display",
+        "RGB_keyboard",
+        "prog_key_card",
+        "Programmable_Key",
+        "Support",
+        "Back_Arrow",
+        "Display_control",
+        "pc_devices_back_button",
+        "Maximize_myHP",
+        "Restore_myHP",
+        "Minimize",
+        "Close_myHP",
+        "devices_module",
+        "RGB_keyboard_title",
+        "select_keyboard_text",
+        "support_card",
+        "option_text",
+        "Product_number",
+        "Serial_number",
+        "Warranty",
+        "Unknown",
+        "pc_device_title",
+        "support_btn",
+        "audio_card_on_pcdevice",
+        "audio_control_text_on_card",
+        "audio_descrip_text_on_card",
+        "pc_devices_back_button_from_audio_title_bar",
+        "display_control_card",
+        "display_control_des_txt",
+        "prog_key_des_text",
+        "5g_card",
+        "5g_text",
+        "5g_des_text",
+        "video_control_card",
+        "video_control_text",
+        "video_control_des_text",
+        "get_details",
+        "get_details_text",
+        "devicename_tooltips_on_pcdevice",
+        "displayOf_image_on_pcdevice",
+        "display_info_icon_on_pcdevice",
+        "system_devicename_on_pcdevice",
+        "display_product_number_on_pcdevice",
+        "display_serial_number_on_pcdevice",
+        "displayOf_battery_icon_on_pcdevice",
+        "displayOf_action_items_on_pcdevice",
+        "privacy_alert_card",
+        "privacy_alert_description_text",
+        "auto_screen_dimming_card",
+        "auto_screen_dimming_description_text",
+        "allow_personalized_support_get_details",
+        "detail_text_on_personalized_support",
+        "view_data_collected_link",
+        "yes_btn_personalized_support",
+        "pc_devices_back_button_from_video_title_bar",
+        "pc_devices_back_button_from_programmable_key_title_bar",
+        "pc_devices_back_button_from_display_title_bar",
+        "pc_devices_back_button_from_rgb_keyboard_title_bar",
+        "no_btn_personalized_support",
+        "warranty_status_title_text_in_view_data",
+        "para1_in_view_data_window",
+        "para2_in_view_data_window",
+        "para3_in_view_data_window",
+        "para4_in_view_data_window",
+        "why_should_text",
+        "authorized_para_text",
+        "selection_this_option_text",
+        "selection_involve_text",
+        "yes_text_under_involve",
+        "change_text",
+        "preference_text",
+        "close_btn_warranty",
+        "devicename_on_pcdevice",
+        "cellular",
+        "infor_ProductNumber_name_show_on_device",
+        "infor_SerialNumber_name_show_on_device",
+        "warranty_under_info_icon",
+        "disconnected_text",
+        "unknown_text",
+        "info_icon",
+        "system_control_card",
+        "system_control_subtext",
+        "display_card",
+        "displayOf_product_number_on_pcdevice",
+        "displayOf_info_icon_on_pcdevice",
+        "productnumber_value",
+        "serialnumber_value_tooltip",
+        "productnumber_value_tooltip",
+        "copyserialnumber_btn_tooltip",
+        "copyserialnumber_btn",
+        "copyproductnumber_btn_tooltip",
+        "copyproductnumber_btn",
+        "battery_icon_on_device_page_header",
+        "battery_tool_tip",
+        "device_rename_icon_on_pcdevice",
+        "displayOf_warranty_info_on_pcdevice",
+        "displayOf_copybtn_serialnumber_on_pcdevice",
+        "displayOf_copybtn_productnumber_on_pcdevice",
+        "copy_productnumber",
+        "serial_productnumber",
+        "auto_screen_dimming",
+        "system_control_text",
+        "touchpad_device_page_header",
+        "touchpad_device_page_header_text",
+        "modal_name_on_device_page_header",
+        "battery_tooltips_on_device_page_header",
+        "infor_icon_show_on_device_page_header",
+        "infor_ProductNumber_show_on_device",
+        "infor_ProductNumber_copy_icon_show_on_device",
+        "infor_SerialNumber_show_on_device",
+        "infor_SerialNumber_copy_icon_show_on_device",
+        "pc_device_image_on_device_page",
+        "audio_Control_card_on_device_page",
+        "video_Control_card_on_device_page",
+        "view_all_controls_link",
+        "touchpad_device_page_header_description",
+        "pc_devices_back_button_from_smartexp_title_bar",
+        "product_number_under_infor_icon",
+        "serial_number_under_infor_icon",
+        "devicename_for_back_PC_device_page",
+        "privacy_alert_card_on_pcdevice",
+        "auto_screen_dimming_card_on_pcdevice",
+        "battery_manager_action_item",
+        "wi-fi_card",
+        "MyScan_card",
+        "gesture_card",
+        "wifi_card_on_pc_device_page",
+        "screen_distance_card",
+        "presence_detection_card",
+        "presence_detection_text",
+        "energy_consumption_card"
+      ],
+      "methods": [
+        {
+          "method_name": "click_pc_devices",
+          "description": "Clicks on the PC devices module element",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to PC devices section by clicking the PC devices module"
+        },
+        {
+          "method_name": "click_pen_control",
+          "description": "Clicks on the pen control module element",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to pen control settings"
+        },
+        {
+          "method_name": "click_keyboard",
+          "description": "Clicks on the keyboard module element",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to keyboard settings"
+        },
+        {
+          "method_name": "click_mouse",
+          "description": "Clicks on the mouse module element",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to mouse settings"
+        },
+        {
+          "method_name": "verify_actions_header",
+          "description": "Waits for and verifies the presence of actions header",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Verify that the actions header is displayed on the page"
+        },
+        {
+          "method_name": "verify_pen_control",
+          "description": "Gets the Name attribute of pen control module",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve and verify the pen control module name"
+        },
+        {
+          "method_name": "verify_audio_control",
+          "description": "Gets the Name attribute of Audio Control Display",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve and verify the audio control display name"
+        },
+        {
+          "method_name": "click_audio_control",
+          "description": "Clicks on the Audio Control Display element",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to audio control settings"
+        },
+        {
+          "method_name": "verify_video_control",
+          "description": "Gets the Name attribute of Video Control Display",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve and verify the video control display name"
+        },
+        {
+          "method_name": "click_video_control",
+          "description": "Clicks on the Video Control Display element",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to video control settings"
+        },
+        {
+          "method_name": "close_hp_video_app",
+          "description": "Closes HP video applications using SSH commands",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Terminate HP video-related processes running on the system"
+        },
+        {
+          "method_name": "verify_rgb_keyword",
+          "description": "Gets the Name attribute of RGB keyboard element",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve and verify the RGB keyboard name"
+        },
+        {
+          "method_name": "click_rgb_keyword",
+          "description": "Clicks on the RGB keyboard element",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to RGB keyboard settings"
+        },
+        {
+          "method_name": "verify_programmable_key",
+          "description": "Gets the Name attribute of programmable key card",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve and verify the programmable key card name"
+        },
+        {
+          "method_name": "click_programmable_key",
+          "description": "Clicks on the Programmable Key element",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to programmable key settings"
+        },
+        {
+          "method_name": "click_support_action_card",
+          "description": "Clicks on the Support action card",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to support section"
+        },
+        {
+          "method_name": "verify_support_action_card",
+          "description": "Gets the Name attribute of Support element",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve and verify the support action card name"
+        },
+        {
+          "method_name": "click_back",
+          "description": "Clicks on the Back Arrow element",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate back to previous page"
+        },
+        {
+          "method_name": "click_display_control",
+          "description": "Clicks on the Display control element with error suppression",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to display control settings"
+        },
+        {
+          "method_name": "verify_display_control",
+          "description": "Gets the Name attribute of Display control with error suppression",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value or None",
+          "method_purpose": "Retrieve and verify the display control name"
+        },
+        {
+          "method_name": "click_pc_devices_back_button",
+          "description": "Clicks on the PC devices back button",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate back from PC devices page"
+        },
+        {
+          "method_name": "maximize_app",
+          "description": "Clicks on the Maximize button for myHP app",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Maximize the myHP application window"
+        },
+        {
+          "method_name": "restore_app",
+          "description": "Clicks on the Restore button for myHP app",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Restore the myHP application window to normal size"
+        },
+        {
+          "method_name": "minimize_app",
+          "description": "Clicks on the Minimize button if present",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Minimize the application window"
+        },
+        {
+          "method_name": "close_app",
+          "description": "Clicks on the Close button for myHP app",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Close the myHP application"
+        },
+        {
+          "method_name": "get_pcdevice_text",
+          "description": "Gets the Name attribute of PC devices module",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the text displayed on PC device module"
+        },
+        {
+          "method_name": "verify_pc_device_module_show_on_global_navigation",
+          "description": "Verifies PC device module presence on global navigation",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if PC device module is visible in global navigation"
+        },
+        {
+          "method_name": "verify_pc_device_module_show_on_global_navigation_panel",
+          "description": "Verifies devices module presence on global navigation panel",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if devices module is visible in global navigation panel"
+        },
+        {
+          "method_name": "get_rgb_title_text",
+          "description": "Gets the Name attribute of RGB keyboard title",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the RGB keyboard title text"
+        },
+        {
+          "method_name": "get_select_keyboard_text",
+          "description": "Gets the Name attribute of select keyboard text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the select keyboard text"
+        },
+        {
+          "method_name": "get_support_title_text",
+          "description": "Gets the Name attribute of support card",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the support card title text"
+        },
+        {
+          "method_name": "get_option_text",
+          "description": "Gets the Name attribute of option text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the option text"
+        },
+        {
+          "method_name": "get_product_number_text",
+          "description": "Gets the Name attribute of Product number",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the product number text"
+        },
+        {
+          "method_name": "get_serial_number_text",
+          "description": "Gets the Name attribute of Serial number",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the serial number text"
+        },
+        {
+          "method_name": "get_warranty_text",
+          "description": "Gets the Name attribute of Warranty",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the warranty text"
+        },
+        {
+          "method_name": "get_unknown_text",
+          "description": "Gets the Name attribute of Unknown element",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the unknown element text"
+        },
+        {
+          "method_name": "click_pc_device_title",
+          "description": "Clicks on the PC device title",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate using PC device title"
+        },
+        {
+          "method_name": "click_support_btn",
+          "description": "Clicks on the support button",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to support section"
+        },
+        {
+          "method_name": "click_audio_card_on_pcdevice",
+          "description": "Clicks on the audio card on PC device page",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to audio settings from PC device page"
+        },
+        {
+          "method_name": "get_audio_control_text_on_card",
+          "description": "Gets the Name attribute of audio control text on card",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the audio control text displayed on card"
+        },
+        {
+          "method_name": "get_audio_descrip_text_on_card",
+          "description": "Gets the Name attribute of audio description text on card",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the audio description text displayed on card"
+        },
+        {
+          "method_name": "click_pc_device_title_from_audio_title",
+          "description": "Clicks PC devices back button from audio title bar",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate back to PC devices from audio page"
+        },
+        {
+          "method_name": "click_display_control_card_pcdevice",
+          "description": "Waits for and clicks display control card",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to display control from PC device page"
+        },
+        {
+          "method_name": "verify_product_number",
+          "description": "Verifies presence of Product number element",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if product number is displayed"
+        },
+        {
+          "method_name": "verify_serial_number",
+          "description": "Verifies presence of Serial number element",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if serial number is displayed"
+        },
+        {
+          "method_name": "verify_warranty",
+          "description": "Verifies presence of Warranty element",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if warranty information is displayed"
+        },
+        {
+          "method_name": "verify_audio_card_visible",
+          "description": "Verifies presence of audio card on PC device",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if audio card is visible on PC device page"
+        },
+        {
+          "method_name": "verify_RGB_card_visible",
+          "description": "Verifies presence of RGB keyboard card",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if RGB keyboard card is visible"
+        },
+        {
+          "method_name": "verify_support_card_visible",
+          "description": "Verifies presence of support card",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if support card is visible"
+        },
+        {
+          "method_name": "verify_display_card_visible",
+          "description": "Verifies presence of display card",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if display card is visible"
+        },
+        {
+          "method_name": "get_display_control_text",
+          "description": "Gets the Name attribute of display control card",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the display control card text"
+        },
+        {
+          "method_name": "get_display_control_des_text",
+          "description": "Gets the Name attribute of display control description text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the display control description text"
+        },
+        {
+          "method_name": "verify_HPPK_card_visible",
+          "description": "Verifies presence of programmable key card",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if HP programmable key card is visible"
+        },
+        {
+          "method_name": "get_prog_key_text",
+          "description": "Gets the Name attribute of programmable key card",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the programmable key card text"
+        },
+        {
+          "method_name": "get_prog_key_des_text",
+          "description": "Gets the Name attribute of programmable key description text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the programmable key description text"
+        },
+        {
+          "method_name": "verify_5G_card_visible",
+          "description": "Verifies presence of 5G card",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if 5G card is visible"
+        },
+        {
+          "method_name": "click_5g_card",
+          "description": "Clicks on the 5G card",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to 5G settings"
+        },
+        {
+          "method_name": "get_5g_text",
+          "description": "Gets the Name attribute of 5G text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the 5G card text"
+        },
+        {
+          "method_name": "get_5g_des_text",
+          "description": "Gets the Name attribute of 5G description text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the 5G description text"
+        },
+        {
+          "method_name": "verify_video_control_card_visible",
+          "description": "Verifies presence of video control card",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if video control card is visible"
+        },
+        {
+          "method_name": "click_video_control_card",
+          "description": "Clicks on the video control card",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to video control settings"
+        },
+        {
+          "method_name": "get_video_control_text",
+          "description": "Gets the Name attribute of video control text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the video control card text"
+        },
+        {
+          "method_name": "get_video_control_des_text",
+          "description": "Gets the Name attribute of video control description text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the video control description text"
+        },
+        {
+          "method_name": "verify_get_details",
+          "description": "Verifies presence of get details element",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if get details element is visible"
+        },
+        {
+          "method_name": "get_get_detials_text",
+          "description": "Gets the Name attribute of get details text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the get details text"
+        },
+        {
+          "method_name": "verify_audio_card_pcdevice",
+          "description": "Verifies presence of audio card on PC device with longer timeout",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if audio card is visible on PC device page"
+        },
+        {
+          "method_name": "verify_presenceOf_custom_deviceName",
+          "description": "Verifies presence of custom device name tooltips",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if custom device name tooltips are displayed"
+        },
+        {
+          "method_name": "verify_presenceOf_image_devicepage",
+          "description": "Verifies presence of image on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if device image is displayed on device page"
+        },
+        {
+          "method_name": "verify_presence_info_icon_devicepage",
+          "description": "Verifies presence of info icon on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if info icon is displayed on device page"
+        },
+        {
+          "method_name": "verify_presenceOf_system_deviceName",
+          "description": "Verifies presence of system device name",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if system device name is displayed"
+        },
+        {
+          "method_name": "verify_presence_productnumber",
+          "description": "Verifies presence of product number on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if product number is displayed on device page"
+        },
+        {
+          "method_name": "verify_presence_serialnumber",
+          "description": "Verifies presence of serial number on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if serial number is displayed on device page"
+        },
+        {
+          "method_name": "verify_presenceOf_batteryIcon",
+          "description": "Verifies presence of battery icon on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if battery icon is displayed on device page"
+        },
+        {
+          "method_name": "verify_presenceOf_actionItems",
+          "description": "Verifies presence of action items on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if action items are displayed on device page"
+        },
+        {
+          "method_name": "verify_privacy_alert",
+          "description": "Verifies presence of privacy alert card",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean indicating presence",
+          "method_purpose": "Check if privacy alert card is visible"
+        },
+        {
+          "method_name": "get_privacy_alert_text",
+          "description": "Gets the Name attribute of privacy alert card",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the privacy alert card text"
+        },
+        {
+          "method_name": "get_privacy_alert_des_text",
+          "description": "Gets the Name attribute of privacy alert description text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the privacy alert description text"
+        },
+        {
+          "method_name": "verify_auto_screen_dimming",
+          "description": "Verifies presence of auto screen dimming card",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if auto screen dimming card is visible"
+        },
+        {
+          "method_name": "get_auto_screen_dimming_text",
+          "description": "Gets the Name attribute of auto screen dimming card",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the auto screen dimming card text"
+        },
+        {
+          "method_name": "get_auto_screen_dimming_des_text",
+          "description": "Gets the Name attribute of auto screen dimming description text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the auto screen dimming description text"
+        },
+        {
+          "method_name": "click_get_details",
+          "description": "Clicks on the get details element",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to details page"
+        },
+        {
+          "method_name": "get_allow_personalized_support_get_details_text",
+          "description": "Gets the Name attribute of allow personalized support get details",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the personalized support details text"
+        },
+        {
+          "method_name": "get_detail_text_on_personalized_support_text",
+          "description": "Gets the Name attribute of detail text on personalized support",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the detail text on personalized support"
+        },
+        {
+          "method_name": "get_view_data_collected_link_text",
+          "description": "Gets the Name attribute of view data collected link",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the view data collected link text"
+        },
+        {
+          "method_name": "get_yes_text",
+          "description": "Gets the Name attribute of yes button on personalized support",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the yes button text"
+        },
+        {
+          "method_name": "click_pc_device_title_from_video_title",
+          "description": "Clicks PC devices back button from video title bar",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate back to PC devices from video page"
+        },
+        {
+          "method_name": "click_pc_device_title_from_programmable_key_title",
+          "description": "Clicks PC devices back button from programmable key title bar",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate back to PC devices from programmable key page"
+        },
+        {
+          "method_name": "click_pc_device_title_from_display_title",
+          "description": "Clicks PC devices back button from display title bar",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate back to PC devices from display page"
+        },
+        {
+          "method_name": "click_pc_device_title_from_rgb_keyboard_title",
+          "description": "Clicks PC devices back button from RGB keyboard title bar",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate back to PC devices from RGB keyboard page"
+        },
+        {
+          "method_name": "get_no_text",
+          "description": "Gets the Name attribute of no button on personalized support",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the no button text"
+        },
+        {
+          "method_name": "click_view_data_collected_link",
+          "description": "Clicks on the view data collected link",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to view data collected page"
+        },
+        {
+          "method_name": "get_about_title_text",
+          "description": "Gets the Name attribute of warranty status title text in view data",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the about title text from view data window"
+        },
+        {
+          "method_name": "get_para1_in_view_data_window_text",
+          "description": "Gets the Name attribute of paragraph 1 in view data window",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the first paragraph text from view data window"
+        },
+        {
+          "method_name": "get_para2_in_view_data_window_text",
+          "description": "Gets the Name attribute of paragraph 2 in view data window",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the second paragraph text from view data window"
+        },
+        {
+          "method_name": "get_para3_in_view_data_window_text",
+          "description": "Gets the Name attribute of paragraph 3 in view data window",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the third paragraph text from view data window"
+        },
+        {
+          "method_name": "get_para4_in_view_data_window_text",
+          "description": "Gets the Name attribute of paragraph 4 in view data window",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the fourth paragraph text from view data window"
+        },
+        {
+          "method_name": "get_why_should_text",
+          "description": "Gets the Name attribute of why should text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the why should text"
+        },
+        {
+          "method_name": "get_authorized_para_text",
+          "description": "Gets the Name attribute of authorized paragraph text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the authorized paragraph text"
+        },
+        {
+          "method_name": "selection_this_option_text",
+          "description": "Gets the Name attribute of selection this option text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the selection this option text"
+        },
+        {
+          "method_name": "selection_involve_text",
+          "description": "Gets the Name attribute of selection involve text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the selection involve text"
+        },
+        {
+          "method_name": "yes_text_under_involve_text",
+          "description": "Gets the Name attribute of yes text under involve",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the yes text under involve section"
+        },
+        {
+          "method_name": "get_change_text",
+          "description": "Gets the Name attribute of change text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the change text"
+        },
+        {
+          "method_name": "get_preference_text",
+          "description": "Gets the Name attribute of preference text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the preference text"
+        },
+        {
+          "method_name": "click_close_warranty",
+          "description": "Clicks on the close button for warranty",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Close the warranty window"
+        },
+        {
+          "method_name": "click_no",
+          "description": "Clicks on the no button for personalized support",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Decline personalized support"
+        },
+        {
+          "method_name": "get_custom_devicename_text",
+          "description": "Gets the Name attribute of device name tooltips on PC device",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the custom device name text"
+        },
+        {
+          "method_name": "get_device_name_text",
+          "description": "Gets the Name attribute of device name on PC device",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the device name text"
+        },
+        {
+          "method_name": "verify_device_name_show_on_device_page_header",
+          "description": "Verifies device name is shown on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean indicating presence",
+          "method_purpose": "Check if device name is displayed on device page header"
+        },
+        {
+          "method_name": "verify_cellular",
+          "description": "Verifies presence of cellular element",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if cellular element is visible"
+        },
+        {
+          "method_name": "get_cellular_text",
+          "description": "Gets the Name attribute of cellular element",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the cellular text"
+        },
+        {
+          "method_name": "click_cellular_icon",
+          "description": "Clicks on the cellular icon",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to cellular settings"
+        },
+        {
+          "method_name": "get_display_product_number_on_pcdevice",
+          "description": "Gets the Name attribute of product number shown on device",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the product number displayed on PC device"
+        },
+        {
+          "method_name": "get_display_serial_number_on_pcdevice",
+          "description": "Gets the Name attribute of serial number shown on device",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the serial number displayed on PC device"
+        },
+        {
+          "method_name": "verify_warranty_under_info_icon",
+          "description": "Verifies presence of warranty under info icon",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if warranty is displayed under info icon"
+        },
+        {
+          "method_name": "get_verify_warranty_under_info_icon",
+          "description": "Gets the Name attribute of warranty under info icon",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the warranty text under info icon"
+        },
+        {
+          "method_name": "click_prog_key_card",
+          "description": "Clicks on the programmable key card",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to programmable key settings"
+        },
+        {
+          "method_name": "verify_disconnected_text",
+          "description": "Verifies presence of disconnected text",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if disconnected text is visible"
+        },
+        {
+          "method_name": "get_disconnected_text",
+          "description": "Gets the Name attribute of disconnected text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the disconnected text"
+        },
+        {
+          "method_name": "verify_unknown_text_value",
+          "description": "Verifies presence of unknown text value",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean indicating presence",
+          "method_purpose": "Check if unknown text value is visible"
+        },
+        {
+          "method_name": "verify_info_icon",
+          "description": "Verifies presence of info icon",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if info icon is visible"
+        },
+        {
+          "method_name": "verify_system_control_card",
+          "description": "Verifies presence of system control card",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if system control card is visible"
+        },
+        {
+          "method_name": "get_system_control_text",
+          "description": "Gets the Name attribute of system control card",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the system control card text"
+        },
+        {
+          "method_name": "get_support_control_sub_text",
+          "description": "Gets the Name attribute of system control subtext",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the system control subtext"
+        },
+        {
+          "method_name": "search_text",
+          "description": "Searches for an element by swiping if not immediately visible",
+          "method_input_parameter": [
+            {
+              "parameter_name": "ele",
+              "default_value": null,
+              "parameter_purpose": "Element locator to search for"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Search for an element by repeatedly swiping until found or timeout"
+        },
+        {
+          "method_name": "verify_window_maximize",
+          "description": "Verifies window maximize state and gets Name attribute",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Check if window is maximized and retrieve maximize button text"
+        },
+        {
+          "method_name": "click_system_control_card",
+          "description": "Clicks on the system control card",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to system control settings"
+        },
+        {
+          "method_name": "click_on_productnumber",
+          "description": "Clicks on the product number display",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Interact with product number element"
+        },
+        {
+          "method_name": "click_info_icon_devicepage",
+          "description": "Clicks on the info icon on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Open device information details"
+        },
+        {
+          "method_name": "click_productnumber_value",
+          "description": "Clicks on the product number value",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Interact with product number value"
+        },
+        {
+          "method_name": "click_serialnumber_value_tooltip",
+          "description": "Clicks on the serial number value tooltip",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Interact with serial number tooltip"
+        },
+        {
+          "method_name": "get_serialnumber_value_tooltip_text",
+          "description": "Gets the Name attribute of serial number value tooltip",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the serial number tooltip text"
+        },
+        {
+          "method_name": "verify_presenceof_serialnumber_tooltip",
+          "description": "Verifies presence of serial number tooltip",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if serial number tooltip is visible"
+        },
+        {
+          "method_name": "get_productnumber_value_tooltip_text",
+          "description": "Gets the Name attribute of product number value tooltip",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the product number tooltip text"
+        },
+        {
+          "method_name": "click_productnumber_value_tooltip",
+          "description": "Clicks on the product number value tooltip",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Interact with product number tooltip"
+        },
+        {
+          "method_name": "verify_presenceof_productnumber_tooltip",
+          "description": "Verifies presence of product number tooltip",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if product number tooltip is visible"
+        },
+        {
+          "method_name": "click_copyserialnumber_btn_tooltip",
+          "description": "Clicks on the copy serial number button tooltip",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Copy serial number using tooltip button"
+        },
+        {
+          "method_name": "click_copyserialnumber_btn",
+          "description": "Clicks on the copy serial number button",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Copy serial number to clipboard"
+        },
+        {
+          "method_name": "get_copyserialnumber_btn_tooltip_text",
+          "description": "Gets the Name attribute of copy serial number button tooltip",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the copy serial number button tooltip text"
+        },
+        {
+          "method_name": "verify_presenceof_copyserialnumberbtn_tooltip",
+          "description": "Verifies presence of copy serial number button tooltip",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if copy serial number button tooltip is visible"
+        },
+        {
+          "method_name": "click_copyproductnumber_btn_tooltip",
+          "description": "Clicks on the copy product number button tooltip",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Copy product number using tooltip button"
+        },
+        {
+          "method_name": "click_copyproductnumber_btn",
+          "description": "Clicks on the copy product number button",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Copy product number to clipboard"
+        },
+        {
+          "method_name": "get_copyproductnumber_btn_tooltip_text",
+          "description": "Gets the Name attribute of copy product number button tooltip",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the copy product number button tooltip text"
+        },
+        {
+          "method_name": "verify_presenceof_copyproductnumberbtn_tooltip",
+          "description": "Verifies presence of copy product number button tooltip",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if copy product number button tooltip is visible"
+        },
+        {
+          "method_name": "click_privacy_alert",
+          "description": "Clicks on the privacy alert card",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to privacy alert details"
+        },
+        {
+          "method_name": "click_battery_tool_tip",
+          "description": "Clicks on the battery icon on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Show battery tooltip information"
+        },
+        {
+          "method_name": "get_battery_tool_tip",
+          "description": "Gets the Name attribute of battery tooltip",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the battery tooltip text"
+        },
+        {
+          "method_name": "click_device_rename_on_pcdevice",
+          "description": "Verifies presence of device rename icon on PC device",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if device rename icon is visible"
+        },
+        {
+          "method_name": "verify_presenceOf_info_icon_devicepage",
+          "description": "Verifies presence of info icon on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if info icon is displayed on device page"
+        },
+        {
+          "method_name": "verify_presenceOf_productnumber",
+          "description": "Verifies presence of product number display",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if product number is displayed"
+        },
+        {
+          "method_name": "verify_presenceOf_serialnumber",
+          "description": "Verifies presence of serial number display",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if serial number is displayed"
+        },
+        {
+          "method_name": "verify_presenceOf_warrantyInfo",
+          "description": "Verifies presence of warranty info display",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if warranty information is displayed"
+        },
+        {
+          "method_name": "verify_presenceOf_copybtn_serialnumber",
+          "description": "Verifies presence of copy button for serial number",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if copy button for serial number is displayed"
+        },
+        {
+          "method_name": "verify_presenceOf_copybtn_productnumber",
+          "description": "Verifies presence of copy button for product number",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if copy button for product number is displayed"
+        },
+        {
+          "method_name": "verify_click_on_info_icon_devicepage",
+          "description": "Clicks on the info icon on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Open device information by clicking info icon"
+        },
+        {
+          "method_name": "verify_click_on_product_number",
+          "description": "Clicks on the copy product number element",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Interact with product number copy element"
+        },
+        {
+          "method_name": "verify_click_on_serial_number",
+          "description": "Clicks on the serial product number element",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Interact with serial number element"
+        },
+        {
+          "method_name": "verify_click_on_productnumber_copyicon",
+          "description": "Clicks on the product number copy icon",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Copy product number using copy icon"
+        },
+        {
+          "method_name": "verify_click_on_serialnumber_copyicon",
+          "description": "Clicks on the serial number copy icon",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Copy serial number using copy icon"
+        },
+        {
+          "method_name": "get_copyproduct_number_text",
+          "description": "Gets the Name attribute of copy product number button",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the copy product number button text"
+        },
+        {
+          "method_name": "get_copyserial_number_text",
+          "description": "Gets the Name attribute of copy serial number button",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the copy serial number button text"
+        },
+        {
+          "method_name": "click_auto_screen_dimming",
+          "description": "Clicks on the auto screen dimming element",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to auto screen dimming settings"
+        },
+        {
+          "method_name": "verify_system_control_title",
+          "description": "Verifies presence of system control title",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if system control title is visible"
+        },
+        {
+          "method_name": "verify_system_control_subtitle",
+          "description": "Verifies presence of system control subtitle",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if system control subtitle is visible"
+        },
+        {
+          "method_name": "verify_touchpad_PCDevice_header",
+          "description": "Verifies presence of touchpad PC device header",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if touchpad header is visible on PC device page"
+        },
+        {
+          "method_name": "verify_touchpad_PCDevice_header_text",
+          "description": "Verifies presence of touchpad PC device header text",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if touchpad header text is visible"
+        },
+        {
+          "method_name": "get_touchpad_PCDevice_header_text",
+          "description": "Gets the Name attribute of touchpad PC device header text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the touchpad header text"
+        },
+        {
+          "method_name": "click_touchpad_header",
+          "description": "Clicks on the touchpad device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate using touchpad header"
+        },
+        {
+          "method_name": "verify_modal_name_show_on_device_page_header",
+          "description": "Verifies presence of modal name on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if modal name is displayed on device page header"
+        },
+        {
+          "method_name": "get_modal_name_show_on_device_page_header",
+          "description": "Gets the Name attribute of modal name on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the modal name from device page header"
+        },
+        {
+          "method_name": "verify_battery_icon_show_on_device_page_header",
+          "description": "Verifies presence of battery icon on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if battery icon is displayed on device page header"
+        },
+        {
+          "method_name": "get_battery_tooltips",
+          "description": "Gets the Name attribute of battery tooltips on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the battery tooltip text"
+        },
+        {
+          "method_name": "verify_infor_icon_show_on_device_page_header",
+          "description": "Verifies info icon is shown on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean indicating presence",
+          "method_purpose": "Check if info icon is displayed on device page header"
+        },
+        {
+          "method_name": "click_infor_icon_on_device_page_header",
+          "description": "Clicks on the info icon on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Open device information from header"
+        },
+        {
+          "method_name": "verify_product_number_name_show_on_device_page_header",
+          "description": "Verifies presence of product number name on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if product number name is displayed on device page header"
+        },
+        {
+          "method_name": "verify_product_number_show_on_device_page_header",
+          "description": "Verifies presence of product number on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if product number is displayed on device page header"
+        },
+        {
+          "method_name": "verify_product_number_copy_icon_show_on_device_page_header",
+          "description": "Verifies presence of product number copy icon on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if product number copy icon is displayed on device page header"
+        },
+        {
+          "method_name": "verify_serial_number_name_show_on_device_page_header",
+          "description": "Verifies presence of serial number name on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if serial number name is displayed on device page header"
+        },
+        {
+          "method_name": "verify_serial_number_show_on_device_page_header",
+          "description": "Verifies presence of serial number on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if serial number is displayed on device page header"
+        },
+        {
+          "method_name": "verify_serial_number_copy_icon__show_on_device_page_header",
+          "description": "Verifies presence of serial number copy icon on device page header",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if serial number copy icon is displayed on device page header"
+        },
+        {
+          "method_name": "verify_pc_device_image_show_on_device_page",
+          "description": "Verifies presence of PC device image on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if PC device image is displayed on device page"
+        },
+        {
+          "method_name": "verify_audio_control_card_show_on_device_page",
+          "description": "Verifies presence of audio control card on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if audio control card is displayed on device page"
+        },
+        {
+          "method_name": "verify_video_control_card_show_on_device_page",
+          "description": "Verifies presence of video control card on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if video control card is displayed on device page"
+        },
+        {
+          "method_name": "verify_display_control_card_show_on_device_page",
+          "description": "Verifies presence of display control card on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if display control card is displayed on device page"
+        },
+        {
+          "method_name": "verify_programmable_key_card_show_on_device_page",
+          "description": "Verifies presence of programmable key card on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if programmable key card is displayed on device page"
+        },
+        {
+          "method_name": "verify_5G_card_show_on_device_page",
+          "description": "Verifies presence of 5G card on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if 5G card is displayed on device page"
+        },
+        {
+          "method_name": "verify_support_card_show_on_device_page",
+          "description": "Verifies presence of support card on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if support card is displayed on device page"
+        },
+        {
+          "method_name": "click_view_all_controls_link",
+          "description": "Waits for and clicks view all controls link",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to view all controls page"
+        },
+        {
+          "method_name": "verify_view_all_controls_link_show",
+          "description": "Verifies presence of view all controls link",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if view all controls link is displayed"
+        },
+        {
+          "method_name": "verify_pc_device_top_title_on_audio_module",
+          "description": "Verifies presence of PC device top title on audio module",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if PC device title is displayed on audio module"
+        },
+        {
+          "method_name": "verify_pc_device_top_title_on_hppk_module",
+          "description": "Verifies presence of PC device top title on HPPK module",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if PC device title is displayed on HPPK module"
+        },
+        {
+          "method_name": "verify_touchpad_PCDevice_header_description",
+          "description": "Verifies presence of touchpad PC device header description",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if touchpad header description is visible"
+        },
+        {
+          "method_name": "get_touchpad_PCDevice_header_description",
+          "description": "Gets the Name attribute of touchpad PC device header description",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the touchpad header description text"
+        },
+        {
+          "method_name": "click_support_module_on_pc_device",
+          "description": "Waits for and clicks support module on PC device",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to support module from PC device page"
+        },
+        {
+          "method_name": "verify_pc_device_top_title_on_display_control_module",
+          "description": "Verifies presence of PC device top title on display control module",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if PC device title is displayed on display control module"
+        },
+        {
+          "method_name": "verify_pc_device_top_title_on_smartexp_module",
+          "description": "Verifies presence of PC device top title on SmartExp module",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if PC device title is displayed on SmartExp module"
+        },
+        {
+          "method_name": "click_pc_device_title_from_smartexp_title",
+          "description": "Clicks PC devices back button from SmartExp title bar",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate back to PC devices from SmartExp page"
+        },
+        {
+          "method_name": "click_product_numder_under_infor_icon",
+          "description": "Clicks on product number under info icon",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Interact with product number under info icon"
+        },
+        {
+          "method_name": "click_serial_number_under_infor_icon",
+          "description": "Clicks on serial number under info icon",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Interact with serial number under info icon"
+        },
+        {
+          "method_name": "get_serial_number_under_infor_icon",
+          "description": "Gets the Name attribute of serial number under info icon",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the serial number text under info icon"
+        },
+        {
+          "method_name": "get_product_numder_under_infor_icon",
+          "description": "Gets the Name attribute of product number under info icon",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the product number text under info icon"
+        },
+        {
+          "method_name": "get_serial_number_copied_under_infor_icon",
+          "description": "Gets the Name attribute of serial number copy icon",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the serial number copy icon text"
+        },
+        {
+          "method_name": "click_devicename_for_back_PC_device_page",
+          "description": "Clicks on device name to go back to PC device page",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate back to PC device page using device name"
+        },
+        {
+          "method_name": "get_privacy_alert_card_on_pcdevice",
+          "description": "Gets the Name attribute of privacy alert card on PC device",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the privacy alert card text on PC device"
+        },
+        {
+          "method_name": "get_auto_screen_dimming_card_on_pcdevice",
+          "description": "Gets the Name attribute of auto screen dimming card on PC device",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the auto screen dimming card text on PC device"
+        },
+        {
+          "method_name": "verify_battery_manager_card",
+          "description": "Verifies presence of battery manager action item",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if battery manager card is visible"
+        },
+        {
+          "method_name": "click_devicename_for_text",
+          "description": "Clicks on device name tooltips on PC device",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Interact with device name tooltips"
+        },
+        {
+          "method_name": "get_product_number_copied_under_infor_icon",
+          "description": "Gets the Name attribute of product number shown on device",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the product number text from device info"
+        },
+        {
+          "method_name": "click_wi_fi_card",
+          "description": "Clicks on the Wi-Fi card",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to Wi-Fi settings"
+        },
+        {
+          "method_name": "click_MyScan_card",
+          "description": "Clicks on the MyScan card",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to MyScan feature"
+        },
+        {
+          "method_name": "verify_Unknown_text",
+          "description": "Verifies Unknown text is present",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean indicating presence",
+          "method_purpose": "Check if Unknown text is visible"
+        },
+        {
+          "method_name": "click_for_battery_manager_card",
+          "description": "Clicks on the battery manager action item",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to battery manager settings"
+        },
+        {
+          "method_name": "verify_gesture_show_on_device_page",
+          "description": "Verifies gesture card is shown on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean indicating presence",
+          "method_purpose": "Check if gesture card is visible on device page"
+        },
+        {
+          "method_name": "verify_wifi_sharing_show_on_device_page",
+          "description": "Verifies Wi-Fi sharing card is shown on device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean indicating presence",
+          "method_purpose": "Check if Wi-Fi sharing card is visible on device page"
+        },
+        {
+          "method_name": "verify_screen_distance_card_on_pcdevice_page",
+          "description": "Verifies screen distance card is shown on PC device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean indicating presence",
+          "method_purpose": "Check if screen distance card is visible on PC device page"
+        },
+        {
+          "method_name": "click_screen_distance_card",
+          "description": "Clicks on the screen distance card",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to screen distance settings"
+        },
+        {
+          "method_name": "verify_pc_device_is_selected_from_navbar",
+          "description": "Verifies PC device is selected from navbar",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the SelectionItem.IsSelected attribute value",
+          "method_purpose": "Check if PC device module is selected in navigation bar"
+        },
+        {
+          "method_name": "verify_presence_detection_card_on_pcdevice_page",
+          "description": "Verifies presence detection card is shown on PC device page",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean indicating presence",
+          "method_purpose": "Check if presence detection card is visible on PC device page"
+        },
+        {
+          "method_name": "click_presence_detection_card",
+          "description": "Clicks on the presence detection card",
+          "method_input_parameter": null,
+          "method_output_parameter": null,
+          "method_purpose": "Navigate to presence detection settings"
+        },
+        {
+          "method_name": "verify_presence_detection_text",
+          "description": "Gets the Name attribute of presence detection text",
+          "method_input_parameter": null,
+          "method_output_parameter": "String containing the Name attribute value",
+          "method_purpose": "Retrieve the presence detection text"
+        },
+        {
+          "method_name": "verify_support_module_on_pc_device",
+          "description": "Verifies presence of support module on PC device",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if support module is visible on PC device page"
+        },
+        {
+          "method_name": "verify_energy_consumption_card",
+          "description": "Verifies presence of energy consumption card",
+          "method_input_parameter": null,
+          "method_output_parameter": "Boolean or element object indicating presence",
+          "method_purpose": "Check if energy consumption card is visible"
+        }
+      ],
+      "summary": "The Devices class is a comprehensive UI page object class for managing device-related interactions in an HP application. It inherits from HPXFlow and provides extensive methods for interacting with various device modules including PC devices, audio control, video control, display control, RGB keyboard, programmable keys, 5G, cellular, battery management, privacy alerts, and system controls. The class follows a consistent pattern of providing methods to click elements, verify their presence, and retrieve text attributes. It includes specialized navigation methods for moving between different device settings pages and back to the main PC devices page. The class also handles SSH commands for closing HP video applications and includes utility methods for window management (maximize, minimize, restore, close). Many methods use the driver object to interact with UI elements through locators, with configurable timeouts and error handling options. The class demonstrates a well-structured approach to test automation with clear method naming conventions and comprehensive coverage of device management features."
+    }
+  ]
+}
