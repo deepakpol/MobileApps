@@ -1,0 +1,1202 @@
+{
+  "devicesmfe.py": {
+    "methods": [
+      {
+        "method_name": "verify_new_hp_app_popup",
+        "method_description": "Verifies the new HP app popup skip button is present on the screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for new_hp_app_popup_skip_btn element",
+        "method_purpose": "Waits for and verifies the presence of the new HP app popup skip button with configurable exception handling to ensure the popup is displayed correctly"
+      },
+      {
+        "method_name": "verify_home_nav",
+        "method_description": "Verifies the home navigation by checking the app bar MFE section",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum wait time in seconds for the element to appear"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Result of verify_app_bar_mfe method execution",
+        "method_purpose": "Delegates to verify_app_bar_mfe method to confirm that home navigation is accessible and properly displayed"
+      },
+      {
+        "method_name": "verify_windows_dummy_printer",
+        "method_description": "Verifies that a specific Windows dummy printer device is present in the devices list",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "_printer",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify in the devices list"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum wait time in seconds for the element to appear"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for windows_dummy_printer_device element",
+        "method_purpose": "Waits for and verifies a specific Windows dummy printer device using format specifier for alpha code testing scenarios"
+      },
+      {
+        "method_name": "verify_windows_dummy_printer_removed",
+        "method_description": "Verifies that a specific Windows dummy printer device has been removed from the devices list",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "_printer",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify removal"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "20",
+            "parameter_purpose": "Maximum wait time in seconds for the element to disappear"
+          },
+          {
+            "parameter_name": "invisible",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to check if element is invisible or removed from DOM"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "False",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is still found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for a specific Windows dummy printer device to become invisible, confirming its successful removal from the devices list"
+      },
+      {
+        "method_name": "verify_printer_friend_name",
+        "method_description": "Retrieves the printer friendly name attribute from the UI",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum wait time in seconds for the element to appear"
+          }
+        ],
+        "method_output_parameter": "Name attribute value of the printer_friend_name element",
+        "method_purpose": "Gets the Name attribute of the printer friendly name element for verification and validation purposes"
+      },
+      {
+        "method_name": "verify_printer_model_name",
+        "method_description": "Verifies that the printer model name element is present on the screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for printer_model_name element",
+        "method_purpose": "Waits for and verifies the presence of the printer model name element to ensure device information is displayed"
+      },
+      {
+        "method_name": "verify_supply_levels_card",
+        "method_description": "Verifies that the supply levels card is present, performing page refresh if needed",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum wait time in seconds for the element to appear"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Checks for supply levels card presence, performs page refresh if not found initially, then verifies presence to ensure supply information is accessible"
+      },
+      {
+        "method_name": "verify_app_bar_mfe",
+        "method_description": "Verifies that the app bar MFE section is present on the screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum wait time in seconds for the element to appear"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for app_bar_mfe_section element",
+        "method_purpose": "Waits for and verifies the presence of the app bar MFE section element to ensure navigation bar is properly loaded"
+      },
+      {
+        "method_name": "verify_device_status_mfe",
+        "method_description": "Verifies that the device status section is present on the screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for device_status_section element",
+        "method_purpose": "Waits for the device status section element with displayed=False parameter to verify its presence in the DOM"
+      },
+      {
+        "method_name": "verify_side_panel_mfe",
+        "method_description": "Verifies that the account panel section is present on the screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for account_panel_section element",
+        "method_purpose": "Waits for and verifies the presence of the account panel section element to ensure side panel is accessible"
+      },
+      {
+        "method_name": "verify_home_loggedin",
+        "method_description": "Verifies that the user is logged in by checking that the sign-in button is invisible",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "3",
+            "parameter_purpose": "Maximum wait time in seconds for the element state to change"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "False",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if verification fails"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object checking sign-in button invisibility",
+        "method_purpose": "Confirms logged-in state by verifying the sign-in button is not visible on the home screen"
+      },
+      {
+        "method_name": "verify_device_card_show_up",
+        "method_description": "Verifies that a device card appears on the screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is not found"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "60",
+            "parameter_purpose": "Maximum wait time in seconds for the element to appear"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for device_card element",
+        "method_purpose": "Waits for and verifies the presence of a device card element with extended timeout to accommodate device loading time"
+      },
+      {
+        "method_name": "verify_top_devices_icon_show_up",
+        "method_description": "Verifies that the top devices icon is visible on the header",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for top_devices_icon element",
+        "method_purpose": "Waits for and verifies the presence of the top devices icon element in the navigation header"
+      },
+      {
+        "method_name": "verify_shop_icon_show_up",
+        "method_description": "Verifies that the shop icon is visible on the header",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for shop_icon element",
+        "method_purpose": "Waits for and verifies the presence of the shop icon element in the navigation header"
+      },
+      {
+        "method_name": "verify_add_device_button_show_up",
+        "method_description": "Verifies that the add device button is visible, performing scroll if needed",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum wait time in seconds for the element to appear"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for top_add_button element",
+        "method_purpose": "Verifies add device button presence, performing upward swipe on Windows platform if initially not found to bring element into view"
+      },
+      {
+        "method_name": "verify_bell_icon_show_up",
+        "method_description": "Verifies that the notifications bell icon is visible on the header",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for top_notifications_button element",
+        "method_purpose": "Waits for and verifies the presence of the notifications bell icon element in the navigation header"
+      },
+      {
+        "method_name": "verify_profile_icon_show_up",
+        "method_description": "Verifies that the profile icon is visible on the header",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "20",
+            "parameter_purpose": "Maximum wait time in seconds for the element to appear"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "False",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for top_profile_button element",
+        "method_purpose": "Waits for and verifies the presence of the profile icon element in the navigation header with extended timeout"
+      },
+      {
+        "method_name": "verify_sign_in_button_show_up",
+        "method_description": "Verifies that the sign-in button is visible on the header",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for top_signin_button element",
+        "method_purpose": "Waits for and verifies the presence of the sign-in button element in the navigation header"
+      },
+      {
+        "method_name": "verify_login_successfully",
+        "method_description": "Verifies successful login by checking multiple UI state changes",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "30",
+            "parameter_purpose": "Maximum wait time in seconds for the state changes to occur"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if verification fails"
+          }
+        ],
+        "method_output_parameter": "Boolean result indicating successful login verification",
+        "method_purpose": "Confirms successful login by verifying notifications button is present, profile button is absent, and sign-in button is absent"
+      },
+      {
+        "method_name": "verify_logout_successfully",
+        "method_description": "Verifies successful logout by checking multiple UI state changes",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if verification fails"
+          }
+        ],
+        "method_output_parameter": "Boolean result indicating successful logout verification",
+        "method_purpose": "Confirms successful logout by verifying both profile button and sign-in button are present on the screen"
+      },
+      {
+        "method_name": "verify_window_maximize",
+        "method_description": "Verifies and retrieves the current window maximize state",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Name attribute value of the maximize_myHP element indicating window state",
+        "method_purpose": "Waits for maximize button and returns its Name attribute to verify the current window maximization state"
+      },
+      {
+        "method_name": "click_home_loggedin",
+        "method_description": "Clicks the sign-in button on the home screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Result of click action on top_signin_button element",
+        "method_purpose": "Performs click action on the sign-in button element to initiate the login flow"
+      },
+      {
+        "method_name": "verfiy_device_container_show",
+        "method_description": "Verifies that the device container is displayed on the screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Boolean value indicating whether device_card element is present",
+        "method_purpose": "Checks if device card element is present with extended timeout, returning boolean result for container visibility"
+      },
+      {
+        "method_name": "verify_pen_card_show",
+        "method_description": "Verifies that the pen card is displayed on the screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Boolean value indicating whether pen_card element is present",
+        "method_purpose": "Checks if pen card element is present, returning boolean result for pen device visibility"
+      },
+      {
+        "method_name": "verify_browser_webview_pane",
+        "method_description": "Verifies that the browser webview pane is present on the screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "False",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is not found"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "15",
+            "parameter_purpose": "Maximum wait time in seconds for the element to appear"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for main_webview_pane element",
+        "method_purpose": "Waits for and verifies the presence of the main webview pane element that hosts the web content"
+      },
+      {
+        "method_name": "verify_dock_station_card_show",
+        "method_description": "Verifies that the dock station card is displayed on the screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for dock_station_card element",
+        "method_purpose": "Waits for and verifies the presence of the dock station card element for dock device visibility"
+      },
+      {
+        "method_name": "verify_system_charging_status",
+        "method_description": "Retrieves the system charging status attribute from the UI",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Name attribute value of the charging_status element",
+        "method_purpose": "Gets the Name attribute of the charging status element for verification of system power state"
+      },
+      {
+        "method_name": "verify_hpai_assistant_button_on_header",
+        "method_description": "Verifies that the HP AI assistant button is present on the header",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for hpai_assistant_button_on_header element",
+        "method_purpose": "Waits for and verifies the presence of the HP AI assistant button on the navigation header"
+      },
+      {
+        "method_name": "verify_profile_and_settings_icon_button_lzero_page",
+        "method_description": "Verifies that the profile and settings icon button is present on the L0 page",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for profile_and_settings_icon_button_lzero_page element",
+        "method_purpose": "Waits for and verifies the presence of the profile and settings icon button on the Level Zero page"
+      },
+      {
+        "method_name": "verify_device_mfe_panel_show_up",
+        "method_description": "Verifies that device MFE panel elements are displayed on the screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Boolean value True if verification is successful",
+        "method_purpose": "Verifies both profile icon and sign-in button are present, returning True if successful to confirm panel visibility"
+      },
+      {
+        "method_name": "verify_shop_icon_preview",
+        "method_description": "Verifies the shop icon preview with create account button",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "False",
+            "parameter_purpose": "Boolean flag to control whether to raise exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for shop_icon_create_account_button element",
+        "method_purpose": "Waits for and verifies the presence of the shop icon create account button element in preview mode"
+      },
+      {
+        "method_name": "click_myhp_window",
+        "method_description": "Clicks the myHP window element to bring it into focus",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the myHP window element to activate or focus the application window"
+      },
+      {
+        "method_name": "scroll_to_printer",
+        "method_description": "Scrolls through the page to find a specific printer in the devices list",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "_printer",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to scroll to and locate"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "40",
+            "parameter_purpose": "Maximum wait time in seconds for scrolling operation"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Scrolls through the page using PAGE_DOWN key until the specified printer is found or timeout occurs"
+      },
+      {
+        "method_name": "click_top_minimize_btn",
+        "method_description": "Clicks the top minimize button to minimize the application window",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the minimize button element to minimize the application window"
+      },
+      {
+        "method_name": "click_top_maximize_btn",
+        "method_description": "Clicks the top maximize button to maximize the application window",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the maximize button element to maximize the application window"
+      },
+      {
+        "method_name": "click_top_close_btn",
+        "method_description": "Clicks the top close button to close the application window",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the close button element to close the application window"
+      },
+      {
+        "method_name": "click_new_hp_app_popup_skip",
+        "method_description": "Clicks the skip button on the new HP app popup dialog",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Result of click action on new_hp_app_popup_skip_btn element",
+        "method_purpose": "Performs click action on the new HP app popup skip button to dismiss the popup"
+      },
+      {
+        "method_name": "refresh_device_mfe",
+        "method_description": "Refreshes the device MFE page using keyboard shortcut",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Result of sending CTRL+R keyboard combination",
+        "method_purpose": "Clicks on webview pane and sends CTRL+R keyboard shortcut to refresh the page content"
+      },
+      {
+        "method_name": "swipe_to_end",
+        "method_description": "Scrolls to the end of the page using END key",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Result of sending END key",
+        "method_purpose": "Clicks on webview pane and sends END key to scroll to the bottom of the page"
+      },
+      {
+        "method_name": "click_windows_dummy_printer",
+        "method_description": "Clicks on a specific Windows dummy printer device in the list",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "_printer",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to click"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks on specified Windows dummy printer, handles feature unavailable and firmware update dialogs if they appear during interaction"
+      },
+      {
+        "method_name": "get_first_printer_device_card_info",
+        "method_description": "Retrieves information from the first printer device card",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Name attribute value of the first_printer_device_card element",
+        "method_purpose": "Gets the Name attribute of the first printer device card element to retrieve device information"
+      },
+      {
+        "method_name": "click_add_button",
+        "method_description": "Clicks the add device button to initiate device addition flow",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies add button is present, then clicks it with change detection for add_device_text and flow change to add_printer screen"
+      },
+      {
+        "method_name": "click_device_tile",
+        "method_description": "Clicks the device tile element to select or view device",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the device tile element to interact with device representation"
+      },
+      {
+        "method_name": "click_profile_button",
+        "method_description": "Clicks the profile button to open profile side panel",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the top profile button with change detection for profile_side_panel appearance to access user profile"
+      },
+      {
+        "method_name": "click_device_icon",
+        "method_description": "Clicks the device icon element in the navigation",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the device icon element to navigate to devices section"
+      },
+      {
+        "method_name": "click_close_button",
+        "method_description": "Clicks the account panel close button using JavaScript executor",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for account panel close button and clicks it using JavaScript executor to dismiss the panel"
+      },
+      {
+        "method_name": "click_device_card",
+        "method_description": "Clicks on a device card, handling different environment configurations",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks device card (stage/prod or regular), handles feature unavailable popup if present, logs if no PC device L0 page is found"
+      },
+      {
+        "method_name": "maximize_app",
+        "method_description": "Maximizes the application window to full screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the maximize_myHP element to maximize the application window"
+      },
+      {
+        "method_name": "restore_app",
+        "method_description": "Restores the application window to its previous size",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the restore_myHP element to restore the application window from maximized state"
+      },
+      {
+        "method_name": "minimize_app",
+        "method_description": "Minimizes the application window to taskbar",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the minimize_app element to minimize the application window"
+      },
+      {
+        "method_name": "close_app",
+        "method_description": "Closes the application completely",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the close_myHP element to terminate the application"
+      },
+      {
+        "method_name": "click_minimize_app",
+        "method_description": "Clicks minimize button if it is present on screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for minimize_app element and clicks it if found to minimize the application"
+      },
+      {
+        "method_name": "click_myhp_on_task_bar",
+        "method_description": "Clicks myHP icon on the Windows taskbar",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for myHP taskbar icon and clicks it if found to restore or focus the application"
+      },
+      {
+        "method_name": "click_profile_and_settings_icon_button_lzero_page",
+        "method_description": "Clicks profile and settings icon button on the L0 page",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the profile and settings icon button on Level Zero page to access settings"
+      },
+      {
+        "method_name": "click_navigation_bar_settings_card_arrow_lzero_page",
+        "method_description": "Clicks navigation bar settings card arrow on the L0 page",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Checks for sign-in link, then clicks navigation bar settings card arrow if present on Level Zero page"
+      },
+      {
+        "method_name": "get_hpx_version_lzero_page",
+        "method_description": "Retrieves the HPX version information from the L0 page",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Name attribute value of the hpx_version_lzero_page element",
+        "method_purpose": "Gets the Name attribute of the HPX version element on Level Zero page for version verification"
+      },
+      {
+        "method_name": "click_back_button_rebranding",
+        "method_description": "Clicks the back button on rebranded pages",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for and clicks back button on rebranded pages, handles feature unavailable popup if present during navigation"
+      },
+      {
+        "method_name": "click_navigation_bar_menu_arrow_lzero_page",
+        "method_description": "Clicks navigation bar menu arrow on the L0 page",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the menu back button in sign-in side navbar on Level Zero page"
+      },
+      {
+        "method_name": "click_navigation_bar_close_button_arrow_lzero_page",
+        "method_description": "Clicks navigation bar close button on the L0 page",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the close button in sign-in side navbar on Level Zero page to dismiss the panel"
+      },
+      {
+        "method_name": "click_ok_btn_error_popup",
+        "method_description": "Clicks OK button on error popup dialog",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the OK button of error popup to dismiss the error message"
+      },
+      {
+        "method_name": "click_device_card_by_index",
+        "method_description": "Clicks a device card at a specific index position in the list",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "index",
+            "default_value": "0",
+            "parameter_purpose": "Zero-based index position of the device card to click"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks device card at specified index position, checking for stage/prod or regular device card configuration"
+      },
+      {
+        "method_name": "click_secondary_device_card_by_index",
+        "method_description": "Clicks a secondary device card at a specific index position in the list",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "index",
+            "default_value": "0",
+            "parameter_purpose": "Zero-based index position of the secondary device card to click"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Finds multiple secondary device cards and clicks the one at specified index position"
+      },
+      {
+        "method_name": "select_my_hp_account_btn",
+        "method_description": "Selects the myHP account button to access account features",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the top sign-in button with extended timeout to access account options"
+      },
+      {
+        "method_name": "click_pen_card",
+        "method_description": "Clicks the pen card element to view pen device details",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the pen card element to interact with pen device"
+      },
+      {
+        "method_name": "click_pen_card_by_index",
+        "method_description": "Clicks a pen card at a specific index position in the list",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "index",
+            "default_value": "0",
+            "parameter_purpose": "Zero-based index position of the pen card to click"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks pen card at specified index position with displayed=False parameter for hidden elements"
+      },
+      {
+        "method_name": "click_top_profile_icon",
+        "method_description": "Clicks the top profile icon in the navigation header",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the top profile button with extended timeout to access profile options"
+      },
+      {
+        "method_name": "verify_top_profile_icon",
+        "method_description": "Verifies that the top profile icon is present in the navigation header",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Boolean value indicating whether top_profile_button element is present",
+        "method_purpose": "Waits for top profile button and returns boolean result to confirm profile icon visibility"
+      },
+      {
+        "method_name": "click_dock_station_card",
+        "method_description": "Clicks the dock station card element to view dock device details",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the dock station card element to interact with dock device"
+      },
+      {
+        "method_name": "maximize_the_hpx_window",
+        "method_description": "Maximizes the HPX window if it is not already in maximized state",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Checks window maximize state and maximizes the application if the state indicates 'Maximize HP' is available"
+      },
+      {
+        "method_name": "verify_pen_card_image",
+        "method_description": "Verifies pen card image using screenshot comparison technique",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Result of wait_for_object for pen_card element",
+        "method_purpose": "Decorated method that performs screenshot comparison of pen card element for visual validation"
+      },
+      {
+        "method_name": "navigate_back_from_page_using_locator",
+        "method_description": "Navigates back from a page if a specific locator is present",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          },
+          {
+            "parameter_name": "locator",
+            "default_value": null,
+            "parameter_purpose": "Locator element to check for presence before navigating back"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Checks if specified locator is present on the page, then clicks back button if found to navigate to previous screen"
+      },
+      {
+        "method_name": "verify_back_button_rebranding_text",
+        "method_description": "Retrieves the text content of the back button on rebranded pages",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": "Name attribute value of the back_button_rebranding element",
+        "method_purpose": "Gets the Name attribute of the back button on rebranded pages for text verification"
+      },
+      {
+        "method_name": "click_hpai_assistant_button_on_header",
+        "method_description": "Clicks the HP AI assistant button on the navigation header",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the HP AI assistant button on header to launch AI assistant feature"
+      },
+      {
+        "method_name": "click_devices_button_on_header",
+        "method_description": "Clicks the devices button on the navigation header",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the devices button on header to navigate to devices section"
+      },
+      {
+        "method_name": "click_door_open_sms_btn",
+        "method_description": "Clicks the door open SMS button for printer door status",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the door open SMS button to handle printer door open notification"
+      },
+      {
+        "method_name": "click_close_app",
+        "method_description": "Clicks to close the myHP application completely",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the close myHP app element to terminate the application"
+      },
+      {
+        "method_name": "click_shop_icon",
+        "method_description": "Clicks the shop icon element in the navigation header",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference to the DevicesMFE page object"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs click action on the shop icon element to navigate to shopping features"
+      }
+    ]
+  }
+}
