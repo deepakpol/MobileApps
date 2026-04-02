@@ -1,0 +1,1264 @@
+{
+  "summaries": [
+    {
+      "class_name": "DevicesMFE",
+      "base_class": "HPXFlow",
+      "locators": [
+        "new_hp_app_popup_skip_btn",
+        "app_bar_mfe_section",
+        "windows_dummy_printer_device",
+        "printer_friend_name",
+        "printer_model_name",
+        "supply_levels_card",
+        "main_webview_pane",
+        "device_status_section",
+        "account_panel_section",
+        "top_signin_button",
+        "device_card",
+        "top_devices_icon",
+        "shop_icon",
+        "top_add_button",
+        "top_notifications_button",
+        "top_profile_button",
+        "maximize_myHP",
+        "pen_card",
+        "dock_station_card",
+        "charging_status",
+        "hpai_assistant_button_on_header",
+        "profile_and_settings_icon_button_lzero_page",
+        "shop_icon_create_account_button",
+        "myhp_window",
+        "minimize_btn",
+        "maximize_btn",
+        "close_btn",
+        "add_device_text",
+        "device_tile",
+        "profile_side_panel",
+        "device_icon",
+        "account_panel_close_button",
+        "device_card_stage_prod",
+        "feature_not_available_itg_pop_up",
+        "itg_pop_up_ok_button",
+        "restore_myHP",
+        "minimize_app",
+        "close_myHP",
+        "myhp_on_task_bar",
+        "sideflyout_sign_in_link",
+        "navigation_bar_settings_card_arrow_lzero_page",
+        "hpx_version_lzero_page",
+        "back_button_rebranding",
+        "menu_back_button_sign_in_side_navbar_lzero",
+        "close_button_sign_in_side_navbar_lzero",
+        "ok_btn_error_popup",
+        "secondary_device_card",
+        "devices_button_on_header",
+        "door_open_sms_btn",
+        "close_myhp_app",
+        "feature_unavailable_text",
+        "dialog_ok_btn",
+        "fw_update_title",
+        "fw_update_no_btn",
+        "first_printer_device_card"
+      ],
+      "methods": [
+        {
+          "method_name": "verify_new_hp_app_popup",
+          "description": "Verifies the new HP app popup skip button is present.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for new_hp_app_popup_skip_btn",
+          "method_purpose": "Waits for and verifies the presence of the new HP app popup skip button with configurable exception handling."
+        },
+        {
+          "method_name": "verify_home_nav",
+          "description": "Verifies the home navigation by checking app bar MFE.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "10",
+              "parameter_purpose": "Maximum wait time in seconds"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "Result of verify_app_bar_mfe method",
+          "method_purpose": "Delegates to verify_app_bar_mfe to confirm home navigation is accessible."
+        },
+        {
+          "method_name": "verify_windows_dummy_printer",
+          "description": "Verifies a Windows dummy printer device is present.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "_printer",
+              "default_value": null,
+              "parameter_purpose": "Printer name to verify"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "10",
+              "parameter_purpose": "Maximum wait time in seconds"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for windows_dummy_printer_device",
+          "method_purpose": "Waits for and verifies a specific Windows dummy printer device using format specifier for alpha code testing."
+        },
+        {
+          "method_name": "verify_windows_dummy_printer_removed",
+          "description": "Verifies a Windows dummy printer device has been removed.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "_printer",
+              "default_value": null,
+              "parameter_purpose": "Printer name to verify removal"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "20",
+              "parameter_purpose": "Maximum wait time in seconds"
+            },
+            {
+              "parameter_name": "invisible",
+              "default_value": "True",
+              "parameter_purpose": "Checks if element is invisible/removed"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "False",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Waits for a specific Windows dummy printer device to become invisible, confirming its removal."
+        },
+        {
+          "method_name": "verify_printer_friend_name",
+          "description": "Retrieves the printer friendly name attribute.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "10",
+              "parameter_purpose": "Maximum wait time in seconds"
+            }
+          ],
+          "method_output_parameter": "Name attribute of printer_friend_name element",
+          "method_purpose": "Gets the Name attribute of the printer friendly name element for verification."
+        },
+        {
+          "method_name": "verify_printer_model_name",
+          "description": "Verifies the printer model name element is present.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for printer_model_name",
+          "method_purpose": "Waits for and verifies the presence of the printer model name element."
+        },
+        {
+          "method_name": "verify_supply_levels_card",
+          "description": "Verifies the supply levels card is present, refreshing if needed.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "10",
+              "parameter_purpose": "Maximum wait time in seconds"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Checks for supply levels card, performs page refresh if not found initially, then verifies presence."
+        },
+        {
+          "method_name": "verify_app_bar_mfe",
+          "description": "Verifies the app bar MFE section is present.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "10",
+              "parameter_purpose": "Maximum wait time in seconds"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for app_bar_mfe_section",
+          "method_purpose": "Waits for and verifies the presence of the app bar MFE section element."
+        },
+        {
+          "method_name": "verify_device_status_mfe",
+          "description": "Verifies the device status section is present.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for device_status_section",
+          "method_purpose": "Waits for the device status section element with displayed=False parameter."
+        },
+        {
+          "method_name": "verify_side_panel_mfe",
+          "description": "Verifies the account panel section is present.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for account_panel_section",
+          "method_purpose": "Waits for and verifies the presence of the account panel section element."
+        },
+        {
+          "method_name": "verify_home_loggedin",
+          "description": "Verifies user is logged in by checking sign-in button is invisible.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "3",
+              "parameter_purpose": "Maximum wait time in seconds"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "False",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object checking sign-in button invisibility",
+          "method_purpose": "Confirms logged-in state by verifying the sign-in button is not visible."
+        },
+        {
+          "method_name": "verify_device_card_show_up",
+          "description": "Verifies a device card appears on screen.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "60",
+              "parameter_purpose": "Maximum wait time in seconds"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for device_card",
+          "method_purpose": "Waits for and verifies the presence of a device card element with extended timeout."
+        },
+        {
+          "method_name": "verify_top_devices_icon_show_up",
+          "description": "Verifies the top devices icon is visible.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for top_devices_icon",
+          "method_purpose": "Waits for and verifies the presence of the top devices icon element."
+        },
+        {
+          "method_name": "verify_shop_icon_show_up",
+          "description": "Verifies the shop icon is visible.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for shop_icon",
+          "method_purpose": "Waits for and verifies the presence of the shop icon element."
+        },
+        {
+          "method_name": "verify_add_device_button_show_up",
+          "description": "Verifies the add device button is visible, scrolling if needed.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "10",
+              "parameter_purpose": "Maximum wait time in seconds"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for top_add_button",
+          "method_purpose": "Verifies add device button presence, performing upward swipe on Windows if initially not found."
+        },
+        {
+          "method_name": "verify_bell_icon_show_up",
+          "description": "Verifies the notifications bell icon is visible.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for top_notifications_button",
+          "method_purpose": "Waits for and verifies the presence of the notifications bell icon element."
+        },
+        {
+          "method_name": "verify_profile_icon_show_up",
+          "description": "Verifies the profile icon is visible.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "20",
+              "parameter_purpose": "Maximum wait time in seconds"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "False",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for top_profile_button",
+          "method_purpose": "Waits for and verifies the presence of the profile icon element."
+        },
+        {
+          "method_name": "verify_sign_in_button_show_up",
+          "description": "Verifies the sign-in button is visible.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for top_signin_button",
+          "method_purpose": "Waits for and verifies the presence of the sign-in button element."
+        },
+        {
+          "method_name": "verify_login_successfully",
+          "description": "Verifies successful login by checking UI state changes.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "30",
+              "parameter_purpose": "Maximum wait time in seconds"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "Boolean result of compound verification",
+          "method_purpose": "Confirms successful login by verifying notifications button is present, profile button is absent, and sign-in button is absent."
+        },
+        {
+          "method_name": "verify_logout_successfully",
+          "description": "Verifies successful logout by checking UI state changes.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "Boolean result of compound verification",
+          "method_purpose": "Confirms successful logout by verifying both profile button and sign-in button are present."
+        },
+        {
+          "method_name": "verify_window_maximize",
+          "description": "Verifies and retrieves the window maximize state.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Name attribute of maximize_myHP element",
+          "method_purpose": "Waits for maximize button and returns its Name attribute to verify window state."
+        },
+        {
+          "method_name": "click_home_loggedin",
+          "description": "Clicks the sign-in button on home screen.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Result of click action on top_signin_button",
+          "method_purpose": "Performs click action on the sign-in button element."
+        },
+        {
+          "method_name": "verfiy_device_container_show",
+          "description": "Verifies device container is displayed.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Boolean indicating if device_card is present",
+          "method_purpose": "Checks if device card element is present with extended timeout, returning boolean result."
+        },
+        {
+          "method_name": "verify_pen_card_show",
+          "description": "Verifies pen card is displayed.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Boolean indicating if pen_card is present",
+          "method_purpose": "Checks if pen card element is present, returning boolean result."
+        },
+        {
+          "method_name": "verify_browser_webview_pane",
+          "description": "Verifies the browser webview pane is present.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "False",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "15",
+              "parameter_purpose": "Maximum wait time in seconds"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for main_webview_pane",
+          "method_purpose": "Waits for and verifies the presence of the main webview pane element."
+        },
+        {
+          "method_name": "verify_dock_station_card_show",
+          "description": "Verifies dock station card is displayed.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for dock_station_card",
+          "method_purpose": "Waits for and verifies the presence of the dock station card element."
+        },
+        {
+          "method_name": "verify_system_charging_status",
+          "description": "Retrieves the system charging status attribute.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Name attribute of charging_status element",
+          "method_purpose": "Gets the Name attribute of the charging status element for verification."
+        },
+        {
+          "method_name": "verify_hpai_assistant_button_on_header",
+          "description": "Verifies HP AI assistant button is present on header.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for hpai_assistant_button_on_header",
+          "method_purpose": "Waits for and verifies the presence of the HP AI assistant button on the header."
+        },
+        {
+          "method_name": "verify_profile_and_settings_icon_button_lzero_page",
+          "description": "Verifies profile and settings icon button on L0 page.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for profile_and_settings_icon_button_lzero_page",
+          "method_purpose": "Waits for and verifies the presence of the profile and settings icon button on L0 page."
+        },
+        {
+          "method_name": "verify_device_mfe_panel_show_up",
+          "description": "Verifies device MFE panel elements are displayed.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "True",
+          "method_purpose": "Verifies both profile icon and sign-in button are present, returning True if successful."
+        },
+        {
+          "method_name": "verify_shop_icon_preview",
+          "description": "Verifies shop icon preview with create account button.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "False",
+              "parameter_purpose": "Controls whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for shop_icon_create_account_button",
+          "method_purpose": "Waits for and verifies the presence of the shop icon create account button element."
+        },
+        {
+          "method_name": "click_myhp_window",
+          "description": "Clicks the myHP window element.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the myHP window element."
+        },
+        {
+          "method_name": "scroll_to_printer",
+          "description": "Scrolls to find a specific printer in the list.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "_printer",
+              "default_value": null,
+              "parameter_purpose": "Printer name to scroll to"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "40",
+              "parameter_purpose": "Maximum wait time in seconds"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Scrolls through the page using PAGE_DOWN key until the specified printer is found or timeout occurs."
+        },
+        {
+          "method_name": "click_top_minimize_btn",
+          "description": "Clicks the top minimize button.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the minimize button element."
+        },
+        {
+          "method_name": "click_top_maximize_btn",
+          "description": "Clicks the top maximize button.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the maximize button element."
+        },
+        {
+          "method_name": "click_top_close_btn",
+          "description": "Clicks the top close button.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the close button element."
+        },
+        {
+          "method_name": "click_new_hp_app_popup_skip",
+          "description": "Clicks the skip button on new HP app popup.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Result of click action on new_hp_app_popup_skip_btn",
+          "method_purpose": "Performs click action on the new HP app popup skip button."
+        },
+        {
+          "method_name": "refresh_device_mfe",
+          "description": "Refreshes the device MFE page using keyboard shortcut.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Result of sending CTRL+R keys",
+          "method_purpose": "Clicks on webview pane and sends CTRL+R keyboard shortcut to refresh the page."
+        },
+        {
+          "method_name": "swipe_to_end",
+          "description": "Scrolls to the end of the page using END key.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Result of sending END key",
+          "method_purpose": "Clicks on webview pane and sends END key to scroll to the bottom of the page."
+        },
+        {
+          "method_name": "click_windows_dummy_printer",
+          "description": "Clicks on a Windows dummy printer device.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "_printer",
+              "default_value": null,
+              "parameter_purpose": "Printer name to click"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Clicks on specified Windows dummy printer, handles feature unavailable and firmware update dialogs if they appear."
+        },
+        {
+          "method_name": "get_first_printer_device_card_info",
+          "description": "Retrieves information from the first printer device card.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Name attribute of first_printer_device_card",
+          "method_purpose": "Gets the Name attribute of the first printer device card element."
+        },
+        {
+          "method_name": "click_add_button",
+          "description": "Clicks the add device button.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Verifies add button is present, then clicks it with change detection for add_device_text and flow change to add_printer."
+        },
+        {
+          "method_name": "click_device_tile",
+          "description": "Clicks the device tile element.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the device tile element."
+        },
+        {
+          "method_name": "click_profile_button",
+          "description": "Clicks the profile button.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Clicks the top profile button with change detection for profile_side_panel appearance."
+        },
+        {
+          "method_name": "click_device_icon",
+          "description": "Clicks the device icon element.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the device icon element."
+        },
+        {
+          "method_name": "click_close_button",
+          "description": "Clicks the account panel close button using JavaScript.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Waits for account panel close button and clicks it using JavaScript executor."
+        },
+        {
+          "method_name": "click_device_card",
+          "description": "Clicks on a device card, handling different environments.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Clicks device card (stage/prod or regular), handles feature unavailable popup if present, logs if no PC device L0 page."
+        },
+        {
+          "method_name": "maximize_app",
+          "description": "Maximizes the application window.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the maximize_myHP element."
+        },
+        {
+          "method_name": "restore_app",
+          "description": "Restores the application window.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the restore_myHP element."
+        },
+        {
+          "method_name": "minimize_app",
+          "description": "Minimizes the application window.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the minimize_app element."
+        },
+        {
+          "method_name": "close_app",
+          "description": "Closes the application.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the close_myHP element."
+        },
+        {
+          "method_name": "click_minimize_app",
+          "description": "Clicks minimize button if present.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Waits for minimize_app element and clicks it if found."
+        },
+        {
+          "method_name": "click_myhp_on_task_bar",
+          "description": "Clicks myHP icon on the taskbar.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Waits for myHP taskbar icon and clicks it if found."
+        },
+        {
+          "method_name": "click_profile_and_settings_icon_button_lzero_page",
+          "description": "Clicks profile and settings icon on L0 page.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the profile and settings icon button on L0 page."
+        },
+        {
+          "method_name": "click_navigation_bar_settings_card_arrow_lzero_page",
+          "description": "Clicks navigation bar settings card arrow on L0 page.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Checks for sign-in link, then clicks navigation bar settings card arrow if present."
+        },
+        {
+          "method_name": "get_hpx_version_lzero_page",
+          "description": "Retrieves HPX version from L0 page.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Name attribute of hpx_version_lzero_page",
+          "method_purpose": "Gets the Name attribute of the HPX version element on L0 page."
+        },
+        {
+          "method_name": "click_back_button_rebranding",
+          "description": "Clicks the back button on rebranded pages.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Waits for and clicks back button on rebranded pages, handles feature unavailable popup if present."
+        },
+        {
+          "method_name": "click_navigation_bar_menu_arrow_lzero_page",
+          "description": "Clicks navigation bar menu arrow on L0 page.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the menu back button in sign-in side navbar on L0 page."
+        },
+        {
+          "method_name": "click_navigation_bar_close_button_arrow_lzero_page",
+          "description": "Clicks navigation bar close button on L0 page.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the close button in sign-in side navbar on L0 page."
+        },
+        {
+          "method_name": "click_ok_btn_error_popup",
+          "description": "Clicks OK button on error popup.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the OK button of error popup."
+        },
+        {
+          "method_name": "click_device_card_by_index",
+          "description": "Clicks a device card by index position.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "index",
+              "default_value": "0",
+              "parameter_purpose": "Index position of device card to click"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Clicks device card at specified index, checking for stage/prod or regular device card."
+        },
+        {
+          "method_name": "click_secondary_device_card_by_index",
+          "description": "Clicks a secondary device card by index position.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "index",
+              "default_value": "0",
+              "parameter_purpose": "Index position of secondary device card to click"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Finds multiple secondary device cards and clicks the one at specified index."
+        },
+        {
+          "method_name": "select_my_hp_account_btn",
+          "description": "Selects the myHP account button.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the top sign-in button with extended timeout."
+        },
+        {
+          "method_name": "click_pen_card",
+          "description": "Clicks the pen card element.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the pen card element."
+        },
+        {
+          "method_name": "click_pen_card_by_index",
+          "description": "Clicks a pen card by index position.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "index",
+              "default_value": "0",
+              "parameter_purpose": "Index position of pen card to click"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Clicks pen card at specified index with displayed=False parameter."
+        },
+        {
+          "method_name": "click_top_profile_icon",
+          "description": "Clicks the top profile icon.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the top profile button with extended timeout."
+        },
+        {
+          "method_name": "verify_top_profile_icon",
+          "description": "Verifies the top profile icon is present.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Boolean indicating if top_profile_button is present",
+          "method_purpose": "Waits for top profile button and returns boolean result."
+        },
+        {
+          "method_name": "click_dock_station_card",
+          "description": "Clicks the dock station card element.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the dock station card element."
+        },
+        {
+          "method_name": "maximize_the_hpx_window",
+          "description": "Maximizes the HPX window if not already maximized.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Checks window maximize state and maximizes the app if the state is 'Maximize HP'."
+        },
+        {
+          "method_name": "verify_pen_card_image",
+          "description": "Verifies pen card image using screenshot comparison.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Result of wait_for_object for pen_card",
+          "method_purpose": "Decorated method that performs screenshot comparison of pen card element."
+        },
+        {
+          "method_name": "navigate_back_from_page_using_locator",
+          "description": "Navigates back from a page if specific locator is present.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            },
+            {
+              "parameter_name": "locator",
+              "default_value": null,
+              "parameter_purpose": "Locator to check before navigating back"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Checks if specified locator is present, then clicks back button if found."
+        },
+        {
+          "method_name": "verify_back_button_rebranding_text",
+          "description": "Retrieves the back button text on rebranded pages.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "Name attribute of back_button_rebranding",
+          "method_purpose": "Gets the Name attribute of the back button on rebranded pages."
+        },
+        {
+          "method_name": "click_hpai_assistant_button_on_header",
+          "description": "Clicks the HP AI assistant button on header.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the HP AI assistant button on header."
+        },
+        {
+          "method_name": "click_devices_button_on_header",
+          "description": "Clicks the devices button on header.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the devices button on header."
+        },
+        {
+          "method_name": "click_door_open_sms_btn",
+          "description": "Clicks the door open SMS button.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the door open SMS button."
+        },
+        {
+          "method_name": "click_close_app",
+          "description": "Clicks to close the myHP application.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the close myHP app element."
+        },
+        {
+          "method_name": "click_shop_icon",
+          "description": "Clicks the shop icon element.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "self",
+              "default_value": null,
+              "parameter_purpose": "Instance reference"
+            }
+          ],
+          "method_output_parameter": "None",
+          "method_purpose": "Performs click action on the shop icon element."
+        }
+      ],
+      "summary": "The DevicesMFE class is a comprehensive Page Object Model for the myHP Devices MFE (Micro Frontend) interface. It extends HPXFlow and provides extensive automation capabilities for Windows desktop application testing. Key patterns include: (1) Dual verification and action method structure - verification methods check element presence/state while action methods perform interactions; (2) Robust error handling with configurable raise_e parameters and timeout values; (3) Special handling for Windows-specific behaviors like dummy printers for alpha testing; (4) Complex state verification for login/logout flows checking multiple UI elements; (5) Keyboard interaction patterns using Selenium Keys for page refresh (CTRL+R), scrolling (PAGE_DOWN, END); (6) Conditional logic for different environments (stage/prod vs regular); (7) JavaScript executor usage for elements that require it; (8) Screenshot comparison decorator for visual validation; (9) Popup and dialog handling for feature unavailable and firmware update scenarios; (10) Window state management (maximize, minimize, restore, close); (11) Index-based element selection for multiple similar elements; (12) Extensive device card interactions for printers, pens, and dock stations; (13) Navigation and header button interactions; (14) L0 (Level Zero) page specific methods for profile, settings, and version retrieval. The class demonstrates enterprise-level test automation patterns with comprehensive coverage of UI verification, user interactions, and edge case handling for a complex desktop application."
+    }
+  ]
+}
