@@ -1,0 +1,346 @@
+{
+  "devicesMFE.py": {
+    "methods": [
+      {
+        "method_name": "verify_new_hp_app_popup",
+        "method_description": "Verifies the presence of the new HP app popup skip button",
+        "method_input_parameter": [
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Flag to determine whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement or boolean result from wait_for_object",
+        "method_purpose": "Validates that the new HP app popup skip button element is present and visible on the page by waiting for the object with configurable exception handling"
+      },
+      {
+        "method_name": "verify_home_nav",
+        "method_description": "Verifies the home navigation by checking the app bar MFE",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Flag to determine whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement or boolean result from verify_app_bar_mfe",
+        "method_purpose": "Confirms that the home navigation is accessible by delegating verification to the app bar MFE verification method with configurable timeout and exception handling"
+      },
+      {
+        "method_name": "verify_windows_dummy_printer",
+        "method_description": "Verifies the presence of a Windows dummy printer device",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the element"
+          }
+        ],
+        "method_output_parameter": "WebElement or boolean result from wait_for_object",
+        "method_purpose": "Validates the presence of a dummy printer device in the recent device list as an alpha code workaround for testing purposes using XML file data"
+      },
+      {
+        "method_name": "verify_app_bar_mfe",
+        "method_description": "Verifies the app bar MFE section is present",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Flag to determine whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement or boolean result from wait_for_object",
+        "method_purpose": "Confirms that the app bar MFE section is displayed on the page by waiting for the element with configurable timeout and exception handling options"
+      },
+      {
+        "method_name": "verify_device_status_mfe",
+        "method_description": "Verifies the device status section (not displayed)",
+        "method_input_parameter": [],
+        "method_output_parameter": "WebElement or boolean result from wait_for_object",
+        "method_purpose": "Validates that the device status section element exists but is not displayed by using the displayed=False flag in the wait condition"
+      },
+      {
+        "method_name": "verify_side_panel_mfe",
+        "method_description": "Verifies the account panel section is present",
+        "method_input_parameter": [],
+        "method_output_parameter": "WebElement or boolean result from wait_for_object",
+        "method_purpose": "Confirms that the account panel section is available and accessible on the page by waiting for the element to be present"
+      },
+      {
+        "method_name": "verify_home_loggedin",
+        "method_description": "Verifies the user is logged in by checking if sign-in button is invisible",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "3",
+            "parameter_purpose": "Maximum time in seconds to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "False",
+            "parameter_purpose": "Flag to determine whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement or boolean result from wait_for_object",
+        "method_purpose": "Validates the user's logged-in state by confirming that the sign-in button is not visible, using a short timeout and suppressed exception handling"
+      },
+      {
+        "method_name": "verify_device_card_show_up",
+        "method_description": "Verifies that a device card is displayed",
+        "method_input_parameter": [],
+        "method_output_parameter": "WebElement or boolean result from wait_for_object",
+        "method_purpose": "Confirms that at least one device card element is present and visible on the page by waiting for the object"
+      },
+      {
+        "method_name": "click_new_hp_app_popup_skip",
+        "method_description": "Clicks the skip button on the new HP app popup",
+        "method_input_parameter": [],
+        "method_output_parameter": "Result of click action",
+        "method_purpose": "Executes a click action on the skip button of the new HP app popup to dismiss or bypass the popup"
+      },
+      {
+        "method_name": "refresh_device_mfe",
+        "method_description": "Refreshes the device MFE page using keyboard shortcut",
+        "method_input_parameter": [],
+        "method_output_parameter": "Result of send_keys action",
+        "method_purpose": "Refreshes the current device MFE page by clicking on the main webview pane and sending the Ctrl+R keyboard shortcut"
+      },
+      {
+        "method_name": "click_windows_dummy_printer",
+        "method_description": "Clicks on the Windows dummy printer device",
+        "method_input_parameter": [],
+        "method_output_parameter": "Result of click action",
+        "method_purpose": "Executes a click action on the dummy printer device element as an alpha code workaround for testing device interactions"
+      },
+      {
+        "method_name": "click_add_button",
+        "method_description": "Clicks the top add button",
+        "method_input_parameter": [],
+        "method_output_parameter": "Result of click action",
+        "method_purpose": "Executes a click action on the add button located at the top of the interface to initiate device addition workflow"
+      },
+      {
+        "method_name": "click_device_tile",
+        "method_description": "Clicks on a device tile",
+        "method_input_parameter": [],
+        "method_output_parameter": "Result of click action",
+        "method_purpose": "Executes a click action on a device tile element to select or open the device details"
+      },
+      {
+        "method_name": "click_profile_button",
+        "method_description": "Clicks the top profile button",
+        "method_input_parameter": [],
+        "method_output_parameter": "Result of click action",
+        "method_purpose": "Executes a click action on the profile button located at the top of the interface to access user profile options"
+      },
+      {
+        "method_name": "click_device_icon",
+        "method_description": "Clicks on the device icon",
+        "method_input_parameter": [],
+        "method_output_parameter": "Result of click action",
+        "method_purpose": "Executes a click action on the device icon element to interact with device-related functionality"
+      },
+      {
+        "method_name": "click_close_button",
+        "method_description": "Clicks the close button using JavaScript executor",
+        "method_input_parameter": [],
+        "method_output_parameter": "None",
+        "method_purpose": "Closes the account panel by executing a JavaScript click on the close button, which handles cases where the button may not be displayed or accessible through standard click methods"
+      },
+      {
+        "method_name": "click_device_card",
+        "method_description": "Clicks on a device card",
+        "method_input_parameter": [],
+        "method_output_parameter": "Result of click action",
+        "method_purpose": "Executes a click action on a device card element to select or view device details"
+      },
+      {
+        "method_name": "click_home_loggedin",
+        "method_description": "Clicks the sign-in button when logged in",
+        "method_input_parameter": [],
+        "method_output_parameter": "Result of click action",
+        "method_purpose": "Executes a click action on the top sign-in button, typically used for navigation or account-related actions when user is already logged in"
+      },
+      {
+        "method_name": "get_hpx_whats_new_popup_title",
+        "method_description": "Gets the title text of the What's New popup",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the element"
+          }
+        ],
+        "method_output_parameter": "String containing the title text",
+        "method_purpose": "Retrieves and returns the text content of the What's New popup title element after waiting for it to be present"
+      },
+      {
+        "method_name": "get_hpx_whats_new_popup_sub_title",
+        "method_description": "Gets the subtitle text of the What's New popup",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the element"
+          }
+        ],
+        "method_output_parameter": "String containing the subtitle text",
+        "method_purpose": "Retrieves and returns the text content of the What's New popup subtitle element after waiting for it to be present"
+      },
+      {
+        "method_name": "get_hpx_whats_new_popup_second_screen_title",
+        "method_description": "Gets the title text of the What's New popup second screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the element"
+          }
+        ],
+        "method_output_parameter": "String containing the second screen title text",
+        "method_purpose": "Retrieves and returns the text content of the What's New popup second screen title element after waiting for it to be present"
+      },
+      {
+        "method_name": "get_hpx_whats_new_popup_second_screen_sub_title",
+        "method_description": "Gets the subtitle text of the What's New popup second screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the element"
+          }
+        ],
+        "method_output_parameter": "String containing the second screen subtitle text",
+        "method_purpose": "Retrieves and returns the text content of the What's New popup second screen subtitle element after waiting for it to be present"
+      },
+      {
+        "method_name": "get_hpx_whats_new_popup_third_screen_title",
+        "method_description": "Gets the title text of the What's New popup third screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the element"
+          }
+        ],
+        "method_output_parameter": "String containing the third screen title text",
+        "method_purpose": "Retrieves and returns the text content of the What's New popup third screen title element after waiting for it to be present"
+      },
+      {
+        "method_name": "get_hpx_whats_new_popup_third_screen_sub_title",
+        "method_description": "Gets the subtitle text of the What's New popup third screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the element"
+          }
+        ],
+        "method_output_parameter": "String containing the third screen subtitle text",
+        "method_purpose": "Retrieves and returns the text content of the What's New popup third screen subtitle element after waiting for it to be present"
+      },
+      {
+        "method_name": "click_hpx_whats_new_popup_next_btn",
+        "method_description": "Clicks the next button on the What's New popup",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the element"
+          }
+        ],
+        "method_output_parameter": "Result of click action",
+        "method_purpose": "Executes a click action on the next button of the What's New popup to navigate to the next screen in the popup flow"
+      },
+      {
+        "method_name": "verify_hpx_whats_new_popup",
+        "method_description": "Verifies the HPX What's New popup is displayed",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the elements"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validates that the What's New popup is properly displayed by confirming both the title and subtitle elements are present on the first screen"
+      },
+      {
+        "method_name": "verify_hpx_whats_new_popup_second_screen",
+        "method_description": "Verifies the HPX What's New popup second screen is displayed",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the elements"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validates that the What's New popup second screen is properly displayed by confirming both the title and subtitle elements are present"
+      },
+      {
+        "method_name": "verify_hpx_whats_new_popup_third_screen",
+        "method_description": "Verifies the HPX What's New popup third screen is displayed",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the elements"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validates that the What's New popup third screen is properly displayed by confirming both the title and subtitle elements are present"
+      },
+      {
+        "method_name": "click_hpx_whats_new_popup_back_btn",
+        "method_description": "Clicks the back button on the What's New popup",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the element"
+          }
+        ],
+        "method_output_parameter": "Result of click action",
+        "method_purpose": "Executes a click action on the back button of the What's New popup to navigate to the previous screen in the popup flow"
+      },
+      {
+        "method_name": "verify_hpx_home",
+        "method_description": "Verifies the HPX Home screen is displayed",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the elements"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validates that the HPX Home screen is properly displayed by confirming both the 'Let's Get Started' title and subtitle elements are present"
+      },
+      {
+        "method_name": "click_hpx_whats_new_popup_done_btn",
+        "method_description": "Clicks the done button on the What's New popup",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the element"
+          }
+        ],
+        "method_output_parameter": "Result of click action",
+        "method_purpose": "Executes a click action on the done button of the What's New popup to complete and close the popup flow"
+      }
+    ]
+  }
+}
