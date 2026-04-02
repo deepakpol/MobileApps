@@ -1,0 +1,105 @@
+{
+  "PRINTERS.py": {
+    "methods": [
+      {
+        "method_name": "verify_evernote_reauthorize_screen",
+        "method_description": "Verifies that Evernote successfully landed on the reauthorize page after clicking the sign in button",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Validates the presence of the Evernote reauthorize page header title to confirm successful navigation to the reauthorization screen"
+      },
+      {
+        "method_name": "verify_evernote_account_added",
+        "method_description": "Verifies that an Evernote account has been successfully added to the account list",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Confirms the Evernote account name is visible in the list, indicating successful account addition"
+      },
+      {
+        "method_name": "verify_cloud_screen",
+        "method_description": "Verifies the cloud screen displays all available cloud provider options",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Validates the presence of all cloud provider buttons (Box, Dropbox, Evernote, Facebook, Google Drive, Instagram, Other) and the add account title on the cloud screen"
+      },
+      {
+        "method_name": "verify_cloud_added",
+        "method_description": "Verifies that a specific cloud account has been successfully added to the account list",
+        "method_input_parameter": [
+          {
+            "parameter_name": "cloud_name",
+            "default_value": null,
+            "parameter_purpose": "Specifies the name of the cloud account to verify in the list"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Confirms that the specified cloud account name is visible in the account list, indicating successful account addition"
+      },
+      {
+        "method_name": "verify_cloud_not_added",
+        "method_description": "Verifies that a specific cloud account is not present in the account list",
+        "method_input_parameter": [
+          {
+            "parameter_name": "cloud_name",
+            "default_value": null,
+            "parameter_purpose": "Specifies the name of the cloud account to verify is absent from the list"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Confirms that the specified cloud account name is not visible in the account list, indicating the account was not added or has been removed"
+      },
+      {
+        "method_name": "select_cloud_account",
+        "method_description": "Selects a specific cloud account from the account list",
+        "method_input_parameter": [
+          {
+            "parameter_name": "cloud_name",
+            "default_value": null,
+            "parameter_purpose": "Specifies the name of the cloud account to select from the list"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs a click action on the specified cloud account name to select it from the list"
+      },
+      {
+        "method_name": "logout_cloud_account",
+        "method_description": "Logs out a specific cloud account by clicking sign out and confirming the action",
+        "method_input_parameter": [
+          {
+            "parameter_name": "cloud_name",
+            "default_value": null,
+            "parameter_purpose": "Specifies the name of the cloud account to log out"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Executes the logout process for the specified cloud account by clicking the sign out button and confirming the sign out action"
+      },
+      {
+        "method_name": "verify_logout_cloud_account",
+        "method_description": "Verifies that a specific cloud account has been successfully logged out",
+        "method_input_parameter": [
+          {
+            "parameter_name": "cloud_name",
+            "default_value": null,
+            "parameter_purpose": "Specifies the name of the cloud account to verify logout status"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Confirms that the sign out button for the specified cloud account is no longer visible, indicating successful logout"
+      },
+      {
+        "method_name": "verify_cloud_album_screen",
+        "method_description": "Verifies that the cloud album screen is displayed for a specific cloud account",
+        "method_input_parameter": [
+          {
+            "parameter_name": "cloud_name",
+            "default_value": null,
+            "parameter_purpose": "Specifies the name of the cloud account whose album screen should be verified"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Validates the presence of the album title for the specified cloud account, confirming successful navigation to the cloud album screen"
+      }
+    ]
+  }
+}
