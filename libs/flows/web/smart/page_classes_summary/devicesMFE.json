@@ -1,0 +1,252 @@
+{
+  "file_path": "libs/flows/web/smart/devices_mfe.py",
+  "file_name": "devices_mfe.py",
+  "classes": [
+    {
+      "class_name": "DevicesMFE",
+      "inherits_from": "SmartFlow",
+      "class_attributes": [
+        {
+          "attribute_name": "flow_name",
+          "attribute_value": "devices_mfe",
+          "attribute_type": "str"
+        }
+      ],
+      "methods": [
+        {
+          "method_name": "verify_new_hp_app_popup",
+          "parameters": ["self", "raise_e=True"],
+          "return_type": "object",
+          "description": "Verifies the new HP app popup skip button is present",
+          "method_type": "verification"
+        },
+        {
+          "method_name": "verify_home_nav",
+          "parameters": ["self", "timeout=10", "raise_e=True"],
+          "return_type": "object",
+          "description": "Verifies home navigation by checking app bar MFE",
+          "method_type": "verification"
+        },
+        {
+          "method_name": "verify_windows_dummy_printer",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "object",
+          "description": "Verifies windows dummy printer device (Alpha code using recent device list xml file)",
+          "method_type": "verification"
+        },
+        {
+          "method_name": "verify_app_bar_mfe",
+          "parameters": ["self", "timeout=10", "raise_e=True"],
+          "return_type": "object",
+          "description": "Verifies the app bar MFE section is present",
+          "method_type": "verification"
+        },
+        {
+          "method_name": "verify_device_status_mfe",
+          "parameters": ["self"],
+          "return_type": "object",
+          "description": "Verifies the device status section (not displayed)",
+          "method_type": "verification"
+        },
+        {
+          "method_name": "verify_side_panel_mfe",
+          "parameters": ["self"],
+          "return_type": "object",
+          "description": "Verifies the account panel section is present",
+          "method_type": "verification"
+        },
+        {
+          "method_name": "verify_home_loggedin",
+          "parameters": ["self", "timeout=3", "raise_e=False"],
+          "return_type": "object",
+          "description": "Verifies home logged in state by checking signin button is invisible",
+          "method_type": "verification"
+        },
+        {
+          "method_name": "verify_device_card_show_up",
+          "parameters": ["self"],
+          "return_type": "object",
+          "description": "Verifies the device card is displayed",
+          "method_type": "verification"
+        },
+        {
+          "method_name": "click_new_hp_app_popup_skip",
+          "parameters": ["self"],
+          "return_type": "object",
+          "description": "Clicks the skip button on new HP app popup",
+          "method_type": "action"
+        },
+        {
+          "method_name": "refresh_device_mfe",
+          "parameters": ["self"],
+          "return_type": "object",
+          "description": "Refreshes the device MFE by clicking main webview pane and sending Ctrl+R",
+          "method_type": "action"
+        },
+        {
+          "method_name": "click_windows_dummy_printer",
+          "parameters": ["self"],
+          "return_type": "None",
+          "description": "Clicks the windows dummy printer device (Alpha code)",
+          "method_type": "action"
+        },
+        {
+          "method_name": "click_add_button",
+          "parameters": ["self"],
+          "return_type": "None",
+          "description": "Clicks the top add button",
+          "method_type": "action"
+        },
+        {
+          "method_name": "click_device_tile",
+          "parameters": ["self"],
+          "return_type": "None",
+          "description": "Clicks the device tile",
+          "method_type": "action"
+        },
+        {
+          "method_name": "click_profile_button",
+          "parameters": ["self"],
+          "return_type": "None",
+          "description": "Clicks the top profile button",
+          "method_type": "action"
+        },
+        {
+          "method_name": "click_device_icon",
+          "parameters": ["self"],
+          "return_type": "None",
+          "description": "Clicks the device icon",
+          "method_type": "action"
+        },
+        {
+          "method_name": "click_close_button",
+          "parameters": ["self"],
+          "return_type": "None",
+          "description": "Clicks the account panel close button using JavaScript execution",
+          "method_type": "action"
+        },
+        {
+          "method_name": "click_device_card",
+          "parameters": ["self"],
+          "return_type": "object",
+          "description": "Clicks the device card",
+          "method_type": "action"
+        },
+        {
+          "method_name": "click_home_loggedin",
+          "parameters": ["self"],
+          "return_type": "object",
+          "description": "Clicks the top signin button",
+          "method_type": "action"
+        },
+        {
+          "method_name": "get_hpx_whats_new_popup_title",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "str",
+          "description": "Get the title of the What's New popup",
+          "method_type": "getter"
+        },
+        {
+          "method_name": "get_hpx_whats_new_popup_sub_title",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "str",
+          "description": "Get the sub title of the What's New popup",
+          "method_type": "getter"
+        },
+        {
+          "method_name": "get_hpx_whats_new_popup_second_screen_title",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "str",
+          "description": "Get the title of the What's New popup second screen",
+          "method_type": "getter"
+        },
+        {
+          "method_name": "get_hpx_whats_new_popup_second_screen_sub_title",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "str",
+          "description": "Get the sub title of the What's New popup second screen",
+          "method_type": "getter"
+        },
+        {
+          "method_name": "get_hpx_whats_new_popup_third_screen_title",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "str",
+          "description": "Get the title of the What's New popup third screen",
+          "method_type": "getter"
+        },
+        {
+          "method_name": "get_hpx_whats_new_popup_third_screen_sub_title",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "str",
+          "description": "Get the sub title of the What's New popup third screen",
+          "method_type": "getter"
+        },
+        {
+          "method_name": "click_hpx_whats_new_popup_next_btn",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "None",
+          "description": "Click on the next button on the What's New popup",
+          "method_type": "action"
+        },
+        {
+          "method_name": "verify_hpx_whats_new_popup",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "None",
+          "description": "Verify HPX Whats New Popup",
+          "method_type": "verification"
+        },
+        {
+          "method_name": "verify_hpx_whats_new_popup_second_screen",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "None",
+          "description": "Verify HPX Whats New Popup Second Screen",
+          "method_type": "verification"
+        },
+        {
+          "method_name": "verify_hpx_whats_new_popup_third_screen",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "None",
+          "description": "Verify HPX Whats New Popup Third Screen",
+          "method_type": "verification"
+        },
+        {
+          "method_name": "click_hpx_whats_new_popup_back_btn",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "None",
+          "description": "Click on the back button on the What's New popup",
+          "method_type": "action"
+        },
+        {
+          "method_name": "verify_hpx_home",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "None",
+          "description": "Verify HPX Home screen",
+          "method_type": "verification"
+        },
+        {
+          "method_name": "click_hpx_whats_new_popup_done_btn",
+          "parameters": ["self", "timeout=10"],
+          "return_type": "None",
+          "description": "Click on the done button on the What's New popup",
+          "method_type": "action"
+        }
+      ],
+      "total_methods": 32,
+      "verification_methods_count": 11,
+      "action_methods_count": 15,
+      "getter_methods_count": 6
+    }
+  ],
+  "total_classes": 1,
+  "imports": [
+    "from selenium.webdriver.common.keys import Keys",
+    "from MobileApps.libs.flows.web.smart.smart_flow import SmartFlow"
+  ],
+  "summary": {
+    "total_methods": 32,
+    "verification_methods": 11,
+    "action_methods": 15,
+    "getter_methods": 6,
+    "description": "DevicesMFE page class for HP Smart web application device management functionality. Includes verification flows for UI elements, action flows for user interactions, and getter methods for retrieving popup content."
+  }
+}
