@@ -1,0 +1,677 @@
+{
+  "summaries": [
+    {
+      "class_name": "Printers",
+      "base_class": "SmartFlow",
+      "locators": [
+        "connection_option_wifi",
+        "connection_option_ethernet",
+        "continue_btn",
+        "printers_tv",
+        "add_printer_btn",
+        "printers_title",
+        "add_printer_using_ip_btn",
+        "search_box",
+        "_shared_clear_text_btn",
+        "connect_the_printer_txt",
+        "dynamic_printer_cell",
+        "printers_cell",
+        "moobe_printer",
+        "enter_ip_address",
+        "is_this_your_printer_yes_btn",
+        "_shared_no",
+        "enter_serial_number_text_box",
+        "add_a_device_by_serial",
+        "help_link_for_serial_number",
+        "hp_support_page_link",
+        "add_a_device_button",
+        "set_up_new_printer",
+        "search_by_serial",
+        "set_up_new_printer_btn",
+        "supported_printer_btn",
+        "connect_to_previously_used_printer_btn",
+        "printer_ip",
+        "connect_bluetooth_popup_title",
+        "connect_bluetooth_popup_close_btn",
+        "get_connection_help_btn",
+        "learn_more_btn",
+        "set_up_a_new_printer_btn",
+        "connect_using_ip_address",
+        "printer_limited_support_pop_title_txt",
+        "_shared_str_ok",
+        "printer_cell_visible",
+        "connect_automatically_logo",
+        "_shared_dynamic_text",
+        "printer_connection_navbar_title",
+        "how_do_i_do_this_link",
+        "follow_instructions_txt",
+        "check_printer_txt",
+        "check_printer_details_txt",
+        "check_network_conn_txt",
+        "check_network_details_txt_os14",
+        "restart_router_txt",
+        "restart_router_details_txt",
+        "try_again_btn",
+        "get_more_help_link",
+        "contact_HP_on_facebook_messenger_link",
+        "open_permissions_btn",
+        "enable_local_network_blocker_screen",
+        "choose_type_of_printer_screen",
+        "option_get_started_img",
+        "option_add_printer_img",
+        "get_started_btn",
+        "add_printer_setup_title",
+        "connect_this_printer",
+        "search_by_serial_number_btn"
+      ],
+      "methods": [
+        {
+          "method_name": "set_up_printer",
+          "description": "From the 'How do you want to connect this printer' page, select connection type and continue.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "option",
+              "default_value": "wifi",
+              "parameter_purpose": "Connection type selection - 'wifi' or 'ethernet'"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Selects the printer connection type (wifi or ethernet) and clicks continue button on the connection setup screen."
+        },
+        {
+          "method_name": "verify_set_up_printer_screen",
+          "description": "Verify 'How do you want to connect this printer' page.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Verifies the presence of wifi and ethernet connection options on the printer setup screen."
+        },
+        {
+          "method_name": "verify_printers_list_screen_ui",
+          "description": "Verifies all UI elements on the printers list screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Validates the complete UI of the printers list screen including navigation, buttons, and printer list."
+        },
+        {
+          "method_name": "verify_printers_list",
+          "description": "Verifies the printers list table view is present.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Waits for and verifies the printers table view element is displayed."
+        },
+        {
+          "method_name": "verify_add_printers_btn",
+          "description": "Verifies the add printer button is present.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "WebElement or boolean",
+          "method_purpose": "Waits for and returns the add printer button element."
+        },
+        {
+          "method_name": "verify_printers_nav",
+          "description": "Verify Printers screen navigation bar title.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "timeout",
+              "default_value": "10",
+              "parameter_purpose": "Maximum wait time for element"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "WebElement or boolean",
+          "method_purpose": "Verifies the printers navigation title is displayed on the screen."
+        },
+        {
+          "method_name": "verify_add_printer_screen",
+          "description": "Verify Add Printer Screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Waits for and verifies the add printer using IP button is present on the add printer screen."
+        },
+        {
+          "method_name": "verify_search_bar",
+          "description": "Verifies search bar on the printer list screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": "WebElement",
+          "method_purpose": "Waits for and returns the search box element on the printer list screen."
+        },
+        {
+          "method_name": "verify_clear_text_button",
+          "description": "Verify the small x button on search bar.",
+          "method_input_parameter": [],
+          "method_output_parameter": "WebElement",
+          "method_purpose": "Waits for and returns the clear text button element in the search bar."
+        },
+        {
+          "method_name": "verify_connect_the_printer_screen",
+          "description": "Verify the Connect the Printer screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Waits for and verifies the connect the printer text element is displayed."
+        },
+        {
+          "method_name": "get_search_bar_text",
+          "description": "Return the text value found in the search bar of the printer list screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": "String",
+          "method_purpose": "Retrieves and returns the current text value from the search bar."
+        },
+        {
+          "method_name": "select_search_bar",
+          "description": "Clicks on the search bar.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Verifies and clicks the search bar to activate it for text input."
+        },
+        {
+          "method_name": "select_clear_text_button",
+          "description": "Clicks the clear text button.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Verifies and clicks the clear text button to remove search text."
+        },
+        {
+          "method_name": "find_printer_using_search_bar",
+          "description": "Searches for a printer using the search bar.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "printer_str",
+              "default_value": null,
+              "parameter_purpose": "Name of the printer or IP address to search for"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Enters the printer name or IP address into the search box to find a specific printer."
+        },
+        {
+          "method_name": "verify_printer_in_list",
+          "description": "Verifies a specific printer is present in the list.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "printer_str",
+              "default_value": null,
+              "parameter_purpose": "IP or bonjour name of the printer to verify"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "10",
+              "parameter_purpose": "Maximum wait time for element"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "WebElement or boolean",
+          "method_purpose": "Waits for and verifies a specific printer cell is present in the printer list."
+        },
+        {
+          "method_name": "select_printer_in_list",
+          "description": "Selects a specific printer from the list.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "printer_str",
+              "default_value": null,
+              "parameter_purpose": "IP or bonjour name of the printer to select"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks on a specific printer cell in the printer list."
+        },
+        {
+          "method_name": "select_printer_not_listed_btn",
+          "description": "Click the 'Printer not listed' button.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the add printer button when the desired printer is not listed."
+        },
+        {
+          "method_name": "verify_printer_not_listed_btn",
+          "description": "Verify the 'Printer not listed' button.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "timeout",
+              "default_value": "5",
+              "parameter_purpose": "Maximum wait time for element"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Whether to raise exception if element not found"
+            }
+          ],
+          "method_output_parameter": "WebElement or boolean",
+          "method_purpose": "Waits for and verifies the printer not listed button is present."
+        },
+        {
+          "method_name": "count_number_of_printers",
+          "description": "Gives the number of printers available in printer list.",
+          "method_input_parameter": [],
+          "method_output_parameter": "Integer",
+          "method_purpose": "Counts and returns the number of printer cells currently displayed in the printer list for GA tracking."
+        },
+        {
+          "method_name": "search_for_printer",
+          "description": "Searches for a printer by scrolling and entering query.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "query",
+              "default_value": null,
+              "parameter_purpose": "Search query string for printer"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Swipes up on the screen and enters the search query into the search box."
+        },
+        {
+          "method_name": "select_moobe_printer_from_list",
+          "description": "Selects a moobe printer from the list with retry logic.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "printer_name",
+              "default_value": null,
+              "parameter_purpose": "Name of the moobe printer to select"
+            },
+            {
+              "parameter_name": "attempt",
+              "default_value": "20",
+              "parameter_purpose": "Number of retry attempts to find the printer"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Attempts to find and click on a moobe printer with multiple retry attempts."
+        },
+        {
+          "method_name": "search_for_printer_directly_using_ip",
+          "description": "Enters IP address into the text field and clicks done to search for a printer.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "name",
+              "default_value": null,
+              "parameter_purpose": "IP address or name to search for"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the IP address field, enters the IP address, and submits the search."
+        },
+        {
+          "method_name": "select_is_this_your_printer",
+          "description": "Selects yes or no on the 'Is this your printer' prompt.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "yes",
+              "default_value": "True",
+              "parameter_purpose": "Whether to select yes (True) or no (False)"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks yes or no button on the printer confirmation dialog."
+        },
+        {
+          "method_name": "get_printers",
+          "description": "Return a list of all the web elements of the printers listed.",
+          "method_input_parameter": [],
+          "method_output_parameter": "List of WebElements",
+          "method_purpose": "Finds and returns all printer cell elements currently displayed in the list."
+        },
+        {
+          "method_name": "select_printer_by_index",
+          "description": "Selects a printer by its index position.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "index",
+              "default_value": "0",
+              "parameter_purpose": "Index position of the printer to select"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks on a printer cell at the specified index position."
+        },
+        {
+          "method_name": "search_for_printer_using_serial_num",
+          "description": "Enters serial number into the text field and clicks done to search for a printer.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "serialnum",
+              "default_value": null,
+              "parameter_purpose": "Serial number of the printer to search for"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the serial number field, enters the serial number, and submits the search."
+        },
+        {
+          "method_name": "verify_listed_printer_using_serial_num",
+          "description": "Verify printer list by serial number.",
+          "method_input_parameter": [],
+          "method_output_parameter": "WebElement",
+          "method_purpose": "Waits for and returns the add device by serial element."
+        },
+        {
+          "method_name": "click_on_add_device_using_serial_num",
+          "description": "Click on add device by serial number.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the add device by serial number button."
+        },
+        {
+          "method_name": "verify_help_link_for_search_by_serial_number_screen",
+          "description": "Verify help link on search by serial number.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Verifies the serial number text box and help link are present on the screen."
+        },
+        {
+          "method_name": "click_and_verify_help_link_for_search_by_serial_number_screen",
+          "description": "Click help link on search by serial number.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the help link and verifies the HP support page link is displayed."
+        },
+        {
+          "method_name": "click_on_back_arrow_on_add_device_button",
+          "description": "Clicks on add device button.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the add device button to navigate back."
+        },
+        {
+          "method_name": "verify_add_device_page",
+          "description": "Verify add device page.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Verifies all elements on the add device page including setup new printer, add printer button, and search by serial."
+        },
+        {
+          "method_name": "verify_printers_setup_screen_ui",
+          "description": "Verifies all UI elements on the printers setup screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Validates all buttons and navigation elements on the printer setup screen."
+        },
+        {
+          "method_name": "select_set_up_a_new_printer",
+          "description": "Selects the set up a new printer button.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Waits for and clicks the set up new printer button."
+        },
+        {
+          "method_name": "select_add_printer_using_ip",
+          "description": "Selects the add printer using IP address button.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the add printer using IP button, with platform-specific scrolling logic."
+        },
+        {
+          "method_name": "select_supported_printers_btn",
+          "description": "Clicks on the Supported printers button.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the supported printers button to view compatible printer models."
+        },
+        {
+          "method_name": "select_connect_to_previously_used_printer",
+          "description": "Clicks on the Connect to a previously used printer button on the empty printer list screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the button to connect to a printer that was previously configured."
+        },
+        {
+          "method_name": "select_add_printer",
+          "description": "Select the add printer button on printers page.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Swipes down and clicks the add printer button from the printer list."
+        },
+        {
+          "method_name": "select_printer_from_printer_list",
+          "description": "Select a printer according to its printer's IP address.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "printer_ip",
+              "default_value": null,
+              "parameter_purpose": "Printer's IP address to locate and select"
+            },
+            {
+              "parameter_name": "timeout",
+              "default_value": "120",
+              "parameter_purpose": "Maximum wait time for finding the printer"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Scrolls through the printer list to find and click on a printer with the specified IP address."
+        },
+        {
+          "method_name": "verify_bluetooth_on_by_invisible_popup",
+          "description": "Verifies bluetooth popup is not visible.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Waits for the bluetooth popup to be invisible, indicating bluetooth is on."
+        },
+        {
+          "method_name": "verify_connect_bluetooth_popup",
+          "description": "Verify current popup is 'Connect using Bluetooth popup'.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Verifies the bluetooth connection popup title is displayed."
+        },
+        {
+          "method_name": "is_connect_using_bluetooth_popup",
+          "description": "Checks if the current screen contains the bluetooth popup and dismisses it.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Checks for bluetooth popup presence and dismisses it if found."
+        },
+        {
+          "method_name": "select_get_connection_help",
+          "description": "Clicks on Get Connection help button on the wifi off screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the get connection help button when wifi is off."
+        },
+        {
+          "method_name": "select_learn_more",
+          "description": "Selects the learn more button on the wifi off screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the learn more button to get additional information about wifi connection."
+        },
+        {
+          "method_name": "verify_printer_list_wifi_off",
+          "description": "Verifies that the wifi off screen is displayed.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Waits and verifies the wifi off screen elements including help and learn more buttons."
+        },
+        {
+          "method_name": "verify_printer_list_empty",
+          "description": "Verify that the printer list is displaying the empty printer list screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Verifies the empty printer list screen with setup and connect options."
+        },
+        {
+          "method_name": "select_setup_a_new_printer",
+          "description": "Clicks on the Set up a new printer button on the empty printer list.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the setup new printer button from the empty printer list screen."
+        },
+        {
+          "method_name": "select_add_printer_using_ip_via_empty_printer_list",
+          "description": "Selects the add printer using IP address button.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the add printer using IP button from the empty printer list screen."
+        },
+        {
+          "method_name": "add_printer_ip",
+          "description": "Complete flow to add a printer using IP address.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "printer_ip",
+              "default_value": null,
+              "parameter_purpose": "IP address of the printer to add"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Executes the complete flow to add a printer by IP address including navigation, search, and confirmation."
+        },
+        {
+          "method_name": "select_a_diff_printer",
+          "description": "Selects a different printer from the list.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "printer_name",
+              "default_value": null,
+              "parameter_purpose": "Name of the printer to avoid selecting"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Finds and selects a printer from the list that is different from the specified printer name."
+        },
+        {
+          "method_name": "verify_automatically_put_device_on_network",
+          "description": "Verifies automatic network connection logo is not displayed.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Waits for the connect automatically logo to not be displayed."
+        },
+        {
+          "method_name": "verify_found_printer_for_setup",
+          "description": "Verifies the found printer message with bonjour name.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "bonjour_name",
+              "default_value": null,
+              "parameter_purpose": "Bonjour name of the printer to verify in the message"
+            }
+          ],
+          "method_output_parameter": null,
+          "method_purpose": "Verifies the dynamic text showing the found printer with its bonjour name."
+        },
+        {
+          "method_name": "verify_printer_connection_screen_ui",
+          "description": "Verifies all UI elements on the printer connection screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Validates all elements on the printer connection troubleshooting screen including instructions and help links."
+        },
+        {
+          "method_name": "verify_connect_the_printer_screen_ui",
+          "description": "Verifies all UI elements on the connect the printer screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Validates the connect printer screen including back button and IP address field."
+        },
+        {
+          "method_name": "select_open_permissions_button",
+          "description": "Clicks the open permissions button.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the button to open device permissions settings."
+        },
+        {
+          "method_name": "verify_enable_local_network_permission_blocker_screen",
+          "description": "Verifies the enable local network permission blocker screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Waits for and verifies the local network permission blocker screen is displayed."
+        },
+        {
+          "method_name": "verify_choose_type_of_printer_screen",
+          "description": "Verifies the choose type of printer screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Waits for and verifies the choose printer type screen is displayed."
+        },
+        {
+          "method_name": "verify_printer_options_screen",
+          "description": "Verify the printer options screen.",
+          "method_input_parameter": [
+            {
+              "parameter_name": "timeout",
+              "default_value": "5",
+              "parameter_purpose": "Maximum wait time for elements"
+            },
+            {
+              "parameter_name": "raise_e",
+              "default_value": "True",
+              "parameter_purpose": "Whether to raise exception if elements not found"
+            }
+          ],
+          "method_output_parameter": "Boolean",
+          "method_purpose": "Verifies all elements on the printer options screen including setup and add printer images and buttons."
+        },
+        {
+          "method_name": "select_get_started_button",
+          "description": "Clicks the get started button.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the get started button to begin printer setup."
+        },
+        {
+          "method_name": "verify_choose_printer_screen_ui",
+          "description": "Verifies all UI elements on the choose printer screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Validates all elements on the choose printer screen including back button, printer type, and action buttons."
+        },
+        {
+          "method_name": "select_add_printer_btn",
+          "description": "Selects the add printer button.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Swipes down if on iOS and clicks the add printer button."
+        },
+        {
+          "method_name": "verify_add_new_printer_screen",
+          "description": "Verifies the add new printer screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": "WebElement",
+          "method_purpose": "Waits for and returns the add printer setup title element."
+        },
+        {
+          "method_name": "click_set_up_new_printer_option",
+          "description": "Clicks the set up new printer option.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the set up new printer button to begin new printer setup."
+        },
+        {
+          "method_name": "click_search_by_serial_number_option",
+          "description": "Clicks the search by serial number option.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Clicks the search by serial button to search for printer by serial number."
+        },
+        {
+          "method_name": "verify_connect_this_printer_option",
+          "description": "Verifies the connect this printer option.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Waits for and verifies the connect this printer element is displayed."
+        },
+        {
+          "method_name": "verify_search_by_serial_number_screen",
+          "description": "Verifies the search by serial number screen.",
+          "method_input_parameter": [],
+          "method_output_parameter": null,
+          "method_purpose": "Waits for and verifies the search by serial number button is displayed."
+        }
+      ],
+      "summary": "This class models the Printers screen and related printer management flows in a mobile test automation framework. It extends SmartFlow and provides comprehensive methods for printer discovery, connection, setup, and management operations. The class handles various printer connection methods including WiFi, Ethernet, IP address, and serial number. It includes verification methods for UI elements across multiple printer-related screens, search functionality for finding printers, and complete flows for adding and configuring printers. The class also manages edge cases such as Bluetooth popups, WiFi connectivity issues, empty printer lists, and permission screens. It supports both iOS and Android platforms with platform-specific logic where needed."
+    }
+  ]
+}
