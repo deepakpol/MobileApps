@@ -1,0 +1,19 @@
+{
+  "HPX_SHORTCUTS.py": {
+    "methods": [
+      {
+        "method_name": "verify_settings_screen",
+        "method_description": "This method verifies that all the expected UI elements on the settings screen are visible and correctly displayed to ensure proper rendering and accessibility.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_logged_in",
+            "default_value": "False",
+            "parameter_purpose": "A boolean flag to indicate if the user is currently logged in, which may affect the visibility of certain settings elements based on authentication state."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "The primary purpose of this method is to perform a comprehensive visual validation of the settings screen elements to ensure UI integrity and verify that all expected components are properly displayed and accessible to the user."
+      }
+    ]
+  }
+}
