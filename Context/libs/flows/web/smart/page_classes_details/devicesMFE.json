@@ -1,0 +1,482 @@
+{
+  "page_class_metadata": {
+    "class_name": "DevicesMFE",
+    "file_path": "libs/flows/web/smart/devices_mfe.py",
+    "parent_class": "SmartFlow",
+    "flow_name": "devices_mfe",
+    "description": "Page Object Model class for HP Smart Devices MFE (Micro Frontend) interface. Handles device management, navigation, and HPX What's New popup interactions.",
+    "imports": [
+      {
+        "module": "selenium.webdriver.common.keys",
+        "items": ["Keys"]
+      },
+      {
+        "module": "MobileApps.libs.flows.web.smart.smart_flow",
+        "items": ["SmartFlow"]
+      }
+    ],
+    "methods": {
+      "verification_methods": [
+        {
+          "method_name": "verify_new_hp_app_popup",
+          "description": "Verifies the presence of the new HP app popup skip button",
+          "parameters": [
+            {
+              "name": "raise_e",
+              "type": "bool",
+              "default": true,
+              "description": "Whether to raise exception if element not found"
+            }
+          ],
+          "return_type": "WebElement or bool",
+          "locator_used": "new_hp_app_popup_skip_btn",
+          "category": "verification"
+        },
+        {
+          "method_name": "verify_home_nav",
+          "description": "Verifies the home navigation by checking the app bar MFE",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            },
+            {
+              "name": "raise_e",
+              "type": "bool",
+              "default": true,
+              "description": "Whether to raise exception if element not found"
+            }
+          ],
+          "return_type": "WebElement or bool",
+          "delegates_to": "verify_app_bar_mfe",
+          "category": "verification"
+        },
+        {
+          "method_name": "verify_windows_dummy_printer",
+          "description": "Verifies the presence of Windows dummy printer device. Alpha code using dummy printer from recent device list XML file (8/26/2024)",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "WebElement",
+          "locator_used": "windows_dummy_printer_device",
+          "category": "verification",
+          "notes": "Alpha code - cannot add printer, using dummy printer workaround"
+        },
+        {
+          "method_name": "verify_app_bar_mfe",
+          "description": "Verifies the app bar MFE section is present",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            },
+            {
+              "name": "raise_e",
+              "type": "bool",
+              "default": true,
+              "description": "Whether to raise exception if element not found"
+            }
+          ],
+          "return_type": "WebElement or bool",
+          "locator_used": "app_bar_mfe_section",
+          "category": "verification"
+        },
+        {
+          "method_name": "verify_device_status_mfe",
+          "description": "Verifies the device status section (checks for non-displayed state)",
+          "parameters": [],
+          "return_type": "WebElement",
+          "locator_used": "device_status_section",
+          "category": "verification",
+          "notes": "Waits for element with displayed=False"
+        },
+        {
+          "method_name": "verify_side_panel_mfe",
+          "description": "Verifies the account panel section is present",
+          "parameters": [],
+          "return_type": "WebElement",
+          "locator_used": "account_panel_section",
+          "category": "verification"
+        },
+        {
+          "method_name": "verify_home_loggedin",
+          "description": "Verifies user is logged in by checking if sign-in button is invisible",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 3,
+              "description": "Maximum wait time in seconds"
+            },
+            {
+              "name": "raise_e",
+              "type": "bool",
+              "default": false,
+              "description": "Whether to raise exception if element not found"
+            }
+          ],
+          "return_type": "WebElement or bool",
+          "locator_used": "top_signin_button",
+          "category": "verification",
+          "notes": "Checks for invisible state to confirm logged-in status"
+        },
+        {
+          "method_name": "verify_device_card_show_up",
+          "description": "Verifies that a device card is displayed",
+          "parameters": [],
+          "return_type": "WebElement",
+          "locator_used": "device_card",
+          "category": "verification"
+        },
+        {
+          "method_name": "verify_hpx_whats_new_popup",
+          "description": "Verifies HPX What's New popup is displayed by checking title and subtitle",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "None",
+          "locators_used": ["hpx_whats_new_popup_title", "hpx_whats_new_popup_sub_title"],
+          "category": "verification"
+        },
+        {
+          "method_name": "verify_hpx_whats_new_popup_second_screen",
+          "description": "Verifies HPX What's New popup second screen by checking title and subtitle",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "None",
+          "locators_used": ["hpx_whats_new_popup_second_screen_title", "hpx_whats_new_popup_second_screen_sub_title"],
+          "category": "verification"
+        },
+        {
+          "method_name": "verify_hpx_whats_new_popup_third_screen",
+          "description": "Verifies HPX What's New popup third screen by checking title and subtitle",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "None",
+          "locators_used": ["hpx_whats_new_popup_third_screen_title", "hpx_whats_new_popup_third_screen_sub_title"],
+          "category": "verification"
+        },
+        {
+          "method_name": "verify_hpx_home",
+          "description": "Verifies HPX Home screen by checking 'Let's Get Started' title and subtitle",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "None",
+          "locators_used": ["hpx_lets_get_started_title", "hpx_lets_get_started_sub_title"],
+          "category": "verification"
+        }
+      ],
+      "action_methods": [
+        {
+          "method_name": "click_new_hp_app_popup_skip",
+          "description": "Clicks the skip button on the new HP app popup",
+          "parameters": [],
+          "return_type": "WebElement or bool",
+          "locator_used": "new_hp_app_popup_skip_btn",
+          "action_type": "click",
+          "category": "action"
+        },
+        {
+          "method_name": "refresh_device_mfe",
+          "description": "Refreshes the device MFE by clicking main webview pane and sending Ctrl+R",
+          "parameters": [],
+          "return_type": "None",
+          "locator_used": "main_webview_pane",
+          "action_type": "keyboard",
+          "category": "action",
+          "notes": "Performs click then sends CTRL+R keyboard command"
+        },
+        {
+          "method_name": "click_windows_dummy_printer",
+          "description": "Clicks the Windows dummy printer device. Alpha code using dummy printer workaround",
+          "parameters": [],
+          "return_type": "None",
+          "locator_used": "windows_dummy_printer_device",
+          "action_type": "click",
+          "category": "action",
+          "notes": "Alpha code - cannot add printer, using dummy printer from XML file (8/26/2024)"
+        },
+        {
+          "method_name": "click_add_button",
+          "description": "Clicks the top add button",
+          "parameters": [],
+          "return_type": "None",
+          "locator_used": "top_add_button",
+          "action_type": "click",
+          "category": "action"
+        },
+        {
+          "method_name": "click_device_tile",
+          "description": "Clicks a device tile",
+          "parameters": [],
+          "return_type": "None",
+          "locator_used": "device_tile",
+          "action_type": "click",
+          "category": "action"
+        },
+        {
+          "method_name": "click_profile_button",
+          "description": "Clicks the top profile button",
+          "parameters": [],
+          "return_type": "None",
+          "locator_used": "top_profile_button",
+          "action_type": "click",
+          "category": "action"
+        },
+        {
+          "method_name": "click_device_icon",
+          "description": "Clicks the device icon",
+          "parameters": [],
+          "return_type": "None",
+          "locator_used": "device_icon",
+          "action_type": "click",
+          "category": "action"
+        },
+        {
+          "method_name": "click_close_button",
+          "description": "Clicks the account panel close button using JavaScript executor",
+          "parameters": [],
+          "return_type": "None",
+          "locator_used": "account_panel_close_button",
+          "action_type": "click",
+          "category": "action",
+          "notes": "Uses JavaScript click for non-displayed element"
+        },
+        {
+          "method_name": "click_device_card",
+          "description": "Clicks a device card",
+          "parameters": [],
+          "return_type": "WebElement or bool",
+          "locator_used": "device_card",
+          "action_type": "click",
+          "category": "action"
+        },
+        {
+          "method_name": "click_home_loggedin",
+          "description": "Clicks the top sign-in button",
+          "parameters": [],
+          "return_type": "WebElement or bool",
+          "locator_used": "top_signin_button",
+          "action_type": "click",
+          "category": "action"
+        },
+        {
+          "method_name": "click_hpx_whats_new_popup_next_btn",
+          "description": "Clicks the next button on the What's New popup",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "None",
+          "locator_used": "hpx_whats_new_popup_next_btn",
+          "action_type": "click",
+          "category": "action",
+          "notes": "Method defined multiple times (duplicate)"
+        },
+        {
+          "method_name": "click_hpx_whats_new_popup_back_btn",
+          "description": "Clicks the back button on the What's New popup",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "None",
+          "locator_used": "hpx_whats_new_popup_back_btn",
+          "action_type": "click",
+          "category": "action",
+          "notes": "Method defined multiple times (duplicate)"
+        },
+        {
+          "method_name": "click_hpx_whats_new_popup_done_btn",
+          "description": "Clicks the done button on the What's New popup",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "None",
+          "locator_used": "hpx_whats_new_popup_done_btn",
+          "action_type": "click",
+          "category": "action"
+        }
+      ],
+      "getter_methods": [
+        {
+          "method_name": "get_hpx_whats_new_popup_title",
+          "description": "Gets the title text of the What's New popup",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "str",
+          "locator_used": "hpx_whats_new_popup_title",
+          "category": "getter"
+        },
+        {
+          "method_name": "get_hpx_whats_new_popup_sub_title",
+          "description": "Gets the subtitle text of the What's New popup",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "str",
+          "locator_used": "hpx_whats_new_popup_sub_title",
+          "category": "getter"
+        },
+        {
+          "method_name": "get_hpx_whats_new_popup_second_screen_title",
+          "description": "Gets the title text of the What's New popup second screen",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "str",
+          "locator_used": "hpx_whats_new_popup_second_screen_title",
+          "category": "getter"
+        },
+        {
+          "method_name": "get_hpx_whats_new_popup_second_screen_sub_title",
+          "description": "Gets the subtitle text of the What's New popup second screen",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "str",
+          "locator_used": "hpx_whats_new_popup_second_screen_sub_title",
+          "category": "getter"
+        },
+        {
+          "method_name": "get_hpx_whats_new_popup_third_screen_title",
+          "description": "Gets the title text of the What's New popup third screen",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "str",
+          "locator_used": "hpx_whats_new_popup_third_screen_title",
+          "category": "getter"
+        },
+        {
+          "method_name": "get_hpx_whats_new_popup_third_screen_sub_title",
+          "description": "Gets the subtitle text of the What's New popup third screen",
+          "parameters": [
+            {
+              "name": "timeout",
+              "type": "int",
+              "default": 10,
+              "description": "Maximum wait time in seconds"
+            }
+          ],
+          "return_type": "str",
+          "locator_used": "hpx_whats_new_popup_third_screen_sub_title",
+          "category": "getter"
+        }
+      ]
+    },
+    "locators_referenced": [
+      "new_hp_app_popup_skip_btn",
+      "app_bar_mfe_section",
+      "windows_dummy_printer_device",
+      "device_status_section",
+      "account_panel_section",
+      "top_signin_button",
+      "device_card",
+      "main_webview_pane",
+      "top_add_button",
+      "device_tile",
+      "top_profile_button",
+      "device_icon",
+      "account_panel_close_button",
+      "hpx_whats_new_popup_title",
+      "hpx_whats_new_popup_sub_title",
+      "hpx_whats_new_popup_second_screen_title",
+      "hpx_whats_new_popup_second_screen_sub_title",
+      "hpx_whats_new_popup_third_screen_title",
+      "hpx_whats_new_popup_third_screen_sub_title",
+      "hpx_whats_new_popup_next_btn",
+      "hpx_whats_new_popup_back_btn",
+      "hpx_whats_new_popup_done_btn",
+      "hpx_lets_get_started_title",
+      "hpx_lets_get_started_sub_title"
+    ],
+    "total_methods": 32,
+    "method_count_by_category": {
+      "verification": 12,
+      "action": 14,
+      "getter": 6
+    },
+    "code_quality_notes": [
+      "Contains duplicate method definitions: click_hpx_whats_new_popup_next_btn and click_hpx_whats_new_popup_back_btn appear multiple times",
+      "Alpha code present with workarounds for Windows dummy printer functionality",
+      "Uses JavaScript executor for clicking non-displayed elements",
+      "Consistent naming conventions following verify_*, click_*, and get_* patterns"
+    ],
+    "metadata_version": "1.0",
+    "generated_timestamp": "2026-04-04T07:40:55Z",
+    "framework": "Selenium WebDriver",
+    "page_type": "MFE (Micro Frontend)"
+  }
+}
