@@ -1,0 +1,20 @@
+{
+  "HPX_PRINTERS_DETAILS.py": {
+    "methods": [
+      {
+        "method_name": "verify_hpx_printers_details_screen",
+        "method_description": "Verifies that all elements on the HPX printers details screen are displayed correctly and accessible for user interaction.",
+        "method_input_parameter": [],
+        "method_output_parameter": "None",
+        "method_purpose": "Validates the visibility and accessibility of UI elements on the HPX printers details screen to ensure proper screen rendering and user experience."
+      },
+      {
+        "method_name": "click_back_button",
+        "method_description": "Performs a click action on the back button element to navigate away from the current screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": "None",
+        "method_purpose": "Enables navigation back to the previous screen by triggering a click event on the back button UI element."
+      }
+    ]
+  }
+}
