@@ -1,0 +1,1598 @@
+{
+  "HPX_SHORTCUTS.py": {
+    "methods": [
+      {
+        "method_name": "verify_shortcuts_screen_title",
+        "method_description": "Verify the title of the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for and verifies the presence of the shortcuts screen title element"
+      },
+      {
+        "method_name": "click_shortcuts_edit_btn",
+        "method_description": "Click the Edit button on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for the edit button and clicks it to navigate to edit shortcuts screen"
+      },
+      {
+        "method_name": "verify_edit_shortcuts_screen_title",
+        "method_description": "Verify the title of the Edit Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the presence of the edit shortcuts screen title"
+      },
+      {
+        "method_name": "click_cancel_shortcut_yes_cancel_btn",
+        "method_description": "Click the Yes Cancel button on the Cancel Shortcut dialog.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the Yes Cancel button to confirm cancellation of shortcut creation"
+      },
+      {
+        "method_name": "verify_cancel_shortcut_yes_cancel_btn",
+        "method_description": "Click the Yes Cancel button on the Cancel Shortcut dialog.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the presence of the Yes Cancel button on the cancel shortcut dialog"
+      },
+      {
+        "method_name": "click_edit_shortcut_print_toggle_btn",
+        "method_description": "Click the Print toggle button on the Edit Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          },
+          {
+            "parameter_name": "enable",
+            "default_value": "True",
+            "parameter_purpose": "Whether to enable or disable the toggle"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Toggles the print destination option in shortcut settings"
+      },
+      {
+        "method_name": "check_toggle_enabled_or_disabled",
+        "method_description": "Check if the toggle is enabled or disabled.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "locator",
+            "default_value": null,
+            "parameter_purpose": "The locator of the toggle element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if the toggle is not found"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "The time to wait for the toggle to be found"
+          }
+        ],
+        "method_output_parameter": "Boolean value indicating if toggle is enabled",
+        "method_purpose": "Returns the enabled state of a toggle element by checking its 'enabled' attribute"
+      },
+      {
+        "method_name": "verify_toggle_disabling_confirmation_msg_title",
+        "method_description": "Verify the title of the Toggle Disabling Confirmation message.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the confirmation dialog appears when disabling a toggle"
+      },
+      {
+        "method_name": "click_toggle_disabling_remove_btn",
+        "method_description": "Click the Remove button on the Toggle Disabling Confirmation message.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Confirms the removal action when disabling a toggle"
+      },
+      {
+        "method_name": "click_toggle_disabling_cancel_btn",
+        "method_description": "Click the Cancel button on the Toggle Disabling Confirmation message.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Cancels the toggle disabling action"
+      },
+      {
+        "method_name": "click_edit_shortcut_email_toggle_btn",
+        "method_description": "Click the Email toggle button on the Edit Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          },
+          {
+            "parameter_name": "enable",
+            "default_value": "True",
+            "parameter_purpose": "Whether to enable or disable the toggle"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Toggles the email destination option in shortcut settings"
+      },
+      {
+        "method_name": "click_edit_shortcut_save_toggle_btn",
+        "method_description": "Click the Save button on the Edit Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Toggles the save destination option in shortcut settings"
+      },
+      {
+        "method_name": "verify_edit_print_screen_title",
+        "method_description": "Verify the title of the Edit Print screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the user is on the edit print settings screen"
+      },
+      {
+        "method_name": "click_edit_shortcut_continue_btn",
+        "method_description": "Click the Continue button on the Edit Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Proceeds to the next step in shortcut configuration"
+      },
+      {
+        "method_name": "is_continue_btn_enabled",
+        "method_description": "Check if the Continue button is enabled on the Edit Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if Continue button is enabled",
+        "method_purpose": "Checks if the Continue button is in an enabled state for user interaction"
+      },
+      {
+        "method_name": "click_edit_print_copies_dropdown_btn",
+        "method_description": "Click the Copies dropdown button on the Edit Print screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Opens the dropdown to select number of copies for printing"
+      },
+      {
+        "method_name": "click_select_color_dropdown_btn",
+        "method_description": "Click the Color dropdown button on the Edit Print screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Opens the dropdown to select color or grayscale printing option"
+      },
+      {
+        "method_name": "click_two_sided_dropdown_btn",
+        "method_description": "Click the Two-Sided dropdown button on the Edit Print screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Opens the dropdown to select two-sided printing options"
+      },
+      {
+        "method_name": "select_copies_number",
+        "method_description": "Select the number of copies on the Edit Print screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "copies_number",
+            "default_value": null,
+            "parameter_purpose": "The number of copies to select"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects a specific number of copies from the dropdown using dynamic locator"
+      },
+      {
+        "method_name": "verify_select_copies_number",
+        "method_description": "Verify the selected number of copies on the Edit Print screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "copies_number",
+            "default_value": null,
+            "parameter_purpose": "The number of copies to verify"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if the copies number is selected",
+        "method_purpose": "Verifies that the specified number of copies is currently selected"
+      },
+      {
+        "method_name": "select_color_option",
+        "method_description": "Select the color option on the Edit Print screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "color_option",
+            "default_value": null,
+            "parameter_purpose": "The color option to select - 'color' or 'grayscale'"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects color or grayscale printing option using dynamic locator"
+      },
+      {
+        "method_name": "verify_select_color_option",
+        "method_description": "Verify the selected color option on the Edit Print screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "color_option",
+            "default_value": null,
+            "parameter_purpose": "The color option to verify - 'color' or 'grayscale'"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if the color option is selected",
+        "method_purpose": "Verifies that the specified color option is currently selected"
+      },
+      {
+        "method_name": "select_two_sided_option",
+        "method_description": "Select the two-sided option on the Edit Print screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "two_sided_option",
+            "default_value": null,
+            "parameter_purpose": "The two-sided option to select - 'off', 'short_edge', or 'long_edge'"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects two-sided printing option using dynamic locator"
+      },
+      {
+        "method_name": "verify_select_two_sided_option",
+        "method_description": "Verify the selected two-sided option on the Edit Print screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "two_sided_option",
+            "default_value": null,
+            "parameter_purpose": "The two-sided option to verify - 'off', 'short_edge', or 'long_edge'"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if the two-sided option is selected",
+        "method_purpose": "Verifies that the specified two-sided printing option is currently selected"
+      },
+      {
+        "method_name": "verify_edit_shortcut_email_screen_title",
+        "method_description": "Verify the title of the Edit Shortcut Email screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the user is on the edit shortcut email configuration screen"
+      },
+      {
+        "method_name": "enter_edit_shortcut_email_receiver_email_id_field",
+        "method_description": "Enter the receiver's email ID in the Edit Shortcut Email screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "email_id",
+            "default_value": null,
+            "parameter_purpose": "The email ID to enter"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Inputs the recipient's email address in the email configuration field"
+      },
+      {
+        "method_name": "verify_edit_shortcut_invalid_email_id_error_msg",
+        "method_description": "Verify the invalid email ID error message on the Edit Shortcut Email screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies that an error message appears for invalid email format"
+      },
+      {
+        "method_name": "verify_shortcut_settings_screen_title",
+        "method_description": "Verify the title of the Shortcut Settings screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the user is on the shortcut settings screen"
+      },
+      {
+        "method_name": "verify_edit_shortcut_email_subject_label",
+        "method_description": "Verify the label of the Email Subject field on the Edit Shortcut Email screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the presence of the email subject label"
+      },
+      {
+        "method_name": "enter_edit_shortcut_email_subject_field",
+        "method_description": "Enter the subject in the Email Subject field on the Edit Shortcut Email screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "subject",
+            "default_value": null,
+            "parameter_purpose": "The subject to enter"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Inputs the email subject text in the subject field"
+      },
+      {
+        "method_name": "verify_edit_shortcut_email_body_field",
+        "method_description": "Verify the Email Body field on the Edit Shortcut Email screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the presence of the email body input field"
+      },
+      {
+        "method_name": "enter_edit_shortcut_email_body_field",
+        "method_description": "Enter the body in the Email Body field on the Edit Shortcut Email screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "body",
+            "default_value": null,
+            "parameter_purpose": "The body to enter"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Inputs the email body text in the body field"
+      },
+      {
+        "method_name": "verify_shortcut_edit_save_title",
+        "method_description": "Verify the title of the Shortcut Edit Save screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the user is on the shortcut edit save screen"
+      },
+      {
+        "method_name": "verify_shortcuts_edit_btn",
+        "method_description": "Verify the presence of the Edit button on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement object for the edit button",
+        "method_purpose": "Returns the edit button element for further interaction or verification"
+      },
+      {
+        "method_name": "click_shortcuts_settings_icon",
+        "method_description": "Click the settings button on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Navigates to the shortcuts settings screen"
+      },
+      {
+        "method_name": "verify_add_new_shortcut_btn",
+        "method_description": "Verify the presence of the Add New Shortcut button on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement object for the add new shortcut button",
+        "method_purpose": "Returns the add new shortcut button element for verification"
+      },
+      {
+        "method_name": "click_add_new_shortcut_btn",
+        "method_description": "Click the Add New Shortcut button on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Initiates the process of creating a new shortcut"
+      },
+      {
+        "method_name": "verify_add_new_shortcut_screen_title",
+        "method_description": "Verify the title of the Add New Shortcut screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the user is on the add new shortcut screen"
+      },
+      {
+        "method_name": "click_shortcuts_back_btn",
+        "method_description": "Click the back button on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Navigates back to the previous screen"
+      },
+      {
+        "method_name": "verify_shortcuts_email_btn",
+        "method_description": "Verify the presence of the Email button on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement object for the email button",
+        "method_purpose": "Returns the email button element for verification"
+      },
+      {
+        "method_name": "click_create_your_own_shortcut",
+        "method_description": "Click the Create Your Own Shortcut on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Initiates custom shortcut creation flow"
+      },
+      {
+        "method_name": "click_cancel_shortcut_go_back_btn",
+        "method_description": "Click the Go Back button on the Cancel Shortcut dialog.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Returns to the previous screen without canceling the shortcut"
+      },
+      {
+        "method_name": "verify_cancel_shortcut_go_back_btn",
+        "method_description": "Verify the Go Back button on the Cancel Shortcut dialog.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if the go back button is displayed",
+        "method_purpose": "Checks if the go back button is visible on the cancel dialog"
+      },
+      {
+        "method_name": "click_google_drive_signin_link",
+        "method_description": "Click the Google Drive Sign In link on the Edit Shortcut Email screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Initiates Google Drive authentication flow"
+      },
+      {
+        "method_name": "verify_google_drive_redirection",
+        "method_description": "Verify the redirection to Google Drive Sign In page.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies successful navigation to Google Drive sign-in page"
+      },
+      {
+        "method_name": "verify_delete_shortcut_confirmation_msg_title",
+        "method_description": "Verify the title of the Delete Shortcut Confirmation message.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the delete confirmation dialog appears"
+      },
+      {
+        "method_name": "click_delete_shortcut_yes_delete_btn",
+        "method_description": "Click the Yes Delete button on the Delete Shortcut Confirmation message.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Confirms the deletion of a shortcut"
+      },
+      {
+        "method_name": "verify_delete_shortcut_yes_delete_btn",
+        "method_description": "Verify the Yes Delete button on the Delete Shortcut Confirmation message.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if the yes delete button is displayed",
+        "method_purpose": "Checks if the yes delete button is visible on the confirmation dialog"
+      },
+      {
+        "method_name": "click_delete_shortcut_no_cancel_btn",
+        "method_description": "Click the No Cancel button on the Delete Shortcut Confirmation message.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Cancels the shortcut deletion action"
+      },
+      {
+        "method_name": "verify_add_new_shortcut_title",
+        "method_description": "Verify the title of the Add New Shortcut screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the user is on the add new shortcut screen"
+      },
+      {
+        "method_name": "verify_cancel_this_shortcut_title",
+        "method_description": "Verify the title of the Cancel This Shortcut dialog.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the cancel shortcut confirmation dialog appears"
+      },
+      {
+        "method_name": "verify_shortcuts_add_print_screen_title",
+        "method_description": "Verify the title of the Shortcuts Add Print screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the user is on the add print shortcut screen"
+      },
+      {
+        "method_name": "click_hpx_quick_run_radio_btn",
+        "method_description": "Click the HPX Quick Run radio button on the Add New Shortcut screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects the quick run option for the shortcut"
+      },
+      {
+        "method_name": "verify_add_save_shortcut_title",
+        "method_description": "Verify the title of the Add Save Shortcut screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the user is on the add save shortcut screen"
+      },
+      {
+        "method_name": "verify_save_destination",
+        "method_description": "Verify the Save Destination field on the Add Save Shortcut screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies all three destination toggles (print, email, save) are present"
+      },
+      {
+        "method_name": "verify_add_shorcuts_destinations",
+        "method_description": "Verify the presence of Print, Email and Save Destinations on Add Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies all three destination text labels are visible"
+      },
+      {
+        "method_name": "verify_file_type_in_shortcut_settings_screen",
+        "method_description": "Verify that the File Type is not displayed in the Shortcut Settings screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies file type label is not displayed (negative test with raise_e=False)"
+      },
+      {
+        "method_name": "enter_shortcut_name",
+        "method_description": "Enter text into the Shortcut Name input box on the Edit Shortcut screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "shortcut_name",
+            "default_value": null,
+            "parameter_purpose": "The text to enter into the input box"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clears existing text and enters a new shortcut name"
+      },
+      {
+        "method_name": "verify_save_shortcut_btn",
+        "method_description": "Verify the presence of the Save Shortcut button on the Edit Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement object for the save shortcut button",
+        "method_purpose": "Returns the save shortcut button element for verification"
+      },
+      {
+        "method_name": "click_save_shortcut_btn",
+        "method_description": "Click the Save Shortcut button on the Edit Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Saves the configured shortcut settings"
+      },
+      {
+        "method_name": "verify_quick_run_toggle",
+        "method_description": "Verify the Quick Run toggle button on the Edit Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement object for the quick run toggle",
+        "method_purpose": "Returns the quick run toggle element for verification"
+      },
+      {
+        "method_name": "click_quick_run_toggle_btn",
+        "method_description": "Click the Quick Run toggle button on the Edit Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Toggles the quick run feature for the shortcut"
+      },
+      {
+        "method_name": "verify_img_file_type",
+        "method_description": "Click the Image File Type option on the Add Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement object for the image file type",
+        "method_purpose": "Returns the image file type element for verification"
+      },
+      {
+        "method_name": "click_image_file_type",
+        "method_description": "Click the toggle switch on the shortcut settings screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects image as the file type for the shortcut"
+      },
+      {
+        "method_name": "verify_pdf_file_type",
+        "method_description": "Click the PDF File Type option on the Add Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement object for the PDF file type",
+        "method_purpose": "Returns the PDF file type element for verification"
+      },
+      {
+        "method_name": "verify_add_button",
+        "method_description": "Verify the presence of the Add button on the Add Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement object for the add button",
+        "method_purpose": "Swipes down and returns the add button element for verification"
+      },
+      {
+        "method_name": "click_add_button",
+        "method_description": "Click the Add button on the Add Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Swipes down and clicks the add button to create the shortcut"
+      },
+      {
+        "method_name": "click_color_card_by_index",
+        "method_description": "Click a color card by index on the shortcut settings screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "index",
+            "default_value": null,
+            "parameter_purpose": "The index of the color card to click (1-based indexing)"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "The time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects a color card by its index using dynamic locator"
+      },
+      {
+        "method_name": "verify_color_card_selection",
+        "method_description": "Verify if a color card is selected by index.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "index",
+            "default_value": null,
+            "parameter_purpose": "The index of the color card to verify (1-based indexing)"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "The time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if the color card is selected",
+        "method_purpose": "Verifies the selection state of a color card by its index"
+      },
+      {
+        "method_name": "click_done_btn",
+        "method_description": "Click the Done button on the Shortcuts saved screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Completes the shortcut creation/editing process"
+      },
+      {
+        "method_name": "verify_shortcut_present_in_list",
+        "method_description": "Verify that a shortcut with the given name is present in the shortcuts list.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "shortcut_name",
+            "default_value": null,
+            "parameter_purpose": "The name of the shortcut to verify"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement object for the shortcut",
+        "method_purpose": "Verifies a shortcut exists in the list using dynamic locator with format specifier"
+      },
+      {
+        "method_name": "click_run_this_shortcut_btn",
+        "method_description": "Click the Run This Shortcut button on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Executes the selected shortcut"
+      },
+      {
+        "method_name": "verify_delete_this_shortcut_title",
+        "method_description": "Verify the title of the Delete This Shortcut dialog.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement object for the delete dialog title",
+        "method_purpose": "Returns the delete shortcut dialog title element for verification"
+      },
+      {
+        "method_name": "verify_delete_shortcut_btn_delete_btn",
+        "method_description": "Verify the Delete button on the Delete Shortcut Confirmation message.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement object for the delete button",
+        "method_purpose": "Returns the delete button element for verification"
+      },
+      {
+        "method_name": "verify_delete_shortcut_btn_cancel_btn",
+        "method_description": "Verify the Cancel button on the Delete Shortcut Confirmation message.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement object for the cancel button",
+        "method_purpose": "Returns the cancel button element for verification"
+      },
+      {
+        "method_name": "click_delete_shortcut_btn_delete_btn",
+        "method_description": "Click the Delete button on the Delete Shortcut Confirmation message.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Confirms deletion of the shortcut using driver.click method"
+      },
+      {
+        "method_name": "click_delete_shortcut_btn_cancel_btn",
+        "method_description": "Click the Cancel button on the Delete Shortcut Confirmation message.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Cancels the shortcut deletion using driver.click method"
+      },
+      {
+        "method_name": "click_account_selection",
+        "method_description": "Click the account selection on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects an account for shortcut operations"
+      },
+      {
+        "method_name": "verify_your_shortcut_is_running_title",
+        "method_description": "Verify the title of the Your Shortcut is Running screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "WebElement object for the running title",
+        "method_purpose": "Returns the shortcut running screen title element for verification"
+      },
+      {
+        "method_name": "click_view_status_btn",
+        "method_description": "Click the View Status button on the Your Shortcut is Running screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Navigates to the status view of the running shortcut"
+      },
+      {
+        "method_name": "click_shortcuts_btn",
+        "method_description": "Click the Shortcuts button on the Your Shortcut is Running screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Returns to the shortcuts main screen from the running screen"
+      },
+      {
+        "method_name": "click_three_dot_in_account",
+        "method_description": "Click the three dots in the account section on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Opens the account options menu"
+      },
+      {
+        "method_name": "click_remove_btn_in_account",
+        "method_description": "Click the Remove button in the account section on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Removes the account from shortcuts (reuses toggle_disabling_remove_btn locator)"
+      },
+      {
+        "method_name": "verify_remove_hp_access_confirmation_msg",
+        "method_description": "Verify the Remove HP Access Confirmation message.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": "String containing the text of the confirmation message",
+        "method_purpose": "Returns the text content of the HP access removal confirmation message"
+      }
+    ]
+  }
+}
