@@ -1,71 +1,313 @@
 {
-  "PRINTERS.py": {
+  "printers.py": {
     "class_name": "Printers",
     "base_class": "SmartFlow",
-    "locators": [
-      {"element_name": "connection_option_wifi", "locator_type": "string_identifier"},
-      {"element_name": "connection_option_ethernet", "locator_type": "string_identifier"},
-      {"element_name": "continue_btn", "locator_type": "string_identifier"},
-      {"element_name": "printers_tv", "locator_type": "string_identifier"},
-      {"element_name": "add_printer_btn", "locator_type": "string_identifier"},
-      {"element_name": "printers_title", "locator_type": "string_identifier"},
-      {"element_name": "add_printer_using_ip_btn", "locator_type": "string_identifier"},
-      {"element_name": "search_box", "locator_type": "string_identifier"},
-      {"element_name": "_shared_clear_text_btn", "locator_type": "string_identifier"},
-      {"element_name": "connect_the_printer_txt", "locator_type": "string_identifier"},
-      {"element_name": "dynamic_printer_cell", "locator_type": "string_identifier"},
-      {"element_name": "printers_cell", "locator_type": "string_identifier"},
-      {"element_name": "moobe_printer", "locator_type": "string_identifier"},
-      {"element_name": "enter_ip_address", "locator_type": "string_identifier"},
-      {"element_name": "is_this_your_printer_yes_btn", "locator_type": "string_identifier"},
-      {"element_name": "_shared_no", "locator_type": "string_identifier"},
-      {"element_name": "enter_serial_number_text_box", "locator_type": "string_identifier"},
-      {"element_name": "add_a_device_by_serial", "locator_type": "string_identifier"},
-      {"element_name": "help_link_for_serial_number", "locator_type": "string_identifier"},
-      {"element_name": "hp_support_page_link", "locator_type": "string_identifier"},
-      {"element_name": "add_a_device_button", "locator_type": "string_identifier"},
-      {"element_name": "set_up_new_printer", "locator_type": "string_identifier"},
-      {"element_name": "search_by_serial", "locator_type": "string_identifier"},
-      {"element_name": "set_up_new_printer_btn", "locator_type": "string_identifier"},
-      {"element_name": "supported_printer_btn", "locator_type": "string_identifier"},
-      {"element_name": "connect_to_previously_used_printer_btn", "locator_type": "string_identifier"},
-      {"element_name": "printer_ip", "locator_type": "string_identifier"},
-      {"element_name": "connect_bluetooth_popup_title", "locator_type": "string_identifier"},
-      {"element_name": "connect_bluetooth_popup_close_btn", "locator_type": "string_identifier"},
-      {"element_name": "get_connection_help_btn", "locator_type": "string_identifier"},
-      {"element_name": "learn_more_btn", "locator_type": "string_identifier"},
-      {"element_name": "set_up_a_new_printer_btn", "locator_type": "string_identifier"},
-      {"element_name": "connect_using_ip_address", "locator_type": "string_identifier"},
-      {"element_name": "printer_limited_support_pop_title_txt", "locator_type": "string_identifier"},
-      {"element_name": "_shared_str_ok", "locator_type": "string_identifier"},
-      {"element_name": "printer_cell_visible", "locator_type": "string_identifier"},
-      {"element_name": "connect_automatically_logo", "locator_type": "string_identifier"},
-      {"element_name": "_shared_dynamic_text", "locator_type": "string_identifier"},
-      {"element_name": "printer_connection_navbar_title", "locator_type": "string_identifier"},
-      {"element_name": "how_do_i_do_this_link", "locator_type": "string_identifier"},
-      {"element_name": "follow_instructions_txt", "locator_type": "string_identifier"},
-      {"element_name": "check_printer_txt", "locator_type": "string_identifier"},
-      {"element_name": "check_printer_details_txt", "locator_type": "string_identifier"},
-      {"element_name": "check_network_conn_txt", "locator_type": "string_identifier"},
-      {"element_name": "check_network_details_txt_os14", "locator_type": "string_identifier"},
-      {"element_name": "restart_router_txt", "locator_type": "string_identifier"},
-      {"element_name": "restart_router_details_txt", "locator_type": "string_identifier"},
-      {"element_name": "try_again_btn", "locator_type": "string_identifier"},
-      {"element_name": "get_more_help_link", "locator_type": "string_identifier"},
-      {"element_name": "contact_HP_on_facebook_messenger_link", "locator_type": "string_identifier"},
-      {"element_name": "open_permissions_btn", "locator_type": "string_identifier"},
-      {"element_name": "enable_local_network_blocker_screen", "locator_type": "string_identifier"},
-      {"element_name": "choose_type_of_printer_screen", "locator_type": "string_identifier"},
-      {"element_name": "option_get_started_img", "locator_type": "string_identifier"},
-      {"element_name": "option_add_printer_img", "locator_type": "string_identifier"},
-      {"element_name": "get_started_btn", "locator_type": "string_identifier"},
-      {"element_name": "add_printer_setup_title", "locator_type": "string_identifier"},
-      {"element_name": "connect_this_printer", "locator_type": "string_identifier"},
-      {"element_name": "search_by_serial_number_btn", "locator_type": "string_identifier"}
-    ],
-    "summary": "The Printers class is a comprehensive page object for the iOS Smart app, responsible for managing all printer-related workflows. It encapsulates printer discovery, connection, and setup processes, providing robust UI verification, search, and multi-step addition flows. The class leverages retry logic for unstable operations, supports both iOS and MAC platforms, and handles dynamic UI elements using format specifiers. It includes conditional popup handling, composite screen validation, and strategic waits for UI stability. The implementation supports multiple printer connection methods (WiFi, Ethernet, IP, serial number), integrates error handling with configurable exceptions, and features analytics and localization support. Troubleshooting and help screens are also managed within this class, ensuring a seamless and resilient automation experience.",
+    "locators": [],
+    "summary": "The Printers class is a comprehensive iOS mobile automation flow for managing printer operations in the HP Smart app. It extends SmartFlow and provides extensive functionality for printer discovery, selection, verification, and management. Key patterns include: (1) Robust retry mechanisms with timeout handling for printer selection, (2) Comprehensive verification methods for different printer states (claimed/unclaimed), (3) Search functionality validation with keyword matching, (4) Status and information verification for printer details, (5) UI element visibility checks for buttons and screens, (6) Exception handling for TimeoutException and NoSuchElementException, (7) Use of pytest.fail for test assertions, (8) Logging for debugging and test execution tracking, (9) Dynamic element location using printer names as identifiers, (10) Support for both main printer list and add printer list contexts. The class demonstrates enterprise-level test automation practices with detailed validation, error handling, and maintainable code structure suitable for continuous integration environments.",
     "methods": [
-      // The full methods list would be inserted here, following the required structure and transformation rules.
+      {
+        "method_name": "__init__",
+        "description": "Constructor that initializes the Printers flow with a driver instance.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "driver",
+            "default_value": null,
+            "parameter_purpose": "WebDriver instance for mobile automation"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Initialize the Printers flow object with the provided driver and call parent class constructor"
+      },
+      {
+        "method_name": "select_printer",
+        "description": "Selects a printer from the printer list by name, with retry logic and optional timeout.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to select"
+          },
+          {
+            "parameter_name": "is_searched",
+            "default_value": "False",
+            "parameter_purpose": "Flag indicating if printer search was already performed"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "30",
+            "parameter_purpose": "Maximum time in seconds to wait for printer to appear"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Navigate to and select a specific printer from the available printer list with retry mechanism"
+      },
+      {
+        "method_name": "get_printer_name",
+        "description": "Retrieves the name of a printer from the printer list at a specified index.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "index",
+            "default_value": "0",
+            "parameter_purpose": "Zero-based index of the printer in the list"
+          }
+        ],
+        "method_output_parameter": "str - printer name",
+        "method_purpose": "Extract and return the printer name text from a specific position in the printer list"
+      },
+      {
+        "method_name": "select_a_printer_to_add",
+        "description": "Selects a printer to add from the available printers list by index.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "index",
+            "default_value": "0",
+            "parameter_purpose": "Zero-based index of the printer to select for adding"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Click on a printer cell at the specified index to initiate the add printer flow"
+      },
+      {
+        "method_name": "verify_printer_navigation_for_non_claimed_printer",
+        "description": "Verifies that clicking on a non-claimed printer navigates to the printer setup screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the non-claimed printer to verify"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validate navigation flow for unclaimed printers by checking for setup screen elements"
+      },
+      {
+        "method_name": "verify_printer_navigation_for_claimed_printer",
+        "description": "Verifies that clicking on a claimed printer navigates to the printer home screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the claimed printer to verify"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validate navigation flow for claimed printers by checking for home screen elements"
+      },
+      {
+        "method_name": "verify_searched_printers_result",
+        "description": "Verifies that search results contain only printers matching the search keyword.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "keyword",
+            "default_value": null,
+            "parameter_purpose": "Search keyword to validate against printer names"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validate that all displayed printers in search results contain the search keyword"
+      },
+      {
+        "method_name": "verify_no_printers_available",
+        "description": "Verifies that the 'No Printers Available' message is displayed when no printers are found.",
+        "method_input_parameter": [],
+        "method_output_parameter": "None",
+        "method_purpose": "Confirm the empty state message appears when printer list is empty"
+      },
+      {
+        "method_name": "verify_printers_screen",
+        "description": "Verifies that the Printers screen is displayed with all expected UI elements.",
+        "method_input_parameter": [],
+        "method_output_parameter": "None",
+        "method_purpose": "Validate the presence of key UI components on the Printers screen"
+      },
+      {
+        "method_name": "verify_add_printer_screen",
+        "description": "Verifies that the Add Printer screen is displayed with expected elements.",
+        "method_input_parameter": [],
+        "method_output_parameter": "None",
+        "method_purpose": "Validate the Add Printer screen UI components are present"
+      },
+      {
+        "method_name": "verify_printer_searched",
+        "description": "Verifies that a specific printer appears in the search results.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify in search results"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Confirm that a specific printer is visible in the search results list"
+      },
+      {
+        "method_name": "verify_printer_not_searched",
+        "description": "Verifies that a specific printer does not appear in the search results.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify is not in search results"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Confirm that a specific printer is not visible in the search results list"
+      },
+      {
+        "method_name": "verify_invisible_printer_in_printers_list",
+        "description": "Verifies that a printer is not visible in the main printers list.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify is not visible"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Confirm that a specific printer does not appear in the printers list"
+      },
+      {
+        "method_name": "verify_visible_printer_in_printers_list",
+        "description": "Verifies that a printer is visible in the main printers list.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify is visible"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Confirm that a specific printer appears in the printers list"
+      },
+      {
+        "method_name": "verify_invisible_printer_in_add_printer_list",
+        "description": "Verifies that a printer is not visible in the add printer list.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify is not in add printer list"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Confirm that a specific printer does not appear in the add printer list"
+      },
+      {
+        "method_name": "verify_visible_printer_in_add_printer_list",
+        "description": "Verifies that a printer is visible in the add printer list.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify is in add printer list"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Confirm that a specific printer appears in the add printer list"
+      },
+      {
+        "method_name": "verify_printer_status",
+        "description": "Verifies the status text displayed for a specific printer.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to check status for"
+          },
+          {
+            "parameter_name": "status",
+            "default_value": null,
+            "parameter_purpose": "Expected status text to verify"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validate that a printer displays the correct status message"
+      },
+      {
+        "method_name": "verify_printer_information",
+        "description": "Verifies detailed printer information including name, status, and connection type.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify information for"
+          },
+          {
+            "parameter_name": "printer_status",
+            "default_value": null,
+            "parameter_purpose": "Expected printer status text"
+          },
+          {
+            "parameter_name": "connection_type",
+            "default_value": null,
+            "parameter_purpose": "Expected connection type (e.g., Wi-Fi, USB)"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validate comprehensive printer details displayed in the UI"
+      },
+      {
+        "method_name": "verify_printer_bonjour_name",
+        "description": "Verifies the Bonjour name displayed for a printer.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to check Bonjour name for"
+          },
+          {
+            "parameter_name": "bonjour_name",
+            "default_value": null,
+            "parameter_purpose": "Expected Bonjour name to verify"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validate that the correct Bonjour name is displayed for a printer"
+      },
+      {
+        "method_name": "verify_add_printer_btn",
+        "description": "Verifies the visibility and state of the Add Printer button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_visible",
+            "default_value": "True",
+            "parameter_purpose": "Expected visibility state of the Add Printer button"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validate the Add Printer button's presence or absence based on expected state"
+      },
+      {
+        "method_name": "verify_manage_printer_btn",
+        "description": "Verifies the visibility and state of the Manage Printer button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_visible",
+            "default_value": "True",
+            "parameter_purpose": "Expected visibility state of the Manage Printer button"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validate the Manage Printer button's presence or absence based on expected state"
+      },
+      {
+        "method_name": "verify_ui_string",
+        "description": "Verifies that a specific UI string is displayed on the screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "string_id",
+            "default_value": null,
+            "parameter_purpose": "Identifier for the UI string to verify"
+          },
+          {
+            "parameter_name": "format_specifier",
+            "default_value": "None",
+            "parameter_purpose": "Optional format specifier for dynamic string values"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Validate that expected localized UI text is displayed correctly"
+      }
     ]
   }
 }
