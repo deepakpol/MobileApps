@@ -1,0 +1,749 @@
+{
+  "HPX_PRINTERS_DETAILS.py": {
+    "class_name": "HPXPrinterDetails",
+    "base_class": "SmartFlow",
+    "locators": [
+      {
+        "locator_name": "flow_name",
+        "locator_value": "hpx_printer_details"
+      }
+    ],
+    "methods": [
+      {
+        "method_name": "click_camera_scan_tile",
+        "method_description": "Swipes through the screen to find the camera scan tile and clicks on it.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          },
+          {
+            "parameter_name": "max_swipes",
+            "default_value": "5",
+            "parameter_purpose": "Maximum number of swipes to perform"
+          }
+        ],
+        "method_output_parameter": "Boolean (True if successful)",
+        "method_purpose": "Locates the camera scan tile by swiping and clicks it. Returns True if successful."
+      },
+      {
+        "method_name": "click_feature_unavailable_popup_if_exist",
+        "method_description": "Clicks on the feature unavailable popup if it exists.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "raise_e",
+            "default_value": "False",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "20",
+            "parameter_purpose": "Maximum time to wait for the element"
+          }
+        ],
+        "method_output_parameter": "Boolean (True if popup exists and clicked) or None",
+        "method_purpose": "Checks for the feature unavailable popup and clicks it if present. Returns True if clicked, otherwise None."
+      },
+      {
+        "method_name": "verify_camera_scan_tile",
+        "method_description": "Verifies that the camera scan tile is displayed.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if camera scan tile is displayed",
+        "method_purpose": "Checks if the camera scan tile element is present on the screen. Returns True if displayed."
+      },
+      {
+        "method_name": "verify_print_photos_tile",
+        "method_description": "Verifies that the print photos tile is displayed.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if print photos tile is displayed",
+        "method_purpose": "Checks if the print photos tile element is present on the screen. Returns True if displayed."
+      },
+      {
+        "method_name": "verify_shortcuts_tile",
+        "method_description": "Verifies that the shortcuts tile is displayed.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if shortcuts tile is displayed",
+        "method_purpose": "Checks if the shortcuts tile element is present on the screen. Returns True if displayed."
+      },
+      {
+        "method_name": "click_scan_tile",
+        "method_description": "Swipes through the screen to find the scan tile and clicks on it.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          },
+          {
+            "parameter_name": "max_swipes",
+            "default_value": "3",
+            "parameter_purpose": "Maximum number of swipes to perform"
+          }
+        ],
+        "method_output_parameter": "Boolean (True if successful)",
+        "method_purpose": "Locates the scan tile by swiping and clicks it. Returns True if successful."
+      },
+      {
+        "method_name": "click_print_documents_tile",
+        "method_description": "Swipes through the screen to find the print documents tile and clicks on it.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          },
+          {
+            "parameter_name": "max_swipes",
+            "default_value": "3",
+            "parameter_purpose": "Maximum number of swipes to perform"
+          }
+        ],
+        "method_output_parameter": "Boolean (True if successful)",
+        "method_purpose": "Locates the print documents tile by swiping and clicks it. Returns True if successful."
+      },
+      {
+        "method_name": "click_print_photos_tile",
+        "method_description": "Swipes through the screen to find the print photos tile and clicks on it.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          },
+          {
+            "parameter_name": "max_swipes",
+            "default_value": "3",
+            "parameter_purpose": "Maximum number of swipes to perform"
+          }
+        ],
+        "method_output_parameter": "Boolean (True if successful)",
+        "method_purpose": "Locates the print photos tile by swiping and clicks it. Returns True if successful."
+      },
+      {
+        "method_name": "click_copy_tile",
+        "method_description": "Swipes through the screen to find the copy tile and clicks on it.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          },
+          {
+            "parameter_name": "max_swipes",
+            "default_value": "3",
+            "parameter_purpose": "Maximum number of swipes to perform"
+          }
+        ],
+        "method_output_parameter": "Boolean (True if successful)",
+        "method_purpose": "Locates the copy tile by swiping and clicks it. Returns True if successful."
+      },
+      {
+        "method_name": "click_mobilefax_tile",
+        "method_description": "Swipes through the screen to find the mobile fax tile and clicks on it.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          },
+          {
+            "parameter_name": "max_swipes",
+            "default_value": "3",
+            "parameter_purpose": "Maximum number of swipes to perform"
+          }
+        ],
+        "method_output_parameter": "Boolean (True if successful)",
+        "method_purpose": "Locates the mobile fax tile by swiping and clicks it. Returns True if successful."
+      },
+      {
+        "method_name": "click_shortcuts_tile",
+        "method_description": "Swipes through the screen to find the shortcuts tile and clicks on it.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          },
+          {
+            "parameter_name": "max_swipes",
+            "default_value": "3",
+            "parameter_purpose": "Maximum number of swipes to perform"
+          }
+        ],
+        "method_output_parameter": "Boolean (True if successful)",
+        "method_purpose": "Locates the shortcuts tile by swiping and clicks it. Returns True if successful."
+      },
+      {
+        "method_name": "click_printable_apps_tile",
+        "method_description": "Swipes through the screen to find the printables tile and clicks on it.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          },
+          {
+            "parameter_name": "max_swipes",
+            "default_value": "3",
+            "parameter_purpose": "Maximum number of swipes to perform"
+          }
+        ],
+        "method_output_parameter": "Boolean (True if successful)",
+        "method_purpose": "Locates the printables tile by swiping and clicks it. Returns True if successful."
+      },
+      {
+        "method_name": "click_print_quality_tools_tile",
+        "method_description": "Swipes through the screen to find the print quality tools tile and clicks on it.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          },
+          {
+            "parameter_name": "max_swipes",
+            "default_value": "3",
+            "parameter_purpose": "Maximum number of swipes to perform"
+          }
+        ],
+        "method_output_parameter": "Boolean (True if successful)",
+        "method_purpose": "Locates the print quality tools tile by swiping and clicks it. Returns True if successful."
+      },
+      {
+        "method_name": "navigate_to_product_information_details",
+        "method_description": "Swipes through the screen to find the product information title and navigates to the details screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          },
+          {
+            "parameter_name": "max_swipes",
+            "default_value": "5",
+            "parameter_purpose": "Maximum number of swipes to perform"
+          }
+        ],
+        "method_output_parameter": "Boolean (True if successful)",
+        "method_purpose": "Locates the product information title by swiping and navigates to the details screen. Returns True if successful."
+      },
+      {
+        "method_name": "verify_product_number_title",
+        "method_description": "Verifies that the product number title is displayed.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if product number title is displayed",
+        "method_purpose": "Checks if the product number title element is present on the screen. Returns True if displayed."
+      },
+      {
+        "method_name": "verify_product_serial_number_title",
+        "method_description": "Verifies that the product serial number title is displayed.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if product serial number title is displayed",
+        "method_purpose": "Checks if the product serial number title element is present on the screen. Returns True if displayed."
+      },
+      {
+        "method_name": "get_product_number_value",
+        "method_description": "Retrieves the product number value from the UI element.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "String containing the product number value or None",
+        "method_purpose": "Fetches and returns the text value of the product number element. Returns None if not found."
+      },
+      {
+        "method_name": "get_product_serial_number_value",
+        "method_description": "Retrieves the product serial number value from the UI element.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "String containing the product serial number value or None",
+        "method_purpose": "Fetches and returns the text value of the product serial number element. Returns None if not found."
+      },
+      {
+        "method_name": "click_more_information_and_reports_btn",
+        "method_description": "Clicks on the more information and reports button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the more information and reports button element."
+      },
+      {
+        "method_name": "verify_printer_information_title",
+        "method_description": "Verifies that the printer information title is displayed.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if printer information title is displayed",
+        "method_purpose": "Checks if the printer information title element is present on the screen. Returns True if displayed."
+      },
+      {
+        "method_name": "click_printer_information_general_btn",
+        "method_description": "Clicks on the printer information general button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the printer information general button element."
+      },
+      {
+        "method_name": "click_printer_information_network_btn",
+        "method_description": "Clicks on the printer information network button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the printer information network button element."
+      },
+      {
+        "method_name": "click_printer_information_reports_btn",
+        "method_description": "Clicks on the printer information reports button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the printer information reports button element."
+      },
+      {
+        "method_name": "click_reports_demo_page_print_btn",
+        "method_description": "Clicks on the reports demo page print button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the reports demo page print button element."
+      },
+      {
+        "method_name": "verify_reports_print_progress_status",
+        "method_description": "Verifies that the reports print progress status is displayed.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if reports print progress status is displayed",
+        "method_purpose": "Checks if the reports print progress status element is present on the screen. Returns True if displayed."
+      },
+      {
+        "method_name": "verify_reports_print_success_status",
+        "method_description": "Verifies that the reports print success status is displayed.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "Boolean indicating if reports print success status is displayed",
+        "method_purpose": "Checks if the reports print success status element is present on the screen. Returns True if displayed."
+      },
+      {
+        "method_name": "click_add_device_btn",
+        "method_description": "Clicks on the add device button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the add device button element, with fallback to coordinate-based click if necessary."
+      },
+      {
+        "method_name": "click_choose_an_available_printer_btn",
+        "method_description": "Clicks on the choose an available printer button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "20",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Waits for and clicks the choose an available printer button element."
+      },
+      {
+        "method_name": "click_printer_device_card",
+        "method_description": "Clicks on the printer device card.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the printer device card element."
+      },
+      {
+        "method_name": "click_default_shortcuts",
+        "method_description": "Clicks on the default shortcuts.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the default shortcuts element."
+      },
+      {
+        "method_name": "click_select_source_as_camera_scan_btn",
+        "method_description": "Clicks on the camera scan button to select it as source.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the camera scan button to select it as the scan source."
+      },
+      {
+        "method_name": "click_start_new_scan_btn",
+        "method_description": "Clicks on the start new scan button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the start new scan button element."
+      },
+      {
+        "method_name": "click_exit_scan_btn",
+        "method_description": "Clicks on the exit scan button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the exit scan button element."
+      },
+      {
+        "method_name": "click_start_email_btn",
+        "method_description": "Clicks on the start email button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the start email button element."
+      },
+      {
+        "method_name": "click_add_image_btn",
+        "method_description": "Clicks on the add image button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the add image button element."
+      },
+      {
+        "method_name": "click_cancel_btn",
+        "method_description": "Clicks on the cancel button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the cancel button element."
+      },
+      {
+        "method_name": "click_add_device_btn_if_exist",
+        "method_description": "Clicks on the add device button if it exists.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "raise_e",
+            "default_value": "False",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          }
+        ],
+        "method_output_parameter": "Boolean (True if button exists and clicked) or None",
+        "method_purpose": "Checks for the add device button and clicks it if present. Returns True if clicked, otherwise None."
+      },
+      {
+        "method_name": "click_rotate_btn",
+        "method_description": "Clicks on the rotate button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Clicks the rotate button element."
+      }
+    ],
+    "summary": "HPXPrinterDetails is an Android UI page class extending SmartFlow. It provides comprehensive automation methods for interacting with the HP printer details screen, including navigation through printer tiles (camera scan, print photos, scan, print documents, copy, mobile fax, shortcuts, printables, print quality tools), managing product information, printer settings, reports, device management, and scan operations. The class uses swipe gestures to locate elements and offers verification methods for UI elements with configurable timeout and exception handling."
+  }
+}
