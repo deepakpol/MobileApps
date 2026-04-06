@@ -1,0 +1,716 @@
+{
+  "PRINTERS.py": {
+    "class_name": "Printers",
+    "base_class": "SmartFlow",
+    "locators": [
+      "MY_PRINTER_IS_NOT_LISTED"
+    ],
+    "summary": "This class models the Printers screen for HP Smart Android. It provides a structured Page Object Model (POM) with declarative locators and comprehensive method definitions. The class encapsulates all flows related to printer selection, searching, setup, and verification. It is designed for robust UI automation, including error handling and support for various Android versions and printer connection types.",
+    "methods": [
+      {
+        "method_name": "select_add",
+        "description": "Click on Add icon button on Printers screen. End of flow: Add Printer screen. Popup display for clicking this button first time.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the add printer button on the Printers screen. If the button is not found, attempts an alternative method to proceed to the Add Printer screen."
+      },
+      {
+        "method_name": "select_looking_for_wifi_direct_printers",
+        "description": "Click on Allow button of Looking for Wi-Fi printers? button. End of flow: Printer screen. App Permission display if it is clicked at first time.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_permission",
+            "default_value": "True",
+            "parameter_purpose": "Determines if location usage permission should be handled."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the Wi-Fi Direct printers button and handles location permission if required."
+      },
+      {
+        "method_name": "select_search_icon",
+        "description": "Click on Search icon button in Printers page (WiFi-Direct/network printer). End of flow: Search screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the search button on the Printers page and waits for the printer title to become invisible."
+      },
+      {
+        "method_name": "search_printer",
+        "description": "Enter key_word to text field. Press enter on virtual key. End of flow: found printer list or empty list.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "key_word",
+            "default_value": null,
+            "parameter_purpose": "The search keyword to enter in the search field."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Enters the provided search keyword into the search field and initiates the search."
+      },
+      {
+        "method_name": "search_printer_by_ip",
+        "description": "Enter IP address in the text field. Selects the printer from the list.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "ip_add",
+            "default_value": null,
+            "parameter_purpose": "IP address of the printer to search for."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Searches for a printer by its IP address and selects it from the list, swiping if not found."
+      },
+      {
+        "method_name": "select_printer",
+        "description": "Select target printer via its printer's ip address/Wifi-Direct name.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_info",
+            "default_value": null,
+            "parameter_purpose": "IP address or Wifi-Direct name of printer."
+          },
+          {
+            "parameter_name": "wifi_direct",
+            "default_value": "False",
+            "parameter_purpose": "Whether to select from Wi-Fi Direct printers."
+          },
+          {
+            "parameter_name": "is_searched",
+            "default_value": "False",
+            "parameter_purpose": "Whether to search before selecting."
+          },
+          {
+            "parameter_name": "keyword",
+            "default_value": null,
+            "parameter_purpose": "Keyword to search for the printer."
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "120",
+            "parameter_purpose": "Timeout for printer list loading."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects a printer from the list using provided information, optionally searching and handling Wi-Fi Direct selection."
+      },
+      {
+        "method_name": "select_search_printers_popup_continue",
+        "description": "Click on Continue button of Search for printers? popup.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_permission",
+            "default_value": "False",
+            "parameter_purpose": "Whether to handle runtime permission."
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if object not found."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks continue on the search printers popup and handles permission if required."
+      },
+      {
+        "method_name": "dismiss_search_for_printers_popup",
+        "description": "Dismiss the popup, 'Search for printers?'. Click on Allow button. Allow on App Permission popup.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Attempts to dismiss the search for printers popup, handling exceptions if not present."
+      },
+      {
+        "method_name": "count_printers",
+        "description": "Count number of found IP/Wifi-Direct printers.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "wifi_direct",
+            "default_value": "False",
+            "parameter_purpose": "Whether to count Wi-Fi Direct printers."
+          }
+        ],
+        "method_output_parameter": "number of printers",
+        "method_purpose": "Counts the number of printers by scrolling through the list and collecting unique printer names."
+      },
+      {
+        "method_name": "select_my_printer_is_not_listed",
+        "description": "On Android 7/8/9: Click on My print is not listed button. On Android 10/11: Click on Printer Not Listed? button.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the appropriate button based on Android version to indicate the printer is not listed."
+      },
+      {
+        "method_name": "select_get_more_help_button",
+        "description": "On Android 10/11 Only: Click on Get More Help button.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the Get More Help button for additional setup assistance."
+      },
+      {
+        "method_name": "select_printer_setup_printer_model",
+        "description": "Select a printer model in list on Print Setup Instruction screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "model",
+            "default_value": null,
+            "parameter_purpose": "Specific printer model to select."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects a printer model from the setup instruction screen."
+      },
+      {
+        "method_name": "select_setup_instruction_link",
+        "description": "Click on instruction link (Setup Mode / Network).",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_network",
+            "default_value": "True",
+            "parameter_purpose": "Whether to click the network setup link."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the appropriate setup instruction link based on the network flag."
+      },
+      {
+        "method_name": "select_setup_instruction_popup_ok",
+        "description": "Click on OK button instruction popup.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_network",
+            "default_value": "True",
+            "parameter_purpose": "Whether to click the network setup popup OK button."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks OK on the setup instruction popup."
+      },
+      {
+        "method_name": "toggle_setup_instruction_checkbox",
+        "description": "Check/uncheck a checkbox.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_network",
+            "default_value": "True",
+            "parameter_purpose": "Whether to toggle the network setup checkbox."
+          },
+          {
+            "parameter_name": "enable",
+            "default_value": "True",
+            "parameter_purpose": "Whether to check or uncheck the checkbox."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Toggles the setup instruction checkbox as specified."
+      },
+      {
+        "method_name": "select_printer_setup_try_again",
+        "description": "Click on Try Again button.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the Try Again button on the setup screen."
+      },
+      {
+        "method_name": "select_print_setup_cancel",
+        "description": "Click on Cancel button.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the Cancel button on the setup screen."
+      },
+      {
+        "method_name": "select_search_again_button",
+        "description": "Click on search again.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the Search Again button."
+      },
+      {
+        "method_name": "select_exit_setup_button",
+        "description": "Click on exit setup.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "check_kibana",
+            "default_value": "False",
+            "parameter_purpose": "Whether to click the Kibana-specific exit button."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the appropriate exit setup button."
+      },
+      {
+        "method_name": "select_oobe_printer",
+        "description": "Select OOBE printer on Add Printer screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "moobe_name",
+            "default_value": null,
+            "parameter_purpose": "Moobe name or BLE mac address."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects an OOBE printer from the list, swiping if not found."
+      },
+      {
+        "method_name": "select_oobe_awc_printer",
+        "description": "Select OOBE printer - AWC path on Android 10 and up.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "moobe_name",
+            "default_value": null,
+            "parameter_purpose": "Moobe name of the printer."
+          },
+          {
+            "parameter_name": "ssid",
+            "default_value": null,
+            "parameter_purpose": "SSID to select for the printer."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs the AWC OOBE printer selection flow."
+      },
+      {
+        "method_name": "select_remote_printer",
+        "description": "Select target printer via its printer's bonjour name.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_bonjour_name",
+            "default_value": null,
+            "parameter_purpose": "Bonjour name of the printer."
+          },
+          {
+            "parameter_name": "is_searched",
+            "default_value": "False",
+            "parameter_purpose": "Whether to search before selecting."
+          },
+          {
+            "parameter_name": "keyword",
+            "default_value": null,
+            "parameter_purpose": "Keyword to search for the printer."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects a remote printer by bonjour name, optionally searching first."
+      },
+      {
+        "method_name": "select_connect_to_the_printer",
+        "description": "Click on Connect to the printer on 'Wi-Fi Direct Printer' screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the connect button for Wi-Fi Direct printers."
+      },
+      {
+        "method_name": "select_disconnect_to_the_printer",
+        "description": "Select Network printers for printer types. Click on Connect to the printer button.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the disconnect button for Wi-Fi Direct printers."
+      },
+      {
+        "method_name": "connect_to_wifi_direct_printer",
+        "description": "At popup 'Connect to <WiFi- Direct name>': Enter password and click Connect.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "pwd",
+            "default_value": null,
+            "parameter_purpose": "Password for Wi-Fi Direct connection."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Enters password and connects to Wi-Fi Direct printer."
+      },
+      {
+        "method_name": "load_printer_setup_screen",
+        "description": "Loads the add printer screen or printer setup screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "connection",
+            "default_value": "\"wifi\"",
+            "parameter_purpose": "Type of connection: 'wifi' or 'ethernet'."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Performs the steps to load the printer setup screen based on the connection type."
+      },
+      {
+        "method_name": "select_printer_option_add_printer",
+        "description": "Selects the add printer button on the add printer option screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the add printer option button."
+      },
+      {
+        "method_name": "select_printer_option_get_started",
+        "description": "Selects the get started button on the add printer option screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the get started option button."
+      },
+      {
+        "method_name": "select_ethernet_connection",
+        "description": "Selects the Ethernet Cable option on the printer connection type screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Timeout for the click action."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects the ethernet connection and continues setup."
+      },
+      {
+        "method_name": "select_wifi_connection",
+        "description": "Selects the Wifi option on the printer connection type screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Timeout for the click action."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects the wifi connection and continues setup."
+      },
+      {
+        "method_name": "select_setup_continue",
+        "description": "Clicks the setup continue button.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_permission",
+            "default_value": "False",
+            "parameter_purpose": "Whether to handle runtime permission."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks continue and handles permission if required."
+      },
+      {
+        "method_name": "select_location_usage_ok_button",
+        "description": "Selects Continue button on the using location data popup.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_permission",
+            "default_value": "True",
+            "parameter_purpose": "Whether to handle runtime permission."
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if object not found."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks continue on location usage popup and handles permission if required."
+      },
+      {
+        "method_name": "select_wifi_screen_learn_more",
+        "description": "Selects the learn more link on the prepare wifi screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": "True if popup appears, raises exception otherwise.",
+        "method_purpose": "Clicks the learn more link multiple times until the popup appears."
+      },
+      {
+        "method_name": "select_wifi_learn_more_ok_button",
+        "description": "Selects the Ok button on the learn more popup at the wifi connectivity screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the Ok button on the learn more popup."
+      },
+      {
+        "method_name": "select_turn_on_bluetooth_continue_btn",
+        "description": "Selects the CONTINUE button on the turn on bluetooth popup.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the continue button on the bluetooth popup."
+      },
+      {
+        "method_name": "select_permissions_popup_button",
+        "description": "Selects a button on the Smart allow permissions popup.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "btn",
+            "default_value": null,
+            "parameter_purpose": "The button to select: 'exit' or 'permissions'."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Clicks the specified button on the permissions popup."
+      },
+      {
+        "method_name": "verify_search_printers_screen",
+        "description": "Verify current screen is searching screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_empty",
+            "default_value": "False",
+            "parameter_purpose": "Whether the list is empty."
+          },
+          {
+            "parameter_name": "is_wifi_direct",
+            "default_value": "False",
+            "parameter_purpose": "Whether for Wi-Fi Direct."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the search printers screen and waits for relevant objects."
+      },
+      {
+        "method_name": "verify_printers_screen",
+        "description": "Verify that current screen is Printers screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if not found."
+          }
+        ],
+        "method_output_parameter": "True if both printer title and search button are found.",
+        "method_purpose": "Verifies the printers screen by checking for title and search button."
+      },
+      {
+        "method_name": "verify_search_printers_popup",
+        "description": "Verify current popup is 'Search for printers?' popup.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if not found."
+          }
+        ],
+        "method_output_parameter": "True if both title and continue button are found.",
+        "method_purpose": "Verifies the search printers popup."
+      },
+      {
+        "method_name": "verify_printer_options_screen",
+        "description": "Verify the printer options screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if not found."
+          }
+        ],
+        "method_output_parameter": "True if all required objects are found.",
+        "method_purpose": "Verifies the printer options screen by checking for images and buttons."
+      },
+      {
+        "method_name": "verify_printer_connection_type_screen",
+        "description": "Verify the printer connection type screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the connection type screen by checking for radio buttons and continue button."
+      },
+      {
+        "method_name": "verify_connect_ethernet_screen",
+        "description": "Verify the prepare printer to connect using ethernet screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the ethernet connection screen by checking for header and continue button."
+      },
+      {
+        "method_name": "verify_connect_wifi_screen",
+        "description": "Verify the get printer ready to connect over Wi-Fi screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the Wi-Fi connection screen by checking for header and continue button."
+      },
+      {
+        "method_name": "verify_prepare_wifi_learn_more_popup",
+        "description": "Verify the 'How are location and Bluetooth used?' popup from the connect wifi screen's learn more link.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "invisible",
+            "default_value": "False",
+            "parameter_purpose": "Whether to check for invisibility."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the learn more popup by checking for title, body, and ok button."
+      },
+      {
+        "method_name": "verify_turn_on_bluetooth_popup",
+        "description": "Verify the 'Turn on Bluetooth' popup.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the bluetooth popup by checking for title, body, and continue button."
+      },
+      {
+        "method_name": "verify_turn_on_location_popup",
+        "description": "Verify the 'Turn on location...' popup.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the location popup by checking for title and settings button."
+      },
+      {
+        "method_name": "verify_location_usage_popup",
+        "description": "Verify the 'Using location data' popup.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the location usage popup by checking for title, body, and ok button."
+      },
+      {
+        "method_name": "verify_provide_permissions_popup",
+        "description": "Verify the provide permissions popup.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "permission",
+            "default_value": null,
+            "parameter_purpose": "The permission the popup should represent."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the permissions popup by checking for title and buttons."
+      },
+      {
+        "method_name": "verify_hide_printer",
+        "description": "Verifies 'Hide Printer' on printer screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Scrolls to and verifies the hide printer button."
+      },
+      {
+        "method_name": "verify_wifi_direct_printers_screen",
+        "description": "Verify that current screen is Wifi Direct Printers screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the Wi-Fi Direct printers screen by checking for relevant objects."
+      },
+      {
+        "method_name": "verify_connect_printers_wifi_direct_screen",
+        "description": "Verify that current screen is Network Printers screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_disconnect",
+            "default_value": "False",
+            "parameter_purpose": "Whether disconnect button should be visible."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the Wi-Fi Direct printers connection screen."
+      },
+      {
+        "method_name": "verify_visible_wifi_direct_wrong_pwd_txt",
+        "description": "Verify that 'Something might be wrong with your password.' is visible.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for the wrong password text to appear."
+      },
+      {
+        "method_name": "verify_setup_authentication_screen",
+        "description": "Verify that current screen is Wireless Password popup.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the authentication popup by checking for password field and buttons."
+      },
+      {
+        "method_name": "verify_printer_setup_screen",
+        "description": "Verify printer setup screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "connection",
+            "default_value": "wifi",
+            "parameter_purpose": "Connection type selected."
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Timeout for waiting for objects."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the printer setup screen based on Android version and connection type."
+      },
+      {
+        "method_name": "verify_add_printers_screen",
+        "description": "Verify Add Printer screen with no printer on the list.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the add printers screen for Android 9 or lower."
+      },
+      {
+        "method_name": "verify_add_printers_list",
+        "description": "Verify Add Printers has printers on list or empty list.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_empty",
+            "default_value": "False",
+            "parameter_purpose": "Whether the list is empty."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the add printers list and checks for empty or non-empty state."
+      },
+      {
+        "method_name": "verify_setup_printers_instruction_screen",
+        "description": "Verify that current screen is Setup Printer Instruction screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the setup instruction screen by checking for spinner and buttons."
+      },
+      {
+        "method_name": "verify_my_printer_not_listed_help_msg",
+        "description": "Verify my printer not listed help text on Setup printers screen after clicking -My printer is not listed-.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for the help text to appear after clicking not listed."
+      },
+      {
+        "method_name": "verify_my_printer_setup_instruction",
+        "description": "Verify that current screen is printer setup screen with instruction.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the setup instruction checkboxes and links."
+      },
+      {
+        "method_name": "verify_setup_instruction_link_popup",
+        "description": "Verify a popup after click the setup instruction link.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_network",
+            "default_value": "False",
+            "parameter_purpose": "Whether to check for network link popup."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the setup instruction popup based on link type."
+      },
+      {
+        "method_name": "verify_try_again_button",
+        "description": "Check if the button 'Try Again' is enabled or not.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "is_enabled",
+            "default_value": "False",
+            "parameter_purpose": "Expected enabled status."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Checks the enabled status of the Try Again button."
+      },
+      {
+        "method_name": "verify_printer_setup_with_printer_not_listed_msg",
+        "description": "Verify 'Printer Not Listed?' message on Printer Setup screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if not found."
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Timeout for waiting for object."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the not listed message on setup screen."
+      },
+      {
+        "method_name": "verify_add_printer_help_find_your_printer_instruction_screen",
+        "description": "Verify Add Printer instruction screen.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Verifies the help find your printer instruction screen."
+      }
+    ]
+  }
+}
