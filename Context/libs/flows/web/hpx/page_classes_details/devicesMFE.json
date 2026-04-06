@@ -1,0 +1,29 @@
+{
+  "devicesMFE.py": {
+    "methods": [
+      {
+        "method_name": "__init__",
+        "method_description": "Constructor method to initialize the DevicesMFE flow object with driver and optional printer information.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference"
+          },
+          {
+            "parameter_name": "driver",
+            "default_value": null,
+            "parameter_purpose": "Selenium WebDriver instance for browser automation"
+          },
+          {
+            "parameter_name": "printer",
+            "default_value": "None",
+            "parameter_purpose": "Optional printer object for device-specific operations"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Initializes the DevicesMFE flow by invoking the parent HPXFlow constructor with the provided driver and optional printer parameters, setting up the page object for device management automation."
+      }
+    ]
+  }
+}
