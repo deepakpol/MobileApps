@@ -1,0 +1,1 @@
+{"summaries": [{"file_path": "libs/flows/web/hpx/devices_mfe.py", "classes": [{"class_name": "DevicesMFE", "base_class": "HPXFlow", "locators": ["flow_name"]
