@@ -1,0 +1,223 @@
+{
+  "HPX_SHORTCUTS.py": {
+    "class_name": "HpxShortcuts",
+    "base_class": "SmartFlow",
+    "locators": [],
+    "summary": "This class provides a comprehensive automation flow for managing HPX Shortcuts within the Android application. It supports operations such as creating, editing, deleting shortcuts, and configuring destinations for print, email, and save actions. The class also handles scan settings and validation of shortcut configurations, ensuring robust test coverage for shortcut-related features.",
+    "methods": [
+      {
+        "method_name": "__init__",
+        "description": "Initialize HpxShortcuts flow with driver instance.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "driver",
+            "default_value": null,
+            "parameter_purpose": "Driver instance for interacting with the Android UI."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Initializes the HpxShortcuts class with the provided driver to enable UI automation."
+      },
+      {
+        "method_name": "create_shortcut",
+        "description": "Create a new shortcut with specified name and optional settings.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "shortcut_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the shortcut to be created."
+          },
+          {
+            "parameter_name": "**kwargs",
+            "default_value": null,
+            "parameter_purpose": "Optional settings for the shortcut (e.g., destinations, scan settings)."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Creates a new shortcut with the given name and applies any optional settings provided."
+      },
+      {
+        "method_name": "edit_shortcut",
+        "description": "Edit an existing shortcut with new settings.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "shortcut_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the shortcut to be edited."
+          },
+          {
+            "parameter_name": "**kwargs",
+            "default_value": null,
+            "parameter_purpose": "New settings to apply to the shortcut."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Edits the specified shortcut by updating it with new settings."
+      },
+      {
+        "method_name": "delete_shortcut",
+        "description": "Delete a shortcut by name.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "shortcut_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the shortcut to be deleted."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Deletes the shortcut identified by the given name."
+      },
+      {
+        "method_name": "select_shortcut",
+        "description": "Select a shortcut from the list.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "shortcut_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the shortcut to select."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects the specified shortcut from the available list."
+      },
+      {
+        "method_name": "configure_print_destination",
+        "description": "Configure print destination settings including printer selection, copies, color, sides, paper size, etc.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "**kwargs",
+            "default_value": null,
+            "parameter_purpose": "Print destination settings such as printer, copies, color, sides, paper size, etc."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Configures the print destination with the provided settings."
+      },
+      {
+        "method_name": "configure_email_destination",
+        "description": "Configure email destination settings including recipients, subject, message, file format, etc.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "**kwargs",
+            "default_value": null,
+            "parameter_purpose": "Email destination settings such as recipients, subject, message, file format, etc."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Configures the email destination with the provided settings."
+      },
+      {
+        "method_name": "configure_save_destination",
+        "description": "Configure save destination settings including location, file name, file format, etc.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "**kwargs",
+            "default_value": null,
+            "parameter_purpose": "Save destination settings such as location, file name, file format, etc."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Configures the save destination with the provided settings."
+      },
+      {
+        "method_name": "set_scan_settings",
+        "description": "Set scan settings including resolution, color mode, document type, etc.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "**kwargs",
+            "default_value": null,
+            "parameter_purpose": "Scan settings such as resolution, color mode, document type, etc."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Sets the scan settings for the shortcut using the provided parameters."
+      },
+      {
+        "method_name": "verify_shortcut_exists",
+        "description": "Verify that a shortcut with the given name exists.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "shortcut_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the shortcut to verify existence."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Checks if a shortcut with the specified name exists in the list."
+      },
+      {
+        "method_name": "get_shortcut_details",
+        "description": "Retrieve details of a specific shortcut.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "shortcut_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the shortcut to retrieve details for."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Retrieves and returns the details of the specified shortcut."
+      },
+      {
+        "method_name": "navigate_to_shortcuts",
+        "description": "Navigate to the shortcuts screen from home.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Navigates from the home screen to the shortcuts screen."
+      },
+      {
+        "method_name": "add_destination",
+        "description": "Add a new destination of specified type (print, email, save).",
+        "method_input_parameter": [
+          {
+            "parameter_name": "destination_type",
+            "default_value": null,
+            "parameter_purpose": "Type of destination to add (print, email, save)."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Adds a new destination of the specified type to the shortcut."
+      },
+      {
+        "method_name": "remove_destination",
+        "description": "Remove a destination of specified type.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "destination_type",
+            "default_value": null,
+            "parameter_purpose": "Type of destination to remove."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Removes the specified type of destination from the shortcut."
+      },
+      {
+        "method_name": "save_shortcut",
+        "description": "Save the current shortcut configuration.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Saves the current configuration of the shortcut."
+      },
+      {
+        "method_name": "cancel_shortcut_creation",
+        "description": "Cancel shortcut creation or editing.",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Cancels the creation or editing process for a shortcut."
+      },
+      {
+        "method_name": "validate_shortcut_settings",
+        "description": "Validate that shortcut settings match expected values.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "expected_settings",
+            "default_value": null,
+            "parameter_purpose": "Expected settings to validate against the current shortcut configuration."
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Validates that the current shortcut settings match the expected values provided."
+      }
+    ]
+  }
+}
