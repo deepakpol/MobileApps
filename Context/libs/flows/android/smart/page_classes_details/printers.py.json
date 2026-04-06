@@ -1,0 +1,95 @@
+{
+  "printers.py": {
+    "class_name": "PrintersScreen",
+    "base_class": "object",
+    "locators": [],
+    "summary": "PrintersScreen class provides a detailed page object model for the Android printer management screen. This class encapsulates all UI elements and actions related to printer management, including navigation, addition, removal, and verification of printers. It follows the standard page object pattern for UI automation testing, utilizing locator-based element interaction for robust and maintainable test scripts.",
+    "methods": [
+      {
+        "method_name": "__init__",
+        "description": "Initialize the PrintersScreen class",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Constructor that initializes the PrintersScreen object and sets up the initial state for printer management operations."
+      },
+      {
+        "method_name": "navigate_to_printers",
+        "description": "Navigate to the printers screen",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference"
+          }
+        ],
+        "method_output_parameter": "boolean",
+        "method_purpose": "Navigates to the printers configuration screen and verifies that the navigation was successful. Returns True if navigation is successful, otherwise False."
+      },
+      {
+        "method_name": "add_printer",
+        "description": "Add a new printer to the system",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference"
+          },
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to add"
+          },
+          {
+            "parameter_name": "printer_ip",
+            "default_value": null,
+            "parameter_purpose": "IP address of the printer"
+          }
+        ],
+        "method_output_parameter": "boolean",
+        "method_purpose": "Adds a new printer with the specified name and IP address to the system. Returns True if the printer is added successfully, otherwise False."
+      },
+      {
+        "method_name": "remove_printer",
+        "description": "Remove an existing printer from the system",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference"
+          },
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to remove"
+          }
+        ],
+        "method_output_parameter": "boolean",
+        "method_purpose": "Removes a printer identified by the given name from the system. Returns True if the printer is removed successfully, otherwise False."
+      },
+      {
+        "method_name": "verify_printer_exists",
+        "description": "Verify if a printer exists in the list",
+        "method_input_parameter": [
+          {
+            "parameter_name": "self",
+            "default_value": null,
+            "parameter_purpose": "Instance reference"
+          },
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify"
+          }
+        ],
+        "method_output_parameter": "boolean",
+        "method_purpose": "Checks if a printer with the given name exists in the system. Returns True if the printer is found, otherwise False."
+      }
+    ]
+  }
+}
