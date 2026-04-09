@@ -1193,6 +1193,179 @@
                     ]
                 }
             ]
+        },
+        {
+            "correlation_steps_to_scripts": [
+                {
+                    "test_step": "1.Install and Launch the HPX app.",
+                    "mapped_script_line": "self.fc.reset_app(); self.fc.flow_load_home_screen(skip_value_prop=False)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Add supported printer on root view.",
+                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn(); self.printers.search_printer_by_ip(self.p.ipAddress)"
+                },
+                {
+                    "test_step": "2.Click on the printer icon on the root view screen.",
+                    "mapped_script_line": "self.hpx_printer_details.click_printer_device_card()"
+                },
+                {
+                    "test_step": "3.Then click on the shortcuts tile on the device details page.",
+                    "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify shortcuts screen title.",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                },
+                {
+                    "test_step": "4.Click on the Add new shortcuts in shortcuts screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_add_new_shortcut_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify add new shortcut screen title.",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_add_new_shortcut_screen_title()"
+                },
+                {
+                    "test_step": "5.Then click on the Create your own shortcut arrow button.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_create_your_own_shortcut()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify add new shortcut title.",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_add_new_shortcut_title()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Click continue button to edit shortcut.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_continue_btn()"
+                },
+                {
+                    "test_step": "6.Navigate 'Add save' screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_add_save_shortcut_title()"
+                },
+                {
+                    "test_step": "7.Click on the 'Sign in' link of any cloud accounts in Add save screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_google_drive_signin_link()"
+                },
+                {
+                    "test_step": "8.Verify the behavior.",
+                    "mapped_script_line": "No direct mapping found"
+                }
+            ],
+            "intermediary_steps": [
+                {
+                    "test_case_step": "1.Install and Launch the HPX app.",
+                    "automation_script_step": "self.fc.reset_app(); self.fc.flow_load_home_screen(skip_value_prop=False)",
+                    "steps": [
+                        "Reset the HPX app to initial state",
+                        "Load the home screen, do not skip value proposition"
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Add supported printer on root view.",
+                    "automation_script_step": "self.hpx_printer_details.click_add_device_btn(); self.printers.search_printer_by_ip(self.p.ipAddress)",
+                    "steps": [
+                        "Click add device button",
+                        "Search printer by IP address"
+                    ]
+                },
+                {
+                    "test_case_step": "2.Click on the printer icon on the root view screen.",
+                    "automation_script_step": "self.hpx_printer_details.click_printer_device_card()",
+                    "steps": [
+                        "Click on the printer device card"
+                    ]
+                },
+                {
+                    "test_case_step": "3.Then click on the shortcuts tile on the device details page.",
+                    "automation_script_step": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)",
+                    "steps": [
+                        "Click on the shortcuts tile, do not raise exception if not found"
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify shortcuts screen title.",
+                    "automation_script_step": "self.hpx_shortcuts.verify_shortcuts_screen_title()",
+                    "steps": [
+                        "Verify the shortcuts screen title is displayed"
+                    ]
+                },
+                {
+                    "test_case_step": "4.Click on the Add new shortcuts in shortcuts screen.",
+                    "automation_script_step": "self.hpx_shortcuts.click_add_new_shortcut_btn()",
+                    "steps": [
+                        "Click the add new shortcut button"
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify add new shortcut screen title.",
+                    "automation_script_step": "self.hpx_shortcuts.verify_add_new_shortcut_screen_title()",
+                    "steps": [
+                        "Verify the add new shortcut screen title is displayed"
+                    ]
+                },
+                {
+                    "test_case_step": "5.Then click on the Create your own shortcut arrow button.",
+                    "automation_script_step": "self.hpx_shortcuts.click_create_your_own_shortcut()",
+                    "steps": [
+                        "Click the create your own shortcut arrow button"
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify add new shortcut title.",
+                    "automation_script_step": "self.hpx_shortcuts.verify_add_new_shortcut_title()",
+                    "steps": [
+                        "Verify the add new shortcut title is displayed"
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Click continue button to edit shortcut.",
+                    "automation_script_step": "self.hpx_shortcuts.click_edit_shortcut_continue_btn()",
+                    "steps": [
+                        "Click the continue button to edit shortcut"
+                    ]
+                },
+                {
+                    "test_case_step": "6.Navigate 'Add save' screen.",
+                    "automation_script_step": "self.hpx_shortcuts.verify_add_save_shortcut_title()",
+                    "steps": [
+                        "Verify the add save shortcut title is displayed"
+                    ]
+                },
+                {
+                    "test_case_step": "7.Click on the 'Sign in' link of any cloud accounts in Add save screen.",
+                    "automation_script_step": "self.hpx_shortcuts.click_google_drive_signin_link()",
+                    "steps": [
+                        "Click the Google Drive sign in link"
+                    ]
+                },
+                {
+                    "test_case_step": "8.Verify the behavior.",
+                    "automation_script_step": "No direct mapping found",
+                    "steps": [
+                        "Manual verification required"
+                    ]
+                }
+            ],
+            "automation_scripts_rules": [
+                {
+                    "rule_id": "RUL-001",
+                    "description": "Whenever a test step corresponds to multiple automation actions, you MUST split the step into sub-steps (e.g., 1a, 1b, etc.), each sub-step must map to one script line, and all sub-steps MUST be implemented in sequence. All intermediary steps must be followed, and no steps may be skipped or merged.",
+                    "applies_to": "Any test step in the test case that maps to multiple script lines or intermediary steps, including implicit/supporting steps.",
+                    "rule_definition": [
+                        "WHEN: A test step or implicit/supporting step maps to multiple automation script lines or intermediary steps.",
+                        "THEN: Split the step into sub-steps (e.g., 1a, 1b, etc.), ensure each sub-step maps to one script line, and implement all sub-steps in the documented sequence. Include all intermediary steps for each sub-step. Do not skip or merge steps.",
+                        "IMPLEMENTATION: For example, 'Implicit Step \u2013 Required for Test Execution: Add supported printer on root view.' splits into: 2a. self.hpx_printer_details.click_add_device_btn(); 2b. self.printers.search_printer_by_ip(self.p.ipAddress). Intermediary steps: 'Click add device button', 'Search printer by IP address'."
+                    ]
+                },
+                {
+                    "rule_id": "RUL-002",
+                    "description": "Whenever executing test cases of type 'Verify the screen, when user click on 'Sign in' link of any cloud accounts under Add accounts in 'Add save' screen.', you MUST include all implicit/supporting steps labeled as required for test execution or purpose of test case validation, even if not explicitly mentioned in the manual test steps. This ensures the test case fulfills its validation purpose.",
+                    "applies_to": "All implicit/supporting steps in the correlation that are not part of the original manual test steps but are required for execution or validation.",
+                    "rule_definition": [
+                        "WHEN: Automating test cases named 'Verify the screen, when user click on 'Sign in' link of any cloud accounts under Add accounts in 'Add save' screen.'",
+                        "THEN: Always include steps such as 'Add supported printer on root view.', 'Verify shortcuts screen title.', 'Verify add new shortcut screen title.', 'Verify add new shortcut title.', 'Click continue button to edit shortcut.'",
+                        "IMPLEMENTATION: For each such step, implement the mapped script line and all intermediary steps. For example, 'Verify add new shortcut screen title.' \u2192 self.hpx_shortcuts.verify_add_new_shortcut_screen_title(); intermediary: 'Verify the add new shortcut screen title is displayed'. This ensures purpose-based validation is not missed."
+                    ]
+                }
+            ]
         }
     ]
 }
