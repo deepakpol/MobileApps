@@ -401,6 +401,117 @@
                     ]
                 }
             ]
+        },
+        {
+            "correlation_steps_to_scripts": [
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution \u2013 Reset application to initial state",
+                    "mapped_script_line": "self.fc.reset_app()"
+                },
+                {
+                    "test_step": "1.Install and Launch the HPX app.",
+                    "mapped_script_line": "self.fc.flow_load_home_screen(skip_value_prop=False)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution \u2013 Click add device button to begin printer setup",
+                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution \u2013 Search and locate printer by IP address",
+                    "mapped_script_line": "self.printers.search_printer_by_ip(self.p.ipAddress)"
+                },
+                {
+                    "test_step": "2.Navigate to printer details screen.",
+                    "mapped_script_line": "self.hpx_printer_details.click_printer_device_card()"
+                },
+                {
+                    "test_step": "3.Navigate to 'Add Shortcuts' screen.",
+                    "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation \u2013 Verify shortcuts screen title is displayed",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                },
+                {
+                    "test_step": "3.Navigate to 'Add Shortcuts' screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_add_new_shortcut_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation \u2013 Verify add new shortcut screen title is displayed",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_add_new_shortcut_screen_title()"
+                },
+                {
+                    "test_step": "4.Enable only the 'Print' destination toggle bar.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_create_your_own_shortcut()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation \u2013 Verify add new shortcut title is displayed",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_add_new_shortcut_title()"
+                },
+                {
+                    "test_step": "6.Click on the Add to Shortcut button.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_continue_btn()"
+                },
+                {
+                    "test_step": "7.verify the behavior.",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_shortcut_settings_screen_title()"
+                }
+            ],
+            "intermediary_steps": [
+                {
+                    "test_case_step": "1.Install and Launch the HPX app.",
+                    "automation_script_step": "self.fc.flow_load_home_screen(skip_value_prop=False)",
+                    "steps": [
+                        "Reset app to initial state if needed"
+                    ]
+                },
+                {
+                    "test_case_step": "2.Navigate to printer details screen.",
+                    "automation_script_step": "self.hpx_printer_details.click_printer_device_card()",
+                    "steps": [
+                        "Click add device button to begin printer setup",
+                        "Search and locate printer by IP address"
+                    ]
+                },
+                {
+                    "test_case_step": "3.Navigate to 'Add Shortcuts' screen.",
+                    "automation_script_step": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)",
+                    "steps": [
+                        "Verify shortcuts screen title is displayed"
+                    ]
+                },
+                {
+                    "test_case_step": "3.Navigate to 'Add Shortcuts' screen.",
+                    "automation_script_step": "self.hpx_shortcuts.click_add_new_shortcut_btn()",
+                    "steps": [
+                        "Verify add new shortcut screen title is displayed"
+                    ]
+                },
+                {
+                    "test_case_step": "4.Enable only the 'Print' destination toggle bar.",
+                    "automation_script_step": "self.hpx_shortcuts.click_create_your_own_shortcut()",
+                    "steps": [
+                        "Verify add new shortcut title is displayed"
+                    ]
+                },
+                {
+                    "test_case_step": "6.Click on the Add to Shortcut button.",
+                    "automation_script_step": "self.hpx_shortcuts.click_edit_shortcut_continue_btn()",
+                    "steps": []
+                }
+            ],
+            "automation_scripts_rules": [
+                {
+                    "rule_id": "RUL-001",
+                    "description": "Rule for mapping test steps to automation script lines, including split steps and supporting/purpose-based steps for test case 'Verify the behavior, when user clicks on 'Add to Shortcut' button in Add print screen.'",
+                    "applies_to": "All test steps and implicit/supporting steps in the correlation for this test case.",
+                    "rule_definition": [
+                        "WHEN: A test step from the manual test case is encountered in automation scripting.",
+                        "THEN: Implement the mapped script line(s) as per the correlation. If a test step corresponds to multiple automation actions, split it into sub-steps (e.g., 3a, 3b, etc.), each mapping to one script line, and implement all sub-steps in sequence. For any implicit or supporting steps labeled as required for test execution or purpose of test case validation, always include them, even if not explicitly mentioned in the manual test steps.",
+                        "IMPLEMENTATION: For each test step, follow the mapping in 'correlation_steps_to_scripts'. For steps with intermediary/supporting actions, follow the breakdown in 'intermediary_steps'. For example: Step 1 (Install and Launch the HPX app) requires resetting the app to initial state if needed. Step 2 (Navigate to printer details screen) requires clicking add device button and searching for printer by IP. Step 3 (Navigate to 'Add Shortcuts' screen) is split into: 3a. click_shortcuts_tile (with verify_shortcuts_screen_title), 3b. click_add_new_shortcut_btn (with verify_add_new_shortcut_screen_title). Step 4 (Enable only the 'Print' destination toggle bar) requires verifying add new shortcut title. All implicit/supporting steps (e.g., verify screen titles) must be included for test case purpose validation. Execution order must be strictly followed as per the mapping and intermediary steps. No steps may be skipped or merged."
+                    ]
+                }
+            ]
         }
     ]
 }
