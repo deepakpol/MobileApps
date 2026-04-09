@@ -297,6 +297,188 @@
                     ]
                 }
             ]
+        },
+        {
+            "correlation_steps_to_scripts": [
+                {
+                    "test_step": "Install and Launch the HPX app.",
+                    "mapped_script": "self.fc.reset_app(); self.fc.flow_load_home_screen(skip_value_prop=False)"
+                },
+                {
+                    "test_step": "Navigate to printer details screen.",
+                    "mapped_script": "self.hpx_printer_details.click_add_device_btn(); self.printers.search_printer_by_ip(self.p.ipAddress); self.hpx_printer_details.click_printer_device_card()"
+                },
+                {
+                    "test_step": "Navigate to 'Shortcuts' screen.",
+                    "mapped_script": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False); self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                },
+                {
+                    "test_step": "Click on the edit link.",
+                    "mapped_script": "self.hpx_shortcuts.click_shortcuts_edit_btn()"
+                },
+                {
+                    "test_step": "Click on the Edit icon of the Email shortcut.",
+                    "mapped_script": "is_email_toggle_enabled = self.hpx_shortcuts.check_toggle_enabled_or_disabled(\"edit_shortcut_email_toggle_btn\"); if is_email_toggle_enabled: self.hpx_shortcuts.click_edit_shortcut_email_toggle_btn()"
+                },
+                {
+                    "test_step": "Verify the pop up.",
+                    "mapped_script": "self.hpx_shortcuts.verify_toggle_disabling_confirmation_msg_title()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Validate that Email toggle is enabled before attempting to remove",
+                    "mapped_script": "is_email_toggle_enabled = self.hpx_shortcuts.check_toggle_enabled_or_disabled(\"edit_shortcut_email_toggle_btn\"); else: raise AssertionError(\"Email toggle is not enabled, cannot proceed with the test.\")"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Comment indicating element availability issue in page source",
+                    "mapped_script": "# Write click to edit the shortcut since element is not available in the page source; # Particular email edit for the created email shortcut button"
+                }
+            ],
+            "intermediary_steps": [
+                {
+                    "test_script_step": "Install and Launch the HPX app. (1a)",
+                    "automation_script_step": "self.fc.reset_app()",
+                    "steps": [
+                        "Identify the HPX app package on the device",
+                        "Reset the app to its initial state",
+                        "Ensure all app data and cache are cleared"
+                    ]
+                },
+                {
+                    "test_script_step": "Install and Launch the HPX app. (1b)",
+                    "automation_script_step": "self.fc.flow_load_home_screen(skip_value_prop=False)",
+                    "steps": [
+                        "Locate the HPX app icon on the device",
+                        "Launch the HPX app",
+                        "Wait for the home screen to load without skipping value proposition"
+                    ]
+                },
+                {
+                    "test_script_step": "Navigate to printer details screen. (2a)",
+                    "automation_script_step": "self.hpx_printer_details.click_add_device_btn()",
+                    "steps": [
+                        "Identify the 'Add Device' button on the home screen",
+                        "Use the appropriate locator strategy to find the button",
+                        "Click the 'Add Device' button"
+                    ]
+                },
+                {
+                    "test_script_step": "Navigate to printer details screen. (2b)",
+                    "automation_script_step": "self.printers.search_printer_by_ip(self.p.ipAddress)",
+                    "steps": [
+                        "Access the printer search input field",
+                        "Enter the printer IP address",
+                        "Initiate the search for the printer by IP"
+                    ]
+                },
+                {
+                    "test_script_step": "Navigate to printer details screen. (2c)",
+                    "automation_script_step": "self.hpx_printer_details.click_printer_device_card()",
+                    "steps": [
+                        "Identify the printer device card in the search results",
+                        "Use the locator to select the correct printer card",
+                        "Click on the printer device card to open details"
+                    ]
+                },
+                {
+                    "test_script_step": "Navigate to 'Shortcuts' screen. (3a)",
+                    "automation_script_step": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)",
+                    "steps": [
+                        "Locate the 'Shortcuts' tile on the printer details screen",
+                        "Use the locator to find the tile",
+                        "Click the 'Shortcuts' tile (do not raise exception on failure)"
+                    ]
+                },
+                {
+                    "test_script_step": "Navigate to 'Shortcuts' screen. (3b)",
+                    "automation_script_step": "self.hpx_shortcuts.verify_shortcuts_screen_title()",
+                    "steps": [
+                        "Identify the title element on the Shortcuts screen",
+                        "Verify the title matches the expected value",
+                        "Confirm that the Shortcuts screen is displayed"
+                    ]
+                },
+                {
+                    "test_script_step": "Click on the edit link.",
+                    "automation_script_step": "self.hpx_shortcuts.click_shortcuts_edit_btn()",
+                    "steps": [
+                        "Locate the 'Edit' button on the Shortcuts screen",
+                        "Use the locator to find the edit button",
+                        "Click the 'Edit' button"
+                    ]
+                },
+                {
+                    "test_script_step": "Click on the Edit icon of the Email shortcut. (5a)",
+                    "automation_script_step": "is_email_toggle_enabled = self.hpx_shortcuts.check_toggle_enabled_or_disabled(\"edit_shortcut_email_toggle_btn\")",
+                    "steps": [
+                        "Identify the Email shortcut edit toggle button",
+                        "Check if the toggle is enabled or disabled",
+                        "Store the toggle state in 'is_email_toggle_enabled'"
+                    ]
+                },
+                {
+                    "test_script_step": "Click on the Edit icon of the Email shortcut. (5b)",
+                    "automation_script_step": "if is_email_toggle_enabled: self.hpx_shortcuts.click_edit_shortcut_email_toggle_btn()",
+                    "steps": [
+                        "If the Email toggle is enabled, locate the edit toggle button",
+                        "Click the edit toggle button for the Email shortcut",
+                        "Proceed only if the toggle was enabled"
+                    ]
+                },
+                {
+                    "test_script_step": "Verify the pop up.",
+                    "automation_script_step": "self.hpx_shortcuts.verify_toggle_disabling_confirmation_msg_title()",
+                    "steps": [
+                        "Identify the confirmation popup title element",
+                        "Verify the popup title matches the expected confirmation message",
+                        "Confirm the popup is displayed after disabling the toggle"
+                    ]
+                },
+                {
+                    "test_script_step": "Implicit Step \u2013 Required for Test Execution: Validate that Email toggle is enabled before attempting to remove (7a)",
+                    "automation_script_step": "is_email_toggle_enabled = self.hpx_shortcuts.check_toggle_enabled_or_disabled(\"edit_shortcut_email_toggle_btn\")",
+                    "steps": [
+                        "Identify the Email shortcut edit toggle button",
+                        "Check if the toggle is enabled or disabled",
+                        "Store the toggle state in 'is_email_toggle_enabled'"
+                    ]
+                },
+                {
+                    "test_script_step": "Implicit Step \u2013 Required for Test Execution: Validate that Email toggle is enabled before attempting to remove (7b)",
+                    "automation_script_step": "else: raise AssertionError(\"Email toggle is not enabled, cannot proceed with the test.\")",
+                    "steps": [
+                        "If the Email toggle is not enabled, raise an AssertionError",
+                        "Abort the test execution with the specified error message"
+                    ]
+                },
+                {
+                    "test_script_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Comment indicating element availability issue in page source (8a)",
+                    "automation_script_step": "# Write click to edit the shortcut since element is not available in the page source",
+                    "steps": [
+                        "Document in code: The click to edit the shortcut is written as a comment",
+                        "Note: The element is not available in the page source"
+                    ]
+                },
+                {
+                    "test_script_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Comment indicating element availability issue in page source (8b)",
+                    "automation_script_step": "# Particular email edit for the created email shortcut button",
+                    "steps": [
+                        "Document in code: Specific comment for the created email shortcut button edit",
+                        "Note: This is a supporting step for test case validation"
+                    ]
+                }
+            ],
+            "automation_scripts_rules": [
+                {
+                    "rule_id": "RUL-001",
+                    "description": "Whenever you encounter a test step that maps to multiple automation actions, you MUST split the step into sub-steps (e.g., 1a, 1b, etc.), each sub-step must map to one script line, and all sub-steps MUST be implemented in sequence. For one-to-one mappings, implement automation using the mapped script line and follow the intermediary steps. Whenever executing test cases of type 'Verify the screen, when user removes the Email destination shortcut', you MUST include implicit/supporting steps even if not explicitly mentioned in manual test steps, because they are required to fulfill the purpose of the test case.",
+                    "applies_to": "All test steps and implicit/supporting steps for 'Verify the screen, when user removes the Email destination shortcut'.",
+                    "rule_definition": [
+                        "WHEN: A test step corresponds to multiple automation actions or includes implicit/supporting steps.",
+                        "THEN: Split the step into sub-steps, map each sub-step to one script line, enforce execution order, and include all intermediary steps. Always include implicit/supporting steps for test case purpose validation.",
+                        "IMPLEMENTATION: Step Breakdown: Step 1a: self.fc.reset_app() (intermediary: Identify HPX app package, Reset app, Clear cache); Step 1b: self.fc.flow_load_home_screen(skip_value_prop=False) (intermediary: Locate app icon, Launch app, Wait for home screen); Step 2a: self.hpx_printer_details.click_add_device_btn() (intermediary: Identify 'Add Device' button, Find button, Click button); Step 2b: self.printers.search_printer_by_ip(self.p.ipAddress) (intermediary: Access search field, Enter IP, Initiate search); Step 2c: self.hpx_printer_details.click_printer_device_card() (intermediary: Identify printer card, Select card, Click card); Step 3a: self.hpx_printer_details.click_shortcuts_tile(raise_e=False) (intermediary: Locate tile, Find tile, Click tile); Step 3b: self.hpx_shortcuts.verify_shortcuts_screen_title() (intermediary: Identify title, Verify title, Confirm screen); Step 4: self.hpx_shortcuts.click_shortcuts_edit_btn() (intermediary: Locate edit button, Find button, Click button); Step 5a: is_email_toggle_enabled = self.hpx_shortcuts.check_toggle_enabled_or_disabled('edit_shortcut_email_toggle_btn') (intermediary: Identify toggle, Check state, Store state); Step 5b: if is_email_toggle_enabled: self.hpx_shortcuts.click_edit_shortcut_email_toggle_btn() (intermediary: If enabled, Locate toggle, Click toggle, Proceed); Step 6: self.hpx_shortcuts.verify_toggle_disabling_confirmation_msg_title() (intermediary: Identify popup, Verify title, Confirm popup); Step 7a: is_email_toggle_enabled = self.hpx_shortcuts.check_toggle_enabled_or_disabled('edit_shortcut_email_toggle_btn') (intermediary: Identify toggle, Check state, Store state); Step 7b: else: raise AssertionError('Email toggle is not enabled, cannot proceed with the test.') (intermediary: Raise error, Abort test); Step 8a: # Write click to edit the shortcut since element is not available in the page source (intermediary: Document comment, Note element not available); Step 8b: # Particular email edit for the created email shortcut button (intermediary: Document comment, Note supporting step). Execution order MUST be strictly followed. No skipping or merging of steps. All intermediary steps and script lines MUST be included."
+                    ]
+                }
+            ]
         }
     ]
 }
