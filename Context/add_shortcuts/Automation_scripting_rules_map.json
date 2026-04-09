@@ -168,6 +168,161 @@
                     ]
                 }
             ]
+        },
+        {
+            "correlation_steps_to_scripts": [
+                {
+                    "test_step": "1.Install and Launch the HPX app.",
+                    "mapped_script_line": "self.fc.reset_app()\nself.fc.flow_load_home_screen(skip_value_prop=False)"
+                },
+                {
+                    "test_step": "2.Click on the printer icon on the root view screen.",
+                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution \u2013 Search and select printer",
+                    "mapped_script_line": "self.printers.search_printer_by_ip(self.p.ipAddress)\nself.hpx_printer_details.click_printer_device_card()"
+                },
+                {
+                    "test_step": "3.Then click on the shortcuts tile on the device details page.",
+                    "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation \u2013 Verify shortcuts screen is displayed",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                },
+                {
+                    "test_step": "4.Click on the Add new shortcuts in shortcuts screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_add_new_shortcut_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation \u2013 Verify add new shortcut screen is displayed",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()"
+                },
+                {
+                    "test_step": "5.Then click on the Create your own shortcut arrow button.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_create_your_own_shortcut()"
+                },
+                {
+                    "test_step": "6.Enable the 'Print' destination toggle bar in 'Add Shortcut' screen",
+                    "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_print_toggle_btn()"
+                },
+                {
+                    "test_step": "7.Verify the screen.",
+                    "mapped_script_line": "assert self.hpx_shortcuts.is_continue_btn_enabled(), \"Continue button should be enabled after toggling print option\""
+                }
+            ],
+            "intermediary_steps": [
+                {
+                    "test_case_step": "1.Install and Launch the HPX app.",
+                    "automation_script_step": "self.fc.reset_app()\nself.fc.flow_load_home_screen(skip_value_prop=False)",
+                    "steps": [
+                        "Reset app state",
+                        "Load home screen, do not skip value proposition"
+                    ]
+                },
+                {
+                    "test_case_step": "2.Click on the printer icon on the root view screen.",
+                    "automation_script_step": "self.hpx_printer_details.click_add_device_btn()",
+                    "steps": [
+                        "Locate printer icon",
+                        "Click add device button"
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution \u2013 Search and select printer",
+                    "automation_script_step": "self.printers.search_printer_by_ip(self.p.ipAddress)\nself.hpx_printer_details.click_printer_device_card()",
+                    "steps": [
+                        "Search printer by IP address",
+                        "Select printer device card"
+                    ]
+                },
+                {
+                    "test_case_step": "3.Then click on the shortcuts tile on the device details page.",
+                    "automation_script_step": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)",
+                    "steps": [
+                        "Locate shortcuts tile",
+                        "Click shortcuts tile"
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation \u2013 Verify shortcuts screen is displayed",
+                    "automation_script_step": "assert self.hpx_shortcuts.verify_shortcuts_screen_title()",
+                    "steps": [
+                        "Verify shortcuts screen title is displayed"
+                    ]
+                },
+                {
+                    "test_case_step": "4.Click on the Add new shortcuts in shortcuts screen.",
+                    "automation_script_step": "self.hpx_shortcuts.click_add_new_shortcut_btn()",
+                    "steps": [
+                        "Locate add new shortcut button",
+                        "Click add new shortcut button"
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation \u2013 Verify add new shortcut screen is displayed",
+                    "automation_script_step": "assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()",
+                    "steps": [
+                        "Verify add new shortcut screen title is displayed"
+                    ]
+                },
+                {
+                    "test_case_step": "5.Then click on the Create your own shortcut arrow button.",
+                    "automation_script_step": "self.hpx_shortcuts.click_create_your_own_shortcut()",
+                    "steps": [
+                        "Locate create your own shortcut arrow button",
+                        "Click create your own shortcut arrow button"
+                    ]
+                },
+                {
+                    "test_case_step": "6.Enable the 'Print' destination toggle bar in 'Add Shortcut' screen",
+                    "automation_script_step": "self.hpx_shortcuts.click_edit_shortcut_print_toggle_btn()",
+                    "steps": [
+                        "Locate print destination toggle bar",
+                        "Enable print destination toggle bar"
+                    ]
+                },
+                {
+                    "test_case_step": "7.Verify the screen.",
+                    "automation_script_step": "assert self.hpx_shortcuts.is_continue_btn_enabled(), \"Continue button should be enabled after toggling print option\"",
+                    "steps": [
+                        "Verify continue button is enabled after toggling print option"
+                    ]
+                }
+            ],
+            "automation_scripts_rules": [
+                {
+                    "rule_id": "RUL-001",
+                    "description": "Whenever a test step directly maps to a single automation script line, implement the script line and follow all intermediary steps.",
+                    "applies_to": "All one-to-one mappings between test steps and script lines.",
+                    "rule_definition": [
+                        "WHEN: A test step has a single mapped script line.",
+                        "THEN: Implement the script line exactly as mapped.",
+                        "IMPLEMENTATION: Follow all intermediary steps for the test step to ensure correct execution."
+                    ]
+                },
+                {
+                    "rule_id": "RUL-002",
+                    "description": "Whenever a test step corresponds to multiple automation actions, split the step into sub-steps (e.g., 1a, 1b, etc.), map each sub-step to one script line, and implement all sub-steps in sequence.",
+                    "applies_to": "Any test step that requires multiple script lines or intermediary steps.",
+                    "rule_definition": [
+                        "WHEN: A test step is mapped to multiple script lines or intermediary steps.",
+                        "THEN: Split the step into sub-steps (e.g., 1a, 1b, etc.), map each sub-step to one script line, and implement all sub-steps in sequence.",
+                        "IMPLEMENTATION: Explicitly define step breakdown, ensure execution order, and do not skip any steps."
+                    ]
+                },
+                {
+                    "rule_id": "RUL-003",
+                    "description": "Whenever executing test cases of type 'Verify the behavior, when user Enables the 'Print' destination toggle bar in 'Add Shortcut' screen.', you MUST include all implicit/supporting steps (e.g., 'Search and select printer', 'Verify shortcuts screen is displayed', 'Verify add new shortcut screen is displayed'), even if not explicitly mentioned in the manual test steps, because they are required to fulfill the purpose of the test case.",
+                    "applies_to": "Implicit/supporting steps for test case 'Verify the behavior, when user Enables the 'Print' destination toggle bar in 'Add Shortcut' screen.'",
+                    "rule_definition": [
+                        "WHEN: Executing test cases of the specified type.",
+                        "THEN: Include all implicit/supporting steps as mapped in correlation and intermediary steps.",
+                        "IMPLEMENTATION: For each supporting step, implement the mapped script line, follow all intermediary steps, and justify inclusion as required for test case purpose validation."
+                    ]
+                }
+            ]
         }
     ]
 }
