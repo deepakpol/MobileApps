@@ -603,6 +603,192 @@
                     ]
                 }
             ]
+        },
+        {
+            "correlation_steps_to_scripts": [
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Reset app to initial state",
+                    "mapped_script_line": "self.fc.reset_app()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Load home screen",
+                    "mapped_script_line": "self.fc.flow_load_home_screen(skip_value_prop=False)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Add device/printer",
+                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Search for printer by IP",
+                    "mapped_script_line": "self.printers.search_printer_by_ip(self.p.ipAddress)"
+                },
+                {
+                    "test_step": "Navigate to printer details screen.",
+                    "mapped_script_line": "self.hpx_printer_details.click_printer_device_card()"
+                },
+                {
+                    "test_step": "Navigate to 'Add Shortcuts' screen.",
+                    "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False) \u2192 self.hpx_shortcuts.verify_shortcuts_screen_title() \u2192 self.hpx_shortcuts.click_add_new_shortcut_btn() \u2192 self.hpx_shortcuts.verify_add_new_shortcut_screen_title() \u2192 self.hpx_shortcuts.click_create_your_own_shortcut() \u2192 self.hpx_shortcuts.verify_add_new_shortcut_title()"
+                },
+                {
+                    "test_step": "Enable only the 'Email' destination toggle bar.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_email_toggle_btn()"
+                },
+                {
+                    "test_step": "Click on the Continue button.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_continue_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Verify 'Add Email' screen is displayed",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_edit_shortcut_email_screen_title()"
+                },
+                {
+                    "test_step": "Enter the valid email address in 'To' section.",
+                    "mapped_script_line": "self.hpx_shortcuts.enter_edit_shortcut_email_receiver_email_id_field(\"test@example.com\")"
+                },
+                {
+                    "test_step": "Click on the 'Add to Shortcut' button.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_continue_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Verify 'Add Shortcut' screen is displayed",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_shortcut_settings_screen_title()"
+                },
+                {
+                    "test_step": "Verify the behavior.",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_shortcut_settings_screen_title()"
+                }
+            ],
+            "intermediary_steps": [
+                {
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Reset app to initial state",
+                    "automation_script_step": "self.fc.reset_app()",
+                    "steps": [
+                        "Reset the app to ensure a clean state before test execution."
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Load home screen",
+                    "automation_script_step": "self.fc.flow_load_home_screen(skip_value_prop=False)",
+                    "steps": [
+                        "Load the home screen to start the test from the main entry point."
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Add device/printer",
+                    "automation_script_step": "self.hpx_printer_details.click_add_device_btn()",
+                    "steps": [
+                        "Add a printer device to the app for subsequent steps."
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Search for printer by IP",
+                    "automation_script_step": "self.printers.search_printer_by_ip(self.p.ipAddress)",
+                    "steps": [
+                        "Search for the printer using its IP address to ensure it is available for the test."
+                    ]
+                },
+                {
+                    "test_case_step": "Navigate to printer details screen.",
+                    "automation_script_step": "self.hpx_printer_details.click_printer_device_card()",
+                    "steps": [
+                        "Navigate to the printer details screen from the home screen."
+                    ]
+                },
+                {
+                    "test_case_step": "Navigate to 'Add Shortcuts' screen.",
+                    "automation_script_step": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False) \u2192 self.hpx_shortcuts.verify_shortcuts_screen_title() \u2192 self.hpx_shortcuts.click_add_new_shortcut_btn() \u2192 self.hpx_shortcuts.verify_add_new_shortcut_screen_title() \u2192 self.hpx_shortcuts.click_create_your_own_shortcut() \u2192 self.hpx_shortcuts.verify_add_new_shortcut_title()",
+                    "steps": [
+                        "Click on the shortcuts tile.",
+                        "Verify the shortcuts screen title.",
+                        "Click the add new shortcut button.",
+                        "Verify the add new shortcut screen title.",
+                        "Click create your own shortcut.",
+                        "Verify the add new shortcut title."
+                    ]
+                },
+                {
+                    "test_case_step": "Enable only the 'Email' destination toggle bar.",
+                    "automation_script_step": "self.hpx_shortcuts.click_edit_shortcut_email_toggle_btn()",
+                    "steps": [
+                        "Enable the email destination toggle."
+                    ]
+                },
+                {
+                    "test_case_step": "Click on the Continue button.",
+                    "automation_script_step": "self.hpx_shortcuts.click_edit_shortcut_continue_btn()",
+                    "steps": [
+                        "Click the continue button to proceed."
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Verify 'Add Email' screen is displayed",
+                    "automation_script_step": "self.hpx_shortcuts.verify_edit_shortcut_email_screen_title()",
+                    "steps": [
+                        "Verify that the 'Add Email' screen is displayed."
+                    ]
+                },
+                {
+                    "test_case_step": "Enter the valid email address in 'To' section.",
+                    "automation_script_step": "self.hpx_shortcuts.enter_edit_shortcut_email_receiver_email_id_field(\"test@example.com\")",
+                    "steps": [
+                        "Enter a valid email address in the 'To' section."
+                    ]
+                },
+                {
+                    "test_case_step": "Click on the 'Add to Shortcut' button.",
+                    "automation_script_step": "self.hpx_shortcuts.click_edit_shortcut_continue_btn()",
+                    "steps": [
+                        "Click the 'Add to Shortcut' button to save the email."
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Verify 'Add Shortcut' screen is displayed",
+                    "automation_script_step": "self.hpx_shortcuts.verify_shortcut_settings_screen_title()",
+                    "steps": [
+                        "Verify that the 'Add Shortcut' screen is displayed."
+                    ]
+                },
+                {
+                    "test_case_step": "Verify the behavior.",
+                    "automation_script_step": "assert self.hpx_shortcuts.verify_shortcut_settings_screen_title()",
+                    "steps": [
+                        "Assert that the shortcut settings screen is displayed as expected."
+                    ]
+                }
+            ],
+            "automation_scripts_rules": [
+                {
+                    "rule_id": "RUL-001",
+                    "description": "Whenever a test step corresponds to multiple automation actions, you MUST split the step into sub-steps (e.g., 1a, 1b, etc.), each sub-step must map to one script line, and all sub-steps MUST be implemented in sequence. This ensures no loss of logic and strict execution order.",
+                    "applies_to": "Test steps like 'Navigate to 'Add Shortcuts' screen.' which map to multiple script lines.",
+                    "rule_definition": [
+                        "WHEN: A test step maps to multiple automation actions (script lines) in the correlation mapping.",
+                        "THEN: Split the test step into sub-steps (e.g., 1a, 1b, etc.), each mapping to a single script line. Implement all sub-steps in the exact order listed. Do not merge or skip any sub-step.",
+                        "IMPLEMENTATION: Step Breakdown: Step 'Navigate to 'Add Shortcuts' screen.' \u2192 1a: self.hpx_printer_details.click_shortcuts_tile(raise_e=False), 1b: self.hpx_shortcuts.verify_shortcuts_screen_title(), 1c: self.hpx_shortcuts.click_add_new_shortcut_btn(), 1d: self.hpx_shortcuts.verify_add_new_shortcut_screen_title(), 1e: self.hpx_shortcuts.click_create_your_own_shortcut(), 1f: self.hpx_shortcuts.verify_add_new_shortcut_title(). For each sub-step, follow the corresponding intermediary steps. Enforce strict execution order."
+                    ]
+                },
+                {
+                    "rule_id": "RUL-002",
+                    "description": "Whenever you encounter a one-to-one mapping between a test step and a script line, implement automation using the mapped script line and follow all intermediary steps for that step.",
+                    "applies_to": "All test steps with a single mapped script line.",
+                    "rule_definition": [
+                        "WHEN: A test step maps to a single automation script line.",
+                        "THEN: Implement the automation using the mapped script line.",
+                        "IMPLEMENTATION: For each such step, use the mapped script line and follow all intermediary steps listed for that step."
+                    ]
+                },
+                {
+                    "rule_id": "RUL-003",
+                    "description": "Whenever executing test cases of type 'Verify the 'To' section when the user enters a valid email address in the 'Add Email' screen.', you MUST include all implicit/supporting steps labeled as 'Implicit Step \u2013 Required for Test Execution' even if not explicitly mentioned in the manual test steps, because they are required to fulfill the purpose of the test case.",
+                    "applies_to": "All implicit/supporting steps for this test case type.",
+                    "rule_definition": [
+                        "WHEN: Automating test cases named 'Verify the 'To' section when the user enters a valid email address in the 'Add Email' screen.'",
+                        "THEN: Always include the following supporting steps: 'Reset app to initial state', 'Load home screen', 'Add device/printer', 'Search for printer by IP', 'Verify 'Add Email' screen is displayed', 'Verify 'Add Shortcut' screen is displayed'.",
+                        "IMPLEMENTATION: For each supporting step, use the mapped script line and intermediary steps as listed in the correlation and intermediary_steps arrays. These steps are mandatory for test case purpose validation."
+                    ]
+                }
+            ]
         }
     ]
 }
