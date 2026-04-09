@@ -131,6 +131,59 @@
                     ]
                 }
             ]
+        },
+        {
+            "correlation_steps_to_scripts": [
+                {
+                    "test_step": "Install and Launch the HPX app.",
+                    "mapped_script_line": "No direct mapping found (handled in test setup or fixture outside this test method)"
+                },
+                {
+                    "test_step": "Click on the printer icon on the root view screen.",
+                    "mapped_script_line": "No direct mapping found (handled in test setup or fixture outside this test method)"
+                },
+                {
+                    "test_step": "Then click on the shortcuts tile on the device details page.",
+                    "mapped_script_line": "No direct mapping found (handled in test setup or fixture outside this test method)"
+                },
+                {
+                    "test_step": "Click on Add new shortcuts in shortcuts screen.",
+                    "mapped_script_line": "No direct mapping found (handled in test setup or fixture outside this test method)"
+                },
+                {
+                    "test_step": "The click on the Create your own shortcut arrow button.",
+                    "mapped_script_line": "No direct mapping found (handled in test setup or fixture outside this test method)"
+                },
+                {
+                    "test_step": "Click on the back button in Add Shortcut screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_cancel_shortcut_go_back_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify that the 'Cancel this shortcut?' confirmation popup is displayed with the correct title.",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_cancel_this_shortcut_title()"
+                },
+                {
+                    "test_step": "Click on 'Yes,cancel' button on pop up screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_cancel_shortcut_yes_cancel_btn()"
+                },
+                {
+                    "test_step": "Verify the screen.",
+                    "mapped_script_line": "No direct mapping found (script does not contain explicit assertion for final screen verification)"
+                }
+            ],
+            "intermediary_steps": [],
+            "automation_scripts_rules": [
+                {
+                    "rule_id": "RUL-001",
+                    "description": "Whenever you encounter a test step with direct mapping, implement the mapped script line. For steps with no direct mapping, ensure setup/fixture handles them. For supporting/purpose steps, always include them even if not in manual steps.",
+                    "applies_to": "All test steps in correlation, including implicit/supporting steps.",
+                    "rule_definition": [
+                        "WHEN: A test step is encountered in the test case or correlation mapping.",
+                        "THEN: Implement the mapped script line. If the step is a supporting/purpose step, include it regardless of manual test steps.",
+                        "IMPLEMENTATION: Use the mapped script line for each step. For supporting steps like 'Verify that the Cancel this shortcut? confirmation popup is displayed with the correct title', always include 'assert self.hpx_shortcuts.verify_cancel_this_shortcut_title()' after 'self.hpx_shortcuts.click_cancel_shortcut_go_back_btn()' and before 'self.hpx_shortcuts.click_cancel_shortcut_yes_cancel_btn()'. If intermediary steps are missing due to technical issues, document this and revisit once available. Enforce execution order as per correlation."
+                    ]
+                }
+            ]
         }
     ]
 }
