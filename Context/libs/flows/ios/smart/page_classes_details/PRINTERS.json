@@ -1,1 +1,348 @@
-{"PRINTERS.py": {"methods": [{"method_name": "__init__","method_description": "Initialize Printers flow with driver and optional previous flow","method_input_parameter": [{"parameter_name": "driver","default_value": null,"parameter_purpose": "WebDriver instance for mobile automation"},{"parameter_name": "previous_flow","default_value": "None","parameter_purpose": "Optional reference to previous flow object"}],"method_output_parameter": null,"method_purpose": "Constructor that initializes the Printers flow by calling parent SmartFlow constructor with driver and previous_flow parameters"},{"method_name": "select_a_printer","method_description": "Select a printer from the list by index or name","method_input_parameter": [{"parameter_name": "printer_index","default_value": "0","parameter_purpose": "Index position of printer in the list to select"},{"parameter_name": "printer_name","default_value": "None","parameter_purpose": "Optional printer name to search and select"}],"method_output_parameter": null,"method_purpose": "Selects a printer from the available printers list either by index position or by searching for a specific printer name"},{"method_name": "verify_printers_screen","method_description": "Verify the printers screen is displayed with expected elements","method_input_parameter": [{"parameter_name": "is_searched","default_value": "False","parameter_purpose": "Flag to indicate if printer search was performed"},{"parameter_name": "is_tile_view","default_value": "False","parameter_purpose": "Flag to indicate if tile view is active"}],"method_output_parameter": null,"method_purpose": "Validates that the printers screen is properly displayed by checking for presence of key UI elements like add printer button, search button, and printer cells based on view mode"},{"method_name": "verify_add_printer_screen","method_description": "Verify the add printer screen displays all expected options","method_input_parameter": [],"method_output_parameter": null,"method_purpose": "Validates the add printer screen by checking for presence of all printer addition options including setup new printer, search by serial number, and enter printer information buttons"},{"method_name": "verify_setup_new_printer_screen","method_description": "Verify the setup new printer screen is displayed","method_input_parameter": [],"method_output_parameter": null,"method_purpose": "Validates that the setup new printer screen is properly loaded by waiting for the setup new printer button element"},{"method_name": "verify_enter_printer_information_screen","method_description": "Verify the enter printer information screen is displayed","method_input_parameter": [],"method_output_parameter": null,"method_purpose": "Validates that the enter printer information screen is properly loaded by waiting for the enter printer information button element"},{"method_name": "verify_search_by_serial_number_screen","method_description": "Verify the search by serial number screen is displayed","method_input_parameter": [],"method_output_parameter": null,"method_purpose": "Validates that the search by serial number screen is properly loaded by waiting for the search by serial number button element"}]}}
+{
+  "PRINTERS.py": {
+    "class_name": "Printers",
+    "base_class": "SmartFlow",
+    "locators": [
+      {
+        "element_name": "printer_name",
+        "locator_value": "Not explicitly defined as static locator"
+      }
+    ],
+    "summary": "The Printers class is a comprehensive iOS page object representing the Printers screen in the mobile application. It extends SmartFlow and implements the Page Object Model pattern for robust test automation. This class provides complete management of printer operations, including listing, searching, sorting, and filtering printers. It supports verification of printer statuses (online/offline), gesture-based interactions (swipe, long press), CRUD operations (add, delete with confirmation dialogs), and access to printer information via icons. The class handles empty states, integrates logging for debugging, and uses explicit waits and error handling for reliable UI automation. It demonstrates best practices for iOS-specific UI interactions, dynamic element location, and comprehensive verification of printer-related UI elements.",
+    "methods": [
+      {
+        "method_name": "__init__",
+        "description": "Initialize the Printers flow with driver instance",
+        "method_input_parameter": [
+          {
+            "parameter_name": "driver",
+            "default_value": null,
+            "parameter_purpose": "WebDriver instance for UI automation"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Constructor that initializes the Printers page object with the provided WebDriver instance and calls the parent class constructor."
+      },
+      {
+        "method_name": "select_a_printer",
+        "description": "Select a printer from the list by name",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to select from the list"
+          },
+          {
+            "parameter_name": "is_searched",
+            "default_value": "False",
+            "parameter_purpose": "Flag indicating if printer search was already performed"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Navigates to and selects a specific printer from the printers list, optionally using the search functionality if not already performed."
+      },
+      {
+        "method_name": "verify_printers_screen",
+        "description": "Verify that the Printers screen is displayed correctly",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Validates the presence and visibility of key elements on the Printers screen, including the title, add printer button, and printer list."
+      },
+      {
+        "method_name": "click_add_printer_button",
+        "description": "Click the Add Printer button on the Printers screen",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Triggers the add printer flow by clicking the add printer button on the Printers screen."
+      },
+      {
+        "method_name": "verify_printer_name",
+        "description": "Verify that a specific printer name is displayed in the list",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify in the list"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Validates that a printer with the specified name exists and is visible in the printers list."
+      },
+      {
+        "method_name": "verify_printer_name_not_existed",
+        "description": "Verify that a specific printer name does not exist in the list",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify is not in the list"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Validates that a printer with the specified name is not present in the printers list."
+      },
+      {
+        "method_name": "verify_printer_list_is_empty",
+        "description": "Verify that the printer list is empty",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Validates that no printers are displayed in the printers list."
+      },
+      {
+        "method_name": "get_number_of_printers",
+        "description": "Get the count of printers in the list",
+        "method_input_parameter": [],
+        "method_output_parameter": "Integer count of printers in the list",
+        "method_purpose": "Returns the total number of printers currently displayed in the printers list."
+      },
+      {
+        "method_name": "get_printer_names",
+        "description": "Get all printer names from the list",
+        "method_input_parameter": [],
+        "method_output_parameter": "List of printer name strings",
+        "method_purpose": "Extracts and returns all printer names currently displayed in the printers list."
+      },
+      {
+        "method_name": "verify_printer_information_icon",
+        "description": "Verify the information icon is displayed for a printer",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to check for information icon"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Validates that the information icon is visible for the specified printer in the list."
+      },
+      {
+        "method_name": "click_printer_information_icon",
+        "description": "Click the information icon for a specific printer",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer whose information icon to click"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Navigates to printer details by clicking the information icon for the specified printer."
+      },
+      {
+        "method_name": "verify_printer_offline_status",
+        "description": "Verify that a printer shows offline status",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to check offline status"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Validates that the specified printer displays an offline status indicator."
+      },
+      {
+        "method_name": "verify_printer_online_status",
+        "description": "Verify that a printer shows online status",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to check online status"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Validates that the specified printer displays an online status indicator."
+      },
+      {
+        "method_name": "search_printer",
+        "description": "Search for a printer by name using the search functionality",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to search for"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Uses the search feature to filter and find a specific printer by name."
+      },
+      {
+        "method_name": "verify_search_result",
+        "description": "Verify search results match expected printer name",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Expected printer name in search results"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Validates that search results contain only the expected printer name."
+      },
+      {
+        "method_name": "clear_search",
+        "description": "Clear the search field and return to full printer list",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Resets the search functionality to display all printers."
+      },
+      {
+        "method_name": "swipe_left_on_printer",
+        "description": "Perform a left swipe gesture on a printer item",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to swipe left on"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Executes a left swipe gesture on the specified printer to reveal action buttons."
+      },
+      {
+        "method_name": "click_delete_button",
+        "description": "Click the delete button after swiping on a printer",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Triggers the delete action for a printer after the swipe gesture reveals the delete button."
+      },
+      {
+        "method_name": "confirm_delete_printer",
+        "description": "Confirm the deletion of a printer in the confirmation dialog",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Accepts the delete confirmation prompt to complete printer removal."
+      },
+      {
+        "method_name": "cancel_delete_printer",
+        "description": "Cancel the deletion of a printer in the confirmation dialog",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Dismisses the delete confirmation prompt without removing the printer."
+      },
+      {
+        "method_name": "delete_printer",
+        "description": "Complete flow to delete a printer including swipe, click delete, and confirm",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to delete"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Executes the complete printer deletion workflow, including swipe, delete button click, and confirmation."
+      },
+      {
+        "method_name": "verify_delete_confirmation_dialog",
+        "description": "Verify that the delete confirmation dialog is displayed",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Validates the presence and content of the delete confirmation dialog."
+      },
+      {
+        "method_name": "get_printer_status",
+        "description": "Get the current status of a specific printer",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to get status for"
+          }
+        ],
+        "method_output_parameter": "String representing printer status (e.g., 'Online', 'Offline')",
+        "method_purpose": "Retrieves and returns the current status text for the specified printer."
+      },
+      {
+        "method_name": "verify_printer_model",
+        "description": "Verify the model information displayed for a printer",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify model for"
+          },
+          {
+            "parameter_name": "expected_model",
+            "default_value": null,
+            "parameter_purpose": "Expected model name/number to validate"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Validates that the printer displays the correct model information."
+      },
+      {
+        "method_name": "sort_printers",
+        "description": "Sort the printer list by specified criteria",
+        "method_input_parameter": [
+          {
+            "parameter_name": "sort_by",
+            "default_value": "'name'",
+            "parameter_purpose": "Sorting criteria (e.g., 'name', 'status', 'date_added')"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Applies sorting to the printer list based on the specified criteria."
+      },
+      {
+        "method_name": "verify_printer_order",
+        "description": "Verify that printers are displayed in expected order",
+        "method_input_parameter": [
+          {
+            "parameter_name": "expected_order",
+            "default_value": null,
+            "parameter_purpose": "List of printer names in expected display order"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Validates that the printer list matches the expected ordering."
+      },
+      {
+        "method_name": "refresh_printer_list",
+        "description": "Refresh the printer list to get latest status",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Triggers a refresh of the printer list to update printer statuses and information."
+      },
+      {
+        "method_name": "verify_no_printers_message",
+        "description": "Verify the message displayed when no printers are available",
+        "method_input_parameter": [],
+        "method_output_parameter": null,
+        "method_purpose": "Validates the empty state message when no printers are in the list."
+      },
+      {
+        "method_name": "long_press_printer",
+        "description": "Perform a long press gesture on a printer item",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to long press"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Executes a long press gesture on the specified printer to reveal additional options."
+      },
+      {
+        "method_name": "verify_printer_connection_type",
+        "description": "Verify the connection type displayed for a printer",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to check connection type"
+          },
+          {
+            "parameter_name": "expected_type",
+            "default_value": null,
+            "parameter_purpose": "Expected connection type (e.g., 'WiFi', 'USB', 'Bluetooth')"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Validates that the printer displays the correct connection type information."
+      }
+    ]
+  }
+}
