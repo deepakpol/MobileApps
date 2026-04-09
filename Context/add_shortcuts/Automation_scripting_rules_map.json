@@ -1,152 +1,299 @@
 {
-    "{{automation-script-path_string_true}}": [
+    "Context/add_shortcuts/Automation_scripting_rules_map.json": [
+        {
+            "{{automation-script-path_string_true}}": [
+                {
+                    "correlation_steps_to_scripts": [
+                        {
+                            "test_step": "Install and Launch the HPX app.",
+                            "mapped_script_line": "self.fc.reset_app(); self.fc.flow_load_home_screen(skip_value_prop=False)"
+                        },
+                        {
+                            "test_step": "Navigate to printer details screen.",
+                            "mapped_script_line": "self.hpx_printer_details.click_add_device_btn(); self.printers.search_printer_by_ip(self.p.ipAddress); self.hpx_printer_details.click_printer_device_card()"
+                        },
+                        {
+                            "test_step": "Navigate to 'Shortcuts' screen.",
+                            "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)"
+                        },
+                        {
+                            "test_step": "Implicit Step \u2013 Required for Test Execution: Verify Shortcuts screen title",
+                            "mapped_script_line": "self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                        },
+                        {
+                            "test_step": "Click on the edit link.",
+                            "mapped_script_line": "self.hpx_shortcuts.click_shortcuts_edit_btn()"
+                        },
+                        {
+                            "test_step": "Implicit Step \u2013 Required for Test Execution: Verify Edit Shortcuts screen title",
+                            "mapped_script_line": "self.hpx_shortcuts.verify_edit_shortcuts_screen_title()"
+                        },
+                        {
+                            "test_step": "Click on the Edit icon of the Print shortcut.",
+                            "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_print_toggle_btn()"
+                        },
+                        {
+                            "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify toggle disabling confirmation message title",
+                            "mapped_script_line": "self.hpx_shortcuts.verify_toggle_disabling_confirmation_msg_title()"
+                        },
+                        {
+                            "test_step": "Click on the remove button of pop up screen.",
+                            "mapped_script_line": "self.hpx_shortcuts.click_toggle_disabling_remove_btn()"
+                        },
+                        {
+                            "test_step": "Verify the screen.",
+                            "mapped_script_line": "No direct mapping found (expected result is described but not explicitly asserted in script)"
+                        }
+                    ],
+                    "intermediary_steps": [
+                        {
+                            "test_case_step": "Install and Launch the HPX app.",
+                            "automation_script_step": "self.fc.reset_app(); self.fc.flow_load_home_screen(skip_value_prop=False)",
+                            "steps": [
+                                "Reset the app to ensure a clean state",
+                                "Load the home screen, do not skip value proposition"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Navigate to printer details screen.",
+                            "automation_script_step": "self.hpx_printer_details.click_add_device_btn(); self.printers.search_printer_by_ip(self.p.ipAddress); self.hpx_printer_details.click_printer_device_card()",
+                            "steps": [
+                                "Click the add device button",
+                                "Search for printer by IP address",
+                                "Click the printer device card to open details"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Navigate to 'Shortcuts' screen.",
+                            "automation_script_step": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)",
+                            "steps": [
+                                "Click the shortcuts tile to open the Shortcuts screen"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Implicit Step \u2013 Required for Test Execution: Verify Shortcuts screen title",
+                            "automation_script_step": "self.hpx_shortcuts.verify_shortcuts_screen_title()",
+                            "steps": [
+                                "Verify the title of the Shortcuts screen is displayed"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Click on the edit link.",
+                            "automation_script_step": "self.hpx_shortcuts.click_shortcuts_edit_btn()",
+                            "steps": [
+                                "Click the edit button on the Shortcuts screen"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Implicit Step \u2013 Required for Test Execution: Verify Edit Shortcuts screen title",
+                            "automation_script_step": "self.hpx_shortcuts.verify_edit_shortcuts_screen_title()",
+                            "steps": [
+                                "Verify the title of the Edit Shortcuts screen is displayed"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Click on the Edit icon of the Print shortcut.",
+                            "automation_script_step": "self.hpx_shortcuts.click_edit_shortcut_print_toggle_btn()",
+                            "steps": [
+                                "Click the edit icon for the Print shortcut"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify toggle disabling confirmation message title",
+                            "automation_script_step": "self.hpx_shortcuts.verify_toggle_disabling_confirmation_msg_title()",
+                            "steps": [
+                                "Verify the confirmation message title for disabling the Print shortcut toggle"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Click on the remove button of pop up screen.",
+                            "automation_script_step": "self.hpx_shortcuts.click_toggle_disabling_remove_btn()",
+                            "steps": [
+                                "Click the remove button on the confirmation popup"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Verify the screen.",
+                            "automation_script_step": "No direct mapping found (expected result is described but not explicitly asserted in script)",
+                            "steps": [
+                                "Expected result is described in test case but not explicitly asserted in script"
+                            ]
+                        }
+                    ],
+                    "automation_scripts_rules": [
+                        {
+                            "rule_id": "RUL-001",
+                            "description": "One-to-one mapping rule for test steps and script lines.",
+                            "applies_to": "Test steps that map directly to a single script line (e.g., 'Install and Launch the HPX app.', 'Navigate to printer details screen.', etc.)",
+                            "rule_definition": [
+                                "WHEN: A test step has a direct one-to-one mapping to a script line in the correlation.",
+                                "THEN: Implement the automation using the mapped script line.",
+                                "IMPLEMENTATION: For each such step, follow the corresponding intermediary steps to ensure correct execution."
+                            ]
+                        },
+                        {
+                            "rule_id": "RUL-002",
+                            "description": "Purpose-based/supporting step rule for test case validation.",
+                            "applies_to": "Test case 'Verify the screen, when user clicks on the remove button of 'Print' destination shortcut.' and any similar cases requiring validation of UI state or confirmation messages not explicitly listed in manual steps.",
+                            "rule_definition": [
+                                "WHEN: Executing test cases of type 'Verify the screen, when user clicks on the remove button of 'Print' destination shortcut.' or similar, and a supporting or implicit step is present in the correlation (e.g., 'Implicit Step \u2013 Required for Test Execution: Verify Shortcuts screen title', 'Implicit Step \u2013 Required for Test Execution: Verify Edit Shortcuts screen title', 'Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify toggle disabling confirmation message title').",
+                                "THEN: You MUST include these supporting/purpose steps in the automation, even if not explicitly mentioned in the manual test steps, because they are required to fulfill the purpose of the test case.",
+                                "IMPLEMENTATION: For each such supporting step, implement the mapped script line and follow the corresponding intermediary steps. This ensures validation of the UI state and confirmation messages as required for test case purpose validation."
+                            ]
+                        },
+                        {
+                            "rule_id": "RUL-003",
+                            "description": "Handling of expected results without direct script assertion.",
+                            "applies_to": "Test steps like 'Verify the screen.' where the expected result is described but not explicitly asserted in the script.",
+                            "rule_definition": [
+                                "WHEN: A test step describes an expected result (e.g., UI state or removal of an item) but there is no direct script assertion in the mapped script line.",
+                                "THEN: Ensure that the automation script includes explicit assertions or validations for the expected result, even if not present in the original script mapping.",
+                                "IMPLEMENTATION: Add script lines to assert the expected UI state (e.g., that the 'Print' destination is removed and the user is redirected to the 'Shortcuts' screen) and document the intermediary steps required for this validation."
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "correlation_steps_to_scripts": [
                 {
-                    "test_step": "Install and Launch the HPX app.",
-                    "mapped_script_line": "self.fc.reset_app(); self.fc.flow_load_home_screen(skip_value_prop=False)"
+                    "test_step": "1.Install and Launch the HPX app.",
+                    "mapped_script_line": "self.fc.reset_app(), self.fc.flow_load_home_screen(skip_value_prop=False)"
                 },
                 {
-                    "test_step": "Navigate to printer details screen.",
-                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn(); self.printers.search_printer_by_ip(self.p.ipAddress); self.hpx_printer_details.click_printer_device_card()"
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Add supported printer on root view",
+                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn(), self.printers.search_printer_by_ip(self.p.ipAddress)"
                 },
                 {
-                    "test_step": "Navigate to 'Shortcuts' screen.",
-                    "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)"
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Ensure user is logged into the account",
+                    "mapped_script_line": "self.fc.flow_load_home_screen(skip_value_prop=False)"
                 },
                 {
-                    "test_step": "Implicit Step \u2013 Required for Test Execution: Verify Shortcuts screen title",
-                    "mapped_script_line": "self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                    "test_step": "2.Navigate to printer details screen.",
+                    "mapped_script_line": "self.hpx_printer_details.click_printer_device_card()"
                 },
                 {
-                    "test_step": "Click on the edit link.",
+                    "test_step": "3.Navigate to 'Shortcuts' screen.",
+                    "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False), self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                },
+                {
+                    "test_step": "4.Click on the edit link.",
                     "mapped_script_line": "self.hpx_shortcuts.click_shortcuts_edit_btn()"
                 },
                 {
-                    "test_step": "Implicit Step \u2013 Required for Test Execution: Verify Edit Shortcuts screen title",
-                    "mapped_script_line": "self.hpx_shortcuts.verify_edit_shortcuts_screen_title()"
+                    "test_step": "5.Click on the Edit icon of the Print shortcut.",
+                    "mapped_script_line": "# Write click to edit the shortcut since element is not available in the page source, self.hpx_shortcuts.verify_edit_shortcuts_screen_title()"
                 },
                 {
-                    "test_step": "Click on the Edit icon of the Print shortcut.",
-                    "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_print_toggle_btn()"
+                    "test_step": "6.Click on the cancel button of pop up screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_cancel_shortcut_go_back_btn(), self.hpx_shortcuts.verify_cancel_this_shortcut_title(), self.hpx_shortcuts.click_cancel_shortcut_yes_cancel_btn()"
                 },
                 {
-                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify toggle disabling confirmation message title",
-                    "mapped_script_line": "self.hpx_shortcuts.verify_toggle_disabling_confirmation_msg_title()"
-                },
-                {
-                    "test_step": "Click on the remove button of pop up screen.",
-                    "mapped_script_line": "self.hpx_shortcuts.click_toggle_disabling_remove_btn()"
-                },
-                {
-                    "test_step": "Verify the screen.",
-                    "mapped_script_line": "No direct mapping found (expected result is described but not explicitly asserted in script)"
+                    "test_step": "7.Verify the screen.",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_shortcuts_screen_title()"
                 }
             ],
             "intermediary_steps": [
                 {
-                    "test_case_step": "Install and Launch the HPX app.",
-                    "automation_script_step": "self.fc.reset_app(); self.fc.flow_load_home_screen(skip_value_prop=False)",
+                    "test_case_step": "1.Install and Launch the HPX app.",
+                    "automation_script_step": "self.fc.reset_app(), self.fc.flow_load_home_screen(skip_value_prop=False)",
                     "steps": [
                         "Reset the app to ensure a clean state",
                         "Load the home screen, do not skip value proposition"
                     ]
                 },
                 {
-                    "test_case_step": "Navigate to printer details screen.",
-                    "automation_script_step": "self.hpx_printer_details.click_add_device_btn(); self.printers.search_printer_by_ip(self.p.ipAddress); self.hpx_printer_details.click_printer_device_card()",
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Add supported printer on root view",
+                    "automation_script_step": "self.hpx_printer_details.click_add_device_btn(), self.printers.search_printer_by_ip(self.p.ipAddress)",
                     "steps": [
-                        "Click the add device button",
-                        "Search for printer by IP address",
-                        "Click the printer device card to open details"
+                        "Click the add device button on printer details",
+                        "Search for printer by IP address"
                     ]
                 },
                 {
-                    "test_case_step": "Navigate to 'Shortcuts' screen.",
-                    "automation_script_step": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)",
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Ensure user is logged into the account",
+                    "automation_script_step": "self.fc.flow_load_home_screen(skip_value_prop=False)",
                     "steps": [
-                        "Click the shortcuts tile to open the Shortcuts screen"
+                        "Load the home screen to ensure user is logged in"
                     ]
                 },
                 {
-                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Verify Shortcuts screen title",
-                    "automation_script_step": "self.hpx_shortcuts.verify_shortcuts_screen_title()",
+                    "test_case_step": "2.Navigate to printer details screen.",
+                    "automation_script_step": "self.hpx_printer_details.click_printer_device_card()",
                     "steps": [
-                        "Verify the title of the Shortcuts screen is displayed"
+                        "Click on the printer device card to open details"
                     ]
                 },
                 {
-                    "test_case_step": "Click on the edit link.",
+                    "test_case_step": "3.Navigate to 'Shortcuts' screen.",
+                    "automation_script_step": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False), self.hpx_shortcuts.verify_shortcuts_screen_title()",
+                    "steps": [
+                        "Click the shortcuts tile",
+                        "Verify the shortcuts screen title"
+                    ]
+                },
+                {
+                    "test_case_step": "4.Click on the edit link.",
                     "automation_script_step": "self.hpx_shortcuts.click_shortcuts_edit_btn()",
                     "steps": [
-                        "Click the edit button on the Shortcuts screen"
+                        "Click the edit button for shortcuts"
                     ]
                 },
                 {
-                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Verify Edit Shortcuts screen title",
-                    "automation_script_step": "self.hpx_shortcuts.verify_edit_shortcuts_screen_title()",
+                    "test_case_step": "5.Click on the Edit icon of the Print shortcut.",
+                    "automation_script_step": "# Write click to edit the shortcut since element is not available in the page source, self.hpx_shortcuts.verify_edit_shortcuts_screen_title()",
                     "steps": [
-                        "Verify the title of the Edit Shortcuts screen is displayed"
+                        "Attempt to click the edit icon for the Print shortcut (may require custom locator)",
+                        "Verify the edit shortcuts screen title"
                     ]
                 },
                 {
-                    "test_case_step": "Click on the Edit icon of the Print shortcut.",
-                    "automation_script_step": "self.hpx_shortcuts.click_edit_shortcut_print_toggle_btn()",
+                    "test_case_step": "6.Click on the cancel button of pop up screen.",
+                    "automation_script_step": "self.hpx_shortcuts.click_cancel_shortcut_go_back_btn(), self.hpx_shortcuts.verify_cancel_this_shortcut_title(), self.hpx_shortcuts.click_cancel_shortcut_yes_cancel_btn()",
                     "steps": [
-                        "Click the edit icon for the Print shortcut"
+                        "Click the go back/cancel button on the popup",
+                        "Verify the cancel shortcut title is displayed",
+                        "Click yes/cancel to confirm"
                     ]
                 },
                 {
-                    "test_case_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify toggle disabling confirmation message title",
-                    "automation_script_step": "self.hpx_shortcuts.verify_toggle_disabling_confirmation_msg_title()",
+                    "test_case_step": "7.Verify the screen.",
+                    "automation_script_step": "assert self.hpx_shortcuts.verify_shortcuts_screen_title()",
                     "steps": [
-                        "Verify the confirmation message title for disabling the Print shortcut toggle"
-                    ]
-                },
-                {
-                    "test_case_step": "Click on the remove button of pop up screen.",
-                    "automation_script_step": "self.hpx_shortcuts.click_toggle_disabling_remove_btn()",
-                    "steps": [
-                        "Click the remove button on the confirmation popup"
-                    ]
-                },
-                {
-                    "test_case_step": "Verify the screen.",
-                    "automation_script_step": "No direct mapping found (expected result is described but not explicitly asserted in script)",
-                    "steps": [
-                        "Expected result is described in test case but not explicitly asserted in script"
+                        "Assert that the shortcuts screen title is displayed"
                     ]
                 }
             ],
             "automation_scripts_rules": [
                 {
                     "rule_id": "RUL-001",
-                    "description": "One-to-one mapping rule for test steps and script lines.",
-                    "applies_to": "Test steps that map directly to a single script line (e.g., 'Install and Launch the HPX app.', 'Navigate to printer details screen.', etc.)",
+                    "description": "Rule for one-to-one mapping between test steps and automation script lines with intermediary steps.",
+                    "applies_to": "Test steps where each step maps directly to a single automation script line (e.g., steps 2, 4, 7).",
                     "rule_definition": [
-                        "WHEN: A test step has a direct one-to-one mapping to a script line in the correlation.",
-                        "THEN: Implement the automation using the mapped script line.",
-                        "IMPLEMENTATION: For each such step, follow the corresponding intermediary steps to ensure correct execution."
+                        "WHEN: A test step maps directly to a single automation script line.",
+                        "THEN: Implement the automation using the mapped script line and follow all intermediary steps for that mapping.",
+                        "IMPLEMENTATION: For example, for '2.Navigate to printer details screen.', use 'self.hpx_printer_details.click_printer_device_card()' and intermediary step 'Click on the printer device card to open details'."
                     ]
                 },
                 {
                     "rule_id": "RUL-002",
-                    "description": "Purpose-based/supporting step rule for test case validation.",
-                    "applies_to": "Test case 'Verify the screen, when user clicks on the remove button of 'Print' destination shortcut.' and any similar cases requiring validation of UI state or confirmation messages not explicitly listed in manual steps.",
+                    "description": "Rule for one-to-many mapping where a test step corresponds to multiple automation actions and must be split into sub-steps.",
+                    "applies_to": "Test steps where a single step is implemented by multiple script lines (e.g., steps 1, 3, 5, 6).",
                     "rule_definition": [
-                        "WHEN: Executing test cases of type 'Verify the screen, when user clicks on the remove button of 'Print' destination shortcut.' or similar, and a supporting or implicit step is present in the correlation (e.g., 'Implicit Step \u2013 Required for Test Execution: Verify Shortcuts screen title', 'Implicit Step \u2013 Required for Test Execution: Verify Edit Shortcuts screen title', 'Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify toggle disabling confirmation message title').",
-                        "THEN: You MUST include these supporting/purpose steps in the automation, even if not explicitly mentioned in the manual test steps, because they are required to fulfill the purpose of the test case.",
-                        "IMPLEMENTATION: For each such supporting step, implement the mapped script line and follow the corresponding intermediary steps. This ensures validation of the UI state and confirmation messages as required for test case purpose validation."
+                        "WHEN: A test step corresponds to multiple automation actions.",
+                        "THEN: Split the step into sub-steps (e.g., 1a, 1b, etc.), each mapping to one script line, and implement all sub-steps in sequence without skipping any.",
+                        "IMPLEMENTATION: For example, for '1.Install and Launch the HPX app.', split into 1a: 'self.fc.reset_app()' (Reset the app to ensure a clean state), 1b: 'self.fc.flow_load_home_screen(skip_value_prop=False)' (Load the home screen, do not skip value proposition). For '3.Navigate to Shortcuts screen.', split into 3a: 'self.hpx_printer_details.click_shortcuts_tile(raise_e=False)' (Click the shortcuts tile), 3b: 'self.hpx_shortcuts.verify_shortcuts_screen_title()' (Verify the shortcuts screen title). For '6.Click on the cancel button of pop up screen.', split into 6a: 'self.hpx_shortcuts.click_cancel_shortcut_go_back_btn()', 6b: 'self.hpx_shortcuts.verify_cancel_this_shortcut_title()', 6c: 'self.hpx_shortcuts.click_cancel_shortcut_yes_cancel_btn()' with their respective intermediary steps. Execution order must be strictly followed."
                     ]
                 },
                 {
                     "rule_id": "RUL-003",
-                    "description": "Handling of expected results without direct script assertion.",
-                    "applies_to": "Test steps like 'Verify the screen.' where the expected result is described but not explicitly asserted in the script.",
+                    "description": "Rule for handling implicit/purpose-based/supporting steps required for test execution even if not explicitly mentioned in manual test steps.",
+                    "applies_to": "Any test case of type 'Verify the screen, when user clicks on the cancel button of 'Print' destination shortcut.' or similar.",
                     "rule_definition": [
-                        "WHEN: A test step describes an expected result (e.g., UI state or removal of an item) but there is no direct script assertion in the mapped script line.",
-                        "THEN: Ensure that the automation script includes explicit assertions or validations for the expected result, even if not present in the original script mapping.",
-                        "IMPLEMENTATION: Add script lines to assert the expected UI state (e.g., that the 'Print' destination is removed and the user is redirected to the 'Shortcuts' screen) and document the intermediary steps required for this validation."
+                        "WHEN: Executing test cases of type 'Verify the screen, when user clicks on the cancel button of 'Print' destination shortcut.'",
+                        "THEN: You MUST include all implicit/supporting steps such as 'Add supported printer on root view' and 'Ensure user is logged into the account', even if not explicitly mentioned in manual test steps, because they are required for test case purpose validation.",
+                        "IMPLEMENTATION: For 'Add supported printer on root view', use 'self.hpx_printer_details.click_add_device_btn(), self.printers.search_printer_by_ip(self.p.ipAddress)' with intermediary steps 'Click the add device button on printer details' and 'Search for printer by IP address'. For 'Ensure user is logged into the account', use 'self.fc.flow_load_home_screen(skip_value_prop=False)' with intermediary step 'Load the home screen to ensure user is logged in'. These steps must be executed before proceeding to the main test steps to ensure the test environment is valid."
                     ]
                 }
             ]
