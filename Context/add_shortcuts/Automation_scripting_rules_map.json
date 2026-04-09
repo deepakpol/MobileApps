@@ -323,6 +323,84 @@
                     ]
                 }
             ]
+        },
+        {
+            "correlation_steps_to_scripts": [
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Reset the application to initial state",
+                    "mapped_script_line": "self.fc.reset_app()"
+                },
+                {
+                    "test_step": "1.Install and Launch the HPX app.",
+                    "mapped_script_line": "self.fc.flow_load_home_screen(skip_value_prop=False)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Click on add device button to initiate printer addition process",
+                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Search for the printer using IP address to locate the target printer",
+                    "mapped_script_line": "self.printers.search_printer_by_ip(self.p.ipAddress)"
+                },
+                {
+                    "test_step": "2.Click on the printer icon on the root view screen.",
+                    "mapped_script_line": "self.hpx_printer_details.click_printer_device_card()"
+                },
+                {
+                    "test_step": "3.Then click on the shortcuts tile on the device details page.",
+                    "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify that shortcuts screen is displayed correctly",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                },
+                {
+                    "test_step": "4.Click on the Add new shortcuts in shortcuts screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_add_new_shortcut_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify that add new shortcut screen is displayed correctly",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_add_new_shortcut_screen_title()"
+                },
+                {
+                    "test_step": "5.Then click on the Create your own shortcut arrow button.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_create_your_own_shortcut()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify that add new shortcut title is displayed correctly",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_add_new_shortcut_title()"
+                },
+                {
+                    "test_step": "6.Disable the 'Print' destination toggle bar in 'Add Shortcut' screen",
+                    "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_print_toggle_btn()"
+                },
+                {
+                    "test_step": "7.Verify the screen. - Expected Result: User should be able to Disable the 'Print' destination toggle bar in 'Add shortcut' screen. After disabling the 'Print' destination toggle bar, 'continue' button should be disabled.",
+                    "mapped_script_line": "assert self.hpx_shortcuts.is_continue_btn_enabled() == 'false', \"Continue button should be disabled after toggling print option off\""
+                }
+            ],
+            "intermediary_steps": [
+                {
+                    "test_case_step": "[[test-case-step]]",
+                    "automation_script_step": "[[automation-script-step]]",
+                    "steps": [
+                        "[[intermediary-step-1]]",
+                        "[[intermediary-step-2]]"
+                    ]
+                }
+            ],
+            "automation_scripts_rules": [
+                {
+                    "rule_id": "RUL-001",
+                    "description": "Reusable automation scripting rules for mapping test steps, split steps, and implicit/supporting steps for the test case 'Verify the behavior, when user Disables the 'Print' destination toggle bar in 'Add Shortcut' screen.'",
+                    "applies_to": "All test steps, split steps, and implicit/supporting steps as mapped in correlation and intermediary_steps.",
+                    "rule_definition": [
+                        "WHEN: A test step from the manual test case is encountered in automation development.",
+                        "THEN: Implement the mapped script line(s) for each test step. If a test step corresponds to multiple automation actions, split it into sub-steps (e.g., 1a, 1b, etc.), each mapping to one script line, and implement all sub-steps in sequence. For any implicit or supporting steps (e.g., steps labeled as 'Implicit Step \u2013 Required for Test Execution' or 'Supporting Step \u2013 Purpose of Test Case Validation'), always include them even if not explicitly mentioned in the manual test steps, as they are required for test case purpose validation.",
+                        "IMPLEMENTATION: For each test step, use the mapped script line(s) from 'correlation_steps_to_scripts' and follow the corresponding intermediary steps from 'intermediary_steps'. For split steps, explicitly break down as: Step X \u2192 Step Xa \u2192 [Script Line 1], Step X \u2192 Step Xb \u2192 [Script Line 2], etc., and enforce execution order. For purpose-based/supporting steps, always include the mapped script line(s) and intermediary steps, referencing the test case name 'Verify the behavior, when user Disables the 'Print' destination toggle bar in 'Add Shortcut' screen.', and justify their inclusion as required for test case validation. No skipping or merging of steps is allowed."
+                    ]
+                }
+            ]
         }
     ]
 }
