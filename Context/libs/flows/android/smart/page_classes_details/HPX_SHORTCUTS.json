@@ -1,0 +1,28 @@
+{
+  "HPX_SHORTCUTS.py": {
+    "class_name": "HpxShortcuts",
+    "base_class": "SmartFlow",
+    "locators": [],
+    "summary": "A page class for handling HPX shortcuts screen interactions in Android Smart flows. This class inherits from SmartFlow and encapsulates all locators and methods required to interact with the HPX shortcuts screen, ensuring robust and consistent automation.",
+    "methods": [
+      {
+        "method_name": "verify_shortcuts_screen_title",
+        "method_description": "Verify the title of the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time in seconds to wait for the shortcuts screen title element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Boolean flag to determine whether to raise an exception if element is not found"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Waits for and verifies the presence of the shortcuts screen title element using the driver's wait_for_object method with specified timeout and exception handling behavior."
+      }
+    ]
+  }
+}
