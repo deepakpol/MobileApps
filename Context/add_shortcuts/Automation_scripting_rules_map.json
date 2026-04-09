@@ -512,6 +512,97 @@
                     ]
                 }
             ]
+        },
+        {
+            "correlation_steps_to_scripts": [
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Reset app",
+                    "mapped_script_line": "self.fc.reset_app()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Load home screen",
+                    "mapped_script_line": "self.fc.flow_load_home_screen(skip_value_prop=False)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Add printer device",
+                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Search printer by IP",
+                    "mapped_script_line": "self.printers.search_printer_by_ip(self.p.ipAddress)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Select printer device card",
+                    "mapped_script_line": "self.hpx_printer_details.click_printer_device_card()"
+                },
+                {
+                    "test_step": "Step 1. Install and Launch the HPX app.",
+                    "mapped_script_line": "self.fc.reset_app() \u2192 self.fc.flow_load_home_screen(skip_value_prop=False)"
+                },
+                {
+                    "test_step": "Step 2. Click on the printer icon on the root view screen.",
+                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn() \u2192 self.printers.search_printer_by_ip(self.p.ipAddress) \u2192 self.hpx_printer_details.click_printer_device_card()"
+                },
+                {
+                    "test_step": "Step 3. Then click on the shortcuts tile on the device details page.",
+                    "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify shortcuts screen title",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                },
+                {
+                    "test_step": "Step 4. Click on the Add new shortcuts in shortcuts screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_add_new_shortcut_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify add new shortcut screen title",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_add_new_shortcut_screen_title()"
+                },
+                {
+                    "test_step": "Step 5. Then click on the Create your own shortcut arrow button.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_create_your_own_shortcut()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify add new shortcut title",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_add_new_shortcut_title()"
+                },
+                {
+                    "test_step": "Step 6. Enable only the 'Email' destination toggle bar in 'Add Shortcut' screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_email_toggle_btn()"
+                },
+                {
+                    "test_step": "Step 7. Then click on the Continue button.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_continue_btn()"
+                },
+                {
+                    "test_step": "Step 8. Verify the screen.",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_edit_shortcut_email_screen_title()"
+                }
+            ],
+            "intermediary_steps": [],
+            "automation_scripts_rules": [
+                {
+                    "rule_id": "RUL-001",
+                    "description": "Whenever a test step corresponds to multiple automation actions, you MUST split the step into sub-steps (e.g., 1a, 1b, etc.), each sub-step must map to one script line, and all sub-steps MUST be implemented in sequence. This ensures full coverage and correct execution order.",
+                    "applies_to": "Step 1. Install and Launch the HPX app.; Step 2. Click on the printer icon on the root view screen.",
+                    "rule_definition": [
+                        "WHEN: A test step maps to multiple script lines (e.g., 'self.fc.reset_app() \u2192 self.fc.flow_load_home_screen(skip_value_prop=False)'),",
+                        "THEN: Split the step into sub-steps (e.g., 1a, 1b), each mapping to a single script line, and execute in order without skipping.",
+                        "IMPLEMENTATION: Step 1 \u2192 Step 1a: self.fc.reset_app(); Step 1 \u2192 Step 1b: self.fc.flow_load_home_screen(skip_value_prop=False). Step 2 \u2192 Step 2a: self.hpx_printer_details.click_add_device_btn(); Step 2 \u2192 Step 2b: self.printers.search_printer_by_ip(self.p.ipAddress); Step 2 \u2192 Step 2c: self.hpx_printer_details.click_printer_device_card()."
+                    ]
+                },
+                {
+                    "rule_id": "RUL-002",
+                    "description": "Whenever executing test cases of type 'Verify the screen when the user enables only the 'Email' destination in the 'Add Shortcut' screen.', you MUST include all implicit and supporting steps required for test execution and purpose validation, even if not explicitly mentioned in the manual test steps.",
+                    "applies_to": "All implicit and supporting steps in this test case context.",
+                    "rule_definition": [
+                        "WHEN: Executing test case 'Verify the screen when the user enables only the 'Email' destination in the 'Add Shortcut' screen.'",
+                        "THEN: Always include the following steps: self.fc.reset_app(), self.fc.flow_load_home_screen(skip_value_prop=False), self.hpx_printer_details.click_add_device_btn(), self.printers.search_printer_by_ip(self.p.ipAddress), self.hpx_printer_details.click_printer_device_card(), self.hpx_shortcuts.verify_shortcuts_screen_title(), self.hpx_shortcuts.verify_add_new_shortcut_screen_title(), self.hpx_shortcuts.verify_add_new_shortcut_title().",
+                        "IMPLEMENTATION: These steps are required to fulfill the test case purpose and must be executed in the order mapped above, ensuring the test environment and validation context are correct."
+                    ]
+                }
+            ]
         }
     ]
 }
