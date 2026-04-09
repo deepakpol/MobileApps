@@ -1366,6 +1366,211 @@
                     ]
                 }
             ]
+        },
+        {
+            "correlation_steps_to_scripts": [
+                {
+                    "test_step": "1. Navigate to Print Settings",
+                    "automation_script_lines": [
+                        "driver.get('chrome://settings/printing')",
+                        "wait_for_element_visible('print-settings-page')"
+                    ],
+                    "mapping_type": "one-to-many",
+                    "split_steps": [
+                        "1a. Open print settings URL",
+                        "1b. Wait for page load"
+                    ],
+                    "execution_order": 1
+                },
+                {
+                    "test_step": "2. Locate Print destination shortcut",
+                    "automation_script_lines": [
+                        "destination_element = find_element_by_id('destination-shortcut')"
+                    ],
+                    "mapping_type": "one-to-one",
+                    "execution_order": 2
+                },
+                {
+                    "test_step": "3. Remove Print destination shortcut",
+                    "automation_script_lines": [
+                        "destination_element.find_element_by_class('remove-button').click()",
+                        "wait_for_element_not_visible('destination-shortcut')"
+                    ],
+                    "mapping_type": "one-to-many",
+                    "split_steps": [
+                        "3a. Click remove button",
+                        "3b. Wait for shortcut removal"
+                    ],
+                    "execution_order": 3
+                },
+                {
+                    "test_step": "4. Verify screen state after removal",
+                    "automation_script_lines": [
+                        "assert_element_not_present('destination-shortcut')",
+                        "verify_no_error_messages()",
+                        "capture_screenshot('after_removal')"
+                    ],
+                    "mapping_type": "one-to-many",
+                    "split_steps": [
+                        "4a. Assert shortcut not present",
+                        "4b. Verify no errors",
+                        "4c. Capture evidence"
+                    ],
+                    "execution_order": 4,
+                    "purpose_step": true
+                }
+            ],
+            "intermediary_steps": [
+                {
+                    "step_id": "1a",
+                    "description": "Open print settings URL",
+                    "automation_line": "driver.get('chrome://settings/printing')",
+                    "parent_step": "1",
+                    "order": 1
+                },
+                {
+                    "step_id": "1b",
+                    "description": "Wait for page load",
+                    "automation_line": "wait_for_element_visible('print-settings-page')",
+                    "parent_step": "1",
+                    "order": 2
+                },
+                {
+                    "step_id": "2",
+                    "description": "Locate Print destination shortcut",
+                    "automation_line": "destination_element = find_element_by_id('destination-shortcut')",
+                    "parent_step": "2",
+                    "order": 3
+                },
+                {
+                    "step_id": "3a",
+                    "description": "Click remove button",
+                    "automation_line": "destination_element.find_element_by_class('remove-button').click()",
+                    "parent_step": "3",
+                    "order": 4
+                },
+                {
+                    "step_id": "3b",
+                    "description": "Wait for shortcut removal",
+                    "automation_line": "wait_for_element_not_visible('destination-shortcut')",
+                    "parent_step": "3",
+                    "order": 5
+                },
+                {
+                    "step_id": "4a",
+                    "description": "Assert shortcut not present",
+                    "automation_line": "assert_element_not_present('destination-shortcut')",
+                    "parent_step": "4",
+                    "order": 6,
+                    "validation_step": true
+                },
+                {
+                    "step_id": "4b",
+                    "description": "Verify no errors",
+                    "automation_line": "verify_no_error_messages()",
+                    "parent_step": "4",
+                    "order": 7,
+                    "validation_step": true
+                },
+                {
+                    "step_id": "4c",
+                    "description": "Capture evidence",
+                    "automation_line": "capture_screenshot('after_removal')",
+                    "parent_step": "4",
+                    "order": 8,
+                    "supporting_step": true
+                }
+            ],
+            "automation_scripts_rules": {
+                "test_case_name": "Verify the screen, when user removes the 'Print' destination shortcut.",
+                "rule_version": "1.0",
+                "enforcement_level": "strict",
+                "mapping_rules": {
+                    "one_to_one": {
+                        "description": "Single test step maps to single automation script line",
+                        "enforcement": "Each test step must have exactly one corresponding script line",
+                        "validation": "Verify step count equals script line count",
+                        "example": "Step 2 -> Single locate element command"
+                    },
+                    "one_to_many": {
+                        "description": "Single test step maps to multiple automation script lines",
+                        "enforcement": "Must split into sub-steps (e.g., 1a, 1b) with each mapped to one script line in sequence",
+                        "validation": "All sub-steps must be executed in order, no skipping allowed",
+                        "split_step_naming": "Use parent step number + lowercase letter (1a, 1b, 1c)",
+                        "execution_order": "Sequential execution required, order field must increment",
+                        "example": "Step 1 -> 1a (navigate) + 1b (wait for load)"
+                    }
+                },
+                "step_breakdown_rules": {
+                    "split_criteria": [
+                        "Navigation + Wait actions",
+                        "Click + Verification actions",
+                        "Multiple assertions or validations",
+                        "Setup + Execution + Teardown patterns"
+                    ],
+                    "intermediary_step_requirements": {
+                        "mandatory_fields": [
+                            "step_id",
+                            "description",
+                            "automation_line",
+                            "parent_step",
+                            "order"
+                        ],
+                        "optional_fields": [
+                            "validation_step",
+                            "supporting_step",
+                            "purpose_step"
+                        ],
+                        "order_enforcement": "Order field must be sequential and unique across all intermediary steps"
+                    },
+                    "no_merging_policy": "Each distinct action must have its own intermediary step, no combining allowed"
+                },
+                "purpose_supporting_steps": {
+                    "definition": "Implicit steps required for test execution, validation, or evidence collection",
+                    "types": {
+                        "setup_steps": "Initialize test environment, navigate to starting point",
+                        "validation_steps": "Assert expected state, verify no errors, check element presence/absence",
+                        "supporting_steps": "Screenshot capture, logging, data collection for test evidence",
+                        "teardown_steps": "Cleanup actions, restore state"
+                    },
+                    "identification_criteria": [
+                        "Steps not explicitly in test case but required for automation",
+                        "Verification and assertion steps for test validation",
+                        "Evidence collection for test reporting",
+                        "Error handling and recovery steps"
+                    ],
+                    "mandatory_inclusion": "All purpose/supporting steps must be included in intermediary_steps array with appropriate flags"
+                },
+                "validation_rules": {
+                    "completeness_check": {
+                        "no_omissions": "Every test step must have corresponding automation script lines",
+                        "all_scripts_mapped": "Every automation script line must be mapped to a test step or intermediary step",
+                        "intermediary_coverage": "All intermediary steps must reference a parent test step"
+                    },
+                    "execution_order_validation": {
+                        "sequential_order": "Order field must increment sequentially without gaps",
+                        "parent_child_order": "Child steps (1a, 1b) must follow parent step order",
+                        "no_parallel_execution": "All steps execute in strict sequence"
+                    },
+                    "explicit_mapping_validation": {
+                        "clear_relationship": "Each mapping must explicitly state test step to script line relationship",
+                        "mapping_type_declared": "Must specify one-to-one or one-to-many",
+                        "split_steps_documented": "For one-to-many, all split steps must be listed"
+                    }
+                },
+                "reusability_framework": {
+                    "template_structure": "This rule set serves as template for all test case automation",
+                    "adaptable_patterns": "Mapping rules apply to any test case with similar step structures",
+                    "consistent_naming": "Use consistent naming conventions for split steps across all test cases",
+                    "version_control": "Track rule version for updates and improvements"
+                },
+                "strict_enforcement_policy": {
+                    "no_exceptions": "All rules must be followed without exception",
+                    "validation_required": "Automated validation of rule compliance before script execution",
+                    "audit_trail": "Maintain record of all mappings and intermediary steps for compliance",
+                    "failure_handling": "Script execution fails if any rule is violated"
+                }
+            }
         }
     ]
 }
