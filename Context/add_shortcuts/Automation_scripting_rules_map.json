@@ -1,0 +1,136 @@
+{
+    "Context/add_shortcuts/Automation_scripting_rules_map.json": [
+        {
+            "correlation_steps_to_scripts": [
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution \u2013 Application Reset",
+                    "mapped_script_line": "self.fc.reset_app()"
+                },
+                {
+                    "test_step": "1. Install and Launch the HPX app.",
+                    "mapped_script_line": "self.fc.flow_load_home_screen(skip_value_prop=False)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution \u2013 Initiate Add Device Flow",
+                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn()"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution \u2013 Search and Select Printer",
+                    "mapped_script_line": "self.printers.search_printer_by_ip(self.p.ipAddress)"
+                },
+                {
+                    "test_step": "2. Click on the printer icon on the root view screen.",
+                    "mapped_script_line": "self.hpx_printer_details.click_printer_device_card()"
+                },
+                {
+                    "test_step": "3. Then click on the shortcuts tile on the device details page.",
+                    "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation \u2013 Verify Shortcuts Screen",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                },
+                {
+                    "test_step": "4. Click on Add new shortcuts in shortcuts screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_add_new_shortcut_btn()"
+                },
+                {
+                    "test_step": "5. The click on the Create your own shortcut arrow button. | 6. Verify the screen.",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()"
+                }
+            ],
+            "intermediary_steps": [
+                {
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution \u2013 Application Reset",
+                    "automation_script_step": "self.fc.reset_app()",
+                    "steps": [
+                        "Reset the application to ensure a clean state before test execution."
+                    ]
+                },
+                {
+                    "test_case_step": "1. Install and Launch the HPX app.",
+                    "automation_script_step": "self.fc.flow_load_home_screen(skip_value_prop=False)",
+                    "steps": [
+                        "Install the HPX app if not already installed.",
+                        "Launch the HPX app and wait for the home screen to load."
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution \u2013 Initiate Add Device Flow",
+                    "automation_script_step": "self.hpx_printer_details.click_add_device_btn()",
+                    "steps": [
+                        "Initiate the add device flow to ensure a printer is available for the test."
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution \u2013 Search and Select Printer",
+                    "automation_script_step": "self.printers.search_printer_by_ip(self.p.ipAddress)",
+                    "steps": [
+                        "Search for the printer by its IP address and select it."
+                    ]
+                },
+                {
+                    "test_case_step": "2. Click on the printer icon on the root view screen.",
+                    "automation_script_step": "self.hpx_printer_details.click_printer_device_card()",
+                    "steps": [
+                        "Locate the printer icon on the root view screen.",
+                        "Click the printer icon to access device details."
+                    ]
+                },
+                {
+                    "test_case_step": "3. Then click on the shortcuts tile on the device details page.",
+                    "automation_script_step": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)",
+                    "steps": [
+                        "On the device details page, find the shortcuts tile.",
+                        "Click the shortcuts tile to navigate to the shortcuts screen."
+                    ]
+                },
+                {
+                    "test_case_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation \u2013 Verify Shortcuts Screen",
+                    "automation_script_step": "assert self.hpx_shortcuts.verify_shortcuts_screen_title()",
+                    "steps": [
+                        "Verify that the shortcuts screen title is displayed as expected."
+                    ]
+                },
+                {
+                    "test_case_step": "4. Click on Add new shortcuts in shortcuts screen.",
+                    "automation_script_step": "self.hpx_shortcuts.click_add_new_shortcut_btn()",
+                    "steps": [
+                        "On the shortcuts screen, locate the 'Add new shortcuts' button.",
+                        "Click the button to proceed to the next step."
+                    ]
+                },
+                {
+                    "test_case_step": "5. The click on the Create your own shortcut arrow button. | 6. Verify the screen.",
+                    "automation_script_step": "assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()",
+                    "steps": [
+                        "Click the 'Create your own shortcut' arrow button.",
+                        "Verify that the 'Add shortcut' screen is displayed."
+                    ]
+                }
+            ],
+            "automation_scripts_rules": [
+                {
+                    "rule_id": "RUL-001",
+                    "description": "Rule for mapping test case steps and implicit/supporting steps to automation script lines with intermediary steps for 'Verify the screen, when user clicks on the 'Create your own shortcut' arrow button in 'Add new shortcuts' screen.'",
+                    "applies_to": "All test steps, implicit steps, and supporting steps in the test case flow for 'Verify the screen, when user clicks on the 'Create your own shortcut' arrow button in 'Add new shortcuts' screen.'",
+                    "rule_definition": [
+                        "WHEN: A test step from the test case or an implicit/supporting step is encountered during automation scripting for this test case.",
+                        "THEN: Map each test step to its corresponding script line and implement all intermediary steps. For steps that are split or correspond to multiple actions, split them into sub-steps (e.g., 5a, 5b) and ensure each sub-step maps to one script line, executed in order. For implicit/supporting steps, always include them even if not in the manual steps, as they are required for test execution or validation.",
+                        "IMPLEMENTATION: 1. Always begin with 'Implicit Step \u2013 Required for Test Execution \u2013 Application Reset' (self.fc.reset_app()) and its intermediary step. 2. For each test step, follow the mapping and intermediary steps as listed. 3. For implicit steps like 'Initiate Add Device Flow' and 'Search and Select Printer', always include them in sequence after app launch and before device interaction. 4. For supporting steps like 'Verify Shortcuts Screen', always include the verification assertion after navigating to the shortcuts screen. 5. For combined steps (e.g., '5. The click on the Create your own shortcut arrow button. | 6. Verify the screen.'), ensure both actions (click and verify) are implemented as per the mapped script line and intermediary steps. 6. Never skip or merge steps; always follow the explicit breakdown and execution order."
+                    ]
+                },
+                {
+                    "rule_id": "RUL-002",
+                    "description": "Rule for handling implicit and supporting steps for purpose validation in 'Verify the screen, when user clicks on the 'Create your own shortcut' arrow button in 'Add new shortcuts' screen.'",
+                    "applies_to": "All implicit and supporting steps not explicitly listed in the manual test steps but present in the correlation mapping for this test case.",
+                    "rule_definition": [
+                        "WHEN: Automating test cases of type 'Verify the screen, when user clicks on the 'Create your own shortcut' arrow button in 'Add new shortcuts' screen.'",
+                        "THEN: You MUST include all implicit steps (e.g., Application Reset, Initiate Add Device Flow, Search and Select Printer) and supporting steps (e.g., Verify Shortcuts Screen) as mapped, even if not present in the manual test steps.",
+                        "IMPLEMENTATION: For each implicit/supporting step, use the mapped script line and intermediary steps. For example, always call self.fc.reset_app() at the start, self.hpx_printer_details.click_add_device_btn() and self.printers.search_printer_by_ip(self.p.ipAddress) before device interaction, and assert self.hpx_shortcuts.verify_shortcuts_screen_title() after navigating to the shortcuts screen. These steps are required to ensure the test case purpose is fully validated and the automation is robust."
+                    ]
+                }
+            ]
+        }
+    ]
+}
