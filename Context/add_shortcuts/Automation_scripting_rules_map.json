@@ -1,5 +1,164 @@
 {
-    "{{automation-script-path_string_true}}": [
+    "Context/add_shortcuts/Automation_scripting_rules_map.json": [
+        {
+            "{{automation-script-path_string_true}}": [
+                {
+                    "correlation_steps_to_scripts": [
+                        {
+                            "test_step": "1.Install and Launch the HPX app.",
+                            "mapped_script_line": "self.fc.reset_app(), self.fc.flow_load_home_screen(skip_value_prop=False)"
+                        },
+                        {
+                            "test_step": "Implicit Step \u2013 Required for Test Execution: Add supported printer on root view.",
+                            "mapped_script_line": "self.hpx_printer_details.click_add_device_btn(), self.printers.search_printer_by_ip(self.p.ipAddress), self.hpx_printer_details.click_printer_device_card()"
+                        },
+                        {
+                            "test_step": "2.Navigate to printer details screen.",
+                            "mapped_script_line": "self.hpx_printer_details.click_printer_device_card()"
+                        },
+                        {
+                            "test_step": "3.Navigate to 'Shortcuts' screen.",
+                            "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False), self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                        },
+                        {
+                            "test_step": "4.Click on the edit link.",
+                            "mapped_script_line": "self.hpx_shortcuts.click_shortcuts_edit_btn()"
+                        },
+                        {
+                            "test_step": "5.Click on the Edit icon of the Email shortcut.",
+                            "mapped_script_line": "# Write click to edit the shortcut since element is not available in the page source (comment), self.hpx_shortcuts.verify_edit_shortcuts_screen_title()"
+                        },
+                        {
+                            "test_step": "6.Click on the cancel button of pop up screen.",
+                            "mapped_script_line": "self.hpx_shortcuts.click_cancel_shortcut_go_back_btn(), self.hpx_shortcuts.verify_cancel_this_shortcut_title(), self.hpx_shortcuts.click_cancel_shortcut_yes_cancel_btn()"
+                        },
+                        {
+                            "test_step": "7.Verify the screen.",
+                            "mapped_script_line": "assert self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                        },
+                        {
+                            "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify edit shortcuts screen title before cancel.",
+                            "mapped_script_line": "self.hpx_shortcuts.verify_edit_shortcuts_screen_title()"
+                        },
+                        {
+                            "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify cancel confirmation popup title.",
+                            "mapped_script_line": "self.hpx_shortcuts.verify_cancel_this_shortcut_title()"
+                        }
+                    ],
+                    "intermediary_steps": [
+                        {
+                            "test_case_step": "1.Install and Launch the HPX app.",
+                            "automation_script_step": "self.fc.reset_app(), self.fc.flow_load_home_screen(skip_value_prop=False)",
+                            "steps": [
+                                "Reset the HPX app to initial state",
+                                "Load the home screen, do not skip value proposition"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Implicit Step \u2013 Required for Test Execution: Add supported printer on root view.",
+                            "automation_script_step": "self.hpx_printer_details.click_add_device_btn(), self.printers.search_printer_by_ip(self.p.ipAddress), self.hpx_printer_details.click_printer_device_card()",
+                            "steps": [
+                                "Click add device button",
+                                "Search printer by IP address",
+                                "Click printer device card"
+                            ]
+                        },
+                        {
+                            "test_case_step": "2.Navigate to printer details screen.",
+                            "automation_script_step": "self.hpx_printer_details.click_printer_device_card()",
+                            "steps": [
+                                "Click printer device card to open details"
+                            ]
+                        },
+                        {
+                            "test_case_step": "3.Navigate to 'Shortcuts' screen.",
+                            "automation_script_step": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False), self.hpx_shortcuts.verify_shortcuts_screen_title()",
+                            "steps": [
+                                "Click shortcuts tile",
+                                "Verify shortcuts screen title"
+                            ]
+                        },
+                        {
+                            "test_case_step": "4.Click on the edit link.",
+                            "automation_script_step": "self.hpx_shortcuts.click_shortcuts_edit_btn()",
+                            "steps": [
+                                "Click edit button for shortcuts"
+                            ]
+                        },
+                        {
+                            "test_case_step": "5.Click on the Edit icon of the Email shortcut.",
+                            "automation_script_step": "# Write click to edit the shortcut since element is not available in the page source (comment), self.hpx_shortcuts.verify_edit_shortcuts_screen_title()",
+                            "steps": [
+                                "(Comment: Write click to edit the shortcut since element is not available in the page source)",
+                                "Verify edit shortcuts screen title"
+                            ]
+                        },
+                        {
+                            "test_case_step": "6.Click on the cancel button of pop up screen.",
+                            "automation_script_step": "self.hpx_shortcuts.click_cancel_shortcut_go_back_btn(), self.hpx_shortcuts.verify_cancel_this_shortcut_title(), self.hpx_shortcuts.click_cancel_shortcut_yes_cancel_btn()",
+                            "steps": [
+                                "Click cancel/go back button on shortcut popup",
+                                "Verify cancel confirmation popup title",
+                                "Click yes/cancel button on confirmation popup"
+                            ]
+                        },
+                        {
+                            "test_case_step": "7.Verify the screen.",
+                            "automation_script_step": "assert self.hpx_shortcuts.verify_shortcuts_screen_title()",
+                            "steps": [
+                                "Assert that the shortcuts screen title is displayed"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify edit shortcuts screen title before cancel.",
+                            "automation_script_step": "self.hpx_shortcuts.verify_edit_shortcuts_screen_title()",
+                            "steps": [
+                                "Verify edit shortcuts screen title before cancel"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify cancel confirmation popup title.",
+                            "automation_script_step": "self.hpx_shortcuts.verify_cancel_this_shortcut_title()",
+                            "steps": [
+                                "Verify cancel confirmation popup title"
+                            ]
+                        }
+                    ],
+                    "automation_scripts_rules": [
+                        {
+                            "rule_id": "RUL-001",
+                            "description": "One-to-one mapping rule for direct test step to script line conversion.",
+                            "applies_to": "Test steps where a single manual step maps to a single automation script line (e.g., steps 1, 2, 3, 4, 7).",
+                            "rule_definition": [
+                                "WHEN: A test step directly corresponds to one automation script line.",
+                                "THEN: Implement the automation using the mapped script line and follow all intermediary steps for that mapping.",
+                                "IMPLEMENTATION: For example, for '2.Navigate to printer details screen.', use 'self.hpx_printer_details.click_printer_device_card()' and follow: ['Click printer device card to open details']."
+                            ]
+                        },
+                        {
+                            "rule_id": "RUL-002",
+                            "description": "One-to-many mapping rule for splitting test steps into sub-steps for multiple automation actions.",
+                            "applies_to": "Test steps where a single manual step corresponds to multiple automation script lines (e.g., step 6, step 3, implicit add printer step, etc.).",
+                            "rule_definition": [
+                                "WHEN: A test step corresponds to multiple automation actions.",
+                                "THEN: You MUST split the step into sub-steps (e.g., 6a, 6b, 6c, etc.), each mapping to one script line, and implement all sub-steps in sequence.",
+                                "IMPLEMENTATION: Step Breakdown: Step 6 \u2192 6a \u2192 'self.hpx_shortcuts.click_cancel_shortcut_go_back_btn()', 6b \u2192 'self.hpx_shortcuts.verify_cancel_this_shortcut_title()', 6c \u2192 'self.hpx_shortcuts.click_cancel_shortcut_yes_cancel_btn()'. Intermediary steps: ['Click cancel/go back button on shortcut popup','Verify cancel confirmation popup title','Click yes/cancel button on confirmation popup']. Execution order must be enforced and no steps skipped."
+                            ]
+                        },
+                        {
+                            "rule_id": "RUL-003",
+                            "description": "Purpose-based/supporting step rule for implicit steps required for test execution or validation.",
+                            "applies_to": "Any test case of type 'Verify the screen, when user clicks on the cancel button of 'Email' destination shortcut.' where implicit/supporting steps are present in the correlation.",
+                            "rule_definition": [
+                                "WHEN: Executing test cases of type 'Verify the screen, when user clicks on the cancel button of 'Email' destination shortcut.'",
+                                "THEN: You MUST include all implicit/supporting steps (e.g., 'Add supported printer on root view.', 'Verify edit shortcuts screen title before cancel.', 'Verify cancel confirmation popup title.') even if not explicitly mentioned in the manual test steps, as they are required for test case purpose validation.",
+                                "IMPLEMENTATION: For 'Add supported printer on root view.', use 'self.hpx_printer_details.click_add_device_btn(), self.printers.search_printer_by_ip(self.p.ipAddress), self.hpx_printer_details.click_printer_device_card()' with intermediary steps: ['Click add device button','Search printer by IP address','Click printer device card']. For 'Verify edit shortcuts screen title before cancel.', use 'self.hpx_shortcuts.verify_edit_shortcuts_screen_title()' with intermediary step: ['Verify edit shortcuts screen title before cancel']. For 'Verify cancel confirmation popup title.', use 'self.hpx_shortcuts.verify_cancel_this_shortcut_title()' with intermediary step: ['Verify cancel confirmation popup title']. These steps are mandatory for fulfilling the test case purpose and must not be omitted."
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "correlation_steps_to_scripts": [
                 {
@@ -7,7 +166,7 @@
                     "mapped_script_line": "self.fc.reset_app(), self.fc.flow_load_home_screen(skip_value_prop=False)"
                 },
                 {
-                    "test_step": "Implicit Step \u2013 Required for Test Execution: Add supported printer on root view.",
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Add supported printer on root view",
                     "mapped_script_line": "self.hpx_printer_details.click_add_device_btn(), self.printers.search_printer_by_ip(self.p.ipAddress), self.hpx_printer_details.click_printer_device_card()"
                 },
                 {
@@ -23,24 +182,24 @@
                     "mapped_script_line": "self.hpx_shortcuts.click_shortcuts_edit_btn()"
                 },
                 {
-                    "test_step": "5.Click on the Edit icon of the Email shortcut.",
-                    "mapped_script_line": "# Write click to edit the shortcut since element is not available in the page source (comment), self.hpx_shortcuts.verify_edit_shortcuts_screen_title()"
+                    "test_step": "5.Click on the Edit icon of the Save shortcut.",
+                    "mapped_script_line": "self.hpx_shortcuts.check_toggle_enabled_or_disabled(\"edit_shortcut_save_toggle_btn\")"
                 },
                 {
-                    "test_step": "6.Click on the cancel button of pop up screen.",
-                    "mapped_script_line": "self.hpx_shortcuts.click_cancel_shortcut_go_back_btn(), self.hpx_shortcuts.verify_cancel_this_shortcut_title(), self.hpx_shortcuts.click_cancel_shortcut_yes_cancel_btn()"
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Check if Save toggle is enabled",
+                    "mapped_script_line": "is_save_toggle_enabled = self.hpx_shortcuts.check_toggle_enabled_or_disabled(\"edit_shortcut_save_toggle_btn\")"
                 },
                 {
-                    "test_step": "7.Verify the screen.",
-                    "mapped_script_line": "assert self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Click Edit icon of Save shortcut if enabled",
+                    "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_save_toggle_btn()"
                 },
                 {
-                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify edit shortcuts screen title before cancel.",
-                    "mapped_script_line": "self.hpx_shortcuts.verify_edit_shortcuts_screen_title()"
+                    "test_step": "6.Verify the pop up.",
+                    "mapped_script_line": "self.hpx_shortcuts.verify_toggle_disabling_confirmation_msg_title()"
                 },
                 {
-                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify cancel confirmation popup title.",
-                    "mapped_script_line": "self.hpx_shortcuts.verify_cancel_this_shortcut_title()"
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Raise error if Save toggle is not enabled",
+                    "mapped_script_line": "raise AssertionError(\"Save toggle is not enabled, cannot proceed with the test.\")"
                 }
             ],
             "intermediary_steps": [
@@ -48,12 +207,12 @@
                     "test_case_step": "1.Install and Launch the HPX app.",
                     "automation_script_step": "self.fc.reset_app(), self.fc.flow_load_home_screen(skip_value_prop=False)",
                     "steps": [
-                        "Reset the HPX app to initial state",
+                        "Reset the app to initial state",
                         "Load the home screen, do not skip value proposition"
                     ]
                 },
                 {
-                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Add supported printer on root view.",
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Add supported printer on root view",
                     "automation_script_step": "self.hpx_printer_details.click_add_device_btn(), self.printers.search_printer_by_ip(self.p.ipAddress), self.hpx_printer_details.click_printer_device_card()",
                     "steps": [
                         "Click add device button",
@@ -80,77 +239,54 @@
                     "test_case_step": "4.Click on the edit link.",
                     "automation_script_step": "self.hpx_shortcuts.click_shortcuts_edit_btn()",
                     "steps": [
-                        "Click edit button for shortcuts"
+                        "Click edit button on shortcuts screen"
                     ]
                 },
                 {
-                    "test_case_step": "5.Click on the Edit icon of the Email shortcut.",
-                    "automation_script_step": "# Write click to edit the shortcut since element is not available in the page source (comment), self.hpx_shortcuts.verify_edit_shortcuts_screen_title()",
+                    "test_case_step": "5.Click on the Edit icon of the Save shortcut.",
+                    "automation_script_step": "self.hpx_shortcuts.check_toggle_enabled_or_disabled(\"edit_shortcut_save_toggle_btn\")",
                     "steps": [
-                        "(Comment: Write click to edit the shortcut since element is not available in the page source)",
-                        "Verify edit shortcuts screen title"
+                        "Check if edit shortcut save toggle button is enabled or disabled"
                     ]
                 },
                 {
-                    "test_case_step": "6.Click on the cancel button of pop up screen.",
-                    "automation_script_step": "self.hpx_shortcuts.click_cancel_shortcut_go_back_btn(), self.hpx_shortcuts.verify_cancel_this_shortcut_title(), self.hpx_shortcuts.click_cancel_shortcut_yes_cancel_btn()",
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Check if Save toggle is enabled",
+                    "automation_script_step": "is_save_toggle_enabled = self.hpx_shortcuts.check_toggle_enabled_or_disabled(\"edit_shortcut_save_toggle_btn\")",
                     "steps": [
-                        "Click cancel/go back button on shortcut popup",
-                        "Verify cancel confirmation popup title",
-                        "Click yes/cancel button on confirmation popup"
+                        "Assign result of toggle check to variable"
                     ]
                 },
                 {
-                    "test_case_step": "7.Verify the screen.",
-                    "automation_script_step": "assert self.hpx_shortcuts.verify_shortcuts_screen_title()",
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Click Edit icon of Save shortcut if enabled",
+                    "automation_script_step": "self.hpx_shortcuts.click_edit_shortcut_save_toggle_btn()",
                     "steps": [
-                        "Assert that the shortcuts screen title is displayed"
+                        "Click edit shortcut save toggle button if enabled"
                     ]
                 },
                 {
-                    "test_case_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify edit shortcuts screen title before cancel.",
-                    "automation_script_step": "self.hpx_shortcuts.verify_edit_shortcuts_screen_title()",
+                    "test_case_step": "6.Verify the pop up.",
+                    "automation_script_step": "self.hpx_shortcuts.verify_toggle_disabling_confirmation_msg_title()",
                     "steps": [
-                        "Verify edit shortcuts screen title before cancel"
+                        "Verify confirmation message title for disabling toggle"
                     ]
                 },
                 {
-                    "test_case_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify cancel confirmation popup title.",
-                    "automation_script_step": "self.hpx_shortcuts.verify_cancel_this_shortcut_title()",
+                    "test_case_step": "Implicit Step \u2013 Required for Test Execution: Raise error if Save toggle is not enabled",
+                    "automation_script_step": "raise AssertionError(\"Save toggle is not enabled, cannot proceed with the test.\")",
                     "steps": [
-                        "Verify cancel confirmation popup title"
+                        "Raise assertion error if toggle is not enabled"
                     ]
                 }
             ],
             "automation_scripts_rules": [
                 {
                     "rule_id": "RUL-001",
-                    "description": "One-to-one mapping rule for direct test step to script line conversion.",
-                    "applies_to": "Test steps where a single manual step maps to a single automation script line (e.g., steps 1, 2, 3, 4, 7).",
+                    "description": "Automation scripting rules for mapping test steps to script lines and intermediary steps for 'Verify the screen, when user removes the 'Save' destination shortcut.'",
+                    "applies_to": "All test steps and implicit/supporting steps for this test case.",
                     "rule_definition": [
-                        "WHEN: A test step directly corresponds to one automation script line.",
-                        "THEN: Implement the automation using the mapped script line and follow all intermediary steps for that mapping.",
-                        "IMPLEMENTATION: For example, for '2.Navigate to printer details screen.', use 'self.hpx_printer_details.click_printer_device_card()' and follow: ['Click printer device card to open details']."
-                    ]
-                },
-                {
-                    "rule_id": "RUL-002",
-                    "description": "One-to-many mapping rule for splitting test steps into sub-steps for multiple automation actions.",
-                    "applies_to": "Test steps where a single manual step corresponds to multiple automation script lines (e.g., step 6, step 3, implicit add printer step, etc.).",
-                    "rule_definition": [
-                        "WHEN: A test step corresponds to multiple automation actions.",
-                        "THEN: You MUST split the step into sub-steps (e.g., 6a, 6b, 6c, etc.), each mapping to one script line, and implement all sub-steps in sequence.",
-                        "IMPLEMENTATION: Step Breakdown: Step 6 \u2192 6a \u2192 'self.hpx_shortcuts.click_cancel_shortcut_go_back_btn()', 6b \u2192 'self.hpx_shortcuts.verify_cancel_this_shortcut_title()', 6c \u2192 'self.hpx_shortcuts.click_cancel_shortcut_yes_cancel_btn()'. Intermediary steps: ['Click cancel/go back button on shortcut popup','Verify cancel confirmation popup title','Click yes/cancel button on confirmation popup']. Execution order must be enforced and no steps skipped."
-                    ]
-                },
-                {
-                    "rule_id": "RUL-003",
-                    "description": "Purpose-based/supporting step rule for implicit steps required for test execution or validation.",
-                    "applies_to": "Any test case of type 'Verify the screen, when user clicks on the cancel button of 'Email' destination shortcut.' where implicit/supporting steps are present in the correlation.",
-                    "rule_definition": [
-                        "WHEN: Executing test cases of type 'Verify the screen, when user clicks on the cancel button of 'Email' destination shortcut.'",
-                        "THEN: You MUST include all implicit/supporting steps (e.g., 'Add supported printer on root view.', 'Verify edit shortcuts screen title before cancel.', 'Verify cancel confirmation popup title.') even if not explicitly mentioned in the manual test steps, as they are required for test case purpose validation.",
-                        "IMPLEMENTATION: For 'Add supported printer on root view.', use 'self.hpx_printer_details.click_add_device_btn(), self.printers.search_printer_by_ip(self.p.ipAddress), self.hpx_printer_details.click_printer_device_card()' with intermediary steps: ['Click add device button','Search printer by IP address','Click printer device card']. For 'Verify edit shortcuts screen title before cancel.', use 'self.hpx_shortcuts.verify_edit_shortcuts_screen_title()' with intermediary step: ['Verify edit shortcuts screen title before cancel']. For 'Verify cancel confirmation popup title.', use 'self.hpx_shortcuts.verify_cancel_this_shortcut_title()' with intermediary step: ['Verify cancel confirmation popup title']. These steps are mandatory for fulfilling the test case purpose and must not be omitted."
+                        "WHEN: A test step from the manual test case or an implicit/supporting step is encountered during automation scripting for 'Verify the screen, when user removes the 'Save' destination shortcut.'",
+                        "THEN: Map each test step to its corresponding script line(s) and intermediary steps as defined in the correlation and intermediary_steps arrays. For steps that require multiple actions (one-to-many mapping), split them into sub-steps (e.g., 1a, 1b, etc.), ensure each sub-step maps to one script line, and enforce sequential execution. For implicit/supporting steps (e.g., adding printer, checking toggle, raising errors), always include them even if not explicitly mentioned in manual steps, as they are required for test case purpose validation.",
+                        "IMPLEMENTATION: For each step, follow the exact script line(s) and intermediary steps as defined. Do not skip any step, do not merge multiple script lines into one, and always include purpose-based steps when applicable. Enforce execution order as per the intermediary_steps array. Ensure full script coverage and explicit mapping clarity for future automation development."
                     ]
                 }
             ]
