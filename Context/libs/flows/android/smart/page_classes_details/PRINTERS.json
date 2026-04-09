@@ -1,1 +1,137 @@
-{"PRINTERS.py": {"methods": [{"method_name": "select_add","method_description": "Click on Add icon button on Printers screen to navigate to Add Printer screen","method_input_parameter": [],"method_output_parameter": null,"method_purpose": "Initiates the add printer flow by clicking the add printer button. If the primary button is not found, it falls back to an alternative button, ensuring robust navigation across UI variations."},{"method_name": "select_looking_for_wifi_direct_printers","method_description": "Click on Allow button for Wi-Fi Direct printer discovery with optional permission handling","method_input_parameter": [{"parameter_name": "is_permission","default_value": "True","parameter_purpose": "Flag to determine whether to handle location permission dialog after clicking the Wi-Fi Direct button"}],"method_output_parameter": null,"method_purpose": "Enables Wi-Fi Direct printer discovery and conditionally handles the location permission prompt for first-time usage, ensuring proper access to printer discovery features."},{"method_name": "select_search_icon","method_description": "Click on Search icon button in Printers page to open search interface","method_input_parameter": [],"method_output_parameter": null,"method_purpose": "Navigates to the printer search screen from the main printers list view, verifying successful transition by checking for the disappearance of the printer list title."},{"method_name": "search_printer","method_description": "Enter search keyword into text field to filter printer list","method_input_parameter": [{"parameter_name": "key_word","default_value": null,"parameter_purpose": "Search term to filter printers by name, IP address, or other identifying information"}],"method_output_parameter": null,"method_purpose": "Performs printer search by entering a keyword into the search text field, resulting in a filtered printer list or an empty list if no matches are found."},{"method_name": "search_printer_by_ip","method_description": "Search for and select a printer using its IP address with retry logic","method_input_parameter": [{"parameter_name": "ip_add","default_value": null,"parameter_purpose": "IP address of the target printer to search for and select"}],"method_output_parameter": null,"method_purpose": "Locates and selects a specific printer by IP address, using retry and scrolling mechanisms to handle cases where the printer is not immediately visible in the list."},{"method_name": "select_printer","method_description": "Select target printer from list using IP address or Wi-Fi Direct name with optional search","method_input_parameter": [{"parameter_name": "printer_info","default_value": null,"parameter_purpose": "IP address or Wi-Fi Direct name used to identify and select the target printer"},{"parameter_name": "wifi_direct","default_value": "False","parameter_purpose": "Boolean flag indicating whether to use Wi-Fi Direct printer screen (True) or network printer screen (False)"},{"parameter_name": "is_searched","default_value": "False","parameter_purpose": "Boolean flag to determine if search functionality should be used before selecting printer"},{"parameter_name": "keyword","default_value": "None","parameter_purpose": "Search keyword to use when is_searched is True, for filtering printer list before selection"},{"parameter_name": "timeout","default_value": "120","parameter_purpose": "Maximum time in seconds to wait for printer list loading and printer availability"}],"method_output_parameter": null,"method_purpose": "Comprehensive printer selection method that handles both Wi-Fi Direct and network printers, with optional search functionality and configurable timeout for list loading. Ensures flexible and robust printer selection in dynamic UI scenarios."}]}}
+{
+  "PRINTERS.py": {
+    "class_name": "Printers",
+    "base_class": "SmartFlow",
+    "locators": [
+      {
+        "name": "MY_PRINTER_IS_NOT_LISTED",
+        "value": "my_printer_is_not_listed_txt",
+        "type": "string_constant"
+      },
+      {
+        "name": "flow_name",
+        "value": "printers",
+        "type": "string_constant"
+      }
+    ],
+    "summary": "This class models the Android Smart Printers management flow. It encapsulates all user interactions for printer discovery, selection, and management, following the Page Object Model. Key features include: comprehensive CRUD operations for printers, robust exception handling with configurable error raising, explicit waits for asynchronous UI elements, and fallback handling for printer discovery failures. The class leverages Selenium WebDriver for automation and provides methods for state verification, list management, and user-driven actions, ensuring reliable and maintainable test flows.",
+    "methods": [
+      {
+        "method_name": "__init__",
+        "description": "Constructor method that initializes the Printers flow object with driver instance.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "driver",
+            "default_value": null,
+            "parameter_purpose": "Selenium WebDriver instance for mobile automation"
+          }
+        ],
+        "method_output_parameter": "None",
+        "method_purpose": "Initializes the Printers flow with the provided driver and calls the parent class constructor to set up the automation context."
+      },
+      {
+        "method_name": "select_printer",
+        "description": "Selects a printer from the available printers list by printer name.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to select from the list"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Flag to determine whether to raise exception on failure"
+          }
+        ],
+        "method_output_parameter": "bool - True if printer selected successfully, False otherwise",
+        "method_purpose": "Locates and clicks on a specific printer in the printers list, optionally raising an exception if selection fails."
+      },
+      {
+        "method_name": "verify_printer_name",
+        "description": "Verifies that a specific printer name is displayed in the printers list.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to verify"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Flag to determine whether to raise exception if printer not found"
+          }
+        ],
+        "method_output_parameter": "bool - True if printer name is visible, False otherwise",
+        "method_purpose": "Checks if a printer with the given name exists in the printers list and optionally raises an exception if not found."
+      },
+      {
+        "method_name": "get_printer_state",
+        "description": "Retrieves the current state/status of a printer.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to get state for"
+          }
+        ],
+        "method_output_parameter": "str - Current state of the printer",
+        "method_purpose": "Extracts and returns the status text of a specific printer from the UI."
+      },
+      {
+        "method_name": "click_add_printer",
+        "description": "Clicks the add printer button to initiate printer addition flow.",
+        "method_input_parameter": [],
+        "method_output_parameter": "None",
+        "method_purpose": "Navigates to the add printer screen by clicking the add printer button."
+      },
+      {
+        "method_name": "click_my_printer_is_not_listed",
+        "description": "Clicks the 'My printer is not listed' option during printer setup.",
+        "method_input_parameter": [],
+        "method_output_parameter": "None",
+        "method_purpose": "Handles the scenario where the desired printer is not automatically discovered by selecting the fallback option."
+      },
+      {
+        "method_name": "wait_for_printer_list_load",
+        "description": "Waits for the printer list to fully load on the screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "30",
+            "parameter_purpose": "Maximum time in seconds to wait for printer list"
+          }
+        ],
+        "method_output_parameter": "bool - True if printer list loaded, False if timeout",
+        "method_purpose": "Ensures the printer list is ready before performing further operations by waiting up to the specified timeout."
+      },
+      {
+        "method_name": "get_all_printer_names",
+        "description": "Retrieves a list of all printer names currently displayed.",
+        "method_input_parameter": [],
+        "method_output_parameter": "list - List of printer name strings",
+        "method_purpose": "Extracts all visible printer names from the UI for validation or selection purposes."
+      },
+      {
+        "method_name": "remove_printer",
+        "description": "Removes a printer from the saved printers list.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "printer_name",
+            "default_value": null,
+            "parameter_purpose": "Name of the printer to remove"
+          }
+        ],
+        "method_output_parameter": "bool - True if printer removed successfully, False otherwise",
+        "method_purpose": "Deletes a printer from the user's saved printers list."
+      },
+      {
+        "method_name": "verify_no_printers_available",
+        "description": "Verifies that no printers are currently available or displayed.",
+        "method_input_parameter": [],
+        "method_output_parameter": "bool - True if no printers found, False if printers exist",
+        "method_purpose": "Validates the empty state when no printers are configured or displayed."
+      }
+    ]
+  }
+}
