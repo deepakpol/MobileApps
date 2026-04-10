@@ -1,22 +1,168 @@
 {
     "Context/add_shortcuts/Automation_scripting_rules_map.json": [
-        ...
         {
-            "correlation_steps_to_scripts": [
-                {"test_step": "Reset HPX application to default state and ensure user is logged in before launching.", "mapped_script_line": "self.fc.reset_app()"},
-                {"test_step": "Add supported printer device via 'Add Device' button on root view screen, searching by IP address, and verify printer is listed and ready.", "mapped_script_line": "self.hpx_printer_details.click_add_device_btn() → self.printers.search_printer_by_ip(self.p.ipAddress)"},
-                {"test_step": "After each navigation (root view, device details, shortcuts screen, add new shortcuts screen), assert that the expected screen title and main UI elements are visible and correctly rendered for early failure detection.", "mapped_script_line": "assert self.hpx_shortcuts.verify_shortcuts_screen_title(), assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()"}
-            ],
-            "intermediary_steps": [
-                {"test_case_step": "Reset application to initial state before launching HPX app", "automation_script_step": "self.fc.reset_app()", "steps": ["[Step 1] Initialize the test environment and ensure clean state", "[Step 2] Invoke the reset_app() method from the flow controller", "[Step 3] Verify application returns to initial state successfully"]},
-                {"test_case_step": "Add printer device (precondition) via Add Device button and search by IP address", "automation_script_step": "self.hpx_printer_details.click_add_device_btn() → self.printers.search_printer_by_ip(self.p.ipAddress)", "steps": ["[Step 1] Navigate to the printer management section on root view", "[Step 2] Locate and click the 'Add Device' button", "[Step 3] Access the printer search functionality", "[Step 4] Input the printer IP address from test configuration", "[Step 5] Execute search and verify printer is discovered and added successfully"]},
-                {"test_case_step": "Verify shortcuts screen is displayed after navigation", "automation_script_step": "assert self.hpx_shortcuts.verify_shortcuts_screen_title()", "steps": ["[Step 1] Retrieve the shortcuts screen title element", "[Step 2] Verify the title matches expected shortcuts screen identifier", "[Step 3] Assert validation passes confirming shortcuts screen is displayed"]},
-                {"test_case_step": "Verify add new shortcut screen is displayed after clicking Add New Shortcut button", "automation_script_step": "assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()", "steps": ["[Step 1] Retrieve the add new shortcut screen title element", "[Step 2] Verify the title matches expected add new shortcut screen identifier", "[Step 3] Assert validation passes confirming add new shortcut screen is displayed"]}
-            ],
-            "automation_scripts_rules": [
-                {"rule_id": "NEW-RUL-001", "description": "Explicitly document implicit steps in the test case for traceability (reset app, printer addition, screen verifications)", "applies_to": "All test case automation scripts", "rule_definition": ["WHEN: Test case contains implicit steps required for execution", "THEN: Document these steps explicitly in the automation mapping for traceability", "IMPLEMENTATION: Include reset app, printer addition, and screen verification steps as explicit intermediary steps"]},
-                {"rule_id": "NEW-RUL-002", "description": "Ensure all supporting validation steps (screen title assertions) are included in automation scripts for early failure detection", "applies_to": "All navigation and screen transition steps", "rule_definition": ["WHEN: Navigating between screens or views", "THEN: Assert screen title and main UI elements are visible and correctly rendered", "IMPLEMENTATION: Add assertion steps after each navigation to verify screen title and UI elements"]},
-                {"rule_id": "NEW-RUL-003", "description": "Maintain strict sequential execution order and intermediary step granularity in automation implementation", "applies_to": "All automation script steps within a test case", "rule_definition": ["WHEN: Multiple steps exist in automation script", "THEN: Execute in strict sequential order and maintain intermediary step granularity", "IMPLEMENTATION: Follow execution order and ensure intermediary steps are detailed for each script line"]}
+            "_raw_previous_content": "{\n    \"Context/add_shortcuts/Automation_scripting_rules_map.json\": [\n        ...\n        {\n            \"correlation_steps_to_scripts\": [\n                {\"test_step\": \"Reset HPX application to default state and ensure user is logged in before launching.\", \"mapped_script_line\": \"self.fc.reset_app()\"},\n                {\"test_step\": \"Add supported printer device via 'Add Device' button on root view screen, searching by IP address, and verify printer is listed and ready.\", \"mapped_script_line\": \"self.hpx_printer_details.click_add_device_btn() \u2192 self.printers.search_printer_by_ip(self.p.ipAddress)\"},\n                {\"test_step\": \"After each navigation (root view, device details, shortcuts screen, add new shortcuts screen), assert that the expected screen title and main UI elements are visible and correctly rendered for early failure detection.\", \"mapped_script_line\": \"assert self.hpx_shortcuts.verify_shortcuts_screen_title(), assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()\"}\n            ],\n            \"intermediary_steps\": [\n                {\"test_case_step\": \"Reset application to initial state before launching HPX app\", \"automation_script_step\": \"self.fc.reset_app()\", \"steps\": [\"[Step 1] Initialize the test environment and ensure clean state\", \"[Step 2] Invoke the reset_app() method from the flow controller\", \"[Step 3] Verify application returns to initial state successfully\"]},\n                {\"test_case_step\": \"Add printer device (precondition) via Add Device button and search by IP address\", \"automation_script_step\": \"self.hpx_printer_details.click_add_device_btn() \u2192 self.printers.search_printer_by_ip(self.p.ipAddress)\", \"steps\": [\"[Step 1] Navigate to the printer management section on root view\", \"[Step 2] Locate and click the 'Add Device' button\", \"[Step 3] Access the printer search functionality\", \"[Step 4] Input the printer IP address from test configuration\", \"[Step 5] Execute search and verify printer is discovered and added successfully\"]},\n                {\"test_case_step\": \"Verify shortcuts screen is displayed after navigation\", \"automation_script_step\": \"assert self.hpx_shortcuts.verify_shortcuts_screen_title()\", \"steps\": [\"[Step 1] Retrieve the shortcuts screen title element\", \"[Step 2] Verify the title matches expected shortcuts screen identifier\", \"[Step 3] Assert validation passes confirming shortcuts screen is displayed\"]},\n                {\"test_case_step\": \"Verify add new shortcut screen is displayed after clicking Add New Shortcut button\", \"automation_script_step\": \"assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()\", \"steps\": [\"[Step 1] Retrieve the add new shortcut screen title element\", \"[Step 2] Verify the title matches expected add new shortcut screen identifier\", \"[Step 3] Assert validation passes confirming add new shortcut screen is displayed\"]}\n            ],\n            \"automation_scripts_rules\": [\n                {\"rule_id\": \"NEW-RUL-001\", \"description\": \"Explicitly document implicit steps in the test case for traceability (reset app, printer addition, screen verifications)\", \"applies_to\": \"All test case automation scripts\", \"rule_definition\": [\"WHEN: Test case contains implicit steps required for execution\", \"THEN: Document these steps explicitly in the automation mapping for traceability\", \"IMPLEMENTATION: Include reset app, printer addition, and screen verification steps as explicit intermediary steps\"]},\n                {\"rule_id\": \"NEW-RUL-002\", \"description\": \"Ensure all supporting validation steps (screen title assertions) are included in automation scripts for early failure detection\", \"applies_to\": \"All navigation and screen transition steps\", \"rule_definition\": [\"WHEN: Navigating between screens or views\", \"THEN: Assert screen title and main UI elements are visible and correctly rendered\", \"IMPLEMENTATION: Add assertion steps after each navigation to verify screen title and UI elements\"]},\n                {\"rule_id\": \"NEW-RUL-003\", \"description\": \"Maintain strict sequential execution order and intermediary step granularity in automation implementation\", \"applies_to\": \"All automation script steps within a test case\", \"rule_definition\": [\"WHEN: Multiple steps exist in automation script\", \"THEN: Execute in strict sequential order and maintain intermediary step granularity\", \"IMPLEMENTATION: Follow execution order and ensure intermediary steps are detailed for each script line\"]}\n            ]\n        }\n    ]\n}"
+        },
+        {
+            "Context/add_shortcuts/Automation_scripting_rules_map.json": [
+                {
+                    "correlation_steps_to_scripts": [
+                        {
+                            "test_step": "Reset HPX application to default state and ensure user is logged in before launching.",
+                            "mapped_script_line": "self.fc.reset_app()"
+                        },
+                        {
+                            "test_step": "Add supported printer device via 'Add Device' button on root view screen, searching by IP address, and verify printer is listed and ready.",
+                            "mapped_script_line": "self.hpx_printer_details.click_add_device_btn() \u2192 self.printers.search_printer_by_ip(self.p.ipAddress)"
+                        },
+                        {
+                            "test_step": "After each navigation (root view, device details, shortcuts screen, add new shortcuts screen), assert that the expected screen title and main UI elements are visible and correctly rendered for early failure detection.",
+                            "mapped_script_line": "assert self.hpx_shortcuts.verify_shortcuts_screen_title(), assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()"
+                        }
+                    ],
+                    "intermediary_steps": [
+                        {
+                            "test_case_step": "Reset application to initial state before launching HPX app",
+                            "automation_script_step": "self.fc.reset_app()",
+                            "steps": [
+                                "[Step 1] Initialize the test environment and ensure clean state",
+                                "[Step 2] Invoke the reset_app() method from the flow controller",
+                                "[Step 3] Verify application returns to initial state successfully"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Add printer device (precondition) via Add Device button and search by IP address",
+                            "automation_script_step": "self.hpx_printer_details.click_add_device_btn() \u2192 self.printers.search_printer_by_ip(self.p.ipAddress)",
+                            "steps": [
+                                "[Step 1] Navigate to the printer management section on root view",
+                                "[Step 2] Locate and click the 'Add Device' button",
+                                "[Step 3] Access the printer search functionality",
+                                "[Step 4] Input the printer IP address from test configuration",
+                                "[Step 5] Execute search and verify printer is discovered and added successfully"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Verify shortcuts screen is displayed after navigation",
+                            "automation_script_step": "assert self.hpx_shortcuts.verify_shortcuts_screen_title()",
+                            "steps": [
+                                "[Step 1] Retrieve the shortcuts screen title element",
+                                "[Step 2] Verify the title matches expected shortcuts screen identifier",
+                                "[Step 3] Assert validation passes confirming shortcuts screen is displayed"
+                            ]
+                        },
+                        {
+                            "test_case_step": "Verify add new shortcut screen is displayed after clicking Add New Shortcut button",
+                            "automation_script_step": "assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()",
+                            "steps": [
+                                "[Step 1] Retrieve the add new shortcut screen title element",
+                                "[Step 2] Verify the title matches expected add new shortcut screen identifier",
+                                "[Step 3] Assert validation passes confirming add new shortcut screen is displayed"
+                            ]
+                        }
+                    ],
+                    "automation_scripts_rules": [
+                        {
+                            "rule_id": "NEW-RUL-001",
+                            "description": "Explicitly document implicit steps in the test case for traceability (reset app, printer addition, screen verifications)",
+                            "applies_to": "All test case automation scripts",
+                            "rule_definition": [
+                                "WHEN: Test case contains implicit steps required for execution",
+                                "THEN: Document these steps explicitly in the automation mapping for traceability",
+                                "IMPLEMENTATION: Include reset app, printer addition, and screen verification steps as explicit intermediary steps"
+                            ]
+                        },
+                        {
+                            "rule_id": "NEW-RUL-002",
+                            "description": "Ensure all supporting validation steps (screen title assertions) are included in automation scripts for early failure detection",
+                            "applies_to": "All navigation and screen transition steps",
+                            "rule_definition": [
+                                "WHEN: Navigating between screens or views",
+                                "THEN: Assert screen title and main UI elements are visible and correctly rendered",
+                                "IMPLEMENTATION: Add assertion steps after each navigation to verify screen title and UI elements"
+                            ]
+                        },
+                        {
+                            "rule_id": "NEW-RUL-003",
+                            "description": "Maintain strict sequential execution order and intermediary step granularity in automation implementation",
+                            "applies_to": "All automation script steps within a test case",
+                            "rule_definition": [
+                                "WHEN: Multiple steps exist in automation script",
+                                "THEN: Execute in strict sequential order and maintain intermediary step granularity",
+                                "IMPLEMENTATION: Follow execution order and ensure intermediary steps are detailed for each script line"
+                            ]
+                        },
+                        {
+                            "rule_id": "NEW-RUL-004",
+                            "description": "Implement platform-specific reset commands for Android and iOS to ensure application returns to default state",
+                            "applies_to": "All test cases requiring application reset (C46 and similar)",
+                            "rule_definition": [
+                                "WHEN: Test case requires resetting HPX application to default state",
+                                "THEN: Execute platform-specific reset command based on target platform",
+                                "IMPLEMENTATION: For Android use 'adb shell pm clear com.hpx.application', for iOS use launch with '--reset-to-defaults' argument, and verify no devices or shortcuts exist post-reset"
+                            ]
+                        },
+                        {
+                            "rule_id": "NEW-RUL-005",
+                            "description": "Verify all main UI elements are visible and enabled after each navigation point for comprehensive screen validation",
+                            "applies_to": "All navigation steps in test cases (HPX Home, Device Details, Shortcuts, Add New Shortcuts screens)",
+                            "rule_definition": [
+                                "WHEN: Navigation to a new screen occurs (launch, device details, shortcuts, add new shortcuts)",
+                                "THEN: Assert screen title matches expected value AND verify all main UI elements are visible and enabled",
+                                "IMPLEMENTATION: After navigation, verify elements including Add Device button, navigation bar, device list container, settings icon, back button, input fields, action buttons, and section headers are visible/enabled"
+                            ]
+                        },
+                        {
+                            "rule_id": "NEW-RUL-006",
+                            "description": "Validate all preconditions in automation setup phase and reference them explicitly in test case steps",
+                            "applies_to": "All test cases with preconditions (printer addition, user login)",
+                            "rule_definition": [
+                                "WHEN: Test case has preconditions such as supported printer added or user logged in",
+                                "THEN: Implement precondition validation checks in automation setup phase",
+                                "IMPLEMENTATION: Add explicit precondition validation steps in automation framework setup, verify printer presence on root view after addition, and confirm user login state before test execution"
+                            ]
+                        },
+                        {
+                            "rule_id": "NEW-RUL-007",
+                            "description": "Break down high-level test steps into atomic actions with explicit verifications for improved automation readiness",
+                            "applies_to": "All test case steps requiring granularity improvement",
+                            "rule_definition": [
+                                "WHEN: Test case contains high-level steps with implicit actions",
+                                "THEN: Decompose into atomic actions with explicit verifications for each action",
+                                "IMPLEMENTATION: Transform high-level steps into explicit reset step, explicit navigation with assertions, explicit documentation of implicit actions, enabling direct mapping to automation framework methods"
+                            ]
+                        },
+                        {
+                            "rule_id": "NEW-RUL-008",
+                            "description": "Ensure traceability and auditability by explicitly listing all implicit steps in test case documentation",
+                            "applies_to": "All test cases with implicit steps (reset, printer addition, screen verifications)",
+                            "rule_definition": [
+                                "WHEN: Test case execution relies on implicit steps not documented in test case",
+                                "THEN: Explicitly list all implicit steps in test case documentation for traceability",
+                                "IMPLEMENTATION: Document implicit steps including resetting application state before launching, verifying printer presence on root view after addition, and screen title/UI element assertions after each navigation"
+                            ]
+                        },
+                        {
+                            "rule_id": "NEW-RUL-009",
+                            "description": "Map explicit reset step to automation framework setup phase for reliability and consistency",
+                            "applies_to": "All test cases requiring application reset (C46 and similar)",
+                            "rule_definition": [
+                                "WHEN: Test case requires explicit reset of HPX application to default state",
+                                "THEN: Map reset step to automation framework setup phase",
+                                "IMPLEMENTATION: Include reset step in both intermediate and automated scripts, execute in setup phase before test execution, and verify application state post-reset"
+                            ]
+                        },
+                        {
+                            "rule_id": "NEW-RUL-010",
+                            "description": "Enforce comprehensive UI element verification including visibility and enabled state for all interactive elements",
+                            "applies_to": "All screen validation steps after navigation",
+                            "rule_definition": [
+                                "WHEN: Screen validation is required after navigation",
+                                "THEN: Verify both visibility AND enabled state of all interactive UI elements",
+                                "IMPLEMENTATION: For each screen, assert visibility and enabled state of buttons (Add Device, Back, action buttons), navigation elements (navigation bar), containers (device list), icons (settings), input fields, and section headers"
+                            ]
+                        }
+                    ]
+                }
             ]
         }
     ]
