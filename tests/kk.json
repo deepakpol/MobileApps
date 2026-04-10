@@ -1,0 +1,1 @@
+{"operation": "commit", "github_token": "github-api-key", "repo_name": "github-repo-name", "branch": "github-branch", "repo_owner": "github-repo-owner", "commit_message": "Updated QAMA Script and TC details", "files_to_commit": [{"path": "qama-script-tc-details-path", "content": "script-tc-details-json"}]}
