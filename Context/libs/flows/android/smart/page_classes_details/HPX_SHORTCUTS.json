@@ -1,0 +1,34 @@
+{
+  "HPX_SHORTCUTS.py": {
+    "class_name": "HpxShortcuts",
+    "base_class": "SmartFlow",
+    "locators": [
+      {
+        "locator_name": "shortcuts_screen_title",
+        "locator_type": "referenced_in_wait_for_object",
+        "description": "Locator for the Shortcuts screen title element"
+      }
+    ],
+    "methods": [
+      {
+        "method_name": "verify_shortcuts_screen_title",
+        "method_description": "Verify the title of the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": "10",
+            "parameter_purpose": "Maximum time to wait for the element"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": "True",
+            "parameter_purpose": "Whether to raise exception if element not found"
+          }
+        ],
+        "method_output_parameter": "No explicit return value; validates element presence",
+        "method_purpose": "Validates that the Shortcuts screen title is displayed within the specified timeout period using the driver's wait_for_object method"
+      }
+    ],
+    "summary": "HpxShortcuts is a page object class for Android Smart app's Shortcuts screen functionality. It inherits from SmartFlow base class and implements test automation patterns for verifying UI elements. The class uses Selenium WebDriver exception handling (TimeoutException, NoSuchElementException, StaleElementReferenceException) for robust element interaction. Key patterns include: (1) Parameterized timeout and exception handling in verification methods, (2) Use of driver.wait_for_object() pattern for explicit waits, (3) Flow-based architecture with flow_name identifier for test organization. The class is designed for mobile test automation with focus on element presence validation and screen verification workflows."
+  }
+}
