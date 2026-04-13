@@ -230,6 +230,351 @@
                     ]
                 }
             ]
+        },
+        {
+            "correlation_steps_to_scripts": [],
+            "intermediary_steps": [],
+            "automation_scripts_rules": {
+                "rule_1_one_to_one_mapping": {
+                    "rule_type": "one_to_one",
+                    "description": "When a test step maps to exactly one script line, document the direct mapping with all intermediary steps required for execution.",
+                    "enforcement": "MANDATORY",
+                    "validation_criteria": [
+                        "Each test step must map to exactly one script line",
+                        "All intermediary steps must be documented in execution order",
+                        "Script line must be executable and validated",
+                        "Intermediary steps must bridge test intent to script execution"
+                    ],
+                    "structure": {
+                        "test_step": "string",
+                        "script_line": "string",
+                        "intermediary_steps": "array",
+                        "execution_order": "sequential",
+                        "validation": "required"
+                    },
+                    "example_pattern": {
+                        "test_step": "Step N: [action description]",
+                        "maps_to": "script_line_X",
+                        "intermediary_steps": [
+                            "intermediary_step_1",
+                            "intermediary_step_2",
+                            "intermediary_step_N"
+                        ],
+                        "execution_order": "sequential",
+                        "purpose": "direct_mapping"
+                    }
+                },
+                "rule_2_one_to_many_mapping": {
+                    "rule_type": "one_to_many",
+                    "description": "When a test step maps to multiple script lines, split into sub-steps (e.g., 1a, 1b, 1c) where each sub-step maps to exactly one script line with its intermediary steps. Execution order must be strictly enforced.",
+                    "enforcement": "MANDATORY",
+                    "validation_criteria": [
+                        "Original test step must be split into sub-steps with alphabetic suffixes",
+                        "Each sub-step maps to exactly one script line",
+                        "All intermediary steps for each sub-step must be documented",
+                        "Execution order across sub-steps must be sequential and enforced",
+                        "No script line from original mapping can be omitted",
+                        "Sub-step labels must follow pattern: [step_number][a-z]"
+                    ],
+                    "structure": {
+                        "original_test_step": "string",
+                        "split_into_substeps": "array",
+                        "each_substep_contains": {
+                            "substep_label": "string (e.g., 1a, 1b)",
+                            "maps_to_script_line": "string",
+                            "intermediary_steps": "array",
+                            "execution_order": "integer"
+                        },
+                        "enforcement": "sequential_execution_required"
+                    },
+                    "example_pattern": {
+                        "original_test_step": "Step N: [complex action requiring multiple scripts]",
+                        "split_substeps": [
+                            {
+                                "substep": "Na",
+                                "maps_to": "script_line_X",
+                                "intermediary_steps": [
+                                    "intermediary_1",
+                                    "intermediary_2"
+                                ],
+                                "execution_order": 1
+                            },
+                            {
+                                "substep": "Nb",
+                                "maps_to": "script_line_Y",
+                                "intermediary_steps": [
+                                    "intermediary_3",
+                                    "intermediary_4"
+                                ],
+                                "execution_order": 2
+                            },
+                            {
+                                "substep": "Nc",
+                                "maps_to": "script_line_Z",
+                                "intermediary_steps": [
+                                    "intermediary_5",
+                                    "intermediary_6"
+                                ],
+                                "execution_order": 3
+                            }
+                        ],
+                        "validation": "all_substeps_required_in_order"
+                    }
+                },
+                "rule_3_purpose_supporting_steps": {
+                    "rule_type": "purpose_validation",
+                    "description": "Steps labeled as 'Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation' must be included to validate the test case purpose. These steps are critical for test integrity and must not be omitted.",
+                    "enforcement": "MANDATORY",
+                    "validation_criteria": [
+                        "Step must be explicitly labeled as supporting/purpose validation",
+                        "Must reference the test_case_name",
+                        "Must map to specific script line(s)",
+                        "Must include all intermediary steps",
+                        "Must include justification for inclusion",
+                        "These steps validate the core purpose of the test case"
+                    ],
+                    "structure": {
+                        "step_label": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation",
+                        "test_case_name": "string",
+                        "mapped_script_line": "string",
+                        "intermediary_steps": "array",
+                        "justification": "string",
+                        "purpose": "test_case_validation",
+                        "enforcement": "cannot_be_omitted"
+                    },
+                    "example_pattern": {
+                        "step_label": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation",
+                        "test_case_name": "[Test Case Name]",
+                        "mapped_script_line": "script_line_X",
+                        "intermediary_steps": [
+                            "validation_step_1",
+                            "validation_step_2",
+                            "validation_step_N"
+                        ],
+                        "justification": "This step validates [specific purpose] which is the core objective of the test case",
+                        "purpose": "ensure_test_case_purpose_validation",
+                        "enforcement": "mandatory_inclusion"
+                    }
+                },
+                "rule_4_execution_order_enforcement": {
+                    "rule_type": "execution_order",
+                    "description": "All steps, sub-steps, and intermediary steps must follow strict sequential execution order. No step can execute before its predecessor completes.",
+                    "enforcement": "MANDATORY",
+                    "validation_criteria": [
+                        "Steps must execute in numerical order",
+                        "Sub-steps must execute in alphabetical order within their parent step",
+                        "Intermediary steps must execute in array order",
+                        "No parallel execution unless explicitly documented",
+                        "Each step must complete before next step begins"
+                    ],
+                    "structure": {
+                        "execution_model": "sequential",
+                        "step_order": "numeric_ascending",
+                        "substep_order": "alphabetic_within_parent",
+                        "intermediary_order": "array_index_sequential",
+                        "validation": "strict_order_enforcement"
+                    }
+                },
+                "rule_5_completeness_validation": {
+                    "rule_type": "completeness",
+                    "description": "Every test step, script line, and intermediary step from the correlation and intermediary_steps arrays must be included in the rules. No omissions allowed.",
+                    "enforcement": "MANDATORY",
+                    "validation_criteria": [
+                        "All entries from correlation_steps_to_scripts must be mapped",
+                        "All entries from intermediary_steps must be included",
+                        "No test steps can be skipped",
+                        "No script lines can be omitted",
+                        "No intermediary steps can be excluded",
+                        "Split steps must account for all original mappings"
+                    ],
+                    "structure": {
+                        "source_validation": [
+                            "correlation_steps_to_scripts_complete",
+                            "intermediary_steps_complete"
+                        ],
+                        "mapping_validation": "one_to_one_coverage",
+                        "split_validation": "all_scripts_accounted_in_substeps",
+                        "enforcement": "zero_omissions_allowed"
+                    }
+                },
+                "rule_6_reusability_and_standardization": {
+                    "rule_type": "reusability",
+                    "description": "All rules must be reusable across test cases and automation scripts. Patterns must be standardized for future automation consistency.",
+                    "enforcement": "MANDATORY",
+                    "validation_criteria": [
+                        "Rules must be pattern-based, not case-specific",
+                        "Structure must be consistent across all mappings",
+                        "Naming conventions must be standardized",
+                        "Rules must be applicable to future test cases",
+                        "Documentation must enable automation without human interpretation"
+                    ],
+                    "structure": {
+                        "pattern_based": "true",
+                        "standardized_structure": "true",
+                        "future_proof": "true",
+                        "automation_ready": "true"
+                    },
+                    "standardization_requirements": {
+                        "step_labeling": "consistent_format",
+                        "substep_notation": "alphabetic_suffix",
+                        "intermediary_documentation": "complete_array",
+                        "script_line_reference": "explicit_mapping",
+                        "execution_order": "always_documented"
+                    }
+                },
+                "rule_7_intermediary_step_requirements": {
+                    "rule_type": "intermediary_steps",
+                    "description": "Intermediary steps bridge the gap between test intent and script execution. Every mapping must include complete intermediary steps in execution order.",
+                    "enforcement": "MANDATORY",
+                    "validation_criteria": [
+                        "Intermediary steps must be documented as arrays",
+                        "Steps must be in execution order",
+                        "Each intermediary step must be actionable",
+                        "Intermediary steps must logically connect test step to script line",
+                        "No intermediary step can be implicit or assumed"
+                    ],
+                    "structure": {
+                        "format": "array_of_strings",
+                        "order": "sequential_execution",
+                        "completeness": "all_steps_explicit",
+                        "validation": "logical_flow_required"
+                    },
+                    "example_pattern": {
+                        "test_step": "Step 1: Login to application",
+                        "script_line": "login_script.py",
+                        "intermediary_steps": [
+                            "Navigate to login page",
+                            "Locate username field",
+                            "Enter username credentials",
+                            "Locate password field",
+                            "Enter password credentials",
+                            "Click login button",
+                            "Wait for dashboard to load",
+                            "Verify successful login"
+                        ],
+                        "execution_order": "sequential"
+                    }
+                },
+                "rule_8_split_step_documentation": {
+                    "rule_type": "split_steps",
+                    "description": "When test steps are split into sub-steps for one-to-many mappings, the split must be fully documented with clear parent-child relationships and execution order.",
+                    "enforcement": "MANDATORY",
+                    "validation_criteria": [
+                        "Parent step must be clearly identified",
+                        "All sub-steps must reference parent",
+                        "Sub-step labels must follow [parent_number][letter] pattern",
+                        "Each sub-step must have complete documentation",
+                        "Execution order across sub-steps must be explicit",
+                        "Justification for split must be documented"
+                    ],
+                    "structure": {
+                        "parent_step": "string",
+                        "substeps": "array",
+                        "substep_format": "[number][letter]",
+                        "each_substep_includes": [
+                            "label",
+                            "mapped_script",
+                            "intermediary_steps",
+                            "execution_order"
+                        ],
+                        "justification": "why_split_was_necessary"
+                    },
+                    "example_pattern": {
+                        "parent_step": "Step 2: Configure system settings",
+                        "reason_for_split": "Maps to 3 different configuration scripts",
+                        "substeps": [
+                            {
+                                "label": "2a",
+                                "description": "Configure database settings",
+                                "maps_to": "config_db.py",
+                                "intermediary_steps": [
+                                    "Open configuration panel",
+                                    "Navigate to database section",
+                                    "Update connection string",
+                                    "Save database config"
+                                ],
+                                "execution_order": 1
+                            },
+                            {
+                                "label": "2b",
+                                "description": "Configure API settings",
+                                "maps_to": "config_api.py",
+                                "intermediary_steps": [
+                                    "Navigate to API section",
+                                    "Update API endpoints",
+                                    "Configure authentication",
+                                    "Save API config"
+                                ],
+                                "execution_order": 2
+                            },
+                            {
+                                "label": "2c",
+                                "description": "Configure logging settings",
+                                "maps_to": "config_logging.py",
+                                "intermediary_steps": [
+                                    "Navigate to logging section",
+                                    "Set log levels",
+                                    "Configure log destinations",
+                                    "Save logging config"
+                                ],
+                                "execution_order": 3
+                            }
+                        ]
+                    }
+                },
+                "rule_9_validation_and_quality_assurance": {
+                    "rule_type": "validation",
+                    "description": "All generated rules and mappings must pass validation checks before being committed. This ensures data integrity and automation readiness.",
+                    "enforcement": "MANDATORY",
+                    "validation_checks": [
+                        "JSON structure is valid and minified",
+                        "All required fields are present",
+                        "No null or undefined values in critical fields",
+                        "All arrays are properly formatted",
+                        "Execution order is logical and sequential",
+                        "No duplicate mappings",
+                        "All references are resolvable",
+                        "Completeness check against source data"
+                    ],
+                    "structure": {
+                        "pre_commit_validation": "required",
+                        "validation_failures": "block_commit",
+                        "quality_gates": [
+                            "structure_validation",
+                            "completeness_validation",
+                            "logic_validation",
+                            "format_validation"
+                        ]
+                    }
+                },
+                "rule_10_future_automation_consistency": {
+                    "rule_type": "future_proofing",
+                    "description": "Rules must ensure consistency for future automation efforts. All patterns, structures, and documentation must enable automated script generation without ambiguity.",
+                    "enforcement": "MANDATORY",
+                    "requirements": [
+                        "Rules must be machine-readable",
+                        "Patterns must be deterministic",
+                        "No ambiguous language or implicit assumptions",
+                        "All relationships must be explicit",
+                        "Documentation must enable code generation",
+                        "Structure must support automated validation"
+                    ],
+                    "structure": {
+                        "machine_readable": "true",
+                        "deterministic": "true",
+                        "explicit_relationships": "true",
+                        "code_generation_ready": "true",
+                        "automated_validation_support": "true"
+                    },
+                    "future_use_cases": [
+                        "Automated script generation from test cases",
+                        "Automated validation of test-to-script mappings",
+                        "Automated intermediary step generation",
+                        "Automated execution order validation",
+                        "Automated completeness checking"
+                    ]
+                }
+            }
         }
     ]
 }
