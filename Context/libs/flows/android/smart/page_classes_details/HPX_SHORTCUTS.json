@@ -3,12 +3,18 @@
     "class_name": "HpxShortcuts",
     "base_class": "SmartFlow",
     "locators": [
-      {
-        "locator_name": "shortcuts_screen_title",
-        "locator_type": "referenced_in_wait_for_object",
-        "description": "Locator for the Shortcuts screen title element"
-      }
+      "shortcuts_screen_title",
+      "shortcuts_edit_btn",
+      "shortcuts_add_btn",
+      "shortcuts_done_btn",
+      "shortcuts_delete_btn",
+      "shortcuts_cancel_btn",
+      "add_shortcut_screen_title",
+      "add_shortcut_name_field",
+      "add_shortcut_save_btn",
+      "shortcut_item"
     ],
+    "summary": "Page class for managing HPX Shortcuts screen interactions in Android Smart app. Provides methods for verifying, editing, and managing printer shortcuts including adding, deleting, and navigating shortcut-related screens. The class encapsulates all UI element locators and exposes methods for CRUD operations, modal navigation, and named item selection. It follows Page Object Model, explicit wait, exception handling, fluent interface, and inheritance-based flow patterns. Locators are referenced externally for maintainability, and method signatures are consistent for reliability.",
     "methods": [
       {
         "method_name": "verify_shortcuts_screen_title",
@@ -16,19 +22,213 @@
         "method_input_parameter": [
           {
             "parameter_name": "timeout",
-            "default_value": "10",
-            "parameter_purpose": "Maximum time to wait for the element"
+            "default_value": 10,
+            "parameter_purpose": "Maximum wait time in seconds"
           },
           {
             "parameter_name": "raise_e",
-            "default_value": "True",
-            "parameter_purpose": "Whether to raise exception if element not found"
+            "default_value": true,
+            "parameter_purpose": "Whether to raise exception on failure"
           }
         ],
-        "method_output_parameter": "No explicit return value; validates element presence",
-        "method_purpose": "Validates that the Shortcuts screen title is displayed within the specified timeout period using the driver's wait_for_object method"
+        "method_output_parameter": null,
+        "method_purpose": "Validates that the Shortcuts screen title is displayed within the specified timeout period."
+      },
+      {
+        "method_name": "click_shortcuts_edit_btn",
+        "method_description": "Click the Edit button on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": 10,
+            "parameter_purpose": "Maximum wait time in seconds"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": true,
+            "parameter_purpose": "Whether to raise exception on failure"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Initiates edit mode for managing shortcuts by clicking the Edit button."
+      },
+      {
+        "method_name": "click_shortcuts_add_btn",
+        "method_description": "Click the Add button on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": 10,
+            "parameter_purpose": "Maximum wait time in seconds"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": true,
+            "parameter_purpose": "Whether to raise exception on failure"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Opens the Add Shortcut screen by clicking the Add button."
+      },
+      {
+        "method_name": "click_shortcuts_done_btn",
+        "method_description": "Click the Done button on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": 10,
+            "parameter_purpose": "Maximum wait time in seconds"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": true,
+            "parameter_purpose": "Whether to raise exception on failure"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Completes shortcut editing by clicking the Done button."
+      },
+      {
+        "method_name": "click_shortcuts_delete_btn",
+        "method_description": "Click the Delete button on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": 10,
+            "parameter_purpose": "Maximum wait time in seconds"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": true,
+            "parameter_purpose": "Whether to raise exception on failure"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Initiates deletion of a shortcut by clicking the Delete button."
+      },
+      {
+        "method_name": "click_shortcuts_cancel_btn",
+        "method_description": "Click the Cancel button on the Shortcuts screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": 10,
+            "parameter_purpose": "Maximum wait time in seconds"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": true,
+            "parameter_purpose": "Whether to raise exception on failure"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Cancels the current shortcut operation by clicking the Cancel button."
+      },
+      {
+        "method_name": "verify_add_shortcut_screen_title",
+        "method_description": "Verify the title of the Add Shortcut screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": 10,
+            "parameter_purpose": "Maximum wait time in seconds"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": true,
+            "parameter_purpose": "Whether to raise exception on failure"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Validates that the Add Shortcut screen title is displayed."
+      },
+      {
+        "method_name": "enter_shortcut_name",
+        "method_description": "Enter a name for the shortcut.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "name",
+            "default_value": null,
+            "parameter_purpose": "The name to assign to the shortcut"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": 10,
+            "parameter_purpose": "Maximum wait time in seconds"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": true,
+            "parameter_purpose": "Whether to raise exception on failure"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Inputs the specified name into the shortcut name field."
+      },
+      {
+        "method_name": "click_add_shortcut_save_btn",
+        "method_description": "Click the Save button on the Add Shortcut screen.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "timeout",
+            "default_value": 10,
+            "parameter_purpose": "Maximum wait time in seconds"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": true,
+            "parameter_purpose": "Whether to raise exception on failure"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Saves the newly created shortcut by clicking the Save button."
+      },
+      {
+        "method_name": "verify_shortcut_exists",
+        "method_description": "Verify that a shortcut with the given name exists.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "name",
+            "default_value": null,
+            "parameter_purpose": "The name of the shortcut to verify"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": 10,
+            "parameter_purpose": "Maximum wait time in seconds"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": true,
+            "parameter_purpose": "Whether to raise exception on failure"
+          }
+        ],
+        "method_output_parameter": "bool",
+        "method_purpose": "Checks if a shortcut with the specified name is present in the shortcuts list."
+      },
+      {
+        "method_name": "click_shortcut_by_name",
+        "method_description": "Click on a shortcut by its name.",
+        "method_input_parameter": [
+          {
+            "parameter_name": "name",
+            "default_value": null,
+            "parameter_purpose": "The name of the shortcut to click"
+          },
+          {
+            "parameter_name": "timeout",
+            "default_value": 10,
+            "parameter_purpose": "Maximum wait time in seconds"
+          },
+          {
+            "parameter_name": "raise_e",
+            "default_value": true,
+            "parameter_purpose": "Whether to raise exception on failure"
+          }
+        ],
+        "method_output_parameter": null,
+        "method_purpose": "Selects and clicks a specific shortcut identified by its name."
       }
-    ],
-    "summary": "HpxShortcuts is a page object class for Android Smart app's Shortcuts screen functionality. It inherits from SmartFlow base class and implements test automation patterns for verifying UI elements. The class uses Selenium WebDriver exception handling (TimeoutException, NoSuchElementException, StaleElementReferenceException) for robust element interaction. Key patterns include: (1) Parameterized timeout and exception handling in verification methods, (2) Use of driver.wait_for_object() pattern for explicit waits, (3) Flow-based architecture with flow_name identifier for test organization. The class is designed for mobile test automation with focus on element presence validation and screen verification workflows."
+    ]
   }
 }
