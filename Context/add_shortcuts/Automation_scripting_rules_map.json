@@ -1,0 +1,74 @@
+{
+    "Context/add_shortcuts/Automation_scripting_rules_map.json": [
+        {
+            "correlation_steps_to_scripts": [
+                {
+                    "test_step": "1. Install and Launch the HPX app.",
+                    "mapped_script_line": "self.fc.reset_app()\nself.fc.flow_load_home_screen(skip_value_prop=False)"
+                },
+                {
+                    "test_step": "Implicit Step: Ensure user is on home screen and ready to interact with printer",
+                    "mapped_script_line": "self.fc.flow_load_home_screen(skip_value_prop=False)"
+                },
+                {
+                    "test_step": "2. Click on the printer icon on the root view screen.",
+                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn()\nself.printers.search_printer_by_ip(self.p.ipAddress)\nself.hpx_printer_details.click_printer_device_card()"
+                },
+                {
+                    "test_step": "Implicit Step: Add/search for printer device before accessing it",
+                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn()\nself.printers.search_printer_by_ip(self.p.ipAddress)"
+                },
+                {
+                    "test_step": "Implicit Step: Select the printer device card to access device details",
+                    "mapped_script_line": "self.hpx_printer_details.click_printer_device_card()"
+                },
+                {
+                    "test_step": "3. Then click on the shortcuts tile on the device details page.",
+                    "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)"
+                },
+                {
+                    "test_step": "Implicit Step: Verify shortcuts screen is displayed after clicking shortcuts tile",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                },
+                {
+                    "test_step": "4. Click on Add new shortcuts in shortcuts screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_add_new_shortcut_btn()"
+                },
+                {
+                    "test_step": "5. The click on the Create your own shortcut arrow button.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_add_new_shortcut_btn()"
+                },
+                {
+                    "test_step": "6. Verify the screen.",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()"
+                },
+                {
+                    "test_step": "Expected Result: User should be navigated to the 'Add shortcut' screen.",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()"
+                }
+            ],
+            "intermediary_steps": [
+                {
+                    "test_case_step": "[[test-case-step]]",
+                    "automation_script_step": "[[automation-script-step]]",
+                    "steps": [
+                        "[[intermediary-step-1]]",
+                        "[[intermediary-step-2]]"
+                    ]
+                }
+            ],
+            "automation_scripts_rules": [
+                {
+                    "rule_id": "RUL-001",
+                    "description": "Reusable automation scripting rule for mapping test steps to script lines and intermediary steps, including handling split steps and purpose/supporting steps for the test case 'Verify the screen, when user clicks on the Create your own shortcut arrow button in Add new shortcuts screen.'",
+                    "applies_to": "All test steps and implicit/supporting steps in the correlation array for this test case.",
+                    "rule_definition": [
+                        "WHEN: A test step from the correlation array is encountered, including implicit/supporting steps.",
+                        "THEN: Implement automation using the mapped script line(s) and follow all intermediary steps. If a test step maps to multiple script lines, split it into sub-steps (e.g., 1a, 1b), each mapping to one script line, and implement in sequence. Include all implicit/supporting steps even if not in the original manual test steps, as they are required for test case purpose validation.",
+                        "IMPLEMENTATION: For each test step, use the mapped script line(s) and intermediary steps as provided. For split steps, document and enforce execution order. For purpose/supporting steps, reference the test case name and justify inclusion for test case validation. Do not skip or merge steps. Ensure full script coverage and explicit mapping clarity."
+                    ]
+                }
+            ]
+        }
+    ]
+}
