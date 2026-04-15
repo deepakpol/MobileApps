@@ -1,0 +1,63 @@
+{
+    "id": [
+        {
+            "test_case_id": "id",
+            "missing_scripts": [
+                {
+                    "step": "Missing step: The script does not include an explicit action for clicking the 'Create your own shortcut' arrow button after navigating to the 'Add new shortcuts' screen. According to the test case and mapping, after 'self.hpx_shortcuts.click_add_new_shortcut_btn()', the next required action is 'self.hpx_shortcuts.click_create_your_own_shortcut()'.",
+                    "page_class": "HpxShortcuts",
+                    "function": "click_create_your_own_shortcut",
+                    "arguments": {
+                        "timeout": 10,
+                        "raise_e": true
+                    }
+                },
+                {
+                    "step": "Missing step: The script does not include an explicit verification/assertion that the 'Add Shortcut' screen is displayed after clicking the 'Create your own shortcut' arrow button. The expected assertion is 'assert self.hpx_shortcuts.verify_add_new_shortcut_screen_title()' immediately after the click action.",
+                    "page_class": "HpxShortcuts",
+                    "function": "verify_add_new_shortcut_screen_title",
+                    "arguments": {
+                        "timeout": 10,
+                        "raise_e": true
+                    }
+                },
+                {
+                    "step": "Missing step: The script does not include intermediary steps for the 'Create your own shortcut' action, such as locating the arrow button, verifying its visibility and enabled state, clicking it, and confirming navigation to the correct workflow.",
+                    "page_class": "HpxShortcuts",
+                    "function": "verify_add_new_shortcut_btn",
+                    "arguments": {
+                        "timeout": 10,
+                        "raise_e": true
+                    }
+                },
+                {
+                    "step": "Missing step: The script does not include intermediary steps for verifying the 'Add Shortcut' screen, such as locating the screen title element, verifying the title text, and confirming the user is on the correct screen.",
+                    "page_class": "HpxShortcuts",
+                    "function": "verify_add_new_shortcut_screen_title",
+                    "arguments": {
+                        "timeout": 10,
+                        "raise_e": true
+                    }
+                },
+                {
+                    "step": "Missing step: If the test case expects any post-action validation (e.g., confirmation, cleanup, or navigation away from the screen after verification), these are not present in the script.",
+                    "page_class": "HpxShortcuts",
+                    "function": "click_shortcuts_back_btn",
+                    "arguments": {
+                        "timeout": 10,
+                        "raise_e": true
+                    }
+                },
+                {
+                    "step": "Missing step: The script does not explicitly handle or verify any preconditions such as ensuring the user is logged in and the supported printer is added on the root view. While these may be handled by fixtures or setup, explicit verification or documentation of these preconditions is required for full automation coverage.",
+                    "page_class": "HpxShortcuts",
+                    "function": "verify_shortcuts_screen_title",
+                    "arguments": {
+                        "timeout": 10,
+                        "raise_e": true
+                    }
+                }
+            ]
+        }
+    ]
+}
