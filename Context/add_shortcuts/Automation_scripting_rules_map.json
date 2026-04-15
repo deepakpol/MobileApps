@@ -153,6 +153,59 @@
                     ]
                 }
             ]
+        },
+        {
+            "correlation_steps_to_scripts": [
+                {
+                    "test_step": "Install and Launch the HPX app.",
+                    "mapped_script_line": "Implicit Step \u2013 Required for Test Execution: Test setup and app launch handled by test framework initialization (not explicitly visible in this test method)"
+                },
+                {
+                    "test_step": "Click on the printer icon on the root view screen.",
+                    "mapped_script_line": "Implicit Step \u2013 Required for Test Execution: Printer selection handled in test preconditions or previous test setup (not explicitly visible in this test method)"
+                },
+                {
+                    "test_step": "Then click on the shortcuts tile on the device details page.",
+                    "mapped_script_line": "Implicit Step \u2013 Required for Test Execution: Navigation to shortcuts handled in test preconditions or previous test setup (not explicitly visible in this test method)"
+                },
+                {
+                    "test_step": "Click on Add new shortcuts in shortcuts screen.",
+                    "mapped_script_line": "Implicit Step \u2013 Required for Test Execution: Add new shortcuts action handled in test preconditions or previous test setup (not explicitly visible in this test method)"
+                },
+                {
+                    "test_step": "The click on the Create your own shortcut arrow button.",
+                    "mapped_script_line": "Implicit Step \u2013 Required for Test Execution: Create your own shortcut navigation handled in test preconditions or previous test setup (not explicitly visible in this test method)"
+                },
+                {
+                    "test_step": "Click on the back button in Add Shortcut screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_cancel_shortcut_go_back_btn()"
+                },
+                {
+                    "test_step": "Click on 'Yes,cancel' button on pop up screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_cancel_shortcut_yes_cancel_btn()"
+                },
+                {
+                    "test_step": "Verify the screen.",
+                    "mapped_script_line": "No direct mapping found \u2013 The script does not explicitly verify that the user is redirected to the 'Shortcuts' screen after clicking 'Yes, cancel'."
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify cancel popup title appears",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_cancel_this_shortcut_title()"
+                }
+            ],
+            "intermediary_steps": [],
+            "automation_scripts_rules": [
+                {
+                    "rule_id": "RUL-001",
+                    "description": "Whenever you encounter implicit steps required for test execution or supporting steps for test case validation, you MUST include them in the automation script even if not explicitly mentioned in the manual test steps. This ensures test setup, navigation, and validation logic are always covered.",
+                    "applies_to": "All implicit steps and supporting steps in the correlation mapping for test case 'Verify the screen, when user clicks on the 'Yes, cancel' button.'",
+                    "rule_definition": [
+                        "WHEN: A test step is mapped as 'Implicit Step \u2013 Required for Test Execution' or 'Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation' in the correlation mapping.",
+                        "THEN: Always implement the mapped script line for these steps, regardless of their presence in the manual test steps.",
+                        "IMPLEMENTATION: For each implicit/supporting step, use the mapped script line and ensure execution order matches the correlation mapping. Do not skip or merge steps. For supporting steps like 'Verify cancel popup title appears', always include 'assert self.hpx_shortcuts.verify_cancel_this_shortcut_title()' to validate the purpose of the test case."
+                    ]
+                }
+            ]
         }
     ]
 }
