@@ -1,0 +1,158 @@
+{
+    "Context/add_shortcuts/Automation_scripting_rules_map.json": [
+        {
+            "correlation_steps_to_scripts": [
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Install and Launch the HPX app",
+                    "mapped_script_line": "Handled by: Framework Setup/Precondition Methods (App launch and installation are managed outside the test function scope)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Ensure that the user is logged into the account",
+                    "mapped_script_line": "Handled by: Framework Setup/Precondition Methods (Login is managed outside the test function scope)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Make sure that the supported printer is added on the root view",
+                    "mapped_script_line": "Handled by: Framework Setup/Precondition Methods (Printer addition is managed outside the test function scope)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Click on the printer icon on the root view screen",
+                    "mapped_script_line": "Handled by: Navigation helper functions (Navigation to printer details is managed outside the test function scope)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Click on the shortcuts tile on the device details page",
+                    "mapped_script_line": "Handled by: Navigation helper functions (Navigation to shortcuts screen is managed outside the test function scope)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Click on Add new shortcuts in shortcuts screen",
+                    "mapped_script_line": "Handled by: Navigation helper functions (Navigation to add new shortcuts is managed outside the test function scope)"
+                },
+                {
+                    "test_step": "Click on the Create your own shortcut arrow button",
+                    "mapped_script_line": "self.hpx_shortcuts.click_create_your_own_shortcut()"
+                },
+                {
+                    "test_step": "Click on the back button in Add Shortcut screen",
+                    "mapped_script_line": "self.hpx_shortcuts.click_cancel_shortcut_go_back_btn()"
+                },
+                {
+                    "test_step": "Verify the pop up screen",
+                    "mapped_script_line": "assert self.hpx_shortcuts.verify_cancel_this_shortcut_title()"
+                }
+            ],
+            "intermediary_steps": [
+                {
+                    "test_script_step": "Implicit Step \u2013 Required for Test Execution: Install and Launch the HPX app",
+                    "automation_script_step": "Handled by: Framework Setup/Precondition Methods (App launch and installation are managed outside the test function scope)",
+                    "steps": [
+                        "Invoke framework setup methods to install the HPX app on the device.",
+                        "Verify installation is successful.",
+                        "Launch the HPX app using precondition methods.",
+                        "Confirm the app launches to the expected initial screen."
+                    ]
+                },
+                {
+                    "test_script_step": "Implicit Step \u2013 Required for Test Execution: Ensure that the user is logged into the account",
+                    "automation_script_step": "Handled by: Framework Setup/Precondition Methods (Login is managed outside the test function scope)",
+                    "steps": [
+                        "Use framework precondition methods to log in with valid user credentials.",
+                        "Validate successful login by checking for user-specific elements on the home screen."
+                    ]
+                },
+                {
+                    "test_script_step": "Implicit Step \u2013 Required for Test Execution: Make sure that the supported printer is added on the root view",
+                    "automation_script_step": "Handled by: Framework Setup/Precondition Methods (Printer addition is managed outside the test function scope)",
+                    "steps": [
+                        "Invoke framework precondition to add a supported printer to the user's account.",
+                        "Verify the printer appears on the root view."
+                    ]
+                },
+                {
+                    "test_script_step": "Implicit Step \u2013 Required for Test Execution: Click on the printer icon on the root view screen",
+                    "automation_script_step": "Handled by: Navigation helper functions (Navigation to printer details is managed outside the test function scope)",
+                    "steps": [
+                        "Use navigation helper to locate the printer icon on the root view.",
+                        "Trigger navigation to the printer details page.",
+                        "Confirm arrival at the printer details page."
+                    ]
+                },
+                {
+                    "test_script_step": "Implicit Step \u2013 Required for Test Execution: Click on the shortcuts tile on the device details page",
+                    "automation_script_step": "Handled by: Navigation helper functions (Navigation to shortcuts screen is managed outside the test function scope)",
+                    "steps": [
+                        "Use navigation helper to identify the shortcuts tile on the device details page.",
+                        "Navigate to the shortcuts screen.",
+                        "Verify the shortcuts screen is displayed."
+                    ]
+                },
+                {
+                    "test_script_step": "Implicit Step \u2013 Required for Test Execution: Click on Add new shortcuts in shortcuts screen",
+                    "automation_script_step": "Handled by: Navigation helper functions (Navigation to add new shortcuts is managed outside the test function scope)",
+                    "steps": [
+                        "Use navigation helper to locate the 'Add new shortcuts' option on the shortcuts screen.",
+                        "Navigate to the add new shortcuts interface.",
+                        "Confirm the add new shortcuts screen is displayed."
+                    ]
+                },
+                {
+                    "test_script_step": "Click on the Create your own shortcut arrow button",
+                    "automation_script_step": "self.hpx_shortcuts.click_create_your_own_shortcut()",
+                    "steps": [
+                        "Identify the 'Create your own shortcut' arrow button using its locator.",
+                        "Perform a click action on the button.",
+                        "Wait for the next screen or dialog to appear."
+                    ]
+                },
+                {
+                    "test_script_step": "Click on the back button in Add Shortcut screen",
+                    "automation_script_step": "self.hpx_shortcuts.click_cancel_shortcut_go_back_btn()",
+                    "steps": [
+                        "Identify the back button (cancel/go back) on the Add Shortcut screen using its locator.",
+                        "Perform a click action on the back button.",
+                        "Wait for navigation to the previous screen."
+                    ]
+                },
+                {
+                    "test_script_step": "Verify the pop up screen",
+                    "automation_script_step": "assert self.hpx_shortcuts.verify_cancel_this_shortcut_title()",
+                    "steps": [
+                        "Check for the presence of the pop-up screen.",
+                        "Verify the title of the pop-up matches the expected 'Cancel this shortcut' text.",
+                        "Assert that the pop-up is displayed correctly."
+                    ]
+                }
+            ],
+            "automation_scripts_rules": [
+                {
+                    "rule_id": "RUL-001",
+                    "description": "Whenever executing test cases of type 'Verify the screen, when user clicks on the 'Back' button in 'Add Shortcut' screen.', you MUST include all steps labeled 'Implicit Step \u2013 Required for Test Execution' even if not explicitly mentioned in manual test steps, as they are required for test case purpose validation.",
+                    "applies_to": "All implicit steps for this test case type",
+                    "rule_definition": [
+                        "WHEN: Any test case of type 'Verify the screen, when user clicks on the 'Back' button in 'Add Shortcut' screen.' is automated",
+                        "THEN: Include all implicit steps as defined in correlation and intermediary_steps",
+                        "IMPLEMENTATION: Use the mapped script lines and intermediary steps for each implicit step, ensuring full coverage and execution order."
+                    ]
+                },
+                {
+                    "rule_id": "RUL-002",
+                    "description": "For explicit test steps (not implicit), implement automation using the mapped script line and follow all intermediary steps. Do not merge multiple script lines into one. Each step must be implemented in sequence.",
+                    "applies_to": "Explicit test steps in this test case",
+                    "rule_definition": [
+                        "WHEN: An explicit test step is encountered",
+                        "THEN: Implement the mapped script line and intermediary steps",
+                        "IMPLEMENTATION: Follow the exact script line and intermediary steps for each explicit step, enforcing execution order and no skipping."
+                    ]
+                },
+                {
+                    "rule_id": "RUL-003",
+                    "description": "All intermediary steps for both implicit and explicit steps MUST be executed in the exact order specified. No step may be skipped or omitted.",
+                    "applies_to": "All steps in this test case",
+                    "rule_definition": [
+                        "WHEN: Automating any step for this test case",
+                        "THEN: Execute all intermediary steps in order",
+                        "IMPLEMENTATION: Use the intermediary_steps array as the definitive sequence for automation."
+                    ]
+                }
+            ]
+        }
+    ]
+}
