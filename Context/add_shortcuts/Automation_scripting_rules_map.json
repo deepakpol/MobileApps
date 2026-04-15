@@ -1,70 +1,176 @@
 {
-    "{{automation-script-path_string_true}}": [
+    "Context/add_shortcuts/Automation_scripting_rules_map.json": [
+        {
+            "{{automation-script-path_string_true}}": [
+                {
+                    "correlation_steps_to_scripts": [
+                        {
+                            "test_step": "Install and Launch the HPX app.",
+                            "mapped_script_line": "self.fc.reset_app(); self.fc.flow_load_home_screen(skip_value_prop=False)"
+                        },
+                        {
+                            "test_step": "Click on the printer icon on the root view screen.",
+                            "mapped_script_line": "self.hpx_printer_details.click_add_device_btn(); self.printers.search_printer_by_ip(self.p.ipAddress); self.hpx_printer_details.click_printer_device_card()"
+                        },
+                        {
+                            "test_step": "Then click on the shortcuts tile on the device details page.",
+                            "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)"
+                        },
+                        {
+                            "test_step": "Implicit Step \u2013 Required for Test Execution: Verify shortcuts screen is displayed",
+                            "mapped_script_line": "self.hpx_shortcuts.verify_shortcuts_screen_title()"
+                        },
+                        {
+                            "test_step": "Click on the Add new shortcuts in shortcuts screen.",
+                            "mapped_script_line": "self.hpx_shortcuts.click_add_new_shortcut_btn()"
+                        },
+                        {
+                            "test_step": "Implicit Step \u2013 Required for Test Execution: Verify Add New Shortcut screen is displayed",
+                            "mapped_script_line": "self.hpx_shortcuts.verify_add_new_shortcut_screen_title()"
+                        },
+                        {
+                            "test_step": "Then click on the Create your own shortcut arrow button.",
+                            "mapped_script_line": "self.hpx_shortcuts.click_create_your_own_shortcut()"
+                        },
+                        {
+                            "test_step": "Implicit Step \u2013 Required for Test Execution: Verify Add New Shortcut title is displayed after clicking create your own",
+                            "mapped_script_line": "self.hpx_shortcuts.verify_add_new_shortcut_title()"
+                        },
+                        {
+                            "test_step": "Implicit Step \u2013 Required for Test Execution: Enable the save toggle option in shortcut settings",
+                            "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_save_toggle_btn()"
+                        },
+                        {
+                            "test_step": "Implicit Step \u2013 Required for Test Execution: Click continue button to proceed to Add Save screen",
+                            "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_continue_btn()"
+                        },
+                        {
+                            "test_step": "Navigate 'Add save' screen.",
+                            "mapped_script_line": "self.hpx_shortcuts.verify_add_save_shortcut_title()"
+                        },
+                        {
+                            "test_step": "Click on the back button.",
+                            "mapped_script_line": "self.driver.back()"
+                        },
+                        {
+                            "test_step": "Verify the screen.",
+                            "mapped_script_line": "assert self.hpx_shortcuts.verify_add_new_shortcut_title()"
+                        }
+                    ],
+                    "intermediary_steps": [],
+                    "automation_scripts_rules": [
+                        {
+                            "rule_id": "RUL-001",
+                            "description": "For each test step in the correlation, implement the mapped script line and follow all intermediary steps. For steps labeled as 'Implicit Step \u2013 Required for Test Execution', always include them even if not in manual steps, as they are required for test case validation.",
+                            "applies_to": "All mapped test steps and implicit/supporting steps for 'Verify the screen, when user clicks on back button in Add print screen.'",
+                            "rule_definition": [
+                                "WHEN: A test step from the correlation is encountered in automation development, including any labeled as 'Implicit Step \u2013 Required for Test Execution'.",
+                                "THEN: Implement the mapped script line exactly as specified, and follow all intermediary steps (if any).",
+                                "IMPLEMENTATION: For one-to-one mappings, use the mapped script line directly. For any step that would require multiple script lines, split into sub-steps (e.g., 1a, 1b, etc.), map each to a script line, and enforce sequential execution. For implicit/supporting steps, always include them even if not in the manual test steps, as they are required for test case purpose validation. Do not skip or merge steps. Ensure execution order is maintained."
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "correlation_steps_to_scripts": [
                 {
-                    "test_step": "Install and Launch the HPX app.",
-                    "mapped_script_line": "self.fc.reset_app(); self.fc.flow_load_home_screen(skip_value_prop=False)"
+                    "test_step": "1.Install and Launch the HPX app.",
+                    "mapped_script_line": "self.fc.reset_app(), self.fc.flow_load_home_screen(skip_value_prop=False)"
                 },
                 {
-                    "test_step": "Click on the printer icon on the root view screen.",
-                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn(); self.printers.search_printer_by_ip(self.p.ipAddress); self.hpx_printer_details.click_printer_device_card()"
+                    "test_step": "2.Click on the printer icon on the root view screen.",
+                    "mapped_script_line": "self.hpx_printer_details.click_add_device_btn()"
                 },
                 {
-                    "test_step": "Then click on the shortcuts tile on the device details page.",
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Search for printer by IP address",
+                    "mapped_script_line": "self.printers.search_printer_by_ip(self.p.ipAddress)"
+                },
+                {
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Select printer device card",
+                    "mapped_script_line": "self.hpx_printer_details.click_printer_device_card()"
+                },
+                {
+                    "test_step": "3.Then click on the shortcuts tile on the device details page.",
                     "mapped_script_line": "self.hpx_printer_details.click_shortcuts_tile(raise_e=False)"
                 },
                 {
-                    "test_step": "Implicit Step \u2013 Required for Test Execution: Verify shortcuts screen is displayed",
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify shortcuts screen title",
                     "mapped_script_line": "self.hpx_shortcuts.verify_shortcuts_screen_title()"
                 },
                 {
-                    "test_step": "Click on the Add new shortcuts in shortcuts screen.",
+                    "test_step": "4.Click on the Add new shortcuts in shortcuts screen.",
                     "mapped_script_line": "self.hpx_shortcuts.click_add_new_shortcut_btn()"
                 },
                 {
-                    "test_step": "Implicit Step \u2013 Required for Test Execution: Verify Add New Shortcut screen is displayed",
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify add new shortcut screen title",
                     "mapped_script_line": "self.hpx_shortcuts.verify_add_new_shortcut_screen_title()"
                 },
                 {
-                    "test_step": "Then click on the Create your own shortcut arrow button.",
+                    "test_step": "5.Then click on the Create your own shortcut arrow button.",
                     "mapped_script_line": "self.hpx_shortcuts.click_create_your_own_shortcut()"
                 },
                 {
-                    "test_step": "Implicit Step \u2013 Required for Test Execution: Verify Add New Shortcut title is displayed after clicking create your own",
+                    "test_step": "Implicit Step \u2013 Supporting Step \u2013 Purpose of Test Case Validation: Verify add new shortcut title",
                     "mapped_script_line": "self.hpx_shortcuts.verify_add_new_shortcut_title()"
                 },
                 {
-                    "test_step": "Implicit Step \u2013 Required for Test Execution: Enable the save toggle option in shortcut settings",
-                    "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_save_toggle_btn()"
-                },
-                {
-                    "test_step": "Implicit Step \u2013 Required for Test Execution: Click continue button to proceed to Add Save screen",
+                    "test_step": "Implicit Step \u2013 Required for Test Execution: Click continue on edit shortcut",
                     "mapped_script_line": "self.hpx_shortcuts.click_edit_shortcut_continue_btn()"
                 },
                 {
-                    "test_step": "Navigate 'Add save' screen.",
+                    "test_step": "6.Navigate 'Add save' screen.",
                     "mapped_script_line": "self.hpx_shortcuts.verify_add_save_shortcut_title()"
                 },
                 {
-                    "test_step": "Click on the back button.",
-                    "mapped_script_line": "self.driver.back()"
+                    "test_step": "7.Click on the 'Sign in' link of any cloud accounts in Add save screen.",
+                    "mapped_script_line": "self.hpx_shortcuts.click_google_drive_signin_link()"
                 },
                 {
-                    "test_step": "Verify the screen.",
-                    "mapped_script_line": "assert self.hpx_shortcuts.verify_add_new_shortcut_title()"
+                    "test_step": "8.Verify the behavior.",
+                    "mapped_script_line": "No direct mapping found (No explicit verification/assertion in script after sign-in link click)"
                 }
             ],
-            "intermediary_steps": [],
+            "intermediary_steps": [
+                {
+                    "test_case_step": "[[test-case-step]]",
+                    "automation_script_step": "[[automation-script-step]]",
+                    "steps": [
+                        "[[intermediary-step-1]]",
+                        "[[intermediary-step-2]]"
+                    ]
+                }
+            ],
             "automation_scripts_rules": [
                 {
                     "rule_id": "RUL-001",
-                    "description": "For each test step in the correlation, implement the mapped script line and follow all intermediary steps. For steps labeled as 'Implicit Step \u2013 Required for Test Execution', always include them even if not in manual steps, as they are required for test case validation.",
-                    "applies_to": "All mapped test steps and implicit/supporting steps for 'Verify the screen, when user clicks on back button in Add print screen.'",
+                    "description": "Whenever a test step from the manual test case maps to a single automation script line, implement the script line directly and follow all intermediary steps for that mapping.",
+                    "applies_to": "All one-to-one mappings between test steps and script lines (e.g., steps 2, 3, 4, 5, 6, 7).",
                     "rule_definition": [
-                        "WHEN: A test step from the correlation is encountered in automation development, including any labeled as 'Implicit Step \u2013 Required for Test Execution'.",
-                        "THEN: Implement the mapped script line exactly as specified, and follow all intermediary steps (if any).",
-                        "IMPLEMENTATION: For one-to-one mappings, use the mapped script line directly. For any step that would require multiple script lines, split into sub-steps (e.g., 1a, 1b, etc.), map each to a script line, and enforce sequential execution. For implicit/supporting steps, always include them even if not in the manual test steps, as they are required for test case purpose validation. Do not skip or merge steps. Ensure execution order is maintained."
+                        "WHEN: A test step directly corresponds to a single automation script line.",
+                        "THEN: Implement the mapped script line for that step.",
+                        "IMPLEMENTATION: For each such step, use the mapped script line and execute all intermediary steps listed for that mapping."
+                    ]
+                },
+                {
+                    "rule_id": "RUL-002",
+                    "description": "Whenever a test step corresponds to multiple automation actions, you MUST split the step into sub-steps (e.g., 1a, 1b, etc.), each mapping to one script line, and implement all sub-steps in sequence.",
+                    "applies_to": "Any test step that is broken into multiple script actions (e.g., step 1: 'Install and Launch the HPX app.' maps to 'self.fc.reset_app(), self.fc.flow_load_home_screen(skip_value_prop=False)').",
+                    "rule_definition": [
+                        "WHEN: A test step maps to multiple automation script lines.",
+                        "THEN: Split the step into sub-steps (e.g., 1a, 1b, etc.), each mapping to one script line, and implement all sub-steps in sequence.",
+                        "IMPLEMENTATION: Step 1 \u2192 Step 1a \u2192 self.fc.reset_app(); Step 1 \u2192 Step 1b \u2192 self.fc.flow_load_home_screen(skip_value_prop=False); Ensure all intermediary steps for each sub-step are executed in order; Do not skip or merge steps."
+                    ]
+                },
+                {
+                    "rule_id": "RUL-003",
+                    "description": "Whenever executing test cases of type 'Verify the screen, when user click on 'Sign in' link of any cloud accounts under Add accounts in 'Add save' screen.', you MUST include all implicit/supporting steps required for test execution and purpose validation, even if not explicitly mentioned in the manual test steps.",
+                    "applies_to": "All implicit steps labeled as 'Required for Test Execution' or 'Supporting Step \u2013 Purpose of Test Case Validation' in the correlation mapping.",
+                    "rule_definition": [
+                        "WHEN: Automating test cases of this type, and implicit/supporting steps are present in the correlation mapping.",
+                        "THEN: Always include these steps in the automation, even if not present in the manual test steps.",
+                        "IMPLEMENTATION: For example, include 'self.printers.search_printer_by_ip(self.p.ipAddress)', 'self.hpx_printer_details.click_printer_device_card()', 'self.hpx_shortcuts.verify_shortcuts_screen_title()', 'self.hpx_shortcuts.verify_add_new_shortcut_screen_title()', 'self.hpx_shortcuts.verify_add_new_shortcut_title()', and 'self.hpx_shortcuts.click_edit_shortcut_continue_btn()' with their respective intermediary steps. This ensures the test case purpose is validated and the automation is robust."
                     ]
                 }
             ]
