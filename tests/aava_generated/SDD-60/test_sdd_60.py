@@ -1,13 +1,12 @@
-class SendPicturePrintTests:
-    """Tests for HP Bridge send print jobs flow (picture and document)."""
+class TestSendPrintJobs:
+    """Tests for HP Bridge send print jobs feature (picture and document)."""
 
     def test_send_picture_print_job(self):
         """
-        Test sending a picture print job and verifying UI is correct.
-        Covers: A picture print job can be sent and its UI is correct.
+        Test that a picture print job can be sent and its UI is correct.
+        Verifies the picture print flow from selection to job submission.
         """
-        # Ensure we're at mini program home page
-        self.fc.flow["hpbridge_flow"].return_home_page()
+        # TODO: Navigate to HP Bridge mini program home page (no method available)
         
         # Select picture print category
         self.fc.flow["print_flow"].select_picture_print()
@@ -15,47 +14,49 @@ class SendPicturePrintTests:
         # Select from album
         self.fc.flow["print_flow"].select_from_album()
         
-        # Pick a photo (default first photo)
-        self.fc.flow["print_flow"].pick_a_photo()
+        # Pick a photo (using default index 0)
+        self.fc.flow["print_flow"].pick_a_photo(index=0)
         
-        # Verify print setting page UI
+        # Verify print settings page is displayed correctly
         self.fc.flow["print_setting"].verify_print_setting_page()
         
-        # Click print button
+        # Submit the print job
         self.fc.flow["print_setting"].select_print()
         
-        # Verify job submitted successfully
+        # Verify job success submitted message
         self.fc.flow["print_setting"].verify_job_success_submitted_msg()
 
 
     def test_send_document_print_job_from_wechat(self):
         """
-        Test sending a document print job from WeChat.
-        Covers: A document print job can be sent from WeChat.
+        Test that a document print job can be sent from WeChat.
+        Verifies the document print flow from WeChat chat history to job submission.
         """
-        # Launch WeChat
-        self.fc.flow["hpbridge_flow"].launch_wechat()
+        # TODO: Navigate to HP Bridge mini program home page (no method available)
+        # TODO: Ensure test document exists in WeChat chat history (setup required)
         
-        # Scan QR code to enter mini program
-        self.fc.flow["wechat"].scan_qrcode_to_mp()
-        
-        # Select file print
+        # Select file print category
         self.fc.flow["print_flow"].select_file_print()
         
-        # Verify file selection options exist
+        # Verify selection options are displayed
         self.fc.flow["print_flow"].verify_select_options_exist(picture_print=False)
         
         # Select from chat history
         self.fc.flow["print_flow"].select_from_chat_history()
         
-        # TODO: Need test data setup - select_doc_from_chat_history requires a file_name parameter but no method exists to set up or retrieve available test documents from chat history
-        # self.fc.flow["print_flow"].select_doc_from_chat_history("test_document.pdf")
+        # TODO: Need actual document file name from test data
+        # Select specific document from chat history
+        test_file_name = "test_document.pdf"  # TODO: Get from test data/fixture
+        self.fc.flow["print_flow"].select_doc_from_chat_history(test_file_name)
         
-        # Verify print setting page
+        # Verify print settings page is displayed correctly
         self.fc.flow["print_setting"].verify_print_setting_page()
         
-        # Click print button
+        # Verify the print job name matches the selected file
+        self.fc.flow["print_setting"].verify_print_job_name(test_file_name)
+        
+        # Submit the print job
         self.fc.flow["print_setting"].select_print()
         
-        # Verify job submitted successfully
+        # Verify job success submitted message
         self.fc.flow["print_setting"].verify_job_success_submitted_msg()
