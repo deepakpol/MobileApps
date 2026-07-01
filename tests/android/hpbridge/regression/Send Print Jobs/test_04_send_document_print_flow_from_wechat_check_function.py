@@ -85,3 +85,39 @@ class TestDocumentPrintFlowFunction(object):
         self.print_setting.verify_print_job_name(self.test_file)
         self.print_setting.click_top_back_arrow_icon()
         self.mp_home.verify_mini_program_home_page()
+
+    def test_send_document_print_from_wechat(self):
+        """
+        Test: Send document print from WeChat
+
+        Verifies that a document print job can be initiated from WeChat
+        and completes successfully via the WeChat flow.
+
+        Story: SDD-59 - HP Bridge: Send print jobs (picture and document)
+        Priority: P1
+        """
+        # TODO: Navigate to WeChat interface or ensure WeChat is accessible
+        # Missing capability: Method to launch or navigate to WeChat print entry point
+
+        # Initiate document print from WeChat
+        self.fc.flow["pa_home"].click_wechat_print_notice()
+
+        # TODO: Navigate to document selection interface
+        # Missing capability: Method to open file/document selection dialog
+
+        # Select a document from chat history
+        test_document_name = "test_document.pdf"
+        self.fc.flow["print_flow"].select_doc_from_chat_history(test_document_name)
+
+        # TODO: Configure print settings if needed
+        # Missing capability: Method to verify print settings page is displayed
+
+        # Submit the print job
+        self.fc.flow["print_setting"].select_print()
+
+        # TODO: Navigate to print history page
+        # Missing capability: Method to open print history from current context
+
+        # Verify the print job completes successfully
+        self.fc.flow["pa_print_history"].verify_print_status_from_print_history(retries=20)
+
