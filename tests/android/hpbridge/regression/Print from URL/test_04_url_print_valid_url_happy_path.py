@@ -107,3 +107,35 @@ class TestURLPrintHappyPath(object):
         assert self.printsetting.get_print_file_name() == PrintPreviewFileName.WEB_ARTICLE.value
         self.printsetting.select_collapse_button()
         self.printsetting.select_print()
+
+    def test_print_valid_url_happy_path(self):
+        """
+        Test printing a document from a valid URL (happy path).
+
+        Steps:
+        1. Navigate to URL print section
+        2. Enter a valid printable URL
+        3. Get the article from the URL
+        4. Process to print
+        5. Submit the print job
+        6. Verify the document is printed successfully
+        """
+        # Step 1: Navigate to URL print section
+        self.fc.flow["mp_home"].click_url_article_print_section()
+
+        # Step 2: Enter a valid printable URL
+        valid_url = "https://www.example.com/article"
+        self.fc.flow["url_print"].input_url_into_field(valid_url)
+
+        # Step 3: Get the article from the URL
+        self.fc.flow["url_print"].get_article(pic_mode=True)
+
+        # Step 4: Process to print
+        self.fc.flow["url_print"].process_to_print()
+
+        # Step 5: Submit the print job
+        self.fc.flow["print_setting"].select_print()
+
+        # Step 6: Verify the document is printed successfully
+        self.fc.flow["pa_home"].verify_print_results_from_notification()
+

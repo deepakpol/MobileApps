@@ -104,3 +104,51 @@ class TestURLPrintContinuePrintButton(object):
         self.printsetting.select_print()
         self.printsetting.click_top_left_back_btn()
         self.urlprint.verify_web_article_page_ui()
+
+    def test_url_print_continue_print_button(self):
+        """
+        Test that the continue-print button is available after a URL print
+        and behaves correctly when used.
+
+        Covers:
+        - SDD-55: HP Bridge: Print from URL
+        - Behaviour 1: The continue-print button is available after a URL print
+        - Behaviour 2: The continue-print button behaves correctly when used
+
+        Steps:
+        1. Navigate to URL article print section
+        2. Input a valid URL
+        3. Get the article
+        4. Proceed to print settings
+        5. Submit the print job
+        6. Verify continue-print button is available and click it
+        7. Verify the button behaves correctly (navigates back to print settings)
+        """
+        # Navigate to URL print
+        self.fc.flow["url_print"].click_url_article_print()
+
+        # Input a valid URL
+        test_url = "https://www.example.com/article"
+        self.fc.flow["url_print"].input_url_into_field(test_url)
+
+        # Get the article
+        self.fc.flow["url_print"].get_article()
+
+        # Proceed to print
+        self.fc.flow["url_print"].process_to_print()
+
+        # Verify we're on print settings page
+        self.fc.flow["print_setting"].verify_print_setting_page()
+
+        # Submit the print job
+        self.fc.flow["print_setting"].select_print()
+
+        # Verify job submitted successfully
+        self.fc.flow["print_setting"].verify_job_success_submitted_msg()
+
+        # Click continue print button (this verifies availability and clicks it)
+        self.fc.flow["print_setting"].click_continue_print_btn()
+
+        # Verify we're back on print settings page (continue-print behaves correctly)
+        self.fc.flow["print_setting"].verify_print_setting_page()
+
