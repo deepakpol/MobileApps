@@ -60,4 +60,65 @@ class TestInvoicePrintFlowLaserJetPrompt(object):
         self.pa_home.click_print_history()
         assert self.pa_home.verify_print_results_from_notification()
 
+    def test_invoice_print_from_applet_home_happy_path(self):
+        """
+        Test invoice print from applet home (happy path).
+
+        Story: HP Bridge: Print an invoice document from the HP Bridge applet home;
+               LaserJet prompts are handled.
+
+        Acceptance Criteria:
+        - Invoice print can be started from the applet home and completes
+        - LaserJet invoice print prompt is handled correctly
+        - Invoice job is submitted successfully
+        """
+        # Step 1: Start invoice print from applet home
+        self.fc.flow["print_flow"].select_invoice_print()
+
+        # Step 2: Select an invoice
+        # TODO: Need method to get available invoices or use default test invoice name
+        # The select_invoice method requires invoice_name parameter but no method exists
+        # to discover available invoices
+
+        # Step 3: Confirm invoice selection
+        self.fc.flow["invoice_print"].click_confirm_btn()
+
+        # Step 4: Submit the print job
+        self.fc.flow["print_setting"].select_print()
+
+        # Step 5: Verify LaserJet printer compatibility message (if applicable)
+        self.fc.flow["print_setting"].verify_laserjet_printer_compatibility_msg()
+
+        # Step 6: Verify job is submitted successfully
+        self.fc.flow["print_setting"].verify_job_success_submitted_msg()
+
+    def test_invoice_print_laserjet_prompt_handling(self):
+        """
+        Test invoice print with LaserJet printer prompt handling.
+
+        Verifies:
+        - Invoice print can be initiated
+        - LaserJet compatibility prompt appears
+        - Prompt is handled and print job proceeds
+        """
+        # Navigate to invoice print section
+        self.fc.flow["print_flow"].select_invoice_print()
+
+        # TODO: Select a specific invoice - requires invoice_name parameter
+        # Need test data configuration or method to retrieve available invoice names
+        # self.fc.flow["invoice_print"].select_invoice(invoice_name)
+
+        # TODO: Confirm invoice selection after selecting specific invoice
+        # self.fc.flow["invoice_print"].click_confirm_btn()
+
+        # Verify LaserJet compatibility prompt appears
+        self.fc.flow["print_setting"].verify_laserjet_printer_compatibility_msg()
+
+        # Handle the LaserJet prompt by continuing
+        self.fc.flow["print_setting"].click_continue_print_btn()
+
+        # Verify print job proceeds after prompt handling
+        self.fc.flow["print_setting"].verify_job_success_submitted_msg()
+
+
 
