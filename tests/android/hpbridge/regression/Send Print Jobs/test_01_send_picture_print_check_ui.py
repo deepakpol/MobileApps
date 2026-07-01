@@ -75,3 +75,37 @@ class TestPicturePrintFlowUI(object):
         self.print.select_from_album()
         self.print.pick_a_photo()
         self.print_setting.select_print()
+
+    def test_send_picture_print_and_check_ui(self):
+        """
+        Test: Send picture print and check UI
+
+        Verifies that:
+        1. Picture print job can be sent successfully
+        2. Picture print UI displays correctly
+        3. Picture print job completes correctly
+        """
+        # Navigate to picture print section
+        self.fc.flow["print_flow"].select_picture_print()
+
+        # Verify picture print UI displays correctly
+        self.fc.flow["print_flow"].verify_select_options_exist(picture_print=True)
+
+        # Select a picture from album
+        self.fc.flow["print_flow"].select_from_album()
+
+        # Pick a photo
+        self.fc.flow["print_flow"].pick_a_photo()
+
+        # Submit the print job
+        self.fc.flow["print_setting"].select_print()
+
+        # Verify job success submitted message
+        self.fc.flow["print_setting"].verify_job_success_submitted_msg()
+
+        # Navigate to print history
+        self.fc.flow["pa_home"].click_print_history()
+
+        # Verify print job completes correctly from print history
+        self.fc.flow["pa_print_history"].verify_print_status_from_print_history()
+
