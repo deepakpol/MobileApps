@@ -4,6 +4,7 @@ from MobileApps.libs.flows.android.hpbridge.utility.api_utility import APIUtilit
 from MobileApps.libs.flows.android.hpbridge.utility.prototype_uitility import PrinterNameOption
 from MobileApps.libs.flows.android.hpbridge.utility import utlitiy_misc
 from MobileApps.libs.flows.android.hpbridge.utility.random_utility import RandomUtility
+from MobileApps.libs.flows.android.hpbridge.hpbridge_flow import HPBridgeFlow
 
 pytest.app_info = "hpbridge"
 
@@ -79,3 +80,31 @@ class TestChangePrinterName(object):
         self.binding.click_binding_btn()
         self.binding.click_start_print_btn()
         self.mp_home.verify_printer_exist(self.valid_printer_name)
+
+    def test_update_printer_name_during_binding(self):
+        """
+        Test that a printer name can be updated during the binding flow.
+
+        Steps:
+        1. Scan a valid QR code to open bind printer flow
+        2. Edit the printer name during binding
+        3. Complete the binding with updated name
+        4. Verify the printer appears on home page with updated name
+        """
+        updated_printer_name = "MyCustomPrinter"
+
+        # Step 1: Scan valid QR code to enter bind printer flow
+        self.fc.flow["mp_home"].scan_qrcode_with_camera(qr_code_valid=True)
+
+        # Step 2: Edit printer name during binding flow
+        self.fc.flow["bind_printer"].change_printer_name(updated_printer_name)
+
+        # Step 3: Complete binding with updated name
+        self.fc.flow["bind_printer"].bind_printer(bound=False)
+
+        # Step 4: Navigate back to home page and verify printer with updated name
+        self.fc.flow["bind_printer"].back_to_home_page()
+        self.fc.flow["mp_home"].verify_printer_exist(updated_printer_name)
+
+        # Cleanup
+        self.fc.remove_all_bound_printers()

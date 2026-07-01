@@ -2,6 +2,7 @@
 import pytest
 from MobileApps.libs.flows.android.hpbridge.utility.api_utility import APIUtility
 from MobileApps.libs.flows.android.hpbridge.utility import utlitiy_misc
+from MobileApps.libs.flows.android.hpbridge.hpbridge_flow import HPBridgeFlow
 
 pytest.app_info = "hpbridge"
 
@@ -82,6 +83,54 @@ class TestBindInvalidPrinter(object):
         self.mp_home.select_add_printer()
         self.mp_home.scan_qrcode_with_camera(qr_code_valid=False)
         self.binding.verify_qr_code_error_message()
+
+    def test_bind_printer_with_valid_qr_code_happy_path(self):
+        """
+        Test binding a printer with a valid QR code (happy path).
+
+        Verifies that:
+        - User can open the bind printer flow
+        - Valid printer QR code is successfully scanned
+        - Printer binding completes successfully
+        - Bound printer appears in the home page printer list
+        """
+        # Step 1: Open the bind printer flow from HP Bridge app
+        self.fc.flow["mp_home"].select_add_printer()
+
+        # Step 2: Scan a valid printer QR code
+        self.fc.flow["mp_home"].scan_qrcode_with_camera(qr_code_valid=True)
+
+        # Step 3: Complete printer binding
+        self.fc.flow["bind_printer"].bind_printer(bound=False)
+
+        # Step 4: Verify bound printer appears in the home page printer list
+        self.fc.flow["bind_printer"].back_to_home_page()
+        self.fc.flow["mp_home"].check_add_printer_filed_with_device()
+
+    def test_bind_printer_with_invalid_qr_code(self):
+        """
+        Test binding a printer with an invalid QR code (negative path).
+
+        Steps:
+        1. Open bind printer flow and scan invalid QR code
+        2. Verify error message is displayed
+        3. Verify binding button is disabled
+        4. Return to home page
+        5. Verify no printer was added
+        """
+        # Step 1: Open bind flow and scan invalid QR code
+        self.fc.flow["mp_home"].scan_qrcode_with_camera(qr_code_valid=False)
+
+        # Step 2 & 3: Verify binding is rejected with error message and button disabled
+        self.fc.flow["bind_printer"].verify_qr_code_error_message()
+        self.fc.flow["bind_printer"].get_binding_printer_button_status()
+
+        # Step 4: Return to home page
+        self.fc.flow["hpbridge_flow"].return_home_page()
+
+        # Step 5: Verify no printer was added to home page
+        self.fc.flow["mp_home"].check_add_printer_filed_no_device()
+
 
 
 
