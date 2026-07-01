@@ -130,5 +130,32 @@ class TestURLPrintUnhappyPath(object):
         self.urlprint.verify_get_article_failed_prompt_msg(invalid_url=False)
         self.urlprint.click_confirm_btn()
 
+    def test_reject_invalid_and_blacklisted_url(self):
+        """
+        Test that invalid and blacklisted URLs are rejected with appropriate messages.
+
+        Covers:
+        - An invalid URL is rejected with an appropriate message
+        - A blacklisted URL is rejected with an appropriate message
+        """
+        # Navigate to URL print section
+        self.fc.flow["url_print"].click_url_article_print()
+
+        # Test 1: Invalid URL rejection
+        invalid_url = "not-a-valid-url"
+        self.fc.flow["url_print"].input_url_into_field(invalid_url)
+        self.fc.flow["url_print"].get_article()
+        self.fc.flow["url_print"].verify_get_article_failed_prompt_msg(invalid_url=True)
+
+        # Clear the input field before testing blacklisted URL
+        self.fc.flow["url_print"].clear_input_input_box()
+
+        # Test 2: Blacklisted URL rejection
+        blacklisted_url = "http://blacklisted-site.com/article"
+        self.fc.flow["url_print"].input_url_into_field(blacklisted_url)
+        self.fc.flow["url_print"].get_article()
+        self.fc.flow["url_print"].verify_get_article_failed_prompt_msg(invalid_url=False)
+
+
 
 
