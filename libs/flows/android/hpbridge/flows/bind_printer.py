@@ -307,3 +307,25 @@ class BindPrinter(HPBridgeFlow):
         """
         for group in GroupName.__members__.values():
             self.verify_no_remove_icon(group.value)
+    def verify_printer_name_matches(self, expected_name):
+        """
+        Verify that the displayed bound printer name matches the expected name.
+        
+        Args:
+            expected_name (str): The expected printer name to match against
+            
+        Returns:
+            bool: True if the displayed name matches expected_name, False otherwise
+        """
+        self.driver.logger.info(f"Verifying printer name matches: {expected_name}")
+        displayed_name = self.driver.get_text(self._printer_name_text)
+        self.driver.logger.info(f"Displayed printer name: {displayed_name}")
+        
+        matches = displayed_name == expected_name
+        if matches:
+            self.driver.logger.info(f"Printer name verification passed: '{displayed_name}' matches '{expected_name}'")
+        else:
+            self.driver.logger.info(f"Printer name verification failed: '{displayed_name}' does not match '{expected_name}'")
+        
+        return matches
+
